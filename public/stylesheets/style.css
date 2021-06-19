@@ -19,3 +19,8 @@ a {
   font-weight: bold;
   font-size: 16px;
 }
+
+.card  {
+  text-decoration: none;
+  color:#7f7f7f;
+}

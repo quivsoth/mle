@@ -1,0 +1,20 @@
+<h3>Products</h3>
+{{# each products }}
+    <div class="row justify-content-md-center">
+        {{# each this}}
+            <div class="col-sm-3">
+                <a href="#">
+                <div class="card">
+                    <img class="card-img-top" src="images/{{ this.productImage }}" alt="Card image top">
+                    <div class="card-body">
+                        <div class="price text-center">{{ this.productName }}</div>
+                        <div class="text-center">{{ this.description }}</div>
+                        <div class="price text-center">Size: {{ this.size }}</div>
+                        <div class="price text-center">${{ this.price }}</div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        {{/each}}
+    </div>
+{{/each}}
