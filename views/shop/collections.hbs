@@ -1,83 +1,20 @@
-{{# each collections }}
-    collections!
-{{/each}}
+<h3>Collections</h3>
 
-{{!-- <h3>Collections</h3>
-<div class="row justify-content-md-center">
-    <div class="col-sm-3">
-        <div class="card">
-            <img class="card-img-top" src="images/collection1.jpg" alt="Card image top">
-            <div class="card-body">
-                <div class="price text-center">Keep it corporate</div>
+{{# each collections }}
+    <div class="row justify-content-md-center">
+        {{# each this}}
+
+            <div class="col-sm-3">
+                <a href="#">
+                <div class="card">
+                    <img class="card-img-top" src="images/{{ this.image }}" alt="Card image top">
+                    <div class="card-body">
+                        <div class="price text-center">{{ this.collectionName }}</div>
+                    </div>
+                </div>
+                </a>
             </div>
-        </div>
+
+        {{/each}}
     </div>
-    <div class="col-sm-3">
-        <div class="card">
-            <img class="card-img-top" src="images/collection2.jpg" alt="Card image top">
-            <div class="card-body">
-                <div class="price text-center">Club Conscious</div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-3">
-        <div class="card">
-            <img class="card-img-top" src="images/collection3.jpg" alt="Card image top">
-            <div class="card-body">
-                <div class="price text-center">Pretty in Pink</div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row justify-content-md-center">
-    <div class="col-sm-3">
-        <div class="card">
-            <img class="card-img-top" src="images/collection4.jpg" alt="Card image top">
-            <div class="card-body">
-                <div class="price text-center">$32</div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-3">
-        <div class="card">
-            <img class="card-img-top" src="images/collection5.jpg" alt="Card image top">
-            <div class="card-body">
-                <div class="price text-center">Miss Hawaiian Tropical</div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-3">
-        <div class="card">
-            <img class="card-img-top" src="images/collection6.jpg" alt="Card image top">
-            <div class="card-body">
-                <div class="price text-center">Lace It Up</div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row justify-content-md-center">
-    <div class="col-sm-3">
-        <div class="card">
-            <img class="card-img-top" src="images/collection7.jpg" alt="Card image top">
-            <div class="card-body">
-                <div class="price text-center">Winter Warmers</div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-3">
-        <div class="card">
-            <img class="card-img-top" src="images/collection2.jpg" alt="Card image top">
-            <div class="card-body">
-                <div class="price text-center">Roses</div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-3">
-        <div class="card">
-            <img class="card-img-top" src="images/collection8.jpg" alt="Card image top">
-            <div class="card-body">
-                <div class="price text-center">Femme Fatale</div>
-            </div>
-        </div>
-    </div>
-</div> --}}
+{{/each}}
