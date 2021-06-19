@@ -1,27 +1,44 @@
 var express = require('express');
 var router = express.Router();
-var Collection = require('../models/collections');
+const {MongoClient} = require('mongodb');
 
 
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  console.log('getting');
-  Collection.find(function(err, docs) {
-      console.log('found!  : ' + docs);
-
-  });
-  var collection101  = Collection.find();
   res.render('shop/index', { title: 'Baja La Bruja - ', collections: collection101 });
 });
 
 
-/* GET home page. */
+/* GET Collections page. */
 router.get('/collections', function(req, res, next) {
-  var collections = Collection.find();
-  res.render('shop/collections', { title: 'Baja La Bruja - Collections', collections: collections });
+  (async function() {
+    const collections = await getCollections();
+    res.render('shop/collections', { title: 'Baja La Bruja - Collections', collections: collections });
+  })();
+
+
 });
 
+async function getCollections(){
+  /**
+   * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
+   * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
+   */
+  var uri = `mongodb://192.168.1.3:27017`;
+  const client = new MongoClient(uri, { useUnifiedTopology: true });
+  try {
+      // Connect to the MongoDB cluster
+      await client.connect();
+      const cursor = client.db("shop").collection("collections").find({active: true});
+      const results = await cursor.toArray();
 
+      return results;
+  } catch (e) {
+      console.error(e);
+  } finally {
+      await client.close();
+  }
+}
 
 module.exports = router;
