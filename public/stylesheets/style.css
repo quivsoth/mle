@@ -1,11 +1,4 @@
-/* body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
-a {
-  color: #00B7FF;
-} */
 
 .thumbnail img {
   max-width: 200px;
@@ -23,4 +16,39 @@ a {
 .card  {
   text-decoration: none;
   color:#7f7f7f;
+}
+
+
+body {
+  font-family: 'Apparel Light It';
+}
+
+
+.heroText {
+  top:4em;
+  left:5em;
+  position: absolute;
+  color: whitesmoke;
+}
+
+.heroScreen{
+  margin: -20px;
+  padding: 0;
+  position:relative;
+  font-size: xx-large;
+}
+
+.heroScreen p{
+  font-size: xx-large;
+  font-style: italic;
+  font-size: 95%;
+  width: 23em;
+}
+
+.heroScreen h3 {
+  font-size: 120%;
+}
+
+.heroScreen btn {
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }

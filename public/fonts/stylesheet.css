@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'Apparel';
+    src: url('/fonts/Apparel-Black.woff2') format('woff2'),
+        url('/fonts/Apparel-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel Bold It';
+    src: url('/fonts/Apparel-BoldIt.woff2') format('woff2'),
+        url('Apparel-BoldIt.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel';
+    src: url('/fonts/Apparel-Bold.woff2') format('woff2'),
+        url('/fonts/Apparel-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel Black It';
+    src: url('/fonts/Apparel-BlackIt.woff2') format('woff2'),
+        url('/fonts/Apparel-BlackIt.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel Display Bold It';
+    src: url('/fonts/ApparelDisplay-BoldIt.woff2') format('woff2'),
+        url('/fonts/ApparelDisplay-BoldIt.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel Display Black It';
+    src: url('/fonts/ApparelDisplay-BlackIt.woff2') format('woff2'),
+        url('/fonts/ApparelDisplay-BlackIt.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel Display';
+    src: url('/fonts/ApparelDisplay-Black.woff2') format('woff2'),
+        url('/fonts/ApparelDisplay-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel Display';
+    src: url('/fonts/ApparelDisplay-Bold.woff2') format('woff2'),
+        url('/fonts/ApparelDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel Display Light It';
+    src: url('/fonts/ApparelDisplay-LightIt.woff2') format('woff2'),
+        url('/fonts/ApparelDisplay-LightIt.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel Display';
+    src: url('/fonts/ApparelDisplay-Light.woff2') format('woff2'),
+        url('/fonts/ApparelDisplay-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel Display';
+    src: url('/fonts/ApparelDisplay-Regular.woff2') format('woff2'),
+        url('/fonts/ApparelDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel Display It';
+    src: url('/fonts/ApparelDisplay-RegularIt.woff2') format('woff2'),
+        url('/fonts/ApparelDisplay-RegularIt.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel Display';
+    src: url('/fonts/ApparelDisplay-Thin.woff2') format('woff2'),
+        url('/fonts/ApparelDisplay-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel Light It';
+    src: url('/fonts/Apparel-LightIt.woff2') format('woff2'),
+        url('/fonts/Apparel-LightIt.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel It';
+    src: url('/fonts/Apparel-RegularIt.woff2') format('woff2'),
+        url('/fonts/Apparel-RegularIt.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel Display Thin It';
+    src: url('/fonts/ApparelDisplay-ThinIt.woff2') format('woff2'),
+        url('/fonts/ApparelDisplay-ThinIt.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel';
+    src: url('/fonts/Apparel-Regular.woff2') format('woff2'),
+        url('/fonts/Apparel-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel';
+    src: url('/fonts/Apparel-Light.woff2') format('woff2'),
+        url('/fonts/Apparel-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel';
+    src: url('/fonts/Apparel-Thin.woff2') format('woff2'),
+        url('/fonts/Apparel-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apparel Thin It';
+    src: url('/fonts/Apparel-ThinIt.woff2') format('woff2'),
+        url('/fonts/Apparel-ThinIt.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
