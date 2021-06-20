@@ -1,4 +1,11 @@
+body {
+  font-family: 'Apparel Light It';
+}
 
+h3 {
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
 
 .thumbnail img {
   max-width: 200px;
@@ -19,9 +26,16 @@
 }
 
 
-body {
-  font-family: 'Apparel Light It';
+.navbar {
+  border-bottom: 1px solid lightgrey;
 }
+
+.row {
+  padding-bottom: 1rem;
+  color:
+}
+
+
 
 
 .heroText {
