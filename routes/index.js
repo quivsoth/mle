@@ -8,6 +8,9 @@ router.get('/', function(req, res, next) {
   res.render('shop/index', { title: 'Baja La Bruja - '});
 });
 
+router.get('/lifestyle', function(req, res, next) {
+  res.render('shop/lifestyle', { title: 'F#$ck Fast Fashion'});
+});
 
 
 /* GET Collections page. */
@@ -15,7 +18,7 @@ router.get('/collections', function(req, res, next) {
   (async function() {
     const collections = await getCollections();
     var productChunks = [];
-    var chunkSize = 3;
+    var chunkSize = 4;
     for (let i = 0; i < collections.length; i+= chunkSize) {
       productChunks.push(collections.slice(i, i + chunkSize));
     }
