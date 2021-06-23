@@ -9,9 +9,16 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/lifestyle', function(req, res, next) {
-  res.render('shop/lifestyle', { title: 'F#$ck Fast Fashion'});
+  res.render('shop/lifestyle', { title: 'Baja La Bruja - F#$ck Fast Fashion'});
 });
 
+router.get('/gifts', function(req, res, next) {
+  res.render('shop/gifts', { title: 'Baja La Bruja - Gifts'});
+});
+
+router.get('/contacts', function(req, res, next) {
+  res.render('shop/contacts', { title: 'Baja La Bruja - Contact Us'});
+});
 
 /* GET Collections page. */
 router.get('/collections', function(req, res, next) {
@@ -36,7 +43,7 @@ router.get('/products', function(req, res, next) {
     for (let i = 0; i < products.length; i+= chunkSize) {
       productChunks.push(products.slice(i, i + chunkSize));
     }
-    res.render('shop/products', { title: 'Baja La Bruja - Collections', products: productChunks });
+    res.render('shop/products', { title: 'Baja La Bruja - Products', products: productChunks });
   })();
 });
 
@@ -45,7 +52,7 @@ router.get('/item', function(req, res, next) {
   (async function() {
     let itemId = req.query.itemId;
     const item = await getItem(itemId);
-    res.render('shop/item', { title: 'Baja La Bruja - ', item: item});
+    res.render('shop/item', { title: 'Baja La Bruja - Items', item: item});
   })();
 });
 
