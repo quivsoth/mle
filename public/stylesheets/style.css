@@ -3,8 +3,6 @@ body {
   background-color:aliceblue;
 }
 
-
-
 .thumbnail img {
   max-width: 200px;
 }
@@ -15,7 +13,7 @@ body {
 
 .price {
   font-weight: bold;
-  font-size: 16px;
+  font-size: x-large;
 }
 
 .card  {
@@ -43,8 +41,6 @@ body {
   padding-bottom: 4rem;
 }
 
-
-
 .heroText {
   top:4em;
   left:5em;
@@ -59,7 +55,7 @@ body {
   font-size: xx-large;
 }
 
-.heroScreen p{
+.heroScreen p {
   font-size: xx-large;
   font-style: italic;
   font-size: 95%;
@@ -70,14 +66,11 @@ body {
   font-size: 120%;
 }
 
-.heroScreen btn {
-  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-}
-
-
 
 .navbar-brand {
   font-size: 160%;
   padding-right: 2rem;
   font-family: 'Apparel Display Bold It';
 }
+
+

@@ -6,13 +6,12 @@
 </nav>
 
 <h3 class="text-center" style="padding: 0 0rem 1rem 0;">Collections</h3>
-
 {{# each collections }}
     <div class="row justify-content-md-center">
         {{# each this}}
             <div class="col-xs-3 col-lg-2 blockSpace4">
                 <a href="#">
-                <div class="card">
+                <div class="card" style="text-decoration: none;">
                     <img class="card-img-top" src="images/collections/{{ this.image }}" alt="Card image top">
                     <div class="card-body">
                         <div class="price text-center">{{ this.collectionName }}</div>
