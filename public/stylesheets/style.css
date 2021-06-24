@@ -27,6 +27,7 @@ h3 {
 }
 
 .nav a {
+  font-size:1.6rem;
   text-decoration: none;
 }
 
@@ -37,13 +38,12 @@ h3 {
 
 .logoHeader {
   text-decoration: none;
-  font-size: xx-large;
+  font-size: xxx-large;
   font-weight:500;
 }
 
 .row {
   padding-bottom: 1rem;
-  color:
 }
 
 
