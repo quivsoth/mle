@@ -67,7 +67,7 @@ async function getCollections(){
   const client = new MongoClient(uri, { useUnifiedTopology: true });
   try {
       await client.connect();
-      const cursor = client.db("shop").collection("collections").find({active: true});
+      const cursor = client.db("shop").collection("collections").find({active: true}).sort({orderIndex:1});
       const results = await cursor.toArray();
       return results;
   } catch (e) { console.error(e); }
