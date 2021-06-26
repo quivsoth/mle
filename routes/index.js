@@ -6,6 +6,7 @@ const uri = `mongodb://192.168.1.3:27017`;
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('shop/index', { title: 'Baja La Bruja - fighting fast fashion'});
+  // console.log("app.locals.settings" + app);
 });
 
 router.get('/lifestyle', function(req, res, next) {
