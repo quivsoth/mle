@@ -10,9 +10,9 @@
     <div class="row justify-content-md-center">
         {{# each this}}
             <div class="col-xs-3 col-lg-2 blockSpace4">
-                <a href="#">
+                <a href="/products?collectionId={{this.collectionId}}" style="text-decoration: none;">
                 <div class="card" style="text-decoration: none;">
-                    <img class="card-img-top" src="images/collections/{{ this.image }}" alt="Card image top">
+                    <img class="card-img-top" src="images/collections/{{ this.image }}" alt="{{ this.collectionName }}">
                     <div class="card-body">
                         <div class="price text-center">{{ this.collectionName }}</div>
                     </div>

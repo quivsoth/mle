@@ -5,7 +5,7 @@ const uri = `mongodb://192.168.1.3:27017`;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('shop/index', { title: 'Baja La Bruja - '});
+  res.render('shop/index', { title: 'Baja La Bruja - fighting fast fashion'});
 });
 
 router.get('/lifestyle', function(req, res, next) {
@@ -39,7 +39,7 @@ router.get('/products', function(req, res, next) {
     let collectionId = req.query.collectionId;
     const products = await getProducts(collectionId);
     var productChunks = [];
-    var chunkSize = 3;
+    var chunkSize = 4;
     for (let i = 0; i < products.length; i+= chunkSize) {
       productChunks.push(products.slice(i, i + chunkSize));
     }
