@@ -3,22 +3,54 @@ body {
   background-color:aliceblue;
 }
 
-.thumbnail img {
-  max-width: 200px;
-}
-
-.thumbnail .description {
-  color: #7f7f7f;
-}
-
-.price {
-  font-weight: bold;
-  font-size: x-large;
+.blockSpace4 {
+  padding-bottom: 4rem;
 }
 
 .card  {
   text-decoration: none;
   color:#7f7f7f;
+}
+
+.full-width {
+  padding: 0;
+} 
+
+.heroScreen {
+  margin: 0;
+  padding: 0;
+  position:relative;
+  font-size: xx-large;
+}
+
+.heroScreen h3 {
+  font-size: 120%;
+}
+
+.heroScreen p {
+  font-size: xx-large;
+  font-style: italic;
+  font-size: 95%;
+  width: 23em;
+}
+
+.heroText {
+  /* top:4em;
+  left:5em;
+  position: absolute; */
+  color: white;
+  font-size: 3.3rem;
+}
+
+.logoHeader {
+  text-decoration: none;
+  font-size: 50px;
+  font-weight:500;
+}
+
+.price {
+  font-weight: bold;
+  font-size: x-large;
 }
 
 .nav a {
@@ -31,46 +63,23 @@ body {
   height: 150px;
 }
 
-.logoHeader {
-  text-decoration: none;
-  font-size: 50px;
-  font-weight:500;
-}
-
-.blockSpace4 {
-  padding-bottom: 4rem;
-}
-
-.heroText {
-  top:4em;
-  left:5em;
-  position: absolute;
-  color: whitesmoke;
-}
-
-.heroScreen{
-  margin: -0px;
-  padding: 0;
-  position:relative;
-  font-size: xx-large;
-}
-
-.heroScreen p {
-  font-size: xx-large;
-  font-style: italic;
-  font-size: 95%;
-  width: 23em;
-}
-
-.heroScreen h3 {
-  font-size: 120%;
-}
-
-
 .navbar-brand {
   font-size: 160%;
   padding-right: 2rem;
   font-family: 'splendid_66regular';
 }
 
+.thumbnail .description {
+  color: #7f7f7f;
+}
 
+.thumbnail img {
+  max-width: 200px;
+}
+
+.caption {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+}
