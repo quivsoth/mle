@@ -3,8 +3,6 @@ body {
   background-color:black;
 }
 
-
-
 .blockSpace4 {
   padding-bottom: 4rem;
 }
@@ -17,8 +15,6 @@ body {
 .full-width {
   padding: 0;
 }
-
-
 
 .logoHeader, .logoHeader a {
   text-decoration: none;
@@ -41,8 +37,6 @@ body {
   border-bottom: 1px solid lightgrey;
   height: 150px;
 }
-
-
 
 .caption {
   position: absolute;
