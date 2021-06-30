@@ -1,7 +1,9 @@
 body {
   font-family: 'splendid_66regular';
-  background-color:aliceblue;
+  background-color:black;
 }
+
+
 
 .blockSpace4 {
   padding-bottom: 4rem;
@@ -14,36 +16,13 @@ body {
 
 .full-width {
   padding: 0;
-} 
-
-.heroScreen {
-  margin: 0;
-  padding: 0;
-  position:relative;
-  font-size: xx-large;
 }
 
-.heroScreen h3 {
-  font-size: 120%;
-}
 
-.heroScreen p {
-  font-size: xx-large;
-  font-style: italic;
-  font-size: 95%;
-  width: 23em;
-}
 
-.heroText {
-  /* top:4em;
-  left:5em;
-  position: absolute; */
-  color: white;
-  font-size: 3.3rem;
-}
-
-.logoHeader {
+.logoHeader, .logoHeader a {
   text-decoration: none;
+  color:white;
   font-size: 50px;
   font-weight:500;
 }
@@ -63,18 +42,8 @@ body {
   height: 150px;
 }
 
-.navbar-brand {
-  font-size: 160%;
-  padding-right: 2rem;
-  font-family: 'splendid_66regular';
-}
+.nav-link {
 
-.thumbnail .description {
-  color: #7f7f7f;
-}
-
-.thumbnail img {
-  max-width: 200px;
 }
 
 .caption {
@@ -82,4 +51,18 @@ body {
   top: 45%;
   left: 0;
   width: 100%;
+}
+
+.topSection
+{
+  background-image: url(/images/moon.png);
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: 6rem;
+  padding:0.5rem;border-bottom: 1px solid rgb(34, 34, 34);
+  margin-bottom: 10px;
+}
+
+.white {
+  color:white;
 }
