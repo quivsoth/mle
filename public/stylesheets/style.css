@@ -45,7 +45,7 @@ body {
   width: 100%;
 }
 
-.topSection
+/* .topSection
 {
   background-image: url(/images/moon.png);
   background-repeat:no-repeat;
@@ -53,8 +53,20 @@ body {
   background-size: 6rem;
   padding:0.5rem;border-bottom: 1px solid rgb(34, 34, 34);
   margin-bottom: 10px;
-}
+} */
 
 .white {
   color:white;
+}
+
+
+
+.cart-profile {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+}
+
+.cart-profile li {
+	display: inline;
 }

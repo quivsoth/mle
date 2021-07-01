@@ -1,45 +1,27 @@
-<div class="topSection">
-  <div class="container" >
-    <header class="blog-header py-3" style="margin-bottom: -10px">
-      <div class="row flex-nowrap justify-content-between align-items-center">
-        <div class="col-2 pt-1">
-          <li class="nav-item dropdown" style="list-style-type: none;">
-            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#4c5258">
-              <i class="fas fa-user"></i> &nbsp;My Profile
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">My Details</a></li>
-              <li><a class="dropdown-item" href="#">My Preferences</a></li>
-              <li><a class="dropdown-item" href="#">Settings</a></li>
-              <li><a class="dropdown-item" href="#">Edit</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Logout</a></li>
-            </ul>
-          </li>
-        </div>
-        <div class="col-7 text-center">
-          <div style="padding-top: 3.5rem">
-          <a class="text-light logoHeader" href="/">Baja La Bruja</a>
-          </div>
-        </div>
-        <div class="col-2 d-flex justify-content-end align-items-center">
-          <ul class="navbar-nav mb-2 mb-lg-0 me-right">
-              <li class="nav-item">
-                <a class="nav-link text-light" href="#"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp; Cart</a>
-              </li>
-            </ul>
-        </div>
-      </div>
-    </header>
-    <div class="nav-scroller py-1 mb-2">
-      <nav class="nav d-flex justify-content-between ">
-        <a class="p-2 link-secondary text-light" href="/">Home</a>
-        <a class="p-2 link-secondary text-light" href="/lifestyle">La Bruja</a>
-        <a class="p-2 link-secondary text-light" href="/collections">Collections</a>
-        <a class="p-2 link-secondary text-light" href="/gifts">Collaborations</a>
-        {{!-- <a class="p-2 link-secondary text-light" href="/gifts">Gift Ideas</a> --}}
-        {{!-- <a class="p-2 link-secondary text-light" href="/contacts">Contact Us</a> --}}
-      </nav>
+<div style="border-bottom: 1px solid rgb(34, 34, 34);" class="full-width">
+  <header class="d-flex">
+    <div class="col-2 text-center"></div>
+    <div class="col-8 text-center">
+      <a href="/">
+        <img src="/images/logo.png" style="max-height: 150px;">
+      </a>
     </div>
+    <div class="col-2 justify-content-end align-items-right">
+      <ul class="cart-profile">
+        <li><a href="#"><i class="fas fa-user text-light"></i></a></li>
+        <li style="padding-left:1rem;"><a href="#"><i class="fas fa-shopping-cart text-light"></i></a></li>
+      </ul>
+    </div>
+  </header>
+
+  {{!---- NAVBAR ----}}
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between" style="padding-left: 2rem; padding-right:2rem;">
+      <a class="p-2 link-secondary text-light" href="/">Home</a>
+      <a class="p-2 link-secondary text-light" href="/lifestyle">La Bruja</a>
+      <a class="p-2 link-secondary text-light" href="/collections">Collections</a>
+      <a class="p-2 link-secondary text-light" href="/gifts">Collaborations</a>
+      {{!-- <a class="p-2 link-secondary text-light" href="/contacts">Contact Us</a> --}}
+    </nav>
   </div>
 </div>
