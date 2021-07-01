@@ -15,11 +15,19 @@
         },
         {
             "productId": 2,
-            "productName": "myproductName",
-            "productImage": "productImage",
-            "description": "product description",
-            "price": 21,
+            "productName": "myproductName 2",
+            "productImage": "productImage 2",
+            "description": "product description 2",
+            "price": 451,
             "size": 6,
+            "active": true
+        },
+        {   "productId": 3,
+            "productName": "my product Name 3",
+            "productImage": "product Image 3",
+            "description": "product description 3",
+            "price": 26,
+            "size": 8,
             "active": true
         }]
 },
