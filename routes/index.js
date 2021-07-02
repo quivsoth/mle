@@ -42,12 +42,18 @@ router.get('/products', function(req, res, next) {
   (async function() {
     let collectionId = req.query.collectionId;
     const products = await getProducts(collectionId);
-    var productChunks = [];
-    var chunkSize = 4;
-    for (let i = 0; i < products.length; i+= chunkSize) {
-      productChunks.push(products.slice(i, i + chunkSize));
+
+    var activeProducts = [];
+    for (let i = 0; i < products.products.length; i++) {
+      if(products.products[i].active === true) activeProducts.push(products.products[i]);
     }
-    res.render('shop/products', { title: 'Baja La Bruja - Products', products: productChunks });
+
+    var productChunks = [];
+    var chunkSize = 5;
+    for (let i = 0; i < activeProducts.length; i+= chunkSize) {
+      productChunks.push(activeProducts.slice(i, i + chunkSize));
+    }
+    res.render('shop/products', { title: 'Baja La Bruja - Products', products: productChunks, breadCrumb: products.collectionName });
   })();
 });
 
@@ -79,9 +85,10 @@ async function getProducts(collectionId){
   const client = new MongoClient(uri, { useUnifiedTopology: true });
   try {
       await client.connect();
-      const cursor = client.db("shop").collection("products").find({collectionId: Number(collectionId), active: true});
-      const results = await cursor.toArray();
-      return results;
+      const cursor = await client.db("shop").collection("bruja").findOne({collectionId: Number(collectionId), active: true});
+      // const results = await cursor.toArray();
+      // console.log("results: " + JSON.stringify(cursor));
+      return cursor;
   } catch (e) { console.error(e); }
   finally { await client.close(); }
 }
