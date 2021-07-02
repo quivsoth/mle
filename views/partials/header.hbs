@@ -1,34 +1,55 @@
+<div class="collapse multi-collapse" id="multiCollapseExample1">
+  <div class="card card-body">
+    <ul class="navbar-nav full-width">
+      <li class="nav-item">
+        <a class="nav-link text-light" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="/lifestyle">La Bruja</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="/collections">Collections</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="/gifts">Collaborations</a>
+      </li>
+    </ul>
+  </div>
+</div>
 <div class="container-fluid full-width">
   <header class="d-flex" style="margin-top: -1rem;">
     <div class="col-2 text-center"></div>
     <div class="col-8 text-center">
       <a href="/">
-        <img src="/images/logo.png" style="max-height: 200px;">
+        <img src="/images/logo.png" style="max-height: 200px;" />
       </a>
     </div>
     <div class="col-2 align-items-right"></div>
-    {{!-- <div class="col-2 align-items-right">
+    {{! <div class="col-2 align-items-right">
       <ul class="cart-profile">
         <li><a href="#"><i class="fas fa-user text-light"></i></a></li>
         <li style="padding-left:1rem;"><a href="#"><i class="fas fa-shopping-cart text-light"></i></a></li>
       </ul>
-    </div> --}}
-  </header> 
+    </div> }}
+  </header>
 
-  {{!---- NAVBAR ----}}
-  {{!-- <div class="nav-scroller py-1 mb-2">
-    <nav class="nav d-flex justify-content-between" style="padding-left: 2rem; padding-right:2rem;">     
-      <a class="p-2 link-secondary text-light" href="/">Home</a>
-      <a class="p-2 link-secondary text-light" href="/lifestyle">La Bruja</a>
-      <a class="p-2 link-secondary text-light" href="/collections">Collections</a>
-      <a class="p-2 link-secondary text-light" href="/gifts">Collaborations</a>
-      <a class="p-2 link-secondary text-light" href="/contacts">Contact Us</a>
-    </nav>
-  </div> --}}
-
-  <nav class="navbar navbar-expand-lg navbar-dark full-width" aria-label="Baja La Bruja Menu" style="margin-top:-2rem;">
+  {{! NAVBAR }}
+  <nav
+    class="navbar navbar-expand-lg navbar-dark full-width"
+    aria-label="Baja La Bruja Menu"
+    style="margin-top:-2rem;"
+  >
     <div class="container-fluid">
-      <button style="margin-top:-16rem" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-blb" aria-controls="nav-blb" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        style="margin-top:-16rem"
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#multiCollapseExample1"
+        aria-controls="multiCollapseExample1"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="nav-blb">
@@ -40,7 +61,10 @@
             <a class="nav-link text-light menu" href="/lifestyle">La Bruja</a>
           </li>
           <li class="nav-item ms-5">
-            <a class="nav-link text-light menu" href="/collections">Collections</a>
+            <a
+              class="nav-link text-light menu"
+              href="/collections"
+            >Collections</a>
           </li>
           <li class="nav-item ms-5">
             <a class="nav-link text-light menu" href="/gifts">Collaborations</a>
@@ -49,5 +73,4 @@
       </div>
     </div>
   </nav>
-  
 </div>
