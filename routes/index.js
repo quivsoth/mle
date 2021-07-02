@@ -6,12 +6,10 @@ const uri = `mongodb://192.168.1.3:27017`;
 /* GET home page. */
 router.get('/s', function(req, res, next) {
   res.render('s', { title: 'da tank'});
-  // console.log("app.locals.settings" + app);
 });
 
 router.get('/', function(req, res, next) {
-  res.render('shop/index', { title: 'Baja La Bruja - fighting fast fashion'});
-  // console.log("app.locals.settings" + app);
+  res.render('shop/index', { title: 'Baja La Bruja - Fighting Fast Fashion'});
 });
 
 router.get('/lifestyle', function(req, res, next) {
@@ -31,7 +29,7 @@ router.get('/collections', function(req, res, next) {
   (async function() {
     const collections = await getCollections();
     var productChunks = [];
-    var chunkSize = 4;
+    var chunkSize = 5;
     for (let i = 0; i < collections.length; i+= chunkSize) {
       productChunks.push(collections.slice(i, i + chunkSize));
     }
@@ -63,10 +61,7 @@ router.get('/item', function(req, res, next) {
 });
 
 
-
 //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
-
-
 
 
 async function getCollections(){

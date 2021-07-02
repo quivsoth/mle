@@ -5,7 +5,7 @@
   </ol>
 </nav>
 
-<h3 class="text-center text-light" style="padding: 0 0rem 1rem 0;">Collections</h3>
+<h1 class="text-center text-light" style="padding: 0 0 1rem 0;">Collections</h1>
 {{# each collections }}
     <div class="row justify-content-md-center">
         {{# each this}}
@@ -13,9 +13,9 @@
                 <a href="/products?collectionId={{this.collectionId}}" style="text-decoration: none;">
                 <div class="card" style="text-decoration: none;">
                     <img class="card-img-top" src="images/collections/{{ this.image }}" alt="{{ this.collectionName }}">
-                    <div class="card-body">
+                    {{!-- <div class="card-body">
                         <div class="price text-center">{{ this.collectionName }}</div>
-                    </div>
+                    </div> --}}
                 </div>
                 </a>
             </div>
