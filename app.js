@@ -6,10 +6,7 @@ var logger = require('morgan');
 var expressHbs = require('express-handlebars');
 var indexRouter = require('./routes/index');
 
-
 var app = express();
-
-
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
