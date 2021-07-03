@@ -69,3 +69,13 @@ html {
 .cart-profile li {
 	display: inline;
 }
+
+
+.imageFloat {
+  padding:2rem; 
+  margin-top:-3rem;
+  background-image:url(/images/emily_transparent2.png);
+  background-repeat: no-repeat;
+  background-position:80% 18%;  /* adjust to fit your design and the image */
+  background-size:22rem;
+}
