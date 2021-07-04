@@ -6,8 +6,38 @@
   </div>
 </div> --}}
 
+<style>
+
+  .fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    
+}
+
+.fullscreen-bg__video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 50%;
+}
+
+
+</style>
+
+<div class="fullscreen-bg" >
+    <video muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+        <source src="/images/BLB-promo.mov" type="video/mp4">
+    </video>
+</div>
+
 <div class="container-fluid text-light">
-    <div class="row full-width imageFloat">
+    <div class="row full-width ">
         <div class="col-lg-7 " style="height:27rem;margin-top:3rem;">
             <h3 class="subtitle letter-spacing-3 mb-3 text-light font-weight-light">Experience revival; without the fast fashion.</h3>
             <h2 class="display-1 mb-3" style="line-height: 1">Curated Vintage &amp; Revived Style</h2>
