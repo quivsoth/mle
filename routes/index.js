@@ -85,8 +85,6 @@ async function getProducts(collectionId){
   try {
       await client.connect();
       const cursor = await client.db("shop").collection("bruja").findOne({collectionId: Number(collectionId), active: true});
-      // const results = await cursor.toArray();
-      // console.log("results: " + JSON.stringify(cursor));
       return cursor;
   } catch (e) { console.error(e); }
   finally { await client.close(); }
@@ -94,15 +92,10 @@ async function getProducts(collectionId){
 
 async function getItem(productId, collectionId){
   const client = new MongoClient(uri, { useUnifiedTopology: true });
-
   try {
-    console.log("productId: " + productId);
-    console.log("collectionId: " + collectionId);
-
       await client.connect();
       const cursor = await client.db("shop").collection("bruja").findOne({"collectionId": parseInt(collectionId)});
       let item = cursor.products.find(product => product.productId == productId);
-      console.log(item);
       return item;
   } catch (e) { console.error(e); }
   finally { await client.close(); }
