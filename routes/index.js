@@ -53,7 +53,7 @@ router.get('/products', function(req, res, next) {
     for (let i = 0; i < activeProducts.length; i+= chunkSize) {
       productChunks.push(activeProducts.slice(i, i + chunkSize));
     }
-    res.render('shop/products', { title: 'Baja La Bruja - Products', products: productChunks, breadCrumb: products.collectionName });
+    res.render('shop/products', { title: 'Baja La Bruja - Products', products: productChunks, breadCrumb: products.collectionName, collectionId: collectionId });
   })();
 });
 
@@ -61,8 +61,9 @@ router.get('/products', function(req, res, next) {
 router.get('/item', function(req, res, next) {
   (async function() {
     let itemId = req.query.itemId;
-    const item = await getItem(itemId);
-    res.render('shop/item', { title: 'Baja La Bruja - Items', item: item});
+    let collectionId = req.query.collectionId;
+    const item = await getItem(itemId, collectionId);
+    res.render('shop/item', { title: 'Baja La Bruja - Items', item: item, collectionId: collectionId});
   })();
 });
 
@@ -91,12 +92,17 @@ async function getProducts(collectionId){
   finally { await client.close(); }
 }
 
-async function getItem(productId){
+async function getItem(productId, collectionId){
   const client = new MongoClient(uri, { useUnifiedTopology: true });
+
   try {
+    console.log("productId: " + productId);
+    console.log("collectionId: " + collectionId);
+
       await client.connect();
-      const cursor = await client.db("shop").collection("bruja").findOne({collectionId:2});
-      let item = cursor.products.find(product => product.productId == 1);
+      const cursor = await client.db("shop").collection("bruja").findOne({"collectionId": parseInt(collectionId)});
+      let item = cursor.products.find(product => product.productId == productId);
+      console.log(item);
       return item;
   } catch (e) { console.error(e); }
   finally { await client.close(); }

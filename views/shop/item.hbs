@@ -3,22 +3,22 @@
     <li class="breadcrumb-item"><a href="/">Home</a></li>
     <li class="breadcrumb-item"><a href="/collections">Home</a></li>
     <li class="breadcrumb-item"><a href="/collections">Collections</a></li>
-    <li class="breadcrumb-item"><a href="/products">Products</a></li>
-    <li class="breadcrumb-item active" aria-current="page">{{ this.productName }}</li>
+    <li class="breadcrumb-item"><a href="/products?collectionId={{collectionId}}">Products</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ item.productName }}</li>
   </ol>
 </nav>
 
-<div id="row">
-  <div class="col col-lg-2">
-      <img src="/images/products/{{ item.productImage }}" style="max-width: 450px;" />
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 p-3 text-center">
+      <img src="/images/products/{{ item.productImage }}" style="border-radius:10px;max-width: 250px;" >
     </div>
-    <div class="col-md-auto">
-      <h1></h1>>
+    <div class="col-md-6 p-3">
+      <h1 class="text-light">{{ item.productName }}</h1>
+    <p class="text-light">{{ item.description }}</p>
+    <p class="text-light">Size: {{ item.size }}</p>
+    <p class="text-light">${{ item.price }}</p>
+    <a class="btn btn-light" href="#">Add to cart</a>
     </div>
+  </div>
 </div>
-
-<div class="price text-center text-light">{{ item.productName }}</div>
-<div class="price text-center text-light">{{ item.productImage }}</div>
-<div class="text-center text-light">{{ item.description }}</div>
-<div class="price text-center text-light">Size: {{ item.size }}</div>
-<div class="price text-center text-light">${{ item.price }}</div>

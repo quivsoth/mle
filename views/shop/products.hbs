@@ -12,7 +12,7 @@
     <div class="row justify-content-md-center">
         {{# each this}}
             <div class="col-xs-3 col-lg-2 blockSpace4">
-                <a href="/items?itemId={{this.productId}}" style="text-decoration: none;">
+                <a href="/item?itemId={{this.productId}}&collectionId={{@root.collectionId}}" style="text-decoration: none;">
                     <div class="card">
                         <img class="card-img-top" src="images/products/{{ this.productImage }}" alt="{{ this.productName }}">
                         <div class="card-body">
