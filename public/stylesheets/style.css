@@ -8,6 +8,10 @@ html {
   width:100%;
 }
 
+.bjb-header{
+  padding-top:1.5rem;
+}
+
 .blockSpace4 {
   padding-bottom: 4rem;
 }
@@ -78,4 +82,14 @@ html {
   background-repeat: no-repeat;
   background-position:80% 18%;  /* adjust to fit your design and the image */
   background-size:22rem;
+}
+
+
+.carousel {
+  width: 17rem;
+  background-color: black;
+}
+
+.flickity-slider {
+  background-color: black;
 }
