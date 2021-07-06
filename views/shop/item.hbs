@@ -8,7 +8,17 @@
   </ol>
 </nav>
 
-<div class="price text-center">{{ item.productName }}</div>
-<div class="text-center">{{ item.description }}</div>
-<div class="price text-center">Size: {{ item.size }}</div>
-<div class="price text-center">${{ item.price }}</div>
+<div id="row">
+  <div class="col col-lg-2">
+      <img src="/images/products/{{ item.productImage }}" style="max-width: 450px;" />
+    </div>
+    <div class="col-md-auto">
+      Variable width content
+    </div>
+</div>
+
+<div class="price text-center text-light">{{ item.productName }}</div>
+<div class="price text-center text-light">{{ item.productImage }}</div>
+<div class="text-center text-light">{{ item.description }}</div>
+<div class="price text-center text-light">Size: {{ item.size }}</div>
+<div class="price text-center text-light">${{ item.price }}</div>

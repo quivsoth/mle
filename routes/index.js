@@ -66,9 +66,7 @@ router.get('/item', function(req, res, next) {
   })();
 });
 
-
 //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
-
 
 async function getCollections(){
   const client = new MongoClient(uri, { useUnifiedTopology: true });
@@ -97,8 +95,9 @@ async function getItem(productId){
   const client = new MongoClient(uri, { useUnifiedTopology: true });
   try {
       await client.connect();
-      const cursor = await client.db("shop").collection("products").findOne({productId: Number(productId), active: true});
-      return cursor;
+      const cursor = await client.db("shop").collection("bruja").findOne({collectionId:2});
+      let item = cursor.products.find(product => product.productId == 1);
+      return item;
   } catch (e) { console.error(e); }
   finally { await client.close(); }
 }
