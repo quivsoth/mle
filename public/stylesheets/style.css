@@ -4,6 +4,10 @@ body {
   width:100%;
 }
 
+html {
+  width:100%;
+}
+
 .bjb-header{
   padding-top:1.5rem;
 }
@@ -12,34 +16,13 @@ body {
   padding-bottom: 4rem;
 }
 
-.caption {
-  position: absolute;
-  top: 45%;
-  left: 0;
-  width: 100%;
-}
-
 .card  {
   text-decoration: none;
   background-color: #4b4b4b;
 }
 
-.carousel {
-  width: 17rem;
-  background-color: black;
-}
-
-.flickity-slider {
-  background-color: black;
-}
-
-.imageFloat {
-  padding:2rem;
-  margin-top:-3rem;
-  background-image:url(/images/emily_transparent2.png);
-  background-repeat: no-repeat;
-  background-position:80% 18%;  /* adjust to fit your design and the image */
-  background-size:22rem;
+.full-width {
+  padding: 0;
 }
 
 .logoHeader, .logoHeader a {
@@ -49,14 +32,54 @@ body {
   font-weight:500;
 }
 
+.price {
+  font-weight: bold;
+  font-size: x-large;
+}
+
 .menu {
   font-size:1.6rem;
   text-decoration: none;
 }
 
+.navbar {
+  /* border-bottom: 1px solid lightgrey; */
+
+}
+
+.caption {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+}
+
+/* .topSection
+{
+  background-image: url(/images/moon.png);
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: 6rem;
+  padding:0.5rem;border-bottom: 1px solid rgb(34, 34, 34);
+  margin-bottom: 10px;
+} */
+
+.cart-profile {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+}
+
+.cart-profile li {
+	display: inline;
+}
 
 
-.price {
-  font-weight: bold;
-  font-size: x-large;
+.imageFloat {
+  padding:2rem; 
+  margin-top:-3rem;
+  background-image:url(/images/emily_transparent2.png);
+  background-repeat: no-repeat;
+  background-position:80% 18%;  /* adjust to fit your design and the image */
+  background-size:22rem;
 }
