@@ -1,21 +1,17 @@
 .bg-image {
   width: 100%;
-  background: url('/images/moon-bg.png') no-repeat fixed;
-  background-position:cover;
-  z-index: 100;
+  background: url('/images/fullmoon.png') no-repeat right fixed;
+  background-position: 80% 68%;
 }
 
 body {
     font-family: 'splendid_66regular';
     background-color: black;
-    width: 100%;
-
-
 }
 
 
 .bjb-header {
-    padding-top: 1.5rem;
+    
 
 
 }
