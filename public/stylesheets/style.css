@@ -1,11 +1,23 @@
+.bg-image {
+  width: 100%;
+  background: url('/images/moon-bg.png') no-repeat fixed;
+  background-position:cover;
+  z-index: 100;
+}
+
 body {
     font-family: 'splendid_66regular';
     background-color: black;
     width: 100%;
+
+
 }
+
 
 .bjb-header {
     padding-top: 1.5rem;
+
+
 }
 
 .blockSpace4 {
@@ -101,6 +113,7 @@ body {
 .navbar {
   background-color: #070707;
   border-bottom: 1px solid  #252525;
+
 }
 
 .navbar-nav {
