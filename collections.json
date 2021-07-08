@@ -212,93 +212,525 @@
   "products": [
     {
       "productId": 1,
-      "productName": "my product Name",
-      "productImage": "product Image",
-      "description": "product description",
+      "productName": "Gown 1",
+      "productImage": "slip_it_slow/IMG_0176.PNG",
+      "description": "Product description will go here, please add a brief description",
+      "productThumbs": [
+        {
+          "thumbnail": "slip_it_slow/IMG_0176.PNG",
+          "image": "slip_it_slow/IMG_0176.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_0174.PNG",
+          "image": "slip_it_slow/IMG_0174.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_0175.PNG",
+          "image": "slip_it_slow/IMG_0175.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_0178.PNG",
+          "image": "slip_it_slow/IMG_0178.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_0179.PNG",
+          "image": "slip_it_slow/IMG_0179.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_0182.PNG",
+          "image": "slip_it_slow/IMG_0182.PNG"
+        }
+      ],
       "price": 21,
       "size": 6,
       "active": true
     },
     {
       "productId": 2,
-      "productName": "myproductName 2",
-      "productImage": "productImage 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
+      "productName": "Gown 2",
+      "productImage": "slip_it_slow/IMG_1209.PNG",
+      "description": "Product description will go here, please add a brief description",
+      "productThumbs": [
+        {
+          "thumbnail": "slip_it_slow/IMG_1209.PNG",
+          "image": "slip_it_slow/IMG_1209.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1206.PNG",
+          "image": "slip_it_slow/IMG_1206.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1210.PNG",
+          "image": "slip_it_slow/IMG_1210.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1212.PNG",
+          "image": "slip_it_slow/IMG_1212.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1214.PNG",
+          "image": "slip_it_slow/IMG_1214.PNG"
+        }
+      ],
+      "price": 500,
+      "size": 4,
       "active": true
     },
     {
       "productId": 3,
-      "productName": "my product Name 3",
-      "productImage": "product Image 3",
-      "description": "product description 3",
+      "productName": "Gown 3",
+      "productImage": "slip_it_slow/IMG_1225.PNG",
+      "description": "Product description will go here, please add a brief description",
+      "productThumbs": [
+        {
+          "thumbnail": "slip_it_slow/IMG_1225.PNG",
+          "image": "slip_it_slow/IMG_1225.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1224.PNG",
+          "image": "slip_it_slow/IMG_1224.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1228.PNG",
+          "image": "slip_it_slow/IMG_1228.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1232.PNG",
+          "image": "slip_it_slow/IMG_1232.PNG"
+        }
+      ],
       "price": 26,
-      "size": 8,
+      "size": 4,
       "active": true
     },
     {
       "productId": 4,
-      "productName": "my product Name 4",
-      "productImage": "product Image 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
+      "productName": "Gown 4",
+      "productImage": "slip_it_slow/IMG_1239.PNG",
+      "description": "Product description will go here, please add a brief description",
+      "productThumbs": [
+        {
+          "thumbnail": "slip_it_slow/IMG_1239.PNG",
+          "image": "slip_it_slow/IMG_1239.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1238.PNG",
+          "image": "slip_it_slow/IMG_1238.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1240.PNG",
+          "image": "slip_it_slow/IMG_1240.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1249.PNG",
+          "image": "slip_it_slow/IMG_1249.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1237.PNG",
+          "image": "slip_it_slow/IMG_1237.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1241.PNG",
+          "image": "slip_it_slow/IMG_1241.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1242.PNG",
+          "image": "slip_it_slow/IMG_1242.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1243.PNG",
+          "image": "slip_it_slow/IMG_1243.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1246.PNG",
+          "image": "slip_it_slow/IMG_1246.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1249.PNG",
+          "image": "slip_it_slow/IMG_1249.PNG"
+        }
+      ],
+      "price": 122,
+      "size": 10,
       "active": true
     },
     {
       "productId": 5,
-      "productName": "my product Name 5",
-      "productImage": "product Image 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
+      "productName": "Gown 5",
+      "productImage": "slip_it_slow/IMG_1264.PNG",
+      "description": "Product description will go here, please add a brief description",
+      "productThumbs": [
+        {
+          "thumbnail": "slip_it_slow/IMG_1264.PNG",
+          "image": "slip_it_slow/IMG_1264.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1252.PNG",
+          "image": "slip_it_slow/IMG_1252.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1266.PNG",
+          "image": "slip_it_slow/IMG_1266.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1260.PNG",
+          "image": "slip_it_slow/IMG_1260.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1252.PNG",
+          "image": "slip_it_slow/IMG_1252.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1253.PNG",
+          "image": "slip_it_slow/IMG_1253.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1281.PNG",
+          "image": "slip_it_slow/IMG_1281.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1284.PNG",
+          "image": "slip_it_slow/IMG_1284.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1266.PNG",
+          "image": "slip_it_slow/IMG_1266.PNG"
+        }
+      ],
+      "price": 120,
+      "size": 6,
+      "active": true
     },
     {
       "productId": 6,
-      "productName": "my product Name 6",
-      "productImage": "product Image 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
+      "productName": "Gown 6",
+      "productImage": "slip_it_slow/IMG_1297.PNG",
+      "description": "Product description will go here, please add a brief description",
+      "productThumbs": [
+        {
+          "thumbnail": "slip_it_slow/IMG_1297.PNG",
+          "image": "slip_it_slow/IMG_1297.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1286.PNG",
+          "image": "slip_it_slow/IMG_1286.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1296.PNG",
+          "image": "slip_it_slow/IMG_1296.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1298.PNG",
+          "image": "slip_it_slow/IMG_1298.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1300.PNG",
+          "image": "slip_it_slow/IMG_1300.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1301.PNG",
+          "image": "slip_it_slow/IMG_1301.PNG"
+        }
+      ],
+      "price": 160,
+      "size": 4,
+      "active": true
     },
     {
       "productId": 7,
-      "productName": "my product Name 8",
-      "productImage": "product Image 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
+      "productName": "Gown 7",
+      "productImage": "slip_it_slow/IMG_1306.PNG",
+      "description": "Product description will go here, please add a brief description",
+      "productThumbs": [
+        {
+          "thumbnail": "slip_it_slow/IMG_1306.PNG",
+          "image": "slip_it_slow/IMG_1306.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1302.PNG",
+          "image": "slip_it_slow/IMG_1302.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1305.PNG",
+          "image": "slip_it_slow/IMG_1305.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_IMG_1308.PNG",
+          "image": "slip_it_slow/IMG_IMG_1308.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1313.PNG",
+          "image": "slip_it_slow/IMG_1313.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1315.PNG",
+          "image": "slip_it_slow/IMG_1315.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1317.PNG",
+          "image": "slip_it_slow/IMG_1317.PNG"
+        }
+      ],
+      "price": 45,
+      "size": 7,
+      "active": true
     },
     {
       "productId": 8,
-      "productName": "my product Name 8",
-      "productImage": "product Image 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
+      "productName": "Gown 8",
+      "productImage": "slip_it_slow/IMG_1322.PNG",
+      "description": "Product description will go here, please add a brief description",
+      "productThumbs": [
+        {
+          "thumbnail": "slip_it_slow/IMG_1322.PNG",
+          "image": "slip_it_slow/IMG_1322.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1323.PNG",
+          "image": "slip_it_slow/IMG_1323.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1325.PNG",
+          "image": "slip_it_slow/IMG_1325.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1332.PNG",
+          "image": "slip_it_slow/IMG_1332.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1336.PNG",
+          "image": "slip_it_slow/IMG_1336.PNG"
+        }
+      ],
+      "price": 97,
+      "size": 5,
+      "active": true
     },
     {
       "productId": 9,
-      "productName": "my product Name 9",
-      "productImage": "product Image 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
+      "productName": "Gown 9",
+      "productImage": "slip_it_slow/IMG_1581.PNG",
+      "description": "Product description will go here, please add a brief description",
+      "productThumbs": [
+        {
+          "thumbnail": "slip_it_slow/IMG_1581.PNG",
+          "image": "slip_it_slow/IMG_1581.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1592.PNG",
+          "image": "slip_it_slow/IMG_1592.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1593.PNG",
+          "image": "slip_it_slow/IMG_1593.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_1594.PNG",
+          "image": "slip_it_slow/IMG_1594.PNG"
+        }
+      ],
+      "price": 200,
+      "size": 4,
+      "active": true
     },
     {
       "productId": 10,
-      "productName": "my product Name 10",
-      "productImage": "product Image 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
+      "productName": "Gown 10",
+      "productImage": "slip_it_slow/IMG_2853.PNG",
+      "description": "Product description will go here, please add a brief description",
+      "productThumbs": [
+        {
+          "thumbnail": "slip_it_slow/IMG_2853.PNG",
+          "image": "slip_it_slow/IMG_2853.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_2851.PNG",
+          "image": "slip_it_slow/IMG_2851.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_2852.PNG",
+          "image": "slip_it_slow/IMG_2852.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_2855.PNG",
+          "image": "slip_it_slow/IMG_2855.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_2857.PNG",
+          "image": "slip_it_slow/IMG_2857.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_2858.PNG",
+          "image": "slip_it_slow/IMG_2852.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_2859.PNG",
+          "image": "slip_it_slow/IMG_2859.PNG"
+        }
+      ],
+      "price": 52,
+      "size": 3,
+      "active": true
+    },
+    {
+      "productId": 11,
+      "productName": "Gown 11",
+      "productImage": "slip_it_slow/IMG_4763.PNG",
+      "description": "Product description will go here, please add a brief description",
+      "productThumbs": [
+        {
+          "thumbnail": "slip_it_slow/IMG_4763.PNG",
+          "image": "slip_it_slow/IMG_4763.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_4759.PNG",
+          "image": "slip_it_slow/IMG_4759.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_4760.PNG",
+          "image": "slip_it_slow/IMG_4760.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_4761.PNG",
+          "image": "slip_it_slow/IMG_4761.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_4764.PNG",
+          "image": "slip_it_slow/IMG_4764.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_4765.PNG",
+          "image": "slip_it_slow/IMG_4765.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_4767.PNG",
+          "image": "slip_it_slow/IMG_4767.PNG"
+        }
+      ],
+      "price": 102,
+      "size": 9,
+      "active": true
+    },
+    {
+      "productId": 12,
+      "productName": "Gown 12",
+      "productImage": "slip_it_slow/IMG_4773.PNG",
+      "description": "Product description will go here, please add a brief description",
+      "productThumbs": [
+        {
+          "thumbnail": "slip_it_slow/IMG_4773.PNG",
+          "image": "slip_it_slow/IMG_4773.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_4770.PNG",
+          "image": "slip_it_slow/IMG_4770.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_4777.PNG",
+          "image": "slip_it_slow/IMG_4777.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_4780.PNG",
+          "image": "slip_it_slow/IMG_4780.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_4783.PNG",
+          "image": "slip_it_slow/IMG_4783.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_4785.PNG",
+          "image": "slip_it_slow/IMG_4785.PNG"
+        }
+      ],
+      "price": 100,
+      "size": 5,
+      "active": true
+    },
+    {
+      "productId": 13,
+      "productName": "Gown 13",
+      "productImage": "slip_it_slow/IMG_4927.PNG",
+      "description": "Product description will go here, please add a brief description",
+      "productThumbs": [
+        {
+          "thumbnail": "slip_it_slow/IMG_4927.PNG",
+          "image": "slip_it_slow/IMG_4927.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_4925.PNG",
+          "image": "slip_it_slow/IMG_4925.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_4932.PNG",
+          "image": "slip_it_slow/IMG_4932.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_4933.PNG",
+          "image": "slip_it_slow/IMG_4933.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_4936.PNG",
+          "image": "slip_it_slow/IMG_4936.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_4937.PNG",
+          "image": "slip_it_slow/IMG_4937.PNG"
+        }
+      ],
+      "price": 50,
+      "size": 6,
+      "active": true
+    },
+    {
+      "productId": 14,
+      "productName": "Gown 14",
+      "productImage": "slip_it_slow/IMG_9164.PNG",
+      "description": "Product description will go here, please add a brief description",
+      "productThumbs": [
+        {
+          "thumbnail": "slip_it_slow/IMG_9164.PNG",
+          "image": "slip_it_slow/IMG_9164.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_9162.PNG",
+          "image": "slip_it_slow/IMG_9162.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_9168.PNG",
+          "image": "slip_it_slow/IMG_9168.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_9171.PNG",
+          "image": "slip_it_slow/IMG_9171.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_9174.PNG",
+          "image": "slip_it_slow/IMG_9174.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_9176.PNG",
+          "image": "slip_it_slow/IMG_9176.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_9183.PNG",
+          "image": "slip_it_slow/IMG_9183.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_9188.PNG",
+          "image": "slip_it_slow/IMG_9188.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_9189.PNG",
+          "image": "slip_it_slow/IMG_9189.PNG"
+        },
+        {
+          "thumbnail": "slip_it_slow/IMG_9193.PNG",
+          "image": "slip_it_slow/IMG_9193.PNG"
+        }
+      ],
+      "price": 290,
+      "size": 3,
+      "active": true
     }
   ]
 },{
@@ -3438,27 +3870,27 @@
       "productThumbs": [
         {
           "thumbnail": "beauty_sleeping/IMG_2867.JPG",
-          "image": "beauty_sleeping/IMG_2867"
+          "image": "beauty_sleeping/IMG_2867.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2871.JPG",
-          "image": "beauty_sleeping/IMG_2871"
+          "image": "beauty_sleeping/IMG_2871.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2872.JPG",
-          "image": "beauty_sleeping/IMG_2872"
+          "image": "beauty_sleeping/IMG_2872.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2877.JPG",
-          "image": "beauty_sleeping/IMG_2877"
+          "image": "beauty_sleeping/IMG_2877.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2878.JPG",
-          "image": "beauty_sleeping/IMG_2878"
+          "image": "beauty_sleeping/IMG_2878.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2885.JPG",
-          "image": "beauty_sleeping/IMG_2885"
+          "image": "beauty_sleeping/IMG_2885.JPG"
         }
       ],
       "price": 26,
@@ -3473,23 +3905,23 @@
       "productThumbs": [
         {
           "thumbnail": "beauty_sleeping/IMG_2768.JPG",
-          "image": "beauty_sleeping/IMG_2768"
+          "image": "beauty_sleeping/IMG_2768.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2767.JPG",
-          "image": "beauty_sleeping/IMG_2767"
+          "image": "beauty_sleeping/IMG_2767.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2769.JPG",
-          "image": "beauty_sleeping/IMG_2869"
+          "image": "beauty_sleeping/IMG_2769.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2774.JPG",
-          "image": "beauty_sleeping/IMG_2774"
+          "image": "beauty_sleeping/IMG_2774.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2775.JPG",
-          "image": "beauty_sleeping/IMG_2775"
+          "image": "beauty_sleeping/IMG_2775.JPG"
         }
       ],
       "price": 26,
@@ -3504,27 +3936,27 @@
       "productThumbs": [
         {
           "thumbnail": "beauty_sleeping/IMG_2786.JPG",
-          "image": "beauty_sleeping/IMG_2786"
+          "image": "beauty_sleeping/IMG_2786.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2789.JPG",
-          "image": "beauty_sleeping/IMG_2789"
+          "image": "beauty_sleeping/IMG_2789.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2792.JPG",
-          "image": "beauty_sleeping/IMG_2792"
+          "image": "beauty_sleeping/IMG_2792.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2793.JPG",
-          "image": "beauty_sleeping/IMG_2793"
+          "image": "beauty_sleeping/IMG_2793.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2796.JPG",
-          "image": "beauty_sleeping/IMG_2796"
+          "image": "beauty_sleeping/IMG_2796.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2800.JPG",
-          "image": "beauty_sleeping/IMG_2800"
+          "image": "beauty_sleeping/IMG_2800.JPG"
         }
       ],
       "price": 26,
@@ -3539,43 +3971,43 @@
       "productThumbs": [
         {
           "thumbnail": "beauty_sleeping/IMG_2807.JPG",
-          "image": "beauty_sleeping/IMG_2807"
+          "image": "beauty_sleeping/IMG_2807.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2802.JPG",
-          "image": "beauty_sleeping/IMG_2802"
+          "image": "beauty_sleeping/IMG_2802.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2803.JPG",
-          "image": "beauty_sleeping/IMG_2803"
+          "image": "beauty_sleeping/IMG_2803.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2804.JPG",
-          "image": "beauty_sleeping/IMG_2804"
+          "image": "beauty_sleeping/IMG_2804.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2806.JPG",
-          "image": "beauty_sleeping/IMG_2806"
+          "image": "beauty_sleeping/IMG_2806.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2800.JPG",
-          "image": "beauty_sleeping/IMG_2800"
+          "image": "beauty_sleeping/IMG_2800.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2810.JPG",
-          "image": "beauty_sleeping/IMG_2810"
+          "image": "beauty_sleeping/IMG_2810.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2815.JPG",
-          "image": "beauty_sleeping/IMG_2815"
+          "image": "beauty_sleeping/IMG_2815.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2818.JPG",
-          "image": "beauty_sleeping/IMG_2818"
+          "image": "beauty_sleeping/IMG_2818.JPG"
         },
         {
           "thumbnail": "beauty_sleeping/IMG_2812.JPG",
-          "image": "beauty_sleeping/IMG_2812"
+          "image": "beauty_sleeping/IMG_2812.JPG"
         }
       ],
       "price": 26,

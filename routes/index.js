@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 const {MongoClient} = require('mongodb');
 const uri = `mongodb://192.168.1.3:27017`;
+var csrf = require('csurf');
+
+var csrfProtection = csrf();
 
 /* GET home page. */
 router.get('/s', function(req, res, next) {

@@ -18,6 +18,13 @@ body {
     color: coral;
 }
 
+.caption {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+}
+
 .card {
     text-decoration: none;
     background-color: #4b4b4b;
@@ -26,7 +33,6 @@ body {
 * {
     box-sizing: border-box;
 }
-
 
 .carousel {
     background: #FAFAFA;
@@ -59,7 +65,24 @@ body {
     line-height: 80px;
 }
 
-.carousel-nav .carousel-cell.is-nav-selected {}
+.carousel-nav .carousel-cell.is-nav-selected {
+
+
+}
+
+.fas {
+  color: #414141;
+}
+
+
+.imageFloat {
+  padding: 2rem;
+  margin-top: -3rem;
+  background-image: url('/images/emily_transparent2.png');
+  background-repeat: no-repeat;
+  background-position: 80% 18%; /* adjust to fit your design and the image */
+  background-size: 22rem;
+}
 
 .logoHeader,
 .logoHeader a {
@@ -69,23 +92,32 @@ body {
     font-weight: 500;
 }
 
-.price {
-    font-weight: bold;
-    font-size: x-large;
-}
 
 .menu {
     font-size: 1.6rem;
     text-decoration: none;
 }
 
-
-.caption {
-    position: absolute;
-    top: 45%;
-    left: 0;
-    width: 100%;
+.navbar {
+  background-color: #070707;
+  border-bottom: 1px solid  #252525;
 }
+
+.navbar-nav {
+  padding-left: 2rem;
+  font-size: large;
+}
+
+.nav-item {
+  padding-left: 2rem;
+}
+
+.price {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+
 
 /* .topSection
 {
@@ -97,14 +129,7 @@ body {
   margin-bottom: 10px;
 } */
 
-.imageFloat {
-    padding: 2rem;
-    margin-top: -3rem;
-    background-image: url('/images/emily_transparent2.png');
-    background-repeat: no-repeat;
-    background-position: 80% 18%; /* adjust to fit your design and the image */
-    background-size: 22rem;
-}
+
 
 .sectionHeader {
     font-size: xx-large;
