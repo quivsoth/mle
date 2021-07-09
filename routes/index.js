@@ -7,10 +7,6 @@ var csrf = require('csurf');
 var csrfProtection = csrf();
 
 /* GET home page. */
-router.get('/s', function(req, res, next) {
-  res.render('s', { title: 'da tank'});
-});
-
 router.get('/', function(req, res, next) {
   res.render('shop/index', { title: 'Baja La Bruja - Fighting Fast Fashion'});
 });
@@ -66,7 +62,7 @@ router.get('/item', function(req, res, next) {
     let itemId = req.query.itemId;
     let collectionId = req.query.collectionId;
     const item = await getItem(itemId, collectionId);
-    res.render('shop/item', { title: 'Baja La Bruja - Items', item: item, collectionId: collectionId});
+    res.render('shop/item', { title: 'Baja La Bruja - Items', item: item.item, collectionId: collectionId, collectionName: item.collectioName});
   })();
 });
 
@@ -97,9 +93,13 @@ async function getItem(productId, collectionId){
   const client = new MongoClient(uri, { useUnifiedTopology: true });
   try {
       await client.connect();
+      var result = {};
       const cursor = await client.db("shop").collection("bruja").findOne({"collectionId": parseInt(collectionId)});
+      result.collectioName = cursor.collectionName;
       let item = cursor.products.find(product => product.productId == productId);
-      return item;
+      result.item = item;
+      console.log(item);
+      return result;
   } catch (e) { console.error(e); }
   finally { await client.close(); }
 }
