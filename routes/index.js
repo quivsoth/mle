@@ -5,6 +5,7 @@ const uri = `mongodb://192.168.1.3:27017`;
 var csrf = require('csurf');
 
 var csrfProtection = csrf();
+router.use(csrfProtection);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -65,6 +66,20 @@ router.get('/item', function(req, res, next) {
     res.render('shop/item', { title: 'Baja La Bruja - Items', item: item.item, collectionId: collectionId, collectionName: item.collectioName});
   })();
 });
+
+
+// ------ USER SIGN UP AND LOGIN //
+
+
+router.get('/user/signup', function(req, res, next) {
+  res.render('user/signup', {csrfToken: req.csrfToken()});
+});
+
+router.post('/user/signup', function(req, res, next){
+  res.redirect('/');
+});
+
+
 
 //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
