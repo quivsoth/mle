@@ -143,3 +143,15 @@ body {
 .sectionHeader {
     font-size: xx-large;
 }
+
+#image-slider {
+  width : 20rem;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.splide__slide img {
+	width : 20rem;
+	height: auto;
+}

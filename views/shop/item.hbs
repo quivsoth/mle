@@ -1,7 +1,6 @@
-{{!-------------------------- Flickity --------------------------}}
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -12,29 +11,24 @@
   </ol>
 </nav>
 
-<div class="container">
-  <div class="row  bg-image">
-    <div class="col-md-2 text-center"></div>
-    <!-- Column 1 -->
-    <div class="col-md-3 p-3 text-center">
-      {{!-- <img src="/images/products/{{ item.productImage }}" style="border-radius:10px;max-width:250px;" > --}}
-      <!-- Flickity HTML init -->
-      <div class="carousel carousel-main text-right" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }' style="background-color: black;width:17rem">
-        {{#each item.productThumbs}}
-          <img src="/images/products/{{this.image}}" style="max-width:17rem;border-radius:10px">
-        {{/each}}
-      </div>
 
-      <div class="carousel carousel-nav"
-        data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false }' style="background-color: black;margin-top:-2rem;width:17rem;">
-          {{#each item.productThumbs}}
-            <img src="/images/products/{{this.thumbnail}}" style="max-width: 40px;">
-          {{/each}}
+<div class="container">
+  <div class="row bg-image">
+    {{!-- COLUMN 1 --}}
+    <div class="col-md-2">
+      <div id="image-slider" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            {{#each item.productThumbs}}
+              <li class="splide__slide"><img src="images/products/{{this.image}}"></li>
+            {{/each}}
+          </ul>
+        </div>
       </div>
     </div>
-
-    <!-- Column 2 -->
-    <div class="col-md-5 p-3">
+    {{!-- COLUMN 2 --}}
+    <div class="col-lg-3"></div>
+    <div class="col-md-7" style="margin-bottom: 3rem;">
       <h1 class="text-light">{{ item.productName }}</h1>
       <p class="text-light">{{ item.description }}</p>
       <p class="text-light">Size: {{ item.size }}</p>
@@ -45,5 +39,8 @@
 </div>
 
 
-
-
+<script>
+  document.addEventListener( 'DOMContentLoaded', function () {
+	  new Splide( '#image-slider' ).mount();
+  } );
+</script>

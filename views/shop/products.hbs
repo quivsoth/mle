@@ -7,9 +7,9 @@
 </nav>
 {{!-- /items?itemId={{this.productId}} --}}
 
-<h4 class="sectionHeader text-center text-light" style="padding: 0  1rem 0;">Products</h4>
+<h4 class="sectionHeader text-center text-light" style="padding: 0  1rem 0;">{{ this.breadCrumb }}</h4>
 {{# each products }}
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-md-center bg-image">
         {{# each this}}
             <div class="col-xs-3 col-lg-2 blockSpace4">
                 <a href="/item?itemId={{this.productId}}&collectionId={{@root.collectionId}}" style="text-decoration: none;">
