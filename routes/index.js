@@ -3,6 +3,7 @@ var router = express.Router();
 const {MongoClient} = require('mongodb');
 const uri = `mongodb://192.168.1.3:27017`;
 var csrf = require('csurf');
+var passport = require('passport');
 
 var csrfProtection = csrf();
 router.use(csrfProtection);
@@ -67,20 +68,20 @@ router.get('/item', function(req, res, next) {
   })();
 });
 
-
-// ------ USER SIGN UP AND LOGIN //
-
-
+//-*-*-*-*USER SIGN UP AND LOGIN-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 router.get('/user/signup', function(req, res, next) {
   res.render('user/signup', {csrfToken: req.csrfToken()});
 });
 
-router.post('/user/signup', function(req, res, next){
-  res.redirect('/');
+router.post('/user/signup', passport.authenticate('local.signup',  {
+  sucessRedirect: '/user/profile',
+  failureRedirect: '/user/signup',
+  failureFlash: true
+}));
+
+router.get('/user/profile', function(req, res, next){
+  res.render('user/profile');
 });
-
-
-
 //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
 async function getCollections(){
@@ -94,7 +95,7 @@ async function getCollections(){
   finally { await client.close(); }
 }
 
-async function getProducts(collectionId){
+async function getProducts(collectionId) {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
   try {
       await client.connect();

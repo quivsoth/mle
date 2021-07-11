@@ -5,9 +5,18 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var expressHbs = require('express-handlebars');
 var session = require('express-session');
+var passport = require('passport');
+var flash = require('connect-flash');
+var mongoose = require('mongoose');
+
 var indexRouter = require('./routes/index');
 
 var app = express();
+
+const uri = `mongodb://192.168.1.3:27017/shop`;
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+require('./config/passport');
+
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
@@ -18,6 +27,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({secret: 'bajasecurity', resave: false, saveUninitialized: false}));
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
