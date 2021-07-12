@@ -1,8 +1,6 @@
 <div class="row">
-    <div class="col-md-4 cold-md-offset-4">
-        
-        <h4>Sign Up</h4>
-
+    <div class="col-md-4 col-md-offset-4 p-5 text-light" style="width:auto">
+        <h2 style="padding-bottom: 1rem">Sign Up for a New Account</h2>
         {{#if hasErrors}}
             <div class="alert alert-danger">
                 {{# each messages}}
@@ -10,13 +8,20 @@
                 {{/each}}
             </div>
         {{/if}}
-
         <form class="text-light" action="/user/signup" method="post">
-            <div class="form-group">
+        <div class="form-group" style="padding-bottom: 2rem">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" class="form-control"></input>
+            </div>
+            <div class="form-group" style="padding-bottom: 2rem">
+                <label for="lastname">Surname</label>
+                <input type="text" id="lastname" name="lastname" class="form-control"></input>
+            </div>
+            <div class="form-group" style="padding-bottom: 2rem">
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" class="form-control"></input>
             </div>
-            <div class="form-group">
+            <div class="form-group" style="padding-bottom: 2rem">
                 <label for="password" >Password</label>
                 <input type="password" id="password" name="password" class="form-control"></input>
             </div>

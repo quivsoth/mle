@@ -1,6 +1,7 @@
 var passport = require('passport');
 var User = require('../models/user');
 var LocalStrategy = require('passport-local').Strategy;
+var csrf = require('csurf');
 
 passport.serializeUser(function(user, done) {
     done(null, user.id);
@@ -18,12 +19,12 @@ passport.use('local.signup', new LocalStrategy({
     passReqToCallback: true
 }, function (req, email, password, done) {
     req.checkBody('email', 'Invalid email').notEmpty().isEmail();
-    req.checkBody('password', 'Invalid password').notEmpty().isLength({min:4});
+    req.checkBody('password', 'Invalid password - password must be 5 characters or more.').notEmpty().isLength({min:4});
     var errors = req.validationErrors();
     if(errors) {
         var messages = [];
         errors.forEach(function(error) {
-            messges.push(error.msg);
+            messages.push(error.msg);
         });
         return done (null, false, req.flash('error', messages))
     }
@@ -58,7 +59,7 @@ passport.use('local.signin', new LocalStrategy({
     if(errors) {
         var messages = [];
         errors.forEach(function(error) {
-            messges.push(error.msg);
+            messages.push(error.msg);
         });
         return done (null, false, req.flash('error', messages))
     }

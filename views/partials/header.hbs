@@ -32,8 +32,15 @@
 
       </ul>
       <div class="col-2">
-        <a href="#" style="padding-right:2rem;"><i class="fas fa-user"></i></a>
-        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        {{# unless login }}
+          <a href="/user/signin" style="padding-right:2rem;"><i class="fas fa-sign-in-alt" title="Login"></i></a>
+        {{/unless}}
+
+        {{# if login }}
+          <a href="/user/profile" style="padding-right:2rem;"><i class="fas fa-user" title="User Profile"></i></a>
+          <a href="/user/logout" style="padding-right:2rem;" ><i class="fas fa-sign-out-alt" title="Logout"></i></a>
+        {{/if}}
+        <a href="#"><i class="fas fa-shopping-cart" title="Shopping Cart"></i></a>
       </div>
     </div>
   </div>
