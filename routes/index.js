@@ -5,8 +5,8 @@ const uri = `mongodb://192.168.1.3:27017`;
 var csrf = require('csurf');
 var passport = require('passport');
 
-var csrfProtection = csrf();
-router.use(csrfProtection);
+// var csrfProtection = csrf();
+// router.use(csrfProtection);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -70,14 +70,22 @@ router.get('/item', function(req, res, next) {
 
 //-*-*-*-*USER SIGN UP AND LOGIN-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 router.get('/user/signup', function(req, res, next) {
-  res.render('user/signup', {csrfToken: req.csrfToken()});
+  let messages = req.flash('error');
+  // res.render('user/signup', {csrfToken: req.csrfToken()});
+  res.render('user/signup', {messages: messages, hasErrors: messages.length > 0});
+});
+
+router.get('/user/signin', function(req, res, next) {
+  let messages = req.flash('error');
+
+  res.render('user/signup', {messages: messages, hasErrors: messages.length > 0});
 });
 
 router.post('/user/signup', passport.authenticate('local.signup',  {
-  sucessRedirect: '/user/profile',
+  successRedirect: '/user/profile',
   failureRedirect: '/user/signup',
   failureFlash: true
-}));
+},));
 
 router.get('/user/profile', function(req, res, next){
   res.render('user/profile');

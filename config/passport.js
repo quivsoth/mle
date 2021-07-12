@@ -17,14 +17,22 @@ passport.use('local.signup', new LocalStrategy({
     passwordField: 'password',
     passReqToCallback: true
 }, function (req, email, password, done) {
+    req.checkBody('email', 'Invalid email').notEmpty().isEmail();
+    req.checkBody('password', 'Invalid password').notEmpty().isLength({min:4});
+    var errors = req.validationErrors();
+    if(errors) {
+        var messages = [];
+        errors.forEach(function(error) {
+            messges.push(error.msg);
+        });
+        return done (null, false, req.flash('error', messages))
+    }
     User.findOne({'email': email}, function (err, user) {
         if (err) {
-            console.log( 'Error found.');
             return done(err);
         }
         if (user) {
-            console.log( 'Exists found.');
-            return done(null, false, {message: 'Email is already in user.'});
+            return done(null, false, {message: 'Email is already taken.'});
         }
         var newUser = new User();
         newUser.email = email;
@@ -39,54 +47,40 @@ passport.use('local.signup', new LocalStrategy({
 }));
 
 
-
-
-
-
-
-
+passport.use('local.signin', new LocalStrategy({
+    usernameField: 'email',
+    passwordField: 'password',
+    passReqToCallback: true
+}, function (req, email, password, done) {
+    req.checkBody('email', 'Invalid email').notEmpty().isEmail();
+    req.checkBody('password', 'Invalid password').notEmpty();
+    var errors = req.validationErrors();
+    if(errors) {
+        var messages = [];
+        errors.forEach(function(error) {
+            messges.push(error.msg);
+        });
+        return done (null, false, req.flash('error', messages))
+    }
+    User.findOne({'email': email}, function (err, user) {
+        if (err) {
+            return done(err);
+        }
+        if (!user) {
+            return done(null, false, {message: 'Sorry, we are unable to find to your user. Please check your email is typed in correctly?'});
+        }
+        if(!user.validPassword(password)){
+            return done(null, false, {message: 'This password is incorrect.'});
+        }
+        return done(null, user);
+    });
+}));
 
 
 
 // // const {MongoClient} = require('mongodb');
 // var bcrypt = require('bcrypt-nodejs');
 // const uri = `mongodb://192.168.1.3:27017`;
-
-
-// function encryptPassword (password) {
-//     return bcrypt.hashSync(password, bcrypt.genSaltSync(5), null);
-// }
-
-// function validPassword (password) {
-//     return bcrypt.compareSync(password, this.passport, null);
-// }
-
-
-// passport.serializeUser(function(user, done) {
-//     done(null, user.id);
-// });
-
-// passport.deserializeUser(function(id, done){
-//     //user find by id    //call back
-//     done(err, user);
-// });
-
-
-// passport.use('local.signup', new LocalStrategy({
-//     usernameField: 'email',
-//     passwordField: 'password',
-//     passReqToCallback: true
-// }, function (req, email, password, done){
-//     //user findone ({email})
-//     getUser(email);
-//     // if theres a user then the account exists
-//     return done(null, false, {message: 'Email is already is use.'});
-
-
-// }));
-
-
-
 // async function getUser(emailAddress){
 //     const client = new MongoClient(uri, { useUnifiedTopology: true });
 //     try {

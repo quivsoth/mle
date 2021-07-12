@@ -5,7 +5,7 @@ const uri = `mongodb://192.168.1.3:27017/shop`;
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
-var User = require('/models/user.js');
+var User = require('./models/userSchema');
 
 // var newUser = new User();
 //         newUser.email = "gege@gmail.com";
