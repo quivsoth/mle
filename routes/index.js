@@ -79,6 +79,7 @@ async function getCollections(){
       await client.connect();
       const cursor = client.db("shop").collection("bruja").find({active: true}).sort({collectionId:1});
       const results = await cursor.toArray();
+      console.log(results);
       return results;
   } catch (e) { console.error(e); }
   finally { await client.close(); }

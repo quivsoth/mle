@@ -195,24 +195,12 @@
       "productName": "Gown 1",
       "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        {
-          "image": "slip_it_slow/IMG_0176.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_0174.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_0175.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_0178.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_0179.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_0182.PNG"
-        }
+        "slip_it_slow/IMG_0176.PNG",
+        "slip_it_slow/IMG_0174.PNG",
+        "slip_it_slow/IMG_0175.PNG",
+        "slip_it_slow/IMG_0178.PNG",
+        "slip_it_slow/IMG_0179.PNG",
+        "slip_it_slow/IMG_0182.PNG"
       ],
       "price": 21,
       "size": 6,
@@ -223,21 +211,11 @@
       "productName": "Gown 2",
       "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        {
-          "image": "slip_it_slow/IMG_1209.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1206.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1210.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1212.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1214.PNG"
-        }
+        "slip_it_slow/IMG_1209.PNG",
+        "slip_it_slow/IMG_1206.PNG",
+        "slip_it_slow/IMG_1210.PNG",
+        "slip_it_slow/IMG_1212.PNG",
+        "slip_it_slow/IMG_1214.PNG"
       ],
       "price": 500,
       "size": 4,
@@ -248,18 +226,10 @@
       "productName": "Gown 3",
       "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        {
-          "image": "slip_it_slow/IMG_1225.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1224.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1228.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1232.PNG"
-        }
+        "slip_it_slow/IMG_1225.PNG",
+        "slip_it_slow/IMG_1224.PNG",
+        "slip_it_slow/IMG_1228.PNG",
+        "slip_it_slow/IMG_1232.PNG"
       ],
       "price": 26,
       "size": 4,
@@ -270,36 +240,16 @@
       "productName": "Gown 4",
       "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        {
-          "image": "slip_it_slow/IMG_1239.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1238.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1240.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1249.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1237.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1241.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1242.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1243.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1246.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1249.PNG"
-        }
+        "slip_it_slow/IMG_1239.PNG",
+        "slip_it_slow/IMG_1238.PNG",
+        "slip_it_slow/IMG_1240.PNG",
+        "slip_it_slow/IMG_1249.PNG",
+        "slip_it_slow/IMG_1237.PNG",
+        "slip_it_slow/IMG_1241.PNG",
+        "slip_it_slow/IMG_1242.PNG",
+        "slip_it_slow/IMG_1243.PNG",
+        "slip_it_slow/IMG_1246.PNG",
+        "slip_it_slow/IMG_1249.PNG"
       ],
       "price": 122,
       "size": 10,
@@ -310,33 +260,15 @@
       "productName": "Gown 5",
       "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        {
-          "image": "slip_it_slow/IMG_1264.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1252.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1266.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1260.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1252.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1253.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1281.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1284.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1266.PNG"
-        }
+        "slip_it_slow/IMG_1264.PNG",
+        "slip_it_slow/IMG_1252.PNG",
+        "slip_it_slow/IMG_1266.PNG",
+        "slip_it_slow/IMG_1260.PNG",
+        "slip_it_slow/IMG_1252.PNG",
+        "slip_it_slow/IMG_1253.PNG",
+        "slip_it_slow/IMG_1281.PNG",
+        "slip_it_slow/IMG_1284.PNG",
+        "slip_it_slow/IMG_1266.PNG"
       ],
       "price": 120,
       "size": 6,
@@ -347,24 +279,12 @@
       "productName": "Gown 6",
       "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        {
-          "image": "slip_it_slow/IMG_1297.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1286.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1296.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1298.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1300.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1301.PNG"
-        }
+        "slip_it_slow/IMG_1297.PNG",
+        "slip_it_slow/IMG_1286.PNG",
+        "slip_it_slow/IMG_1296.PNG",
+        "slip_it_slow/IMG_1298.PNG",
+        "slip_it_slow/IMG_1300.PNG",
+        "slip_it_slow/IMG_1301.PNG"
       ],
       "price": 160,
       "size": 4,
@@ -375,27 +295,13 @@
       "productName": "Gown 7",
       "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        {
-          "image": "slip_it_slow/IMG_1306.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1302.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1305.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_IMG_1308.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1313.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1315.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1317.PNG"
-        }
+        "slip_it_slow/IMG_1306.PNG",
+        "slip_it_slow/IMG_1302.PNG",
+        "slip_it_slow/IMG_1305.PNG",
+        "slip_it_slow/IMG_1308.PNG",
+        "slip_it_slow/IMG_1313.PNG",
+        "slip_it_slow/IMG_1315.PNG",
+        "slip_it_slow/IMG_1317.PNG"
       ],
       "price": 45,
       "size": 7,
@@ -406,21 +312,11 @@
       "productName": "Gown 8",
       "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        {
-          "image": "slip_it_slow/IMG_1322.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1323.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1325.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1332.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1336.PNG"
-        }
+        "slip_it_slow/IMG_1322.PNG",
+        "slip_it_slow/IMG_1323.PNG",
+        "slip_it_slow/IMG_1325.PNG",
+        "slip_it_slow/IMG_1332.PNG",
+        "slip_it_slow/IMG_1336.PNG"
       ],
       "price": 97,
       "size": 5,
@@ -431,18 +327,10 @@
       "productName": "Gown 9",
       "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        {
-          "image": "slip_it_slow/IMG_1581.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1592.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1593.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_1594.PNG"
-        }
+        "slip_it_slow/IMG_1581.PNG",
+        "slip_it_slow/IMG_1592.PNG",
+        "slip_it_slow/IMG_1593.PNG",
+        "slip_it_slow/IMG_1594.PNG"
       ],
       "price": 200,
       "size": 4,
@@ -453,27 +341,13 @@
       "productName": "Gown 10",
       "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        {
-          "image": "slip_it_slow/IMG_2853.JPG"
-        },
-        {
-          "image": "slip_it_slow/IMG_2851.JPG"
-        },
-        {
-          "image": "slip_it_slow/IMG_2852.JPG"
-        },
-        {
-          "image": "slip_it_slow/IMG_2855.JPG"
-        },
-        {
-          "image": "slip_it_slow/IMG_2857.JPG"
-        },
-        {
-          "image": "slip_it_slow/IMG_2852.JPG"
-        },
-        {
-          "image": "slip_it_slow/IMG_2859.JPG"
-        }
+        "slip_it_slow/IMG_2853.JPG",
+        "slip_it_slow/IMG_2851.JPG",
+        "slip_it_slow/IMG_2852.JPG",
+        "slip_it_slow/IMG_2855.JPG",
+        "slip_it_slow/IMG_2857.JPG",
+        "slip_it_slow/IMG_2852.JPG",
+        "slip_it_slow/IMG_2859.JPG"
       ],
       "price": 52,
       "size": 3,
@@ -484,27 +358,13 @@
       "productName": "Gown 11",
       "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        {
-          "image": "slip_it_slow/IMG_4763.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_4759.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_4760.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_4761.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_4764.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_4765.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_4767.PNG"
-        }
+        "slip_it_slow/IMG_4763.PNG",
+        "slip_it_slow/IMG_4759.PNG",
+        "slip_it_slow/IMG_4760.PNG",
+        "slip_it_slow/IMG_4761.PNG",
+        "slip_it_slow/IMG_4764.PNG",
+        "slip_it_slow/IMG_4765.PNG",
+        "slip_it_slow/IMG_4767.PNG"
       ],
       "price": 102,
       "size": 9,
@@ -515,24 +375,12 @@
       "productName": "Gown 12",
       "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        {
-          "image": "slip_it_slow/IMG_4773.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_4770.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_4777.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_4780.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_4783.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_4785.PNG"
-        }
+        "slip_it_slow/IMG_4773.PNG",
+        "slip_it_slow/IMG_4770.PNG",
+        "slip_it_slow/IMG_4777.PNG",
+        "slip_it_slow/IMG_4780.PNG",
+        "slip_it_slow/IMG_4783.PNG",
+        "slip_it_slow/IMG_4785.PNG"
       ],
       "price": 100,
       "size": 5,
@@ -543,24 +391,13 @@
       "productName": "Gown 13",
       "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        {
-          "image": "slip_it_slow/IMG_4927.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_4925.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_4932.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_4933.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_4936.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_4937.PNG"
-        }
+        "slip_it_slow/IMG_4927.PNG",
+        "slip_it_slow/IMG_4925.PNG",
+        "slip_it_slow/IMG_4932.PNG",
+        "slip_it_slow/IMG_4933.PNG",
+        "slip_it_slow/IMG_4936.PNG",
+        "slip_it_slow/IMG_4937.PNG"
+
       ],
       "price": 50,
       "size": 6,
@@ -571,36 +408,16 @@
       "productName": "Gown 14",
       "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        {
-          "image": "slip_it_slow/IMG_9164.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_9162.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_9168.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_9171.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_9174.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_9176.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_9183.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_9188.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_9189.PNG"
-        },
-        {
-          "image": "slip_it_slow/IMG_9193.PNG"
-        }
+        "slip_it_slow/IMG_9164.PNG",
+        "slip_it_slow/IMG_9162.PNG",
+        "slip_it_slow/IMG_9168.PNG",
+        "slip_it_slow/IMG_9171.PNG",
+        "slip_it_slow/IMG_9174.PNG",
+        "slip_it_slow/IMG_9176.PNG",
+        "slip_it_slow/IMG_9183.PNG",
+        "slip_it_slow/IMG_9188.PNG",
+        "slip_it_slow/IMG_9189.PNG",
+        "slip_it_slow/IMG_9193.PNG"
       ],
       "price": 290,
       "size": 3,
@@ -622,27 +439,13 @@
       "productName": "Warmer 1",
       "description": "product description",
       "productThumbs": [
-        {
-          "image": "winter_warmers/IMG_1693.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_1695.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_1698.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_1699.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_1700.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_1704.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_1707.PNG"
-        }
+        "winter_warmers/IMG_1693.PNG",
+        "winter_warmers/IMG_1695.PNG",
+        "winter_warmers/IMG_1698.PNG",
+        "winter_warmers/IMG_1699.PNG",
+        "winter_warmers/IMG_1700.PNG",
+        "winter_warmers/IMG_1704.PNG",
+        "winter_warmers/IMG_1707.PNG"
       ],
       "price": 21,
       "size": 6,
@@ -653,30 +456,14 @@
       "productName": "Warmer 2",
       "description": "product description 2",
       "productThumbs": [
-        {
-          "image": "winter_warmers/IMG_3429.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3427.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3428.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3430.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3434.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3435.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3436.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3437.JPG"
-        }
+        "winter_warmers/IMG_3429.JPG",
+        "winter_warmers/IMG_3427.JPG",
+        "winter_warmers/IMG_3428.JPG",
+        "winter_warmers/IMG_3430.JPG",
+        "winter_warmers/IMG_3434.JPG",
+        "winter_warmers/IMG_3435.JPG",
+        "winter_warmers/IMG_3436.JPG",
+        "winter_warmers/IMG_3437.JPG"
       ],
       "price": 451,
       "size": 6,
@@ -687,30 +474,14 @@
       "productName": "Warmer 3",
       "description": "product description 3",
       "productThumbs": [
-        {
-          "image": "winter_warmers/IMG_3445.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3438.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3439.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3440.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3442.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3443.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3444.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3446.PNG"
-        }
+        "winter_warmers/IMG_3445.JPG",
+        "winter_warmers/IMG_3438.JPG",
+        "winter_warmers/IMG_3439.JPG",
+        "winter_warmers/IMG_3440.JPG",
+        "winter_warmers/IMG_3442.JPG",
+        "winter_warmers/IMG_3443.JPG",
+        "winter_warmers/IMG_3444.JPG",
+        "winter_warmers/IMG_3446.JPG"
       ],
       "price": 26,
       "size": 8,
@@ -721,42 +492,18 @@
       "productName": "Winter Warmer 4",
       "description": "product description 4",
       "productThumbs": [
-        {
-          "image": "winter_warmers/IMG_3461.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3448.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3449.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3454.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3455.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3456.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3458.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3460.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3461.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3462.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3463.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3464.JPG"
-        }
+        "winter_warmers/IMG_3461.JPG",
+        "winter_warmers/IMG_3448.JPG",
+        "winter_warmers/IMG_3449.JPG",
+        "winter_warmers/IMG_3454.JPG",
+        "winter_warmers/IMG_3455.JPG",
+        "winter_warmers/IMG_3456.JPG",
+        "winter_warmers/IMG_3458.JPG",
+        "winter_warmers/IMG_3460.JPG",
+        "winter_warmers/IMG_3461.JPG",
+        "winter_warmers/IMG_3462.JPG",
+        "winter_warmers/IMG_3463.JPG",
+        "winter_warmers/IMG_3464.JPG"
       ],
       "price": 26,
       "size": 8,
@@ -767,57 +514,23 @@
       "productName": "Winter Warmer 5",
       "description": "product description 5",
       "productThumbs": [
-        {
-          "image": "winter_warmers/IMG_3471.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3465.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3466.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3467.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3468.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3469.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3472.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3473.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3474.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3475.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3476.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3477.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3478.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3479.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3480.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3481.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3483.JPG"
-        }
+        "winter_warmers/IMG_3471.JPG",
+        "winter_warmers/IMG_3465.JPG",
+        "winter_warmers/IMG_3466.JPG",
+        "winter_warmers/IMG_3467.JPG",
+        "winter_warmers/IMG_3468.JPG",
+        "winter_warmers/IMG_3469.JPG",
+        "winter_warmers/IMG_3472.JPG",
+        "winter_warmers/IMG_3473.JPG",
+        "winter_warmers/IMG_3474.JPG",
+        "winter_warmers/IMG_3475.JPG",
+        "winter_warmers/IMG_3476.JPG",
+        "winter_warmers/IMG_3477.JPG",
+        "winter_warmers/IMG_3478.JPG",
+        "winter_warmers/IMG_3479.JPG",
+        "winter_warmers/IMG_3480.JPG",
+        "winter_warmers/IMG_3481.JPG",
+        "winter_warmers/IMG_3483.JPG"
       ],
       "price": 26,
       "size": 8,
@@ -828,24 +541,12 @@
       "productName": "Winter Warmer 6",
       "description": "product description 6",
       "productThumbs": [
-        {
-          "image": "winter_warmers/IMG_3488.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3487.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3489.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3491.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3492.JPG"
-        },
-        {
-          "image": "winter_warmers/IMG_3494.JPG"
-        }
+        "winter_warmers/IMG_3488.JPG",
+        "winter_warmers/IMG_3487.JPG",
+        "winter_warmers/IMG_3489.JPG",
+        "winter_warmers/IMG_3491.JPG",
+        "winter_warmers/IMG_3492.JPG",
+        "winter_warmers/IMG_3494.JPG"
       ],
       "price": 26,
       "size": 8,
@@ -853,36 +554,18 @@
     },
     {
       "productId": 7,
-      "productName": "my product Name 8",
+      "productName": "Winter Warmer 8",
       "description": "product description 8",
       "productThumbs": [
-        {
-          "image": "winter_warmers/IMG_7892.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_7886.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_7888.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_7890.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_7891.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_7894.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_7895.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_7896.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_7898.PNG"
-        }
+        "winter_warmers/IMG_7892.PNG",
+        "winter_warmers/IMG_7886.PNG",
+        "winter_warmers/IMG_7888.PNG",
+        "winter_warmers/IMG_7890.PNG",
+        "winter_warmers/IMG_7891.PNG",
+        "winter_warmers/IMG_7894.PNG",
+        "winter_warmers/IMG_7895.PNG",
+        "winter_warmers/IMG_7896.PNG",
+        "winter_warmers/IMG_7898.PNG"
       ],
       "price": 26,
       "size": 8,
@@ -893,27 +576,13 @@
       "productName": "Winter Warmer 8",
       "description": "product description 8",
       "productThumbs": [
-        {
-          "image": "winter_warmers/IMG_7900.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_7901.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_7902.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_7905.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_7906.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_7909.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_7910.PNG"
-        }
+        "winter_warmers/IMG_7900.PNG",
+        "winter_warmers/IMG_7901.PNG",
+        "winter_warmers/IMG_7902.PNG",
+        "winter_warmers/IMG_7905.PNG",
+        "winter_warmers/IMG_7906.PNG",
+        "winter_warmers/IMG_7909.PNG",
+        "winter_warmers/IMG_7910.PNG"
       ],
       "price": 26,
       "size": 8,
@@ -924,27 +593,13 @@
       "productName": "Winter Warmer 9",
       "description": "product description 9",
       "productThumbs": [
-        {
-          "image": "winter_warmers/IMG_8158.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8148.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8149.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8150.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8153.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8157.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8159.PNG"
-        }
+        "winter_warmers/IMG_8158.PNG",
+        "winter_warmers/IMG_8148.PNG",
+        "winter_warmers/IMG_8149.PNG",
+        "winter_warmers/IMG_8150.PNG",
+        "winter_warmers/IMG_8153.PNG",
+        "winter_warmers/IMG_8157.PNG",
+        "winter_warmers/IMG_8159.PNG"
       ],
       "price": 26,
       "size": 8,
@@ -955,27 +610,13 @@
       "productName": "Winter Warmer 10",
       "description": "product description 10",
       "productThumbs": [
-        {
-          "image": "winter_warmers/IMG_8556.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8559.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8565.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8566.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8570.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8574.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8575.PNG"
-        }
+        "winter_warmers/IMG_8556.PNG",
+        "winter_warmers/IMG_8559.PNG",
+        "winter_warmers/IMG_8565.PNG",
+        "winter_warmers/IMG_8566.PNG",
+        "winter_warmers/IMG_8570.PNG",
+        "winter_warmers/IMG_8574.PNG",
+        "winter_warmers/IMG_8575.PNG"
       ],
       "price": 26,
       "size": 8,
@@ -986,36 +627,16 @@
       "productName": "Winter Warmer 11",
       "description": "product description 11",
       "productThumbs": [
-        {
-          "image": "winter_warmers/IMG_8974.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8971.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8976.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8980.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8984.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8988.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8993.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8994.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8996.PNG"
-        },
-        {
-          "image": "winter_warmers/IMG_8998.PNG"
-        }
+        "winter_warmers/IMG_8974.PNG",
+        "winter_warmers/IMG_8971.PNG",
+        "winter_warmers/IMG_8976.PNG",
+        "winter_warmers/IMG_8980.PNG",
+        "winter_warmers/IMG_8984.PNG",
+        "winter_warmers/IMG_8988.PNG",
+        "winter_warmers/IMG_8993.PNG",
+        "winter_warmers/IMG_8994.PNG",
+        "winter_warmers/IMG_8996.PNG",
+        "winter_warmers/IMG_8998.PNG"
       ],
       "price": 26,
       "size": 8,
@@ -1034,83 +655,313 @@
   "products": [
     {
       "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_8138.PNG",
+        "check_please/IMG_8146.PNG",
+        "check_please/IMG_8144.PNG",
+        "check_please/IMG_8143.PNG",
+        "check_please/IMG_8131.PNG",
+        "check_please/IMG_8136.PNG",
+        "check_please/IMG_8135.PNG"
+      ],
+      "price": 111,
+      "size": 4,
       "active": true
     },
     {
       "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_3775.JPG",
+        "check_please/IMG_3774.JPG",
+        "check_please/IMG_3776.JPG",
+        "check_please/IMG_3773.JPG",
+        "check_please/IMG_3772.JPG"
+      ],
+      "price": 111,
+      "size": 4,
       "active": true
     },
     {
       "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_3790.JPG",
+        "check_please/IMG_3787.JPG",
+        "check_please/IMG_3789.JPG",
+        "check_please/IMG_3788.JPG"
+      ],
+      "price": 111,
+      "size": 4,
       "active": true
     },
     {
       "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_3757.JPG",
+        "check_please/IMG_3756.JPG",
+        "check_please/IMG_3761.JPG",
+        "check_please/IMG_3760.JPG",
+        "check_please/IMG_3758.JPG",
+        "check_please/IMG_3759.JPG"
+      ],
+      "price": 111,
+      "size": 4,
       "active": true
     },
     {
       "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_5384.PNG",
+        "check_please/IMG_5395.PNG",
+        "check_please/IMG_5373.PNG",
+        "check_please/IMG_5398.PNG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
     },
     {
       "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_3754.JPG",
+        "check_please/IMG_3755.JPG",
+        "check_please/IMG_3752.JPG",
+        "check_please/IMG_3753.JPG",
+        "check_please/IMG_3751.JPG",
+        "check_please/IMG_3750.JPG",
+        "check_please/IMG_3749.JPG",
+        "check_please/IMG_3748.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
     },
     {
       "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_6764.PNG",
+        "check_please/IMG_6765.PNG",
+        "check_please/IMG_6773.PNG",
+        "check_please/IMG_6789.PNG",
+        "check_please/IMG_6788.PNG",
+        "check_please/IMG_6787.PNG",
+        "check_please/IMG_6780.PNG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
     },
     {
       "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_1421.PNG",
+        "check_please/IMG_1409.PNG",
+        "check_please/IMG_1400.PNG",
+        "check_please/IMG_1403.PNG",
+        "check_please/IMG_1417.PNG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
     },
     {
       "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_3783.JPG",
+        "check_please/IMG_3782.JPG",
+        "check_please/IMG_3780.JPG",
+        "check_please/IMG_3781.JPG",
+        "check_please/IMG_3785.JPG",
+        "check_please/IMG_3784.JPG",
+        "check_please/IMG_3786.JPG",
+        "check_please/IMG_3779.JPG",
+        "check_please/IMG_3778.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
     },
     {
       "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_9858.PNG",
+        "check_please/IMG_9860.PNG",
+        "check_please/IMG_9853.PNG",
+        "check_please/IMG_9852.PNG",
+        "check_please/IMG_9855.PNG",
+        "check_please/IMG_9857.PNG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 11,
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_3762.JPG",
+        "check_please/IMG_3763.JPG",
+        "check_please/IMG_3764.JPG",
+        "check_please/IMG_3765.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 12,
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_2628.PNG",
+        "check_please/IMG_2629.PNG",
+        "check_please/IMG_2622.PNG",
+        "check_please/IMG_2637.PNG",
+        "check_please/IMG_2634.PNG",
+        "check_please/IMG_2624.PNG",
+        "check_please/IMG_2625.PNG",
+        "check_please/IMG_2627.PNG",
+        "check_please/IMG_2632.PNG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 13,
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_4113.PNG",
+        "check_please/IMG_4129.PNG",
+        "check_please/IMG_4119.PNG",
+        "check_please/IMG_4123.PNG",
+        "check_please/IMG_4122.PNG",
+        "check_please/IMG_4120.PNG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 14,
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_2059.PNG",
+        "check_please/IMG_2052.PNG",
+        "check_please/IMG_2051.PNG",
+        "check_please/IMG_2055.PNG",
+        "check_please/IMG_2056.PNG",
+        "check_please/IMG_2057.PNG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 15,
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_3806.JPG",
+        "check_please/IMG_3804.JPG",
+        "check_please/IMG_3801.JPG",
+        "check_please/IMG_3800.JPG",
+        "check_please/IMG_3808.JPG",
+        "check_please/IMG_3809.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 16,
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_1838.PNG",
+        "check_please/IMG_1839.PNG",
+        "check_please/IMG_1834.PNG",
+        "check_please/IMG_1833.PNG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 17,
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_3815.JPG",
+        "check_please/IMG_3814.JPG",
+        "check_please/IMG_3816.JPG",
+        "check_please/IMG_3817.JPG",
+        "check_please/IMG_3819.JPG",
+        "check_please/IMG_3818.JPG",
+        "check_please/IMG_3820.JPG",
+        "check_please/IMG_3821.JPG",
+        "check_please/IMG_3822.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 18,
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_2666.PNG",
+        "check_please/IMG_2659.PNG",
+        "check_please/IMG_2665.PNG",
+        "check_please/IMG_2654.PNG",
+        "check_please/IMG_2657.PNG",
+        "check_please/IMG_2652.PNG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 19,
+      "productName": "Check Please! ",
+      "productDescription": "Description",
+      "productThumbs": [
+        "check_please/IMG_3829.JPG",
+        "check_please/IMG_3828.JPG",
+        "check_please/IMG_3826.JPG",
+        "check_please/IMG_3827.JPG",
+        "check_please/IMG_3825.JPG",
+        "check_please/IMG_3831.JPG",
+        "check_please/IMG_3830.JPG",
+        "check_please/IMG_3824.JPG",
+        "check_please/IMG_3823.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
     }
   ]
 },{
@@ -1125,83 +976,104 @@
   "products": [
     {
       "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
+      "productName": "Trenches",
+      "productDescription": "Description",
+      "productThumbs": [
+        "trenched/IMG_3569.JPG",
+        "trenched/IMG_3568.JPG",
+        "trenched/IMG_3563.JPG",
+        "trenched/IMG_3562.JPG",
+        "trenched/IMG_3564.JPG",
+        "trenched/IMG_3570.JPG",
+        "trenched/IMG_3566.JPG"
+      ],
+      "price": 111,
+      "size": 4,
       "active": true
     },
     {
       "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
+      "productName": "Trenches",
+      "productDescription": "Description",
+      "productThumbs": [
+        "trenched/IMG_2232.PNG",
+        "trenched/IMG_2233.PNG",
+        "trenched/IMG_2225.PNG",
+        "trenched/IMG_2224.PNG",
+        "trenched/IMG_2234.PNG",
+        "trenched/IMG_2237.PNG",
+        "trenched/IMG_2236.PNG"
+      ],
+      "price": 111,
+      "size": 4,
       "active": true
     },
     {
       "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
+      "productName": "Trenches",
+      "productDescription": "Description",
+      "productThumbs": [
+        "trenched/IMG_3541.JPG",
+        "trenched/IMG_3540.JPG",
+        "trenched/IMG_3539.JPG",
+        "trenched/IMG_3538.JPG"
+      ],
+      "price": 111,
+      "size": 4,
       "active": true
     },
     {
       "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
+      "productName": "Trenches",
+      "productDescription": "Description",
+      "productThumbs": [
+        "trenched/IMG_3542.JPG",
+        "trenched/IMG_1779.PNG",
+        "trenched/IMG_3543.JPG",
+        "trenched/IMG_3544.JPG"
+      ],
+      "price": 111,
+      "size": 4,
       "active": true
     },
     {
       "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
+      "productName": "Trenches",
+      "productDescription": "Description",
+      "productThumbs": [
+        "trenched/IMG_3290.PNG",
+        "trenched/IMG_3287.PNG",
+        "trenched/IMG_3292.PNG",
+        "trenched/IMG_3286.PNG",
+        "trenched/IMG_3296.PNG",
+        "trenched/IMG_3295.PNG",
+        "trenched/IMG_3299.PNG",
+        "trenched/IMG_3300.PNG",
+        "trenched/IMG_3301.PNG",
+        "trenched/IMG_3288.PNG",
+        "trenched/IMG_3289.PNG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
     },
     {
       "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
+      "productName": "Trenches",
+      "productDescription": "Description",
+      "productThumbs": [
+        "trenched/IMG_3550.JPG",
+        "trenched/IMG_3551.JPG",
+        "trenched/IMG_3547.JPG",
+        "trenched/IMG_3553.JPG",
+        "trenched/IMG_3552.JPG",
+        "trenched/IMG_3546.JPG",
+        "trenched/IMG_3548.JPG",
+        "trenched/IMG_3549.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
     }
   ]
 },{
@@ -3676,24 +3548,12 @@
       "productName": "Nightie 1",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_2727.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2726.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2725.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2728.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2729.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2730.JPG"
-        }
+        "beauty_sleeping/IMG_2727.JPG",
+        "beauty_sleeping/IMG_2726.JPG",
+        "beauty_sleeping/IMG_2725.JPG",
+        "beauty_sleeping/IMG_2728.JPG",
+        "beauty_sleeping/IMG_2729.JPG",
+        "beauty_sleeping/IMG_2730.JPG"
       ],
       "price": 40,
       "size": 6,
@@ -3704,18 +3564,10 @@
       "productName": "Nightie 2",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_2747.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2745.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2751.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2752.JPG"
-        }
+        "beauty_sleeping/IMG_2747.JPG",
+        "beauty_sleeping/IMG_2745.JPG",
+        "beauty_sleeping/IMG_2751.JPG",
+        "beauty_sleeping/IMG_2752.JPG"
       ],
       "price": 451,
       "size": 6,
@@ -3726,18 +3578,10 @@
       "productName": "Nightie 3",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_2756.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2757.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2763.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2764.JPG"
-        }
+        "beauty_sleeping/IMG_2756.JPG",
+        "beauty_sleeping/IMG_2757.JPG",
+        "beauty_sleeping/IMG_2763.JPG",
+        "beauty_sleeping/IMG_2764.JPG"
       ],
       "price": 26,
       "size": 8,
@@ -3748,24 +3592,12 @@
       "productName": "Nightie 4",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_2867.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2871.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2872.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2877.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2878.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2885.JPG"
-        }
+        "beauty_sleeping/IMG_2867.JPG",
+        "beauty_sleeping/IMG_2871.JPG",
+        "beauty_sleeping/IMG_2872.JPG",
+        "beauty_sleeping/IMG_2877.JPG",
+        "beauty_sleeping/IMG_2878.JPG",
+        "beauty_sleeping/IMG_2885.JPG"
       ],
       "price": 26,
       "size": 8,
@@ -3776,21 +3608,11 @@
       "productName": "Nightie 5",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_2768.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2767.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2769.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2774.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2775.JPG"
-        }
+        "beauty_sleeping/IMG_2768.JPG",
+        "beauty_sleeping/IMG_2767.JPG",
+        "beauty_sleeping/IMG_2769.JPG",
+        "beauty_sleeping/IMG_2774.JPG",
+        "beauty_sleeping/IMG_2775.JPG"
       ],
       "price": 26,
       "size": 8,
@@ -3801,24 +3623,12 @@
       "productName": "Nightie 6",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_2786.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2789.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2792.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2793.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2796.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2800.JPG"
-        }
+        "beauty_sleeping/IMG_2786.JPG",
+        "beauty_sleeping/IMG_2789.JPG",
+        "beauty_sleeping/IMG_2792.JPG",
+        "beauty_sleeping/IMG_2793.JPG",
+        "beauty_sleeping/IMG_2796.JPG",
+        "beauty_sleeping/IMG_2800.JPG"
       ],
       "price": 26,
       "size": 8,
@@ -3829,36 +3639,16 @@
       "productName": "Nightie 7",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_2807.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2802.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2803.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2804.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2806.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2800.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2810.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2815.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2818.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2812.JPG"
-        }
+        "beauty_sleeping/IMG_2807.JPG",
+        "beauty_sleeping/IMG_2802.JPG",
+        "beauty_sleeping/IMG_2803.JPG",
+        "beauty_sleeping/IMG_2804.JPG",
+        "beauty_sleeping/IMG_2806.JPG",
+        "beauty_sleeping/IMG_2800.JPG",
+        "beauty_sleeping/IMG_2810.JPG",
+        "beauty_sleeping/IMG_2815.JPG",
+        "beauty_sleeping/IMG_2818.JPG",
+        "beauty_sleeping/IMG_2812.JPG"
       ],
       "price": 26,
       "size": 8,
@@ -3869,30 +3659,14 @@
       "productName": "Nightie 8",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_2827.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2822.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2823.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2825.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2829.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2830.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2832.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2828.JPG"
-        }
+        "beauty_sleeping/IMG_2827.JPG",
+        "beauty_sleeping/IMG_2822.JPG",
+        "beauty_sleeping/IMG_2823.JPG",
+        "beauty_sleeping/IMG_2825.JPG",
+        "beauty_sleeping/IMG_2829.JPG",
+        "beauty_sleeping/IMG_2830.JPG",
+        "beauty_sleeping/IMG_2832.JPG",
+        "beauty_sleeping/IMG_2828.JPG"
       ],
       "price": 26,
       "size": 8,
@@ -3903,24 +3677,12 @@
       "productName": "Nightie 9",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_2846.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2847.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2849.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2851.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2853.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2859.JPG"
-        }
+        "beauty_sleeping/IMG_2846.JPG",
+        "beauty_sleeping/IMG_2847.JPG",
+        "beauty_sleeping/IMG_2849.JPG",
+        "beauty_sleeping/IMG_2851.JPG",
+        "beauty_sleeping/IMG_2853.JPG",
+        "beauty_sleeping/IMG_2859.JPG"
       ],
       "price": 26,
       "size": 8,
@@ -3931,24 +3693,12 @@
       "productName": "Nightie 11",
       "description": "product description 10",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_2863.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2860.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2861.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2862.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2865.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2866.JPG"
-        }
+        "beauty_sleeping/IMG_2863.JPG",
+        "beauty_sleeping/IMG_2860.JPG",
+        "beauty_sleeping/IMG_2861.JPG",
+        "beauty_sleeping/IMG_2862.JPG",
+        "beauty_sleeping/IMG_2865.JPG",
+        "beauty_sleeping/IMG_2866.JPG"
       ],
       "price": 26,
       "size": 8,
@@ -3959,27 +3709,13 @@
       "productName": "Nightie 12",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_2894.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2895.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2893.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2892.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2890.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2888.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2889.JPG"
-        }
+        "beauty_sleeping/IMG_2894.JPG",
+        "beauty_sleeping/IMG_2895.JPG",
+        "beauty_sleeping/IMG_2893.JPG",
+        "beauty_sleeping/IMG_2892.JPG",
+        "beauty_sleeping/IMG_2890.JPG",
+        "beauty_sleeping/IMG_2888.JPG",
+        "beauty_sleeping/IMG_2889.JPG"
       ],
       "price": 31,
       "size": 4,
@@ -3990,24 +3726,12 @@
       "productName": "Nightie 13",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_2896.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2898.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2899.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2900.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2902.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2906.JPG"
-        }
+        "beauty_sleeping/IMG_2896.JPG",
+        "beauty_sleeping/IMG_2898.JPG",
+        "beauty_sleeping/IMG_2899.JPG",
+        "beauty_sleeping/IMG_2900.JPG",
+        "beauty_sleeping/IMG_2902.JPG",
+        "beauty_sleeping/IMG_2906.JPG"
       ],
       "price": 31,
       "size": 4,
@@ -4018,33 +3742,15 @@
       "productName": "Nightie 14",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_2919.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2908.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2910.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2911.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2902.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2913.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2915.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2935.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2931.JPG"
-        }
+        "beauty_sleeping/IMG_2919.JPG",
+        "beauty_sleeping/IMG_2908.JPG",
+        "beauty_sleeping/IMG_2910.JPG",
+        "beauty_sleeping/IMG_2911.JPG",
+        "beauty_sleeping/IMG_2902.JPG",
+        "beauty_sleeping/IMG_2913.JPG",
+        "beauty_sleeping/IMG_2915.JPG",
+        "beauty_sleeping/IMG_2935.JPG",
+        "beauty_sleeping/IMG_2931.JPG"
       ],
       "price": 31,
       "size": 4,
@@ -4055,30 +3761,14 @@
       "productName": "Nightie 15",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_2938.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2939.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2942.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2946.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2947.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2951.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2953.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_2954.JPG"
-        }
+        "beauty_sleeping/IMG_2938.JPG",
+        "beauty_sleeping/IMG_2939.JPG",
+        "beauty_sleeping/IMG_2942.JPG",
+        "beauty_sleeping/IMG_2946.JPG",
+        "beauty_sleeping/IMG_2947.JPG",
+        "beauty_sleeping/IMG_2951.JPG",
+        "beauty_sleeping/IMG_2953.JPG",
+        "beauty_sleeping/IMG_2954.JPG"
       ],
       "price": 31,
       "size": 4,
@@ -4089,30 +3779,14 @@
       "productName": "Nightie 16",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_3056.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3049.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3050.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3051.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3054.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3055.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3056.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3058.JPG"
-        }
+        "beauty_sleeping/IMG_3056.JPG",
+        "beauty_sleeping/IMG_3049.JPG",
+        "beauty_sleeping/IMG_3050.JPG",
+        "beauty_sleeping/IMG_3051.JPG",
+        "beauty_sleeping/IMG_3054.JPG",
+        "beauty_sleeping/IMG_3055.JPG",
+        "beauty_sleeping/IMG_3056.JPG",
+        "beauty_sleeping/IMG_3058.JPG"
       ],
       "price": 31,
       "size": 4,
@@ -4123,24 +3797,12 @@
       "productName": "Nightie 17",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_3061.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3060.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3062.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3066.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3068.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3069.JPG"
-        }
+        "beauty_sleeping/IMG_3061.JPG",
+        "beauty_sleeping/IMG_3060.JPG",
+        "beauty_sleeping/IMG_3062.JPG",
+        "beauty_sleeping/IMG_3066.JPG",
+        "beauty_sleeping/IMG_3068.JPG",
+        "beauty_sleeping/IMG_3069.JPG"
       ],
       "price": 31,
       "size": 4,
@@ -4151,24 +3813,12 @@
       "productName": "Nightie 18",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_3072.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3071.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3075.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3076.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3077.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3080.JPG"
-        }
+        "beauty_sleeping/IMG_3072.JPG",
+        "beauty_sleeping/IMG_3071.JPG",
+        "beauty_sleeping/IMG_3075.JPG",
+        "beauty_sleeping/IMG_3076.JPG",
+        "beauty_sleeping/IMG_3077.JPG",
+        "beauty_sleeping/IMG_3080.JPG"
       ],
       "price": 31,
       "size": 4,
@@ -4179,25 +3829,13 @@
       "productName": "Nightie 19",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_3096.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3093.JPG"
-        },
-        {
-          "thumbnail": "beauty_sleeping/IMG_3097.JPG",
-          "image": "beauty_sleeping/IMG_3097.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3098.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3099.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3101.JPG"
-        }
+        "beauty_sleeping/IMG_3096.JPG",
+        "beauty_sleeping/IMG_3093.JPG",
+        "beauty_sleeping/IMG_3097.JPG",
+        "beauty_sleeping/IMG_3097.JPG",
+        "beauty_sleeping/IMG_3098.JPG",
+        "beauty_sleeping/IMG_3099.JPG",
+        "beauty_sleeping/IMG_3101.JPG"
       ],
       "price": 31,
       "size": 4,
@@ -4208,21 +3846,11 @@
       "productName": "Nightie 20",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_3104.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3105.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3106.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3108.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3110.JPG"
-        }
+        "beauty_sleeping/IMG_3104.JPG",
+        "beauty_sleeping/IMG_3105.JPG",
+        "beauty_sleeping/IMG_3106.JPG",
+        "beauty_sleeping/IMG_3108.JPG",
+        "beauty_sleeping/IMG_3110.JPG"
       ],
       "price": 31,
       "size": 4,
@@ -4233,33 +3861,15 @@
       "productName": "Nightie 21",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_3119.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3118.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3116.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3115.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3120.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3121.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3122.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3123.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3129.JPG"
-        }
+        "beauty_sleeping/IMG_3119.JPG",
+        "beauty_sleeping/IMG_3118.JPG",
+        "beauty_sleeping/IMG_3116.JPG",
+        "beauty_sleeping/IMG_3115.JPG",
+        "beauty_sleeping/IMG_3120.JPG",
+        "beauty_sleeping/IMG_3121.JPG",
+        "beauty_sleeping/IMG_3122.JPG",
+        "beauty_sleeping/IMG_3123.JPG",
+        "beauty_sleeping/IMG_3129.JPG"
       ],
       "price": 31,
       "size": 4,
@@ -4270,30 +3880,14 @@
       "productName": "Nightie 22",
       "description": "Product Description to go here..",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_3131.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3133.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3132.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3134.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3136.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3138.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3144.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3148.JPG"
-        }
+        "beauty_sleeping/IMG_3131.JPG",
+        "beauty_sleeping/IMG_3133.JPG",
+        "beauty_sleeping/IMG_3132.JPG",
+        "beauty_sleeping/IMG_3134.JPG",
+        "beauty_sleeping/IMG_3136.JPG",
+        "beauty_sleeping/IMG_3138.JPG",
+        "beauty_sleeping/IMG_3144.JPG",
+        "beauty_sleeping/IMG_3148.JPG"
       ],
       "price": 49,
       "size": 3,
@@ -4304,24 +3898,12 @@
       "productName": "Nightie 23",
       "description": "Product Description goes here",
       "productThumbs": [
-        {
-          "image": "beauty_sleeping/IMG_3154.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3149.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3153.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3154.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3156.JPG"
-        },
-        {
-          "image": "beauty_sleeping/IMG_3159.JPG"
-        }
+        "beauty_sleeping/IMG_3154.JPG",
+        "beauty_sleeping/IMG_3149.JPG",
+        "beauty_sleeping/IMG_3153.JPG",
+        "beauty_sleeping/IMG_3154.JPG",
+        "beauty_sleeping/IMG_3156.JPG",
+        "beauty_sleeping/IMG_3159.JPG"
       ],
       "price": 83,
       "size": 4,
