@@ -16,63 +16,48 @@ namespace workerConsole
         {
             var client = new MongoClient("mongodb://192.168.1.3:27017/shop");
             IMongoDatabase db = client.GetDatabase("shop");
+            var bruja = db.GetCollection<BsonDocument>("bruja");
 
 
-            db.DropCollection("dummy");
-            db.CreateCollection("dummy");
-
-
-
-            // var bruja = db.GetCollection<BsonDocument>("bruja");
+            // db.DropCollection("dummy");
+            // db.CreateCollection("dummy");
             // var documents = bruja.Find(new BsonDocument()).ToList();
-
             //  var doc = new BsonDocument
             // {
             //     {"name", "BMW"},
             //     {"price", 34621}
             // };
-
             // var dummy = db.GetCollection<BsonDocument>("dummy");
             // dummy.InsertOne(doc);
-
             // foreach (BsonDocument doc in documents)
             // {
             //     Console.WriteLine(doc.ToString());
             // }
 
 
+            const string workerPath = "/worker/check_please";
+            const string storingFolder = "check_please/";
+            string productName = "Check Please! ";
+            int seeder = 1;
+            List<Product> products = new List<Product>();
+            DirectoryInfo dir = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory() + workerPath));
 
+            var listDir  = dir.GetDirectories("*",SearchOption.AllDirectories)
+                .Where(dir=>!dir.GetDirectories().Any())
+                .ToList();
 
-            // var filter = Builders<BsonDocument>.Filter.Eq("price", 29000);
+            foreach(DirectoryInfo d in listDir) {
+                Product p = new Product(seeder, productName, "Description", 111, 4, true);
 
-
-            // var doc = shop.Find(null).FirstOrDefault();
-            // Console.WriteLine(doc.ToString());
-
-
-            // const string workerPath = "/worker/check_please";
-            // const string storingFolder = "check_please/";
-            // string productName = "Check Please! ";
-            // int seeder = 1;
-            // List<Product> products = new List<Product>();
-            // DirectoryInfo dir = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory() + workerPath));
-
-            // var listDir  = dir.GetDirectories("*",SearchOption.AllDirectories)
-            //     .Where(dir=>!dir.GetDirectories().Any())
-            //     .ToList();
-
-            // foreach(DirectoryInfo d in listDir) {
-            //     Product p = new Product(seeder, productName, "Description", 111, 4, true);
-
-            //     seeder++;
-            //     IEnumerable<System.IO.FileInfo> fileList = d.GetFiles("*.*", System.IO.SearchOption.AllDirectories);
-            //     foreach(FileInfo f in fileList) {
-            //         p.productThumbs.Add(storingFolder + f.Name);
-            //     }
-            //     products.Add(p);
-            // }
-            // var json = JsonSerializer.Serialize(products);
-            // Console.WriteLine(json);
+                seeder++;
+                IEnumerable<System.IO.FileInfo> fileList = d.GetFiles("*.*", System.IO.SearchOption.AllDirectories);
+                foreach(FileInfo f in fileList) {
+                    p.productThumbs.Add(storingFolder + f.Name);
+                }
+                products.Add(p);
+            }
+            var json = JsonSerializer.Serialize(products);
+            Console.WriteLine(json);
         }
     }
 
