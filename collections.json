@@ -7,88 +7,7 @@
   "image": "intimates.jpg",
   "description": "collection description",
   "active": true,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "Intimate Collection # 1",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "Intimate Collection # 2",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "Intimate Collection # 3",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "Intimate Collection # 4",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "Intimate Collection # 5",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 6,
-      "productName": "Intimate Collection # 6",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9c5"
@@ -98,88 +17,7 @@
   "image": "shes_got_knits.jpg",
   "description": "collection description",
   "active": true,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9c6"
@@ -397,7 +235,6 @@
         "slip_it_slow/IMG_4933.PNG",
         "slip_it_slow/IMG_4936.PNG",
         "slip_it_slow/IMG_4937.PNG"
-
       ],
       "price": 50,
       "size": 6,
@@ -656,7 +493,7 @@
     {
       "productId": 1,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_8138.PNG",
         "check_please/IMG_8146.PNG",
@@ -673,7 +510,7 @@
     {
       "productId": 2,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3775.JPG",
         "check_please/IMG_3774.JPG",
@@ -688,7 +525,7 @@
     {
       "productId": 3,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3790.JPG",
         "check_please/IMG_3787.JPG",
@@ -702,7 +539,7 @@
     {
       "productId": 4,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3757.JPG",
         "check_please/IMG_3756.JPG",
@@ -718,7 +555,7 @@
     {
       "productId": 5,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_5384.PNG",
         "check_please/IMG_5395.PNG",
@@ -732,7 +569,7 @@
     {
       "productId": 6,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3754.JPG",
         "check_please/IMG_3755.JPG",
@@ -750,7 +587,7 @@
     {
       "productId": 7,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_6764.PNG",
         "check_please/IMG_6765.PNG",
@@ -767,7 +604,7 @@
     {
       "productId": 8,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_1421.PNG",
         "check_please/IMG_1409.PNG",
@@ -782,7 +619,7 @@
     {
       "productId": 9,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3783.JPG",
         "check_please/IMG_3782.JPG",
@@ -801,7 +638,7 @@
     {
       "productId": 10,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_9858.PNG",
         "check_please/IMG_9860.PNG",
@@ -817,7 +654,7 @@
     {
       "productId": 11,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3762.JPG",
         "check_please/IMG_3763.JPG",
@@ -831,7 +668,7 @@
     {
       "productId": 12,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_2628.PNG",
         "check_please/IMG_2629.PNG",
@@ -850,7 +687,7 @@
     {
       "productId": 13,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_4113.PNG",
         "check_please/IMG_4129.PNG",
@@ -866,7 +703,7 @@
     {
       "productId": 14,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_2059.PNG",
         "check_please/IMG_2052.PNG",
@@ -882,7 +719,7 @@
     {
       "productId": 15,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3806.JPG",
         "check_please/IMG_3804.JPG",
@@ -898,7 +735,7 @@
     {
       "productId": 16,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_1838.PNG",
         "check_please/IMG_1839.PNG",
@@ -912,7 +749,7 @@
     {
       "productId": 17,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3815.JPG",
         "check_please/IMG_3814.JPG",
@@ -931,7 +768,7 @@
     {
       "productId": 18,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_2666.PNG",
         "check_please/IMG_2659.PNG",
@@ -947,7 +784,7 @@
     {
       "productId": 19,
       "productName": "Check Please! ",
-      "productDescription": "Description",
+      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3829.JPG",
         "check_please/IMG_3828.JPG",
@@ -976,8 +813,8 @@
   "products": [
     {
       "productId": 1,
-      "productName": "Trenches",
-      "productDescription": "Description",
+      "productName": "Trench Coat #1",
+      "description": "Description",
       "productThumbs": [
         "trenched/IMG_3569.JPG",
         "trenched/IMG_3568.JPG",
@@ -993,8 +830,8 @@
     },
     {
       "productId": 2,
-      "productName": "Trenches",
-      "productDescription": "Description",
+      "productName": "Trench Coat #2",
+      "description": "Description",
       "productThumbs": [
         "trenched/IMG_2232.PNG",
         "trenched/IMG_2233.PNG",
@@ -1010,8 +847,8 @@
     },
     {
       "productId": 3,
-      "productName": "Trenches",
-      "productDescription": "Description",
+      "productName": "Trench Coat #3",
+      "description": "Description",
       "productThumbs": [
         "trenched/IMG_3541.JPG",
         "trenched/IMG_3540.JPG",
@@ -1024,8 +861,8 @@
     },
     {
       "productId": 4,
-      "productName": "Trenches",
-      "productDescription": "Description",
+      "productName": "Trench Coat #4",
+      "description": "Description",
       "productThumbs": [
         "trenched/IMG_3542.JPG",
         "trenched/IMG_1779.PNG",
@@ -1038,8 +875,8 @@
     },
     {
       "productId": 5,
-      "productName": "Trenches",
-      "productDescription": "Description",
+      "productName": "Trench Coat #5",
+      "description": "Description",
       "productThumbs": [
         "trenched/IMG_3290.PNG",
         "trenched/IMG_3287.PNG",
@@ -1059,8 +896,8 @@
     },
     {
       "productId": 6,
-      "productName": "Trenches",
-      "productDescription": "Description",
+      "productName": "Trench Coat #6",
+      "description": "Description",
       "productThumbs": [
         "trenched/IMG_3550.JPG",
         "trenched/IMG_3551.JPG",
@@ -1085,88 +922,7 @@
   "image": "collection13.jpg",
   "description": "collection description",
   "active": false,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9cb"
@@ -1176,88 +932,7 @@
   "image": "some_keep_it_corporate.jpg",
   "description": "collection description",
   "active": true,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9cc"
@@ -1267,88 +942,7 @@
   "image": "collection1.jpg",
   "description": "collection description",
   "active": false,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9cd"
@@ -1358,88 +952,7 @@
   "image": "lbd.jpg",
   "description": "collection description",
   "active": true,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9ce"
@@ -1449,88 +962,7 @@
   "image": "collection13.jpg",
   "description": "collection description",
   "active": false,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9cf"
@@ -1540,88 +972,7 @@
   "image": "collection13.jpg",
   "description": "collection description",
   "active": false,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9d0"
@@ -1631,88 +982,7 @@
   "image": "collection13.jpg",
   "description": "collection description",
   "active": false,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9d1"
@@ -1722,88 +992,7 @@
   "image": "day-core.jpg",
   "description": "collection description",
   "active": true,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9d2"
@@ -1813,88 +1002,7 @@
   "image": "collection13.jpg",
   "description": "collection description",
   "active": false,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9d3"
@@ -1904,88 +1012,7 @@
   "image": "are_you_fur_real.jpg",
   "description": "collection description",
   "active": false,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9d5"
@@ -1995,88 +1022,7 @@
   "image": "club_conscious.jpg",
   "description": "collection description",
   "active": true,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9d6"
@@ -2086,88 +1032,7 @@
   "image": "collection13.jpg",
   "description": "collection description",
   "active": false,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9d7"
@@ -2177,88 +1042,7 @@
   "image": "wild_things.jpg",
   "description": "collection description",
   "active": true,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9d8"
@@ -2268,88 +1052,7 @@
   "image": "collection13.jpg",
   "description": "collection description",
   "active": false,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9da"
@@ -2359,88 +1062,7 @@
   "image": "red_hot.jpg",
   "description": "collection description",
   "active": true,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9db"
@@ -2450,88 +1072,7 @@
   "image": "roses.jpg",
   "description": "collection description",
   "active": true,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9dc"
@@ -2541,88 +1082,7 @@
   "image": "baby_blues.jpg",
   "description": "collection description",
   "active": true,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9dd"
@@ -2632,88 +1092,7 @@
   "image": "pretty_in_pink.jpg",
   "description": "collection description",
   "active": true,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9de"
@@ -2723,88 +1102,7 @@
   "image": "miss_hawaiian_tropical.jpg",
   "description": "collection description",
   "active": true,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9df"
@@ -2814,88 +1112,7 @@
   "image": "collection13.jpg",
   "description": "collection description",
   "active": false,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9e0"
@@ -2905,88 +1122,7 @@
   "image": "collection13.jpg",
   "description": "collection description",
   "active": false,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9e1"
@@ -2996,88 +1132,7 @@
   "image": "collection13.jpg",
   "description": "collection description",
   "active": false,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9e2"
@@ -3087,88 +1142,7 @@
   "image": "that_70s_though.jpg",
   "description": "collection description",
   "active": false,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9e3"
@@ -3178,88 +1152,7 @@
   "image": "80s_dream_queen.jpg",
   "description": "collection description",
   "active": true,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9e4"
@@ -3269,88 +1162,7 @@
   "image": "90s_like_neve.jpg",
   "description": "collection description",
   "active": true,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9e5"
@@ -3360,88 +1172,7 @@
   "image": "collection13.jpg",
   "description": "collection description",
   "active": false,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60df3434837938542f6ca10b"
@@ -3451,88 +1182,7 @@
   "image": "oriental_origins.jpg",
   "description": "collection description",
   "active": true,
-  "products": [
-    {
-      "productId": 1,
-      "productName": "my product Name",
-      "description": "product description",
-      "price": 21,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 2,
-      "productName": "myproductName 2",
-      "description": "product description 2",
-      "price": 451,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productId": 3,
-      "productName": "my product Name 3",
-      "description": "product description 3",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 4,
-      "productName": "my product Name 4",
-      "description": "product description 4",
-      "price": 26,
-      "size": 8,
-      "active": true
-    },
-    {
-      "productId": 5,
-      "productName": "my product Name 5",
-      "description": "product description 5",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 6,
-      "productName": "my product Name 6",
-      "description": "product description 6",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 7,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 8,
-      "productName": "my product Name 8",
-      "description": "product description 8",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 9,
-      "productName": "my product Name 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "active": false
-    },
-    {
-      "productId": 10,
-      "productName": "my product Name 10",
-      "description": "product description 10",
-      "price": 26,
-      "size": 8,
-      "active": false
-    }
-  ]
+  "products": []
 },{
   "_id": {
     "$oid": "60e2314cfcc625e31c39e89d"
