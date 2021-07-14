@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 const {MongoClient} = require('mongodb');
-const uri = `mongodb://192.168.1.3:27017`;
+const uri = "mongodb://192.168.1.3:27017";
 
 var Cart = require('../models/cart');
 // var csrf = require('csurf');
@@ -77,27 +77,24 @@ router.get('/addCart', function(req, res, next) {
     let collectionId = req.query.collectionId;
     var cart = new Cart(req.session.cart ? req.session.cart : {});
     const item = await getItem(productId, collectionId);
-    cart.add(item, productId);
+    cart.add(item.item, item.item.productId);
     req.session.cart = cart;
-    console.clear();
-    console.log(req.session.cart);
-    console.log(req.session.cart.items);
+  console.log(req.session.cart);
     res.redirect('/');
-    // res.render('/collections', { title: 'Baja La Bruja - Items'});
   })();
 });
+
 
 module.exports = router;
 
 
-
+// -*-*-*-*-*-*-*-*-*-*-*-*-* DB FUNCTIONS -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
 async function getCollections(){
   const client = new MongoClient(uri, { useUnifiedTopology: true });
   try {
       await client.connect();
       const cursor = client.db("shop").collection("bruja").find({active: true}).sort({collectionId:1});
       const results = await cursor.toArray();
-      console.log(results);
       return results;
   } catch (e) { console.error(e); }
   finally { await client.close(); }
