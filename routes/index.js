@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
+
 const {MongoClient} = require('mongodb');
 const uri = `mongodb://192.168.1.3:27017`;
 
+var Cart = require('../models/cart');
 // var csrf = require('csurf');
 // var csrfProtection = csrf();
 // router.use(csrfProtection);
@@ -67,7 +69,23 @@ router.get('/item', function(req, res, next) {
   })();
 });
 
-
+/* GET Shopping Cart. */
+router.get('/addCart', function(req, res, next) {
+  (async function() {
+    // var productId = req.params.id;
+    let productId = req.query.productId;
+    let collectionId = req.query.collectionId;
+    var cart = new Cart(req.session.cart ? req.session.cart : {});
+    const item = await getItem(productId, collectionId);
+    cart.add(item, productId);
+    req.session.cart = cart;
+    console.clear();
+    console.log(req.session.cart);
+    console.log(req.session.cart.items);
+    res.redirect('/');
+    // res.render('/collections', { title: 'Baja La Bruja - Items'});
+  })();
+});
 
 module.exports = router;
 
@@ -104,7 +122,6 @@ async function getItem(productId, collectionId){
       result.collectioName = cursor.collectionName;
       let item = cursor.products.find(product => product.productId == productId);
       result.item = item;
-      console.log(item);
       return result;
   } catch (e) { console.error(e); }
   finally { await client.close(); }

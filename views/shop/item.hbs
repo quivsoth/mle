@@ -33,7 +33,7 @@
       <p class="text-light">{{ item.description }}</p>
       <p class="text-light">Size: {{ item.size }}</p>
       <p class="text-light">${{ item.price }}</p>
-      <a class="btn btn-light" href="#">Add to cart</a>
+      <a class="btn btn-light" href="/addCart?productId={{item.productId}}&collectionId={{collectionId}}">Add to cart</a>
     </div>
   </div>
 </div>
