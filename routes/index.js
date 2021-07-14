@@ -1,14 +1,13 @@
-var express = require('express');
 const { registerHelper } = require('hbs');
-var router = express.Router();
-
 const {MongoClient} = require('mongodb');
 const uri = process.env.DB_HOST;
 
+var express = require('express');
+var router = express.Router();
 var Cart = require('../models/cart');
-// var csrf = require('csurf');
-// var csrfProtection = csrf();
-// router.use(csrfProtection);
+var csrf = require('csurf');
+var csrfProtection = csrf();
+router.use(csrfProtection);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -80,9 +79,7 @@ router.get('/addCart', function(req, res, next) {
     const item = await getItem(productId, collectionId);
     cart.add(item.item, item.item.productId);
     req.session.cart = cart;
-    console.log("cart length: " + Object.keys(req.session.cart.items).length);
-  console.log(req.session.cart);
-    res.redirect('/');
+    res.redirect('/item?itemId=' + productId + "&collectionId="+collectionId);
   })();
 });
 
@@ -98,7 +95,6 @@ router.get('/shopping-cart', function(req, res, next) {
 });
 
 module.exports = router;
-
 
 // -*-*-*-*-*-*-*-*-*-*-*-*-* DB FUNCTIONS -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
 async function getCollections(){
