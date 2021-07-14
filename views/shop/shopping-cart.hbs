@@ -1,39 +1,56 @@
 <div class="container-fluid text-light bg-image">
     <div class="row">
         <div class="col" style="font-size:1.4rem">
-            <h4 class="sectionHeader text-light" style="font-size:largest;padding:1rem;">Shopping Cart</h4>
+            <h4 class="sectionHeader text-light" style="font-size:largest;padding:1rem;">Shopping Bag</h4>
         </div>
     </div>
 {{# if products }}
     <div class="row">
-        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3" >
+            <div class="bg-light justify-content-between text-dark p-3" style="padding-bottom: 1rem;border-radius:0.5rem;">
+                <h4 class="text-center text-dark" style="padding-bottom: 1rem;">Items in your bag</h4>
             <ul class="list-group">
                 {{#each products  }}
                 <li class="list-group-item">
-                    <span class=""><img style="max-height: 3rem;" src="images/products/{{this.item.productThumbs.[1]}}" /></span>
+                    <span class=""><img style="max-height: 6rem;border-radius:6rem" src="images/products/{{this.item.productThumbs.[1]}}" /></span>
                     <span class="">{{this.item.productName}}</span>
                     <span class="badge bg-success">${{this.item.price}}</span>
                     {{!-- to do remove --}}
+                </li>
                 {{/each}}
             </ul>
+            </div>
         </div>
-        <div class="bg-light col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 p-3 clearfix">
+        <div class="bg-light col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 p-3 clearfix"  style="border-radius: 0.5rem;">
             <h4 class="text-center text-dark" style="padding-bottom: 2rem;">Order Summary</h4>
             <div class="d-flex justify-content-between text-dark" style="padding-bottom: 1rem;">
-                <div>Total Cost</div>
-                <div class="text-right">$50</div>
+                <div>Item Cost</div>
+                <div class="text-right">${{totalPrice}}</div>
             </div>
             <div class="d-flex justify-content-between text-dark" style="padding-bottom: 1rem;">
                 <div>Estimated GST</div>
                 <div class="text-right">$0</div>
             </div>
-            <div class="d-flex justify-content-between text-dark" style="padding-bottom: 1rem;">
-                <div>Shipping Costs</div>
+            <div class="d-flex justify-content-between text-dark" style="padding-bottom: 2rem;">
+                <div>Shipping Costs (calc. at checkout)</div>
                 <div class="text-right">$TBC</div>
             </div>
             <div class="d-flex justify-content-between text-dark" style="padding-bottom: 1rem;">
-                <div>Shipping Costs</div>
-                <div class="text-right">$TBC</div>
+                <div>Total Cost</div>
+                <div class="text-right"><span class="badge rounded-pill bg-primary">${{totalPrice}}</span></div>
+            </div>
+
+            <div class="text-dark text-center" style="padding-bottom: 1rem;">
+                <button type="button" class="btn btn-success" style="width: 10rem">CHECKOUT</button>
+            </div>
+            <div class="text-dark text-center" style="padding-bottom: 1rem;">
+                <a href="#"><img src="images/paypal-button@2x.png" style="max-height: 2rem;" /></a>
+            </div>
+            <div class="text-dark text-center" style="padding-bottom: 1rem;">
+                <a href="#"><img src="images/apple.png" style="max-height: 2rem;" /></a>
+            </div>
+            <div class="text-dark text-center" style="padding-bottom: 1rem;">
+                <a href="#"><img src="images/visa.png" style="max-height: 2rem;" /></a>
             </div>
         </div>
     </div>
@@ -42,21 +59,12 @@
             <strong ><small>** Shipping costs will be calculated when you check-out</small></strong>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-            Total: <strong class="badge bg-success">${{totalPrice}}</strong>
-        </div>
-    </div>
-    <hr>
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-            <button type="button" class="btn btn-success">Checkout</button>
-        </div>
-    </div>
+
+
 {{else}}
 <div class="row">
     <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-        <strong>No Items in Cart</strong>
+        <strong>No Items in Shopping Bag</strong>
     </div>
 </div>
 {{/if}}
