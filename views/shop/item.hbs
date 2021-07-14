@@ -34,7 +34,15 @@
       <p class="text-light">Size: {{ item.size }}</p>
       <p class="text-light">${{ item.price }}</p>
       <p class="text-light">SKU #: {{ item.productId }}</p>
+
+
+      {{# unless inCart }}
       <a class="btn btn-light" href="/addCart?productId={{item.productId}}&collectionId={{collectionId}}">Add to cart</a>
+      {{/unless}}
+      {{# if inCart }}
+        <p class="text-light"><span class="badge bg-info">{{ item.productName }} is in your cart.</span></p>
+      {{/if}}
+
     </div>
   </div>
 </div>

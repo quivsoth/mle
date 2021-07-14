@@ -62,10 +62,13 @@ router.get('/products', function(req, res, next) {
 /* GET Product Detail page. */
 router.get('/item', function(req, res, next) {
   (async function() {
+
     let itemId = req.query.itemId;
     let collectionId = req.query.collectionId;
+    let inCart = false;
+    if(req.session.cart.items[itemId]) inCart = true;
     const item = await getItem(itemId, collectionId);
-    res.render('shop/item', { title: 'Baja La Bruja - Items', item: item.item, collectionId: collectionId, collectionName: item.collectioName});
+    res.render('shop/item', { title: 'Baja La Bruja - Items', item: item.item, collectionId: collectionId, collectionName: item.collectioName, inCart: inCart});
   })();
 });
 
