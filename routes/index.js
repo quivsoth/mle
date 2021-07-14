@@ -66,7 +66,10 @@ router.get('/item', function(req, res, next) {
     let itemId = req.query.itemId;
     let collectionId = req.query.collectionId;
     let inCart = false;
-    if(req.session.cart.items[itemId]) inCart = true;
+    if (req.session.hasOwnProperty('cart')) {
+      inCart = true;
+    }
+    // if(req.session.cart.items[itemId]) inCart = true;
     const item = await getItem(itemId, collectionId);
     res.render('shop/item', { title: 'Baja La Bruja - Items', item: item.item, collectionId: collectionId, collectionName: item.collectioName, inCart: inCart});
   })();
