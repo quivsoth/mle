@@ -35,12 +35,14 @@
       <p class="text-light">${{ item.price }}</p>
       <p class="text-light">SKU #: {{ item.productId }}</p>
 
-
+<hr class="text-light">
       {{# unless inCart }}
       <a class="btn btn-light" href="/addCart?productId={{item.productId}}&collectionId={{collectionId}}">Add to cart</a>
       {{/unless}}
       {{# if inCart }}
-        <p class="text-light"><span class="badge bg-info">{{ item.productName }} is in your cart.</span></p>
+
+        <h4 class="text-light"><span class="">{{ item.productName }} is in your cart.</span></h4>
+        <a class="btn btn-light" href="/shopping-cart">View your cart</a>
       {{/if}}
 
     </div>

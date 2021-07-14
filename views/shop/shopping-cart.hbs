@@ -1,29 +1,30 @@
 <div class="container-fluid text-light bg-image">
+    <div class="row">
+        <div class="col" style="font-size:1.4rem">
+            <h4 class="sectionHeader text-light" style="font-size:largest;padding:1rem;">Shopping Cart</h4>
+        </div>
+    </div>
 {{# if products }}
-<div class="row">
+    <div class="row">
         <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
             <ul class="list-group">
                 {{#each products  }}
                 <li class="list-group-item">
+                    <span class=""><img style="max-height: 3rem;" src="images/products/{{this.item.productThumbs.[1]}}" /></span>
                     <span class="">{{this.item.productName}}</span>
                     <span class="badge bg-success">${{this.item.price}}</span>
-
-                    {{!-- to do remove}}
-
-                    {{!-- <div class="btn-group">
-                        <button class="btn btn-primary btn-xs dropdown-toggle" type="button">Action<span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Remove All</a></li>
-                        </ul>
-                    </div> --}}
-                </li>
+                    {{!-- to do remove --}}
                 {{/each}}
             </ul>
+        </div>
+    </div><div class="row">
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 p-3 ">
+            <strong ><small>** Shipping costs will be calculated when you check-out</small></strong>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-            <strong class="badge bg-success">Total: {{totalPrice}}</strong>
+            Total: <strong class="badge bg-success">${{totalPrice}}</strong>
         </div>
     </div>
     <hr>
