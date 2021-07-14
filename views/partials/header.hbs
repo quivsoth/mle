@@ -40,11 +40,20 @@
           <a href="/user/profile" style="padding-right:2rem;"><i class="fas fa-user" title="User Profile"></i></a>
           <a href="/user/logout" style="padding-right:2rem;" ><i class="fas fa-sign-out-alt" title="Logout"></i></a>
         {{/if}}
-        <a href="#"><i class="fas fa-shopping-cart" title="Shopping Cart"></i></a>
+        <a href="/shopping-cart" style="text-decoration: none;">
+          <i class="fas fa-shopping-cart " title="Shopping Cart"></i>
+          <span class="badge bg-danger">{{session.cart.qty}}</span>
+        </a>
       </div>
     </div>
   </div>
 </nav>
+
+<script>
+  Handlebars.registerHelper('get_length', function (obj) {
+    return obj.length;
+  });
+</script>
 
 {{!-- <div class="collapse multi-collapse" id="multiCollapseExample1" >
   <div class="card card-body">

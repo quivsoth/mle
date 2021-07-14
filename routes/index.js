@@ -1,4 +1,5 @@
 var express = require('express');
+const { registerHelper } = require('hbs');
 var router = express.Router();
 
 const {MongoClient} = require('mongodb');
@@ -69,7 +70,7 @@ router.get('/item', function(req, res, next) {
   })();
 });
 
-/* GET Shopping Cart. */
+/* GET Add to Shopping Cart. */
 router.get('/addCart', function(req, res, next) {
   (async function() {
     // var productId = req.params.id;
@@ -79,11 +80,22 @@ router.get('/addCart', function(req, res, next) {
     const item = await getItem(productId, collectionId);
     cart.add(item.item, item.item.productId);
     req.session.cart = cart;
+    console.log("cart length: " + Object.keys(req.session.cart.items).length);
   console.log(req.session.cart);
     res.redirect('/');
   })();
 });
 
+/* GET View Shopping Cart. */
+router.get('/shopping-cart', function(req, res, next) {
+  (async function() {
+    if(!req.session.cart) {
+      return res.render('shop/shopping-cart', {products: null});
+    }
+    var cart = new Cart(req.session.cart);
+    res.render('shop/shopping-cart', {products: cart.generateArray(), totalPrice: cart.totalPrice});
+  })();
+});
 
 module.exports = router;
 
