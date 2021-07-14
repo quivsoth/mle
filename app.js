@@ -1,3 +1,4 @@
+require('dotenv').config();
 var mongoose = require('mongoose');
 var createError = require('http-errors');
 var express = require('express');
@@ -16,10 +17,9 @@ var userRouter = require('./routes/user');
 
 var app = express();
 
-const uri = `mongodb://192.168.1.3:27017/shop`;
+const uri = process.env.DB_HOST;
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 require('./config/passport');
-
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
@@ -30,9 +30,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(validator());
 app.use(cookieParser());
-app.use(session({ 
-  secret: 'bajasecurity', 
-  resave: false, 
+app.use(session({
+  secret: 'bajasecurity',
+  resave: false,
   saveUninitialized: false,
   store: MongoStore.create({ mongoUrl: uri }),
   cookie: { maxAge: 180 * 60 * 1000 }

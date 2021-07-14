@@ -3,7 +3,7 @@ const { registerHelper } = require('hbs');
 var router = express.Router();
 
 const {MongoClient} = require('mongodb');
-const uri = "mongodb://192.168.1.3:27017";
+const uri = process.env.DB_HOST;
 
 var Cart = require('../models/cart');
 // var csrf = require('csurf');
