@@ -160,7 +160,317 @@
   "image": "shes_got_knits.jpg",
   "description": "collection description",
   "active": true,
-  "products": []
+  "products": [
+    {
+      "productId": 21534,
+      "productName": "She's got knits #1",
+      "description": "Description",
+      "productThumbs": [
+        "shes_got_knits/IMG_4563.PNG",
+        "shes_got_knits/IMG_4562.PNG",
+        "shes_got_knits/IMG_4561.PNG",
+        "shes_got_knits/IMG_4559.PNG",
+        "shes_got_knits/IMG_4565.PNG",
+        "shes_got_knits/IMG_4564.PNG",
+        "shes_got_knits/IMG_4558.PNG",
+        "shes_got_knits/IMG_4566.PNG",
+        "shes_got_knits/IMG_4567.PNG",
+        "shes_got_knits/IMG_4568.PNG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 80537,
+      "productName": "She's got knits #2",
+      "description": "Description",
+      "productThumbs": [
+        "shes_got_knits/IMG_8104.PNG",
+        "shes_got_knits/IMG_8107.PNG",
+        "shes_got_knits/IMG_8098.PNG",
+        "shes_got_knits/IMG_8099.PNG",
+        "shes_got_knits/IMG_8106.PNG",
+        "shes_got_knits/IMG_8102.PNG",
+        "shes_got_knits/IMG_8089.PNG",
+        "shes_got_knits/IMG_8088.PNG",
+        "shes_got_knits/IMG_8101.PNG",
+        "shes_got_knits/IMG_8100.PNG",
+        "shes_got_knits/IMG_8092.PNG",
+        "shes_got_knits/IMG_8093.PNG",
+        "shes_got_knits/IMG_8091.PNG",
+        "shes_got_knits/IMG_8090.PNG",
+        "shes_got_knits/IMG_8094.PNG",
+        "shes_got_knits/IMG_8095.PNG",
+        "shes_got_knits/IMG_8108.PNG",
+        "shes_got_knits/IMG_8096.PNG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 62166,
+      "productName": "She's got knits #3",
+      "description": "Description",
+      "productThumbs": [
+        "shes_got_knits/IMG_3409.JPG",
+        "shes_got_knits/IMG_3408.JPG",
+        "shes_got_knits/IMG_3416.JPG",
+        "shes_got_knits/IMG_3414.JPG",
+        "shes_got_knits/IMG_3415.JPG",
+        "shes_got_knits/IMG_3405.JPG",
+        "shes_got_knits/IMG_3411.JPG",
+        "shes_got_knits/IMG_3404.JPG",
+        "shes_got_knits/IMG_3412.JPG",
+        "shes_got_knits/IMG_3406.JPG",
+        "shes_got_knits/IMG_3407.JPG",
+        "shes_got_knits/IMG_3413.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 39729,
+      "productName": "She's got knits #4",
+      "description": "Description",
+      "productThumbs": [
+        "shes_got_knits/IMG_3378.JPG",
+        "shes_got_knits/IMG_3386.JPG",
+        "shes_got_knits/IMG_3392.JPG",
+        "shes_got_knits/IMG_3384.JPG",
+        "shes_got_knits/IMG_3391.JPG",
+        "shes_got_knits/IMG_3385.JPG",
+        "shes_got_knits/IMG_3381.JPG",
+        "shes_got_knits/IMG_3395.JPG",
+        "shes_got_knits/IMG_3394.JPG",
+        "shes_got_knits/IMG_3380.JPG",
+        "shes_got_knits/IMG_3369.JPG",
+        "shes_got_knits/IMG_3397.JPG",
+        "shes_got_knits/IMG_3371.JPG",
+        "shes_got_knits/IMG_3370.JPG",
+        "shes_got_knits/IMG_3399.JPG",
+        "shes_got_knits/IMG_3400.JPG",
+        "shes_got_knits/IMG_3366.JPG",
+        "shes_got_knits/IMG_3372.JPG",
+        "shes_got_knits/IMG_3401.JPG",
+        "shes_got_knits/IMG_3367.JPG",
+        "shes_got_knits/IMG_3398.JPG",
+        "shes_got_knits/IMG_3377.JPG",
+        "shes_got_knits/IMG_3376.JPG",
+        "shes_got_knits/IMG_3389.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 3972,
+      "productName": "She's got knits #5",
+      "description": "Description",
+      "productThumbs": [
+        "shes_got_knits/IMG_3284.JPG",
+        "shes_got_knits/IMG_3285.JPG",
+        "shes_got_knits/IMG_3278.JPG",
+        "shes_got_knits/IMG_3279.JPG",
+        "shes_got_knits/IMG_3286.JPG",
+        "shes_got_knits/IMG_3296.JPG",
+        "shes_got_knits/IMG_3282.JPG",
+        "shes_got_knits/IMG_3283.JPG",
+        "shes_got_knits/IMG_3297.JPG",
+        "shes_got_knits/IMG_3281.JPG",
+        "shes_got_knits/IMG_3295.JPG",
+        "shes_got_knits/IMG_3294.JPG",
+        "shes_got_knits/IMG_3280.JPG",
+        "shes_got_knits/IMG_3299.JPG",
+        "shes_got_knits/IMG_3298.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 3981,
+      "productName": "She's got knits #6",
+      "description": "Description",
+      "productThumbs": [
+        "shes_got_knits/IMG_4662.PNG",
+        "shes_got_knits/IMG_4661.PNG",
+        "shes_got_knits/IMG_8073.PNG",
+        "shes_got_knits/IMG_8072.PNG",
+        "shes_got_knits/IMG_8066.PNG",
+        "shes_got_knits/IMG_4657.PNG",
+        "shes_got_knits/IMG_8079.PNG",
+        "shes_got_knits/IMG_4656.PNG",
+        "shes_got_knits/IMG_8084.PNG",
+        "shes_got_knits/IMG_4655.PNG",
+        "shes_got_knits/IMG_8080.PNG",
+        "shes_got_knits/IMG_8081.PNG",
+        "shes_got_knits/IMG_8068.PNG",
+        "shes_got_knits/IMG_4652.PNG",
+        "shes_got_knits/IMG_8083.PNG",
+        "shes_got_knits/IMG_8069.PNG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 32117,
+      "productName": "She's got knits #7",
+      "description": "Description",
+      "productThumbs": [
+        "shes_got_knits/IMG_3418.JPG",
+        "shes_got_knits/IMG_3419.JPG",
+        "shes_got_knits/IMG_3417.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 76783,
+      "productName": "She's got knits #8",
+      "description": "Description",
+      "productThumbs": [
+        "shes_got_knits/IMG_3333.JPG",
+        "shes_got_knits/IMG_3327.JPG",
+        "shes_got_knits/IMG_3326.JPG",
+        "shes_got_knits/IMG_3330.JPG",
+        "shes_got_knits/IMG_3331.JPG",
+        "shes_got_knits/IMG_3325.JPG",
+        "shes_got_knits/IMG_3335.JPG",
+        "shes_got_knits/IMG_3334.JPG",
+        "shes_got_knits/IMG_3336.JPG",
+        "shes_got_knits/IMG_3337.JPG",
+        "shes_got_knits/IMG_3340.JPG",
+        "shes_got_knits/IMG_3329.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 54770,
+      "productName": "She's got knits #9",
+      "description": "Description",
+      "productThumbs": [
+        "shes_got_knits/IMG_3318.JPG",
+        "shes_got_knits/IMG_3324.JPG",
+        "shes_got_knits/IMG_3321.JPG",
+        "shes_got_knits/IMG_3322.JPG",
+        "shes_got_knits/IMG_3323.JPG",
+        "shes_got_knits/IMG_3312.JPG",
+        "shes_got_knits/IMG_3313.JPG",
+        "shes_got_knits/IMG_3311.JPG",
+        "shes_got_knits/IMG_3310.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 56654,
+      "productName": "She's got knits #10",
+      "description": "Description",
+      "productThumbs": [
+        "shes_got_knits/IMG_8212.PNG",
+        "shes_got_knits/IMG_8213.PNG",
+        "shes_got_knits/IMG_8207.PNG",
+        "shes_got_knits/IMG_8216.PNG",
+        "shes_got_knits/IMG_8214.PNG",
+        "shes_got_knits/IMG_8201.PNG",
+        "shes_got_knits/IMG_8221.PNG",
+        "shes_got_knits/IMG_8220.PNG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 3958,
+      "productName": "She's got knits #11",
+      "description": "Description",
+      "productThumbs": [
+        "shes_got_knits/IMG_3308.JPG",
+        "shes_got_knits/IMG_3306.JPG",
+        "shes_got_knits/IMG_3307.JPG",
+        "shes_got_knits/IMG_3305.JPG",
+        "shes_got_knits/IMG_3304.JPG",
+        "shes_got_knits/IMG_3300.JPG",
+        "shes_got_knits/IMG_3301.JPG",
+        "shes_got_knits/IMG_3303.JPG",
+        "shes_got_knits/IMG_3302.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 51697,
+      "productName": "She's got knits #12",
+      "description": "Description",
+      "productThumbs": [
+        "shes_got_knits/IMG_8228.PNG",
+        "shes_got_knits/IMG_8224.PNG",
+        "shes_got_knits/IMG_8227.PNG",
+        "shes_got_knits/IMG_8233.PNG",
+        "shes_got_knits/IMG_8232.PNG",
+        "shes_got_knits/IMG_8235.PNG",
+        "shes_got_knits/IMG_8234.PNG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 9813,
+      "productName": "She's got knits #13",
+      "description": "Description",
+      "productThumbs": [
+        "shes_got_knits/IMG_3350.JPG",
+        "shes_got_knits/IMG_3345.JPG",
+        "shes_got_knits/IMG_3347.JPG",
+        "shes_got_knits/IMG_3352.JPG",
+        "shes_got_knits/IMG_3346.JPG",
+        "shes_got_knits/IMG_3356.JPG",
+        "shes_got_knits/IMG_3357.JPG",
+        "shes_got_knits/IMG_3343.JPG",
+        "shes_got_knits/IMG_3355.JPG",
+        "shes_got_knits/IMG_3354.JPG",
+        "shes_got_knits/IMG_3359.JPG",
+        "shes_got_knits/IMG_3364.JPG",
+        "shes_got_knits/IMG_3358.JPG",
+        "shes_got_knits/IMG_3363.JPG",
+        "shes_got_knits/IMG_3362.JPG",
+        "shes_got_knits/IMG_3360.JPG",
+        "shes_got_knits/IMG_3348.JPG",
+        "shes_got_knits/IMG_3349.JPG",
+        "shes_got_knits/IMG_3361.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 95509,
+      "productName": "She's got knits #14",
+      "description": "Description",
+      "productThumbs": [
+        "shes_got_knits/IMG_8239.PNG",
+        "shes_got_knits/IMG_8238.PNG",
+        "shes_got_knits/IMG_8244.PNG",
+        "shes_got_knits/IMG_8245.PNG",
+        "shes_got_knits/IMG_8240.PNG",
+        "shes_got_knits/IMG_8242.PNG",
+        "shes_got_knits/IMG_8243.PNG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    }
+  ]
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9c6"
@@ -1501,7 +1811,7 @@
   "collectionName": "That 70s though",
   "image": "that_70s_though.jpg",
   "description": "collection description",
-  "active": false,
+  "active": true,
   "products": []
 },{
   "_id": {
