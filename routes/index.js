@@ -114,6 +114,20 @@ router.get('/shopping-cart', function(req, res, next) {
   })();
 });
 
+/* GET View Shopping Cart. */
+router.get('/checkout', function(req, res, next) {
+  (async function() {
+    if(!req.session.cart) {
+      return res.render('shop/checkout', {products: null});
+    }
+    var cart = new Cart(req.session.cart);
+
+    res.render('shop/checkout', {products: cart.generateArray(), totalPrice: cart.totalPrice});
+  })();
+});
+
+
+
 module.exports = router;
 
 // -*-*-*-*-*-*-*-*-*-*-*-*-* DB FUNCTIONS -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//

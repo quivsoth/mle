@@ -1755,7 +1755,7 @@
       "productName": "Lace it up #7",
       "description": "Description",
       "productThumbs": [
-          "lace_it_up/IMG_0523.PNG",
+        "lace_it_up/IMG_0523.PNG",
         "lace_it_up/IMG_0518.PNG",
         "lace_it_up/IMG_0520.PNG",
         "lace_it_up/IMG_0522.PNG"
@@ -1868,8 +1868,8 @@
       "productName": "Lace it up #14",
       "description": "Description",
       "productThumbs": [
-          "lace_it_up/IMG_1061.PNG",
-          "lace_it_up/IMG_1069.PNG",
+        "lace_it_up/IMG_1061.PNG",
+        "lace_it_up/IMG_1069.PNG",
         "lace_it_up/IMG_1060.PNG",
         "lace_it_up/IMG_1063.PNG",
         "lace_it_up/IMG_1067.PNG",
@@ -2084,7 +2084,124 @@
   "image": "collection13.jpg",
   "description": "collection description",
   "active": false,
-  "products": []
+  "products": [
+    {
+      "productId": 13115,
+      "productName": "Seriously 60s #1",
+      "description": "Description",
+      "productThumbs": [
+        "seriously_60s/.DS_Store",
+        "seriously_60s/IMG_4189.JPG",
+        "seriously_60s/IMG_4188.JPG",
+        "seriously_60s/IMG_4191.JPG",
+        "seriously_60s/IMG_4190.JPG",
+        "seriously_60s/IMG_4192.JPG",
+        "seriously_60s/IMG_4186.JPG",
+        "seriously_60s/IMG_4187.JPG",
+        "seriously_60s/IMG_4193.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 75200,
+      "productName": "Seriously 60s #2",
+      "description": "Description",
+      "productThumbs": [
+        "seriously_60s/IMG_4148.JPG",
+        "seriously_60s/IMG_4146.JPG",
+        "seriously_60s/IMG_4147.JPG",
+        "seriously_60s/IMG_4145.JPG",
+        "seriously_60s/IMG_4144.JPG",
+        "seriously_60s/IMG_4140.JPG",
+        "seriously_60s/IMG_4141.JPG",
+        "seriously_60s/IMG_4143.JPG",
+        "seriously_60s/IMG_4142.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 22125,
+      "productName": "Seriously 60s #3",
+      "description": "Description",
+      "productThumbs": [
+        "seriously_60s/.DS_Store",
+        "seriously_60s/IMG_4167.JPG",
+        "seriously_60s/IMG_4173.JPG",
+        "seriously_60s/IMG_4172.JPG",
+        "seriously_60s/IMG_4166.JPG",
+        "seriously_60s/IMG_4170.JPG",
+        "seriously_60s/IMG_4171.JPG",
+        "seriously_60s/IMG_4168.JPG",
+        "seriously_60s/IMG_4169.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 88054,
+      "productName": "Seriously 60s #4",
+      "description": "Description",
+      "productThumbs": [
+        "seriously_60s/.DS_Store",
+        "seriously_60s/IMG_4164.JPG",
+        "seriously_60s/IMG_4158.JPG",
+        "seriously_60s/IMG_4159.JPG",
+        "seriously_60s/IMG_4165.JPG",
+        "seriously_60s/IMG_4161.JPG",
+        "seriously_60s/IMG_4160.JPG",
+        "seriously_60s/IMG_4163.JPG",
+        "seriously_60s/IMG_4157.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 69710,
+      "productName": "Seriously 60s #5",
+      "description": "Description",
+      "productThumbs": [
+        "seriously_60s/.DS_Store",
+        "seriously_60s/IMG_4149.JPG",
+        "seriously_60s/IMG_4152.JPG",
+        "seriously_60s/IMG_4153.JPG",
+        "seriously_60s/IMG_4151.JPG",
+        "seriously_60s/IMG_4150.JPG",
+        "seriously_60s/IMG_4154.JPG",
+        "seriously_60s/IMG_4155.JPG",
+        "seriously_60s/IMG_4156.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 56123,
+      "productName": "Seriously 60s #6",
+      "description": "Description",
+      "productThumbs": [
+        "seriously_60s/.DS_Store",
+        "seriously_60s/IMG_4175.JPG",
+        "seriously_60s/IMG_4174.JPG",
+        "seriously_60s/IMG_4176.JPG",
+        "seriously_60s/IMG_4177.JPG",
+        "seriously_60s/IMG_4179.JPG",
+        "seriously_60s/IMG_4178.JPG",
+        "seriously_60s/IMG_4183.JPG",
+        "seriously_60s/IMG_4182.JPG",
+        "seriously_60s/IMG_4180.JPG",
+        "seriously_60s/IMG_4181.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    }
+  ]
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9e1"
@@ -2104,7 +2221,261 @@
   "image": "that_70s_though.jpg",
   "description": "collection description",
   "active": true,
-  "products": []
+  "products": [
+    {
+      "productId": 58603,
+      "productName": "That 70s tho!#1",
+      "description": "Description",
+      "productThumbs": [],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 73325,
+      "productName": "That 70s tho!#2",
+      "description": "Description",
+      "productThumbs": [
+        "that_70s_tho/IMG_4288.JPG",
+        "that_70s_tho/IMG_4289.JPG",
+        "that_70s_tho/IMG_4290.JPG",
+        "that_70s_tho/IMG_4291.JPG",
+        "that_70s_tho/IMG_4287.JPG",
+        "that_70s_tho/IMG_4293.JPG",
+        "that_70s_tho/IMG_4292.JPG",
+        "that_70s_tho/IMG_4286.JPG",
+        "that_70s_tho/IMG_4294.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 72706,
+      "productName": "That 70s tho!#3",
+      "description": "Description",
+      "productThumbs": [
+        "that_70s_tho/IMG_4266.JPG",
+        "that_70s_tho/IMG_4267.JPG",
+        "that_70s_tho/IMG_4265.JPG",
+        "that_70s_tho/IMG_4259.JPG",
+        "that_70s_tho/IMG_4264.JPG",
+        "that_70s_tho/IMG_4260.JPG",
+        "that_70s_tho/IMG_4261.JPG",
+        "that_70s_tho/IMG_4263.JPG",
+        "that_70s_tho/IMG_4262.JPG",
+        "that_70s_tho/IMG_4269.JPG",
+        "that_70s_tho/IMG_4268.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 81902,
+      "productName": "That 70s tho!#4",
+      "description": "Description",
+      "productThumbs": [
+        "that_70s_tho/IMG_4258.JPG",
+        "that_70s_tho/IMG_4253.JPG",
+        "that_70s_tho/IMG_4252.JPG",
+        "that_70s_tho/IMG_4255.JPG",
+        "that_70s_tho/IMG_4254.JPG",
+        "that_70s_tho/IMG_4256.JPG",
+        "that_70s_tho/IMG_4257.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 55722,
+      "productName": "That 70s tho!#5",
+      "description": "Description",
+      "productThumbs": [
+        "that_70s_tho/IMG_4205.JPG",
+        "that_70s_tho/IMG_4204.JPG",
+        "that_70s_tho/IMG_4206.JPG",
+        "that_70s_tho/IMG_4207.JPG",
+        "that_70s_tho/IMG_4209.JPG",
+        "that_70s_tho/IMG_4208.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 43126,
+      "productName": "That 70s tho!#6",
+      "description": "Description",
+      "productThumbs": [
+        "that_70s_tho/IMG_4284.JPG",
+        "that_70s_tho/IMG_4285.JPG",
+        "that_70s_tho/IMG_4278.JPG",
+        "that_70s_tho/IMG_4279.JPG",
+        "that_70s_tho/IMG_4282.JPG",
+        "that_70s_tho/IMG_4283.JPG",
+        "that_70s_tho/IMG_4281.JPG",
+        "that_70s_tho/IMG_4280.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 12172,
+      "productName": "That 70s tho!#7",
+      "description": "Description",
+      "productThumbs": [
+        "that_70s_tho/IMG_4272.JPG",
+        "that_70s_tho/IMG_4273.JPG",
+        "that_70s_tho/IMG_4271.JPG",
+        "that_70s_tho/IMG_4270.JPG",
+        "that_70s_tho/IMG_4274.JPG",
+        "that_70s_tho/IMG_4275.JPG",
+        "that_70s_tho/IMG_4277.JPG",
+        "that_70s_tho/IMG_4276.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 53565,
+      "productName": "That 70s tho!#8",
+      "description": "Description",
+      "productThumbs": [
+        "that_70s_tho/IMG_4239.JPG",
+        "that_70s_tho/IMG_4238.JPG",
+        "that_70s_tho/IMG_4233.JPG",
+        "that_70s_tho/IMG_4236.JPG",
+        "that_70s_tho/IMG_4237.JPG",
+        "that_70s_tho/IMG_4235.JPG",
+        "that_70s_tho/IMG_4234.JPG",
+        "that_70s_tho/IMG_4241.JPG",
+        "that_70s_tho/IMG_4240.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 23175,
+      "productName": "That 70s tho!#9",
+      "description": "Description",
+      "productThumbs": [
+        "that_70s_tho/IMG_4228.JPG",
+        "that_70s_tho/IMG_4229.JPG",
+        "that_70s_tho/IMG_4230.JPG",
+        "that_70s_tho/IMG_4219.JPG",
+        "that_70s_tho/IMG_4231.JPG",
+        "that_70s_tho/IMG_4227.JPG",
+        "that_70s_tho/IMG_4232.JPG",
+        "that_70s_tho/IMG_4222.JPG",
+        "that_70s_tho/IMG_4221.JPG",
+        "that_70s_tho/IMG_4220.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 46212,
+      "productName": "That 70s tho!#10",
+      "description": "Description",
+      "productThumbs": [
+        "that_70s_tho/IMG_4299.JPG",
+        "that_70s_tho/IMG_4298.JPG",
+        "that_70s_tho/IMG_4300.JPG",
+        "that_70s_tho/IMG_4301.JPG",
+        "that_70s_tho/IMG_4303.JPG",
+        "that_70s_tho/IMG_4302.JPG",
+        "that_70s_tho/IMG_4296.JPG",
+        "that_70s_tho/IMG_4297.JPG",
+        "that_70s_tho/IMG_4295.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 24052,
+      "productName": "That 70s tho!#11",
+      "description": "Description",
+      "productThumbs": [
+        "that_70s_tho/IMG_4211.JPG",
+        "that_70s_tho/IMG_4210.JPG",
+        "that_70s_tho/IMG_4212.JPG",
+        "that_70s_tho/IMG_4213.JPG",
+        "that_70s_tho/IMG_4217.JPG",
+        "that_70s_tho/IMG_4216.JPG",
+        "that_70s_tho/IMG_4214.JPG",
+        "that_70s_tho/IMG_4215.JPG",
+        "that_70s_tho/IMG_4218.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 12773,
+      "productName": "That 70s tho!#12",
+      "description": "Description",
+      "productThumbs": [
+        "that_70s_tho/IMG_4306.JPG",
+        "that_70s_tho/IMG_4312.JPG",
+        "that_70s_tho/IMG_4307.JPG",
+        "that_70s_tho/IMG_4311.JPG",
+        "that_70s_tho/IMG_4305.JPG",
+        "that_70s_tho/IMG_4304.JPG",
+        "that_70s_tho/IMG_4310.JPG",
+        "that_70s_tho/IMG_4309.JPG",
+        "that_70s_tho/IMG_4308.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 74960,
+      "productName": "That 70s tho!#13",
+      "description": "Description",
+      "productThumbs": [
+        "that_70s_tho/IMG_4248.JPG",
+        "that_70s_tho/IMG_4249.JPG",
+        "that_70s_tho/IMG_4247.JPG",
+        "that_70s_tho/IMG_4246.JPG",
+        "that_70s_tho/IMG_4244.JPG",
+        "that_70s_tho/IMG_4250.JPG",
+        "that_70s_tho/IMG_4251.JPG",
+        "that_70s_tho/IMG_4245.JPG",
+        "that_70s_tho/IMG_4242.JPG",
+        "that_70s_tho/IMG_4243.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    },
+    {
+      "productId": 5906,
+      "productName": "That 70s tho!#14",
+      "description": "Description",
+      "productThumbs": [
+        "that_70s_tho/IMG_4313.JPG",
+        "that_70s_tho/IMG_4314.JPG",
+        "that_70s_tho/IMG_4315.JPG",
+        "that_70s_tho/IMG_4317.JPG",
+        "that_70s_tho/IMG_4316.JPG",
+        "that_70s_tho/IMG_4318.JPG",
+        "that_70s_tho/IMG_4319.JPG",
+        "that_70s_tho/IMG_4321.JPG",
+        "that_70s_tho/IMG_4320.JPG"
+      ],
+      "price": 111,
+      "size": 4,
+      "active": true
+    }
+  ]
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9e3"
