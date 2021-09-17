@@ -217,12 +217,16 @@ async function updateItem(productId, collectionId){
   var collections = Collection.findOne(query, function(err, result) {
     if(err) { console.log(err); }
     console.log("\n\n\n\n-------");
-    console.log(result.products);
-
     objIndex = result.products.findIndex((obj => obj.productId == 8192));
-    console.log(objIndex);
+
+    var product = result.products[objIndex].productId;
+    const update = { description: "Larry" };
+
+    Collection.findOneAndUpdate(product, update);
+
 
   });
+
 
   // var c = Collection.findOneAndUpdate(
   // { query },
