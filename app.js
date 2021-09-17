@@ -18,6 +18,8 @@ var userRouter = require('./routes/user');
 var app = express();
 
 const uri = process.env.DB_HOST;
+
+
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 require('./config/passport');
 

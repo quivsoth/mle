@@ -5,28 +5,45 @@ const uri = process.env.DB_HOST;
 var express = require('express');
 var router = express.Router();
 var Cart = require('../models/cart');
-var csrf = require('csurf');
-var csrfProtection = csrf();
-router.use(csrfProtection);
 
-/* GET home page. */
+
+var mongoose = require("mongoose");
+var Collection = require("../models/collection");
+var Product = require("../models/collection");
+const { findOneAndUpdate } = require('../models/collection');
+
+
+
+// var csrf = require('csurf');
+// var csrfProtection = csrf();
+// router.use(csrfProtection);
+
+/*    Description: View for HOME page.
+      Method: GET                     */
 router.get('/', function(req, res, next) {
   res.render('shop/index', { title: 'Baja La Bruja - Fighting Fast Fashion'});
 });
 
+/*    Description: View for lifestyle page.
+      Method: GET                     */
 router.get('/lifestyle', function(req, res, next) {
   res.render('shop/lifestyle', { title: 'Baja La Bruja - F#$ck Fast Fashion'});
 });
 
+/*    Description: View for Gift page.
+      Method: GET                     */
 router.get('/gifts', function(req, res, next) {
   res.render('shop/gifts', { title: 'Baja La Bruja - Gifts'});
 });
 
+/*    Description: View for Contact page.
+      Method: GET                     */
 router.get('/contacts', function(req, res, next) {
   res.render('shop/contacts', { title: 'Baja La Bruja - Contact Us'});
 });
 
-/* GET Collections page. */
+/*    Description: View for Collections page.
+      Method: GET                     */
 router.get('/collections', function(req, res, next) {
   (async function() {
     const collections = await getCollections();
@@ -39,7 +56,8 @@ router.get('/collections', function(req, res, next) {
   })();
 });
 
-/* GET Products in Collection page. */
+/*      Description: Products in Collection page.
+        Method: GET                    */
 router.get('/products', function(req, res, next) {
   (async function() {
     let collectionId = req.query.collectionId;
@@ -59,7 +77,8 @@ router.get('/products', function(req, res, next) {
   })();
 });
 
-/* GET Product Detail page. */
+/*      Description: Item/Product Detail View.
+        Method: GET                     */
 router.get('/item', function(req, res, next) {
   (async function() {
 
@@ -75,7 +94,8 @@ router.get('/item', function(req, res, next) {
   })();
 });
 
-/* GET Add to Shopping Cart. */
+/*      Description: Add item to Shopping Cart.
+        Method: GET                            */
 router.get('/addCart', function(req, res, next) {
   (async function() {
     // var productId = req.params.id;
@@ -89,7 +109,8 @@ router.get('/addCart', function(req, res, next) {
   })();
 });
 
-/* GET Add to Shopping Cart. */
+/*      Description: Delete item in Shopping Cart.
+        Method: GET                           */
 router.get('/deleteCart', function(req, res, next) {
   (async function() {
     console.log("delete cart");
@@ -102,7 +123,9 @@ router.get('/deleteCart', function(req, res, next) {
   })();
 });
 
-/* GET View Shopping Cart. */
+
+/*      Description: View Shopping Cart.
+        Method: GET                           */
 router.get('/shopping-cart', function(req, res, next) {
   (async function() {
     if(!req.session.cart) {
@@ -114,7 +137,9 @@ router.get('/shopping-cart', function(req, res, next) {
   })();
 });
 
-/* GET View Shopping Cart. */
+
+/*      Description: Checkout of Shopping Cart.
+        Method: GET                           */
 router.get('/checkout', function(req, res, next) {
   (async function() {
     if(!req.session.cart) {
@@ -126,7 +151,22 @@ router.get('/checkout', function(req, res, next) {
   })();
 });
 
+/*      Description: Update item in collection
+        Method: PUT                           */
+router.put('/updateProduct/:id', function(req, res) {
 
+
+
+  (async function() {
+    let itemId = req.params.id;
+    // let collectionId = 1;
+    await updateItem(itemId, 1);
+    // console.log(item);
+
+
+
+  })();
+});
 
 module.exports = router;
 
@@ -165,3 +205,168 @@ async function getItem(productId, collectionId){
   } catch (e) { console.error(e); }
   finally { await client.close(); }
 }
+
+
+
+async function updateItem(productId, collectionId){
+  console.log("Calling Update Item");
+
+  var query = { collectionId : 1 };
+
+
+  var collections = Collection.findOne(query, function(err, result) {
+    if(err) { console.log(err); }
+    console.log("\n\n\n\n-------");
+    console.log(result.products);
+
+    objIndex = result.products.findIndex((obj => obj.productId == 8192));
+    console.log(objIndex);
+
+  });
+
+  // var c = Collection.findOneAndUpdate(
+  // { query },
+  //   function(err, result) {
+  //     if(err) { console.log(err); }
+  //     console.log("result | " + result);
+  // });
+
+
+
+
+//   Folder.findOneAndUpdate(
+//     { "_id": folderId, "permissions._id": permission._id },
+//     {
+//         "$set": {
+//             "permissions.$.role": permission.role
+//         }
+//     },
+//     function(err,doc) {
+//     }
+// );
+
+
+
+  // var collections = Collection.find(query, function(err, result) {
+  //   if(err) {console.log(err);}
+  //   var product = result.map(function (result) { return result.products });
+  //   Product.find({product: {$in: product}}, function (err, items) {
+  //     if(err) {console.log(err);}
+
+  //     result.forEach(function (user) {
+  //       result.items = items.filter(function (item) {
+  //         // return item.user_id === user._id;
+  //       });
+  //     });
+
+  //   });
+  // });
+
+
+
+  // console.log(collections);
+
+  // var c = new Collection({
+  //   collectionId: 999,
+  //   collectionName: "Not a real collection",
+  //   image: "image.jpg",
+  //   description: "dummy description",
+  //   active: false,
+  //   products: []
+  // })
+
+  // c.save(function(err, result){
+  //   if (err) throw err;
+  //   console.log("1 document updated : " + result);
+  // });
+
+
+
+
+
+
+  // const client = new MongoClient(uri, { useUnifiedTopology: true });
+  // try {
+  //     await client.connect();
+
+  //     var query = { collectionId : collectionId };
+  //     var newvalues = { $set: { description : "Mickey"} };
+
+  //     await client.db("shop").collection("bruja").updateOne(query, newvalues, function(err, res) {
+  //          if (err) throw err;
+  //          console.log(res);
+  //          console.log("1 document updated");
+  //       });
+
+  //     // var result = {};
+  //     // const cursor = await client.db("shop").collection("bruja").findOne({"collectionId": parseInt(collectionId)});
+  //     // // result.collectioName = cursor.collectionName;
+  //     // let item = cursor.products.find(product => product.productId == productId);
+
+
+
+  //     // await cursor.updateOne(query, newvalues, function(err, res) {
+  //     //   if (err) throw err;
+  //     //   console.log("1 document updated");
+  //     // });
+  //     // console.log(item);
+
+  //     // result.item = item;
+  //     // return result;
+  // } catch (e) { console.error(e); }
+  // finally { await client.close(); }
+}
+
+// async function updateItem(productId){
+//   console.log("Async Update Item called : " + productId);
+//   const client = new MongoClient(uri, { useUnifiedTopology: true });
+//   try {
+//       await client.connect();
+
+//       var match = {
+//         // $unwind : "$products",
+//         $match: { "collectionId": 1 },
+//         $group: {
+//         "collectionId": "$collectionId"
+//         }
+//       }
+//       // const pipeline = [{
+//       //     "$unwind" : "$products",
+//       //     "$match": { "products.productId": 35537 },
+//       //     "$project" : {"_id" : 0,
+//       //       "id" : "$products.productId",
+//       //       "name" : "$products.productName",
+//       //       "description" : "$products.description"}
+//       //   }];
+
+//       var query = { collectionId: 10, "$products.productId" : 35537 };
+//       await client.db("shop").collection("bruja").find(query).toArray(function(err, res) {
+//         if (err) throw err;
+//         console.log(res);
+//       });
+
+//       var myquery = { collectionId : 10 };
+//       var newvalues = { $set: { description : "Mickey"} };
+
+//       // const result = await collection.updateOne(filter, updateDocument);
+//       // await client.db("shop").collection("bruja").updateOne(pipeline, newvalues, function(err, res) {
+//       //   if (err) throw err;
+//       //   console.log("1 document updated");
+//       // });
+
+//       // const cursor = await client.db("shop").collection("bruja").aggregate(match).toArray();
+//       // console.log(cursor[0]);
+//       // for await (const doc of cursor) {
+//       //      console.log(doc);
+//       //  }
+
+//       // return cursor;
+
+//   } catch (e) {
+//     console.log("there was an error with this request: " + e);
+//     console.error(e);
+//   }
+//   finally {
+//     // await client.close();
+//   }
+// }
