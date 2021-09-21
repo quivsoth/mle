@@ -2,7 +2,7 @@ require('dotenv').config();
 var mongoose = require('mongoose');
 var createError = require('http-errors');
 var express = require('express');
-const methodOverride = require('method-override');
+var methodOverride = require('method-override');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -17,7 +17,6 @@ var indexRouter = require('./routes/index');
 var userRouter = require('./routes/user');
 
 var app = express();
-
 const uri = process.env.DB_HOST;
 
 

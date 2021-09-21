@@ -11,11 +11,24 @@ var router = express.Router();
 var Cart = require('../models/cart');
 var Collection = require("../models/collection");
 var Product = require("../models/collection");
+const { deserializeUser } = require('passport');
 
 
 // var csrf = require('csurf');
 // var csrfProtection = csrf();
 // router.use(csrfProtection);
+
+router.get('/flash', function(req, res){
+  // Set a flash message by passing the key, followed by the value, to req.flash().
+  req.flash('info', 'Flash is back!')
+  res.redirect('/flash2');
+});
+
+router.get('/flash2', function(req, res){
+  // Get an array of flash messages by passing the key to req.flash()
+  console.log(req.flash('info'));
+  res.render('shop/index', { messages: req.flash('info') });
+});
 
 /*    Description: View for HOME page.
       Method: GET                     */
@@ -95,20 +108,22 @@ router.get('/item', function(req, res, next) {
 
 /*      Description: Item/Product Detail View.
         Method: GET                     */
-        router.get('/item_admin', function(req, res, next) {
-          (async function() {
-        
-            let itemId = req.query.itemId;
-            let collectionId = req.query.collectionId;
-            let inCart = false;
-            if (req.session.hasOwnProperty('cart') && req.session.cart.items[itemId]) {
-              inCart = true;
-            }
-            // if(req.session.cart.items[itemId]) inCart = true;
-            const item = await getItem(itemId, collectionId);
-            res.render('shop/item_admin', { title: 'Baja La Bruja - Items', item: item.item, collectionId: collectionId, collectionName: item.collectioName, inCart: inCart});
-          })();
-        });
+router.get('/item_admin', function(req, res, next) {
+  (async function() {
+
+    let itemId = req.query.itemId;
+    let collectionId = req.query.collectionId;
+    let inCart = false;
+    if (req.session.hasOwnProperty('cart') && req.session.cart.items[itemId]) {
+      inCart = true;
+    }
+    // if(req.session.cart.items[itemId]) inCart = true;
+    const item = await getItem(itemId, collectionId);
+    let messages = req.flash("Succesfully updated item!");
+    console.log("Messages: " + messages.length);
+    res.render('shop/item_admin', { title: 'Baja La Bruja - Items', item: item.item, collectionId: collectionId, collectionName: item.collectioName, inCart: inCart, messages: messages, hasErrors: messages.length > 0,});
+  })();
+});
 
 /*      Description: Add item to Shopping Cart.
         Method: GET                            */
@@ -170,17 +185,15 @@ router.get('/checkout', function(req, res, next) {
 /*      Description: Update item in collection
         Method: PUT                           */
 router.put('/updateProduct/:collection/:id', function(req, res) {
-  // (async function() {
-    console.log("here");
+  (async function() {
     let itemId = parseInt(req.params.id);
     let collectionId = parseInt(req.params.collection);
- 
-    var description = req.body.description;
-    var price = req.body.price;
-    var size = req.body.size;
-    // await updateItem(itemId, collectionId, description, price, size);
-  // })();
-}); 
+    await updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size);
+
+    res.redirect('/item_admin?itemId=' + itemId + "&collectionId="+collectionId);
+
+  })();
+});
 
 module.exports = router;
 
@@ -220,7 +233,7 @@ async function getItem(productId, collectionId){
   finally { await client.close(); }
 }
 
-async function updateItem(productId, collectionId, description, price, size) {
+async function updateItem(productId, collectionId, productName, description, price, size) {
   var query = { collectionId : collectionId }; 
 
   var cr = Collection.findOne(query, function (err, product) {
@@ -228,6 +241,7 @@ async function updateItem(productId, collectionId, description, price, size) {
       return item.productId === productId;
     }).pop();
 
+    p.description = productName;
     p.description = description;
     p.price = price;
     p.size = size;
