@@ -10,25 +10,11 @@ var router = express.Router();
 
 var Cart = require('../models/cart');
 var Collection = require("../models/collection");
-var Product = require("../models/collection");
 const { deserializeUser } = require('passport');
-
 
 // var csrf = require('csurf');
 // var csrfProtection = csrf();
 // router.use(csrfProtection);
-
-router.get('/flash', function(req, res){
-  // Set a flash message by passing the key, followed by the value, to req.flash().
-  req.flash('info', 'Flash is back!')
-  res.redirect('/flash2');
-});
-
-router.get('/flash2', function(req, res){
-  // Get an array of flash messages by passing the key to req.flash()
-  console.log(req.flash('info'));
-  res.render('shop/index', { messages: req.flash('info') });
-});
 
 /*    Description: View for HOME page.
       Method: GET                     */
@@ -93,7 +79,6 @@ router.get('/products', function(req, res, next) {
         Method: GET                     */
 router.get('/item', function(req, res, next) {
   (async function() {
-
     let itemId = req.query.itemId;
     let collectionId = req.query.collectionId;
     let inCart = false;
@@ -110,18 +95,15 @@ router.get('/item', function(req, res, next) {
         Method: GET                     */
 router.get('/item_admin', function(req, res, next) {
   (async function() {
-
     let itemId = req.query.itemId;
     let collectionId = req.query.collectionId;
     let inCart = false;
     if (req.session.hasOwnProperty('cart') && req.session.cart.items[itemId]) {
       inCart = true;
     }
-    // if(req.session.cart.items[itemId]) inCart = true;
     const item = await getItem(itemId, collectionId);
-    let messages = req.flash("Succesfully updated item!");
-    console.log("Messages: " + messages.length);
-    res.render('shop/item_admin', { title: 'Baja La Bruja - Items', item: item.item, collectionId: collectionId, collectionName: item.collectioName, inCart: inCart, messages: messages, hasErrors: messages.length > 0,});
+    var messages = req.flash('info');
+    res.render('shop/item_admin', { title: 'Baja La Bruja - Items', item: item.item, collectionId: collectionId, collectionName: item.collectioName, inCart: inCart, messages: messages, hasMessages: messages.length > 0});
   })();
 });
 
@@ -129,7 +111,6 @@ router.get('/item_admin', function(req, res, next) {
         Method: GET                            */
 router.get('/addCart', function(req, res, next) {
   (async function() {
-    // var productId = req.params.id;
     let productId = req.query.productId;
     let collectionId = req.query.collectionId;
     var cart = new Cart(req.session.cart ? req.session.cart : {});
@@ -144,8 +125,6 @@ router.get('/addCart', function(req, res, next) {
         Method: GET                           */
 router.get('/deleteCart', function(req, res, next) {
   (async function() {
-    console.log("delete cart");
-    // var productId = req.params.id;
     let productId = req.query.productId;
     var cart = new Cart(req.session.cart);
     cart.delete(productId);
@@ -153,7 +132,6 @@ router.get('/deleteCart', function(req, res, next) {
     res.redirect('/shopping-cart', );
   })();
 });
-
 
 /*      Description: View Shopping Cart.
         Method: GET                           */
@@ -167,7 +145,6 @@ router.get('/shopping-cart', function(req, res, next) {
     res.render('shop/shopping-cart', {products: cart.generateArray(), totalPrice: cart.totalPrice});
   })();
 });
-
 
 /*      Description: Checkout of Shopping Cart.
         Method: GET                           */
@@ -189,13 +166,15 @@ router.put('/updateProduct/:collection/:id', function(req, res) {
     let itemId = parseInt(req.params.id);
     let collectionId = parseInt(req.params.collection);
     await updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size);
-
+    req.flash('info', 'Item # ' + itemId + 'has been updated');
     res.redirect('/item_admin?itemId=' + itemId + "&collectionId="+collectionId);
-
   })();
 });
 
 module.exports = router;
+
+
+
 
 // -*-*-*-*-*-*-*-*-*-*-*-*-* DB FUNCTIONS -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
 async function getCollections(){
@@ -240,7 +219,6 @@ async function updateItem(productId, collectionId, productName, description, pri
     var p = product.products.filter(function (item) {
       return item.productId === productId;
     }).pop();
-
     p.description = productName;
     p.description = description;
     p.price = price;

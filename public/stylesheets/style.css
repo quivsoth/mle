@@ -151,6 +151,10 @@ body {
   padding-bottom: 2rem;
 }
 
+#itemEdit {
+  color: white;
+}
+
 .splide__slide img {
 	width : 20rem;
 	height: auto;

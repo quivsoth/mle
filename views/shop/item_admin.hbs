@@ -1,6 +1,13 @@
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
+{{#if hasMessages}}
+  <div class="alert alert-success">
+    {{# each messages}}
+      <p>{{this}}</p>
+    {{/each}}
+  </div>
+{{/if}}
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -10,8 +17,6 @@
     <li class="breadcrumb-item active" aria-current="page">{{ item.productName }}</li>
   </ol>
 </nav>
-
-
 <div class="container">
   <div class="row bg-image">
     {{!-- COLUMN 1 --}}
@@ -31,9 +36,11 @@
     <div class="col-md-7" style="margin-bottom: 3rem;">
       
     <!-- views/reviews-edit.handlebars --> 
-    <form method="POST" action="/updateProduct/{{collectionId}}/{{item.productId}}?_method=PUT">
+    <form method="POST" action="/updateProduct/{{collectionId}}/{{item.productId}}?_method=PUT" id="itemEdit">
       <fieldset>
         <legend>Edit Item</legend>
+        
+        
         <!-- PRODUCT NAME -->
         <p>
           <label for="productName">Product Name</label><br>
@@ -51,32 +58,23 @@
           <label for="size">Size</label><br>
           <input id="size" type="text" name="size" value="{{item.size}}"/>
         </p>
-
+        
         <!-- PRICE -->
         <p>
           <label for="price">Price</label><br>
           <input id="price" type="text" name="price" value="{{item.price}}"/>
         </p>
+
       </fieldset>
-      <!-- BUTTON -->
-      <p>
-        <button type="submit">Save</button>
-      </p>
+        <!-- BUTTON -->
+      <div>
+        <button class="btn btn-light" type="submit">Save Changes</button>
+        <a class="btn btn-light" href="/item?itemId={{item.productId}}&collectionId={{collectionId}}">Return to Item</a>
+      </div>
     </form>
-
-<hr class="text-light">
-      {{# unless inCart }}
-      <a class="btn btn-light" href="/addCart?productId={{item.productId}}&collectionId={{collectionId}}">Add to cart</a>
-      {{/unless}}
-      {{# if inCart }}
-        <h4 class="text-light"><span class="">{{ item.productName }} is in your cart.</span></h4>
-        <a class="btn btn-light" href="/shopping-cart">View your cart</a>
-      {{/if}}
-
     </div>
   </div>
 </div>
-
 
 <script>
   document.addEventListener( 'DOMContentLoaded', function () {

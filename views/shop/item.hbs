@@ -1,7 +1,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
-
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -11,10 +10,9 @@
   </ol>
 </nav>
 
-
 <div class="container">
   <div class="row bg-image">
-    {{!-- COLUMN 1 --}}
+    {{!-- #Start Column 2 --}}
     <div class="col-md-2">
       <div id="image-slider" class="splide">
         <div class="splide__track">
@@ -25,29 +23,32 @@
           </ul>
         </div>
       </div>
-    </div>
-    {{!-- COLUMN 2 --}}
+    </div>  {{!-- #End Column 1 --}}
     <div class="col-lg-3"></div>
+    {{!-- #Start Column 2 --}}
     <div class="col-md-7" style="margin-bottom: 3rem;">
-      <h1 class="text-light">{{ item.productName }}</h1>
+      <div>
+        <h1 class="text-light">{{ item.productName }}</h1>
+        {{# unless login }}
+          <a href="/item_admin?itemId={{item.productId}}&collectionId={{collectionId}}" style="padding-right:2rem;">[Edit]</a>
+        {{/unless}}
+      </div>
       <p class="text-light">{{ item.description }}</p>
       <p class="text-light">Size: {{ item.size }}</p>
       <p class="text-light">${{ item.price }}</p>
       <p class="text-light">SKU #: {{ item.productId }}</p>
 
-<hr class="text-light">
+      <hr class="text-light">
       {{# unless inCart }}
-      <a class="btn btn-light" href="/addCart?productId={{item.productId}}&collectionId={{collectionId}}">Add to cart</a>
+        <a class="btn btn-light" href="/addCart?productId={{item.productId}}&collectionId={{collectionId}}">Add to cart</a>
       {{/unless}}
       {{# if inCart }}
         <h4 class="text-light"><span class="">{{ item.productName }} is in your cart.</span></h4>
         <a class="btn btn-light" href="/shopping-cart">View your cart</a>
       {{/if}}
-
-    </div>
+    </div> {{!-- #End Column 2 --}}
   </div>
 </div>
-
 
 <script>
   document.addEventListener( 'DOMContentLoaded', function () {
