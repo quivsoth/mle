@@ -10,5 +10,8 @@ Installation
 * Run npm start
 
 
-Import MongoData and set up DB/Collection by running the script
+Import MongoData and set up DB/Collection by running the script from the root folder
+mongoimport --db shop --collection bruja --drop --file ./collections.json --jsonArray
+
 mongoimport --uri "mongodb://192.168.1.3:27017/shop" --collection dummy --drop --file collections.json
+
