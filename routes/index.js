@@ -3,7 +3,7 @@ const { registerHelper } = require('hbs');
 const {MongoClient} = require('mongodb');
 var mongoose = require("mongoose");
 
-const uri = process.env.DB_HOST;
+const uri = process.env.MONGO_DB;
 
 var express = require('express');
 var router = express.Router();

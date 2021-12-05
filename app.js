@@ -17,7 +17,7 @@ var indexRouter = require('./routes/index');
 var userRouter = require('./routes/user');
 
 var app = express();
-const uri = process.env.DB_HOST;
+const uri = process.env.MONGO_DB;
 
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
