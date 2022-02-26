@@ -15,3 +15,11 @@ mongoimport --db shop --collection bruja --drop --file ./collections.json --json
 
 mongoimport --uri "mongodb://192.168.1.3:27017/shop" --collection dummy --drop --file collections.json
 
+
+Build in OCP
+oc new-app \
+    -e MONGODB_USER=kube \
+    -e MONGODB_PASSWORD=8YxcC?6aex]yDb*[ \
+    -e MONGODB_DATABASE=utils \
+    -e MONGODB_ADMIN_PASSWORD=admin \
+    registry.redhat.io/rhscl/mongodb-26-rhel7

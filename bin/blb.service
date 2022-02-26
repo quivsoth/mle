@@ -1,0 +1,16 @@
+~
+~
+"/etc/systemd/system/multi-user.target.wants/blb.service" 13L, 235C                                        1,1           All
+[Unit]
+Description=baja.la.bruja
+Documentation=https://github.com/quivsoth/mle/
+After=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+WorkingDirectory=/home/pk/dev/mle
+ExecStart=npm start
+
+[Install]
+WantedBy=multi-user.target
