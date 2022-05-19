@@ -23,7 +23,7 @@ body {
 .breadcrumb-item,
 .breadcrumb-item li,
 .breadcrumb-item a {
-    color: coral;
+    color: silver;
 }
 
 .caption {
@@ -104,6 +104,10 @@ body {
 .menu {
     font-size: 1.6rem;
     text-decoration: none;
+}
+
+.nav-link {
+  font-size:larger;
 }
 
 .navbar {
