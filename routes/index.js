@@ -240,62 +240,10 @@ async function updateItem(productId, collectionId, productName, description, pri
     var p = result.products.filter(function (item) {
       return item.productId === productId;
     }).pop();
-    p.description = productName;
+    p.productName = productName;
     p.description = description;
     p.price = price;
     p.size = size;
     result.save();
   });
-
-  // var cr = Collection.findOne(query, function (err, product) {
-  //   console.log("err: " + err);
-  //   if(err) { console.log(err); }
-  //   console.log("product: " + product);
-    
-  //   //  var p = product.products.filter(function (item) {
-  //   //   return item.productId === productId;
-  //   // }).pop();
-  // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // console.log("productId: " + productId);
-  // console.log("collectionId: " + collectionId);
-  // console.log("productName: " + productName);
-  // console.log("description: " + description);
-  // console.log("price: " + price);
-  // console.log("size: " + size);
-
-  // var cr = Collection.findOne(query, function (err, product) {
-    // var p = product.products.filter(function (item) {
-    //   return item.productId === productId;
-    // }).pop();
-
-    // console.log("product: " + p);
-
-    // p.description = productName;
-    // p.description = description;
-    // p.price = price;
-    // p.size = size;
-    // product.save();
-  // });
-
 }
