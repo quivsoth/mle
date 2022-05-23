@@ -1,15 +1,18 @@
 const { createServer } = require('livereload');
 const { registerHelper } = require('hbs');
 const {MongoClient} = require('mongodb');
-var mongoose = require("mongoose");
-
+var mongoose = require('mongoose');
 const uri = process.env.MONGO_DB;
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 var express = require('express');
 var router = express.Router();
 
 var Cart = require('../models/cart');
 var Collection = require("../models/collection");
+
+
+
 const { deserializeUser } = require('passport');
 
 // var csrf = require('csurf');
@@ -232,15 +235,67 @@ async function getItem(productId, collectionId){
 
 async function updateItem(productId, collectionId, productName, description, price, size) {
   var query = { collectionId : collectionId }; 
-
-  var cr = Collection.findOne(query, function (err, product) {
-    var p = product.products.filter(function (item) {
+  Collection.findOne(query, function (err, result) {
+    if(err) { console.log(err); }
+    var p = result.products.filter(function (item) {
       return item.productId === productId;
     }).pop();
     p.description = productName;
     p.description = description;
     p.price = price;
     p.size = size;
-    product.save();
+    result.save();
   });
+
+  // var cr = Collection.findOne(query, function (err, product) {
+  //   console.log("err: " + err);
+  //   if(err) { console.log(err); }
+  //   console.log("product: " + product);
+    
+  //   //  var p = product.products.filter(function (item) {
+  //   //   return item.productId === productId;
+  //   // }).pop();
+  // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // console.log("productId: " + productId);
+  // console.log("collectionId: " + collectionId);
+  // console.log("productName: " + productName);
+  // console.log("description: " + description);
+  // console.log("price: " + price);
+  // console.log("size: " + size);
+
+  // var cr = Collection.findOne(query, function (err, product) {
+    // var p = product.products.filter(function (item) {
+    //   return item.productId === productId;
+    // }).pop();
+
+    // console.log("product: " + p);
+
+    // p.description = productName;
+    // p.description = description;
+    // p.price = price;
+    // p.size = size;
+    // product.save();
+  // });
+
 }
