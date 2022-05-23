@@ -24,6 +24,8 @@ body {
 .breadcrumb-item li,
 .breadcrumb-item a {
     color: silver;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 .caption {

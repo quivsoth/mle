@@ -25,19 +25,37 @@ router.get('/', function(req, res, next) {
 /*    Description: View for lifestyle page.
       Method: GET                     */
 router.get('/lifestyle', function(req, res, next) {
-  res.render('shop/lifestyle', { title: 'Baja La Bruja - F#$ck Fast Fashion'});
+  res.render('site/lifestyle', { title: 'Baja La Bruja - F#$ck Fast Fashion'});
+});
+
+/*    Description: View for mixed media page.
+      Method: GET                     */
+router.get('/mixedmedia', function(req, res, next) {
+  res.render('site/mixedmedia', { title: 'Baja La Bruja - Mixed Media'});
 });
 
 /*    Description: View for Gift page.
       Method: GET                     */
 router.get('/gifts', function(req, res, next) {
-  res.render('shop/gifts', { title: 'Baja La Bruja - Gifts'});
+  res.render('site/gifts', { title: 'Baja La Bruja - Gifts'});
+});
+
+/*    Description: View for La Bruja page.
+      Method: GET                     */
+router.get('/labruja', function(req, res, next) {
+  res.render('site/labruja', { title: 'Baja La Bruja - La Bruja'});
+});
+
+/*    Description: View for heritage page.
+      Method: GET                     */
+router.get('/heritage', function(req, res, next) {
+  res.render('site/heritage', { title: 'Baja La Bruja - La Bruja'});
 });
 
 /*    Description: View for Contact page.
       Method: GET                     */
 router.get('/contacts', function(req, res, next) {
-  res.render('shop/contacts', { title: 'Baja La Bruja - Contact Us'});
+  res.render('site/contacts', { title: 'Baja La Bruja - Contact Us'});
 });
 
 /*    Description: View for Collections page.
