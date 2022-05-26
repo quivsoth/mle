@@ -1,5 +1,8 @@
-<style>
+<script src="/javascripts/splide.min.js"></script>
+<link rel="stylesheet" href="/stylesheets/splide.min.css">
 
+
+<style>
     .splide__slide img {
         width: 60%;
         height: auto;
@@ -44,25 +47,27 @@
         </div> --}}
     </div>
 
-    {{!-- <hr /> --}}
+    <hr />
 
-    {{!-- <div class="row justify-content-md-center">
-        <section id="image-carousel" class="splide" aria-label="Baja Life">
+    <div class="row full-width">
+
+        <section id="image-carousel" class="splide justify-content-md-center" aria-label="Baja Life">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
-                        <img class="rounded-corners" src="images/fff3.jpg" alt="">
+                        <img class="rounded-corners" src="images/frontpage/hero1.png" alt="">
                     </li>
                     <li class="splide__slide">
-                        <img "rounded-corners" src="images/fff2.jpg" alt="">
+                        <img "rounded-corners" src="images/frontpage/hero2.jpg" alt="">
                     </li>
                     <li class="splide__slide">
-                        <img "rounded-corners" src="images/fff1.jpg" alt="">
+                        <img "rounded-corners" src="images/frontpage/hero3.jpeg" alt="">
                     </li>
                 </ul>
             </div>
         </section>
-    </div> --}}
+
+    </div>
 
 <hr />
     <div class="row full-width pb-3" >
@@ -132,13 +137,13 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
 
-    new Splide('.splide', {
+    new Splide('#image-carousel', {
         type: 'loop',
         perPage: 1,
         arrows: false,
         pagination: false,
         autoplay: true,
-        interval: 10000
+        interval: 5000
     }).mount();
 
 });</script>
