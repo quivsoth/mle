@@ -9,13 +9,6 @@ body {
     background-color: black;
 }
 
-
-.bjb-header {
-    
-
-
-}
-
 .blockSpace4 {
     padding-bottom: 4rem;
 }
@@ -75,10 +68,6 @@ body {
     line-height: 80px;
 }
 
-.carousel-nav .carousel-cell.is-nav-selected {
-
-
-}
 
 .fas {
   color: #414141;
@@ -131,20 +120,6 @@ body {
   font-weight: bold;
   font-size: x-large;
 }
-
-
-
-/* .topSection
-{
-  background-image: url(/images/moon.png);
-  background-repeat:no-repeat;
-  background-position: center center;
-  background-size: 6rem;
-  padding:0.5rem;border-bottom: 1px solid rgb(34, 34, 34);
-  margin-bottom: 10px;
-} */
-
-
 
 .sectionHeader {
     font-size: xx-large;
