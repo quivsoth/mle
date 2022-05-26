@@ -19,6 +19,14 @@ const { deserializeUser } = require('passport');
 // var csrfProtection = csrf();
 // router.use(csrfProtection);
 
+
+router.get('/sp', function(req, res, next) {
+  
+  res.render("site/scratchpad");
+}); 
+
+
+
 /*    Description: View for HOME page.
       Method: GET                     */
 router.get('/', function(req, res, next) {
