@@ -1,0 +1,43 @@
+<script src="/javascripts/splide.min.js"></script>
+<link rel="stylesheet" href="/stylesheets/splide.min.css">
+
+<style>
+    .splide__slide img {
+        width: 60%;
+        height: auto;
+    }
+</style>
+
+<div class="bg-image container-fluid">
+    <div class="row justify-content-md-center">
+        <section id="image-carousel" class="splide" aria-label="Baja Life">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img class="rounded-corners" src="images/fff3.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img "rounded-corners" src="images/fff2.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img "rounded-corners" src="images/fff1.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    new Splide('.splide', {
+        type: 'loop',
+        perPage: 1,
+        arrows: false,
+        pagination: false,
+        autoplay: true,
+        interval: 10000
+    }).mount();
+
+});</script>
