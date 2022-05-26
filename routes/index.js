@@ -22,7 +22,7 @@ const { deserializeUser } = require('passport');
 /*    Description: View for HOME page.
       Method: GET                     */
 router.get('/', function(req, res, next) {
-  res.render('shop/index', { title: 'Baja La Bruja - Fighting Fast Fashion'});
+  res.render('site/index', { title: 'Baja La Bruja - Fighting Fast Fashion'});
 });
 
 /*    Description: View for lifestyle page.
