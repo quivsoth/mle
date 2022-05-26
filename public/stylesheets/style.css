@@ -86,6 +86,10 @@ body {
   background-size: 22rem;
 }
 
+img.rounded-corners {
+  border-radius: 1.5rem;
+}
+
 .logoHeader,
 .logoHeader a {
     text-decoration: none;
