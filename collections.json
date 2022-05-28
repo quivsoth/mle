@@ -3557,22 +3557,6 @@
   "products": [
     {
       "productThumbs": [
-        "beauty_sleeping/IMG_2727.png",
-        "beauty_sleeping/IMG_2726.png",
-        "beauty_sleeping/IMG_2725.png",
-        "beauty_sleeping/IMG_2728.png",
-        "beauty_sleeping/IMG_2729.png",
-        "beauty_sleeping/IMG_2730.png"
-      ],
-      "productId": 51095,
-      "productName": "Nightie 1",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 40,
-      "size": 6,
-      "active": true
-    },
-    {
-      "productThumbs": [
         "beauty_sleeping/IMG_2745.png",
         "beauty_sleeping/IMG_2734.png",
         "beauty_sleeping/IMG_2728.png",

@@ -1,55 +1,8 @@
 <nav
   class="navbar navbar-expand-md navbar-dark"
-  aria-label="Baja La Bruja navbar"
->
-  <div class="container-fluid" style="background-color: #070707;">
+  aria-label="Baja La Bruja navbar">
+  <div class="container-fluid justify-content-center" style="background-color: #070707;">
     <a href="/"> <img src="/images/logo.png" style="max-height: 9rem;" /> </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#blj-nav"
-      aria-controls="blj-nav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="blj-nav">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
-        </li>
-        {{!-- <li class="nav-item">
-          <a class="nav-link" href="/labruja">La Bruja</a>
-        </li> --}}
-        <li class="nav-item">
-          <a class="nav-link" href="/heritage">La Bruja</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/collections">Collections</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/lifestyle">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/mixedmedia">Media</a>
-        </li>
-      </ul>
-      <div class="col-2">
-        {{# unless login }}
-          <a href="/user/signin" style="padding-right:2rem;"><i class="fas fa-sign-in-alt" title="Login"></i></a>
-        {{/unless}}
-
-        {{# if login }}
-          <a href="/user/profile" style="padding-right:2rem;"><i class="fas fa-user" title="User Profile"></i></a>
-          <a href="/user/logout" style="padding-right:2rem;" ><i class="fas fa-sign-out-alt" title="Logout"></i></a>
-        {{/if}}
-        <a href="/shopping-cart" style="text-decoration: none;">
-          <i class="fas fa-shopping-cart " title="Shopping Cart"></i>
-          <span class="badge bg-danger">{{session.cart.qty}}</span>
-        </a>
-      </div>
     </div>
   </div>
 </nav>
