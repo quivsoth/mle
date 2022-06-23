@@ -1,17 +1,13 @@
 const { createServer } = require('livereload');
 const { registerHelper } = require('hbs');
 const {MongoClient} = require('mongodb');
-var mongoose = require('mongoose');
 const uri = process.env.MONGO_DB;
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 var express = require('express');
 var router = express.Router();
 
 var Cart = require('../models/cart');
 var Collection = require("../models/collection");
-
-
 
 const { deserializeUser } = require('passport');
 
@@ -20,8 +16,7 @@ const { deserializeUser } = require('passport');
 // router.use(csrfProtection);
 
 
-router.get('/sp', function(req, res, next) {
-  
+router.get('/sp', function(req, res, next) {  
   res.render("site/scratchpad");
 }); 
 
