@@ -3,8 +3,6 @@
 <link rel="stylesheet" href="/stylesheets/timeline.css">
 
 <style>
-    
-
     .fullscreen-bg {
         position: fixed;
         top: 0;
@@ -14,7 +12,6 @@
         overflow: hidden;
         z-index: -100;
     }
-
     .fullscreen-bg__video {
         top: 0;
         left: 0;
@@ -33,50 +30,19 @@
     </div>
     <div class="row full-width">
         <div class="col-lg-8" style="margin-top:1rem;">
-            <h4 class="mb-5 text-light">With a focus on locally sourced, Australian Made items, this Melbourne based boutique caters to women with an appreciation for quality garments, whilst offering iconic pieces of Australia’s fashion history.
-            </h4>
-            <h4 class="mb-5 text-light">Style does not have to come at the expense of another human being, nor the environment!</h4>
+            <h5 class="mb-3 text-light">With a focus on locally sourced, Australian Made items, this Melbourne based boutique caters to women with an appreciation for quality garments, whilst offering iconic pieces of Australia’s fashion history.
+            </h5>
+            <h5 class="mb-3 text-light">Style does not have to come at the expense of another human being, nor the environment!</h5>
         </div>
         <div class="row full-width">
-            <h4 class=" text-light ">Support sustainability - our voices are being heard with every dollar we spend!</h4>
-            <a class="btn btn-light btn-block col-6 ml-1" href="/collections">Discover more</a>
-        </div>
-    </div>
-    <hr/>
-    {{!-- 
-    <div class="row full-width">
-        <section id="image-carousel" class="splide justify-content-md-center" aria-label="Baja Life">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        <img class="rounded-corners" src="images/frontpage/hero1.png" alt="">
-                    </li>
-                    <li class="splide__slide">
-                        <img "rounded-corners" src="images/frontpage/hero2.jpg" alt="">
-                    </li>
-                    <li class="splide__slide">
-                        <img "rounded-corners" src="images/frontpage/hero3.jpeg" alt="">
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </div> --}}
-
-
-    <div class="row full-width pb-3">
-        <div class="col-lg-8 col-xl-4">
-            <h3 class="display-5 mb-1 text-light p-1 pb-3">Latest News..</h3>
-            <h4 class="font-weight-bold">May 28 09:00am</h4>
-            <img class="rounded-corners" src="/images/frontpage/shopfront.jpg" style="height:26rem;"/>
-        </div>
-        <div class="col-lg-8 col-xl-4">
-            <h4 class="mb-5 text-light">We're rolling out the welcome mat in Richmond, we invite you to come on in and see my hand-picked favourite collections!</h4>
+            <h5 class=" text-light ">Support sustainability - our voices are being heard with every dollar we spend!</h5>
+            <a class="btn btn-light btn-block col-6" style="margin-left: 0.8rem;" href="/collections">Discover More!</a>
         </div>
     </div>
     <hr/>
     <div class="row full-width">
         <h2>The Baja Eras</h2>
-        <p>The Baja collections are inspired through all the golden eras of fashion! Check out our collections throughout the eras..</p>
+        <h5 class=" text-light ">The Baja collections are inspired through all the golden eras of fashion! Check out our collections throughout the eras..</h5>
         <section id="era-carousel" class="splide" aria-label="Baja Life">
             <div class="splide__track">
                 <ul class="splide__list">
@@ -108,7 +74,7 @@
                     </li>
                     <li class="splide__slide">
                         <div class="tl-item">
-                            <div class="tl-bg" style="background-image: url(/images/decade80.jpeg)"></div>
+                            <div class="tl-bg" style="background-image: url(/images/products/80s_dream_queen/IMG_4400.png)"></div>
                             <div class="tl-year">
                                 <h2>80s Dream Queen</h2>
                             </div>
@@ -121,7 +87,7 @@
                     </li>
                     <li class="splide__slide">
                         <div class="tl-item">
-                            <div class="tl-bg" style="background-image: url(/images/decade90.jpeg)"></div>
+                            <div class="tl-bg" style="background-image: url(/images/products/90s_like_nieve/IMG_4769.png)"></div>
                             <div class="tl-year">
                                 <h2>90s like Neve
                                 </h2>
@@ -135,7 +101,7 @@
                     </li>
                     <li class="splide__slide">
                         <div class="tl-item">
-                            <div class="tl-bg" style="background-image: url(/images/decade90.jpeg)"></div>
+                            <div class="tl-bg" style="background-image: url(/images/products/RUY2Kray/IMG_4604.png)"></div>
                             <div class="tl-year">
                                 <h2>R U Y2Kray?</h2>
                             </div>
@@ -148,14 +114,66 @@
                     </li>
                 </ul>
             </div>
-
             <div class="era-carousel-progress">
                 <div class="era-carousel-progress-bar"></div>
             </div>
         </section>
     </div>
+
+
+    <hr/>
+
+
+    {{!-- Latest News --}}
+    <div class="row full-width pb-3">
+      <div class="row full-width">
+        <div class="col-lg-9 col-xl-9">
+            <h3 class="display-5 mb-1 text-light p-1 pb-3">Latest News..</h3>            
+        </div>
+        {{!-- Entry 4 --}}
+        <div class="row full-width">
+          <div class="col-lg-9 col-xl-9">
+            <h5 class="font-weight-bold">June 24 10:21pm</h5>
+            <video class="videoControl" controls="controls" src="videos/shopbuild3.mov">
+              Your browser does not support the HTML5 Video element.
+            </video>
+            <p class="mb-5 text-light">Got my painting done! Can't wait for you guys to check out the store..</p>
+          </div>
+        </div>
+        {{!-- Entry 3 --}}
+        <div class="row full-width">
+          <div class="col-lg-9 col-xl-9">
+            <h5 class="font-weight-bold">June 18 12:55pm</h5>
+            <video class="videoControl" controls="controls" src="videos/shopbuild2.mov">
+              Your browser does not support the HTML5 Video element.
+            </video>
+            <p class="mb-5 text-light">Quick look at how I've built the Baja Tags!</p>
+          </div>
+        </div>
+
+        {{!-- Entry 2 --}}
+        <div class="row full-width">
+          <div class="col-lg-9 col-xl-9">
+            <h5 class="font-weight-bold">June 10 07:43pm</h5>
+            <video class="videoControl" controls="controls" src="videos/shopbuild.mov">
+              Your browser does not support the HTML5 Video element.
+            </video>
+            <p class="mb-5 text-light">Toiling away at the shop! Quick view of the carpeting we had to put in!</p>
+          </div>
+        </div>
+        {{!-- Entry 1 --}}
+        <div class="row full-width">
+          <div class="col-lg-9 col-xl-9">
+            <h5 class="font-weight-bold">May 28 09:00am</h5>
+            <img class="rounded-corners" src="/images/frontpage/shopfront.jpg" style="height:26rem;"/>
+            <p class="mb-5 text-light">We're rolling out the welcome mat in Richmond, we invite you to come on in and see my hand-picked favourite collections!</p>
+          </div>
+        </div>
+        
+        </div>
+    </div>
 </div>
-<hr/>
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
 
@@ -165,7 +183,8 @@
                 arrow: 'splide__arrow arrow',
                 prev: 'splide__arrow--prev arrow_prev',
                 next: 'splide__arrow--next arrow_next'
-            }
+            },
+            type   : 'loop'
         });
         var bar = splide.root.querySelector('.era-carousel-progress-bar');
 

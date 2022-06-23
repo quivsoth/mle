@@ -144,9 +144,6 @@ img.rounded-corners {
   font-size: 1.2rem;
 }
 
-
-
-#splide_panel {
-  width: 200%;
-  height: auto;
+.videoControl {
+  width: 100%;
 }
