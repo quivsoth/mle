@@ -1,25 +1,52 @@
+.arrow {
+  background: none;
+}
+
+.arrows {
+  background: none;
+  
+}
+
+.arrow_next {
+  background: none;
+  color:aliceblue;
+}
+
+.arrow_prev {
+  background: none;
+  color:aliceblue;
+}
+
+.era-carousel-progress {
+  background: #ccc;
+}
+
+.era-carousel-progress-bar {
+  background: greenyellow;
+  height: 2px;
+  transition: width 400ms ease;
+  width: 0;
+}
 
 #timeline {
-    display: flex;
-    background-color: #031625;
-  }
+  display: flex;
+  background-color: #031625;
+}
   
   #timeline:hover .tl-item {
-    width: 50.3333%;
+    width: 100.3333%;
   }
-  
   
   .tl-item {
     transform: translate3d(0, 0, 0);
     position: relative;
-    width: 50%;
+    width: 100%;
     height: 70vh;
     min-height: 300px;
     color: #fff;
     overflow: hidden;
     transition: width 0.5s ease;
   }
-  
   
   .tl-item:before, .tl-item:after {
     transform: translate3d(0, 0, 0);
@@ -38,7 +65,7 @@
   }
 
   .tl-item:before {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 45%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 85%);
     z-index: 1;
     opacity: 0;
     transform: translate3d(0, 0, 0) translateY(0%);
@@ -46,11 +73,13 @@
   }
   
   .tl-item:hover {
-    width: 50% !important;
+    width: 100% !important;
   }
+
   .tl-item:hover:after {
     opacity: 0;
   }
+
   .tl-item:hover:before {
     opacity: 1;
     transform: translate3d(0, 0, 0) translateY(0);
@@ -72,10 +101,11 @@
     position: relative;
     z-index: 1;
     text-align: justify;
-    margin: 0 0.918em;
+    margin: 4.5rem 0.918em;
     top: 5%;
     opacity: 0;
   }
+  
   .tl-content h1 {
     font-family: 'splendid_66regular';
     text-transform: uppercase;
@@ -86,17 +116,24 @@
   
   .tl-year {
     position: absolute;
-    top: 50%;
+    top: 5%;
     left: 50%;
-    transform: translateX(-50%) translateY(400%);
+    width: 70%;
+    transform: translateX(-50%) translateY(10%);
     z-index: 1;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    border-top: 1px outset silver;
+    border-bottom: 1px dashed silver;
   }
+
   .tl-year p {
     font-family: 'splendid_66regular';
     font-size: 1.728rem;
     line-height: 0;
+  }
+
+  .tl-year h2 {
+   text-align: center;
+   padding: 0.3rem;
   }
   
   .tl-bg {

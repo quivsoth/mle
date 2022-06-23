@@ -144,8 +144,9 @@ img.rounded-corners {
   font-size: 1.2rem;
 }
 
-.splide__slide img {
-	width : 20rem;
-	height: auto;
-  border-radius: 5px;
+
+
+#splide_panel {
+  width: 200%;
+  height: auto;
 }

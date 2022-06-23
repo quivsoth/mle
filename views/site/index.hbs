@@ -1,28 +1,49 @@
-{{!-- <script src="/javascripts/splide.min.js"></script>
+<script src="/javascripts/splide.min.js"></script>
+<link rel="stylesheet" href="/stylesheets/splide.min.css">
+<link rel="stylesheet" href="/stylesheets/timeline.css">
 
-<link rel="stylesheet" href="/stylesheets/splide.min.css"> --}}
+<style>
+    
 
+    .fullscreen-bg {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: -100;
+    }
 
-<link rel="stylesheet" href="/stylesheets/timeline.css"> 
+    .fullscreen-bg__video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-left: 60%;
+    }
+</style>
 
 <div class="container-fluid text-light bg-image p-3 y-5">
-    <div class="row full-width" >
-      <h2 class="display-4 mb-0" style="line-height: 1">Curated Vintage. <br> Revived Styles.</h2>
-      {{!-- <img class="rounded-corners" src="images/frontpage/hero1.png" alt=""> --}}
+    <div class="row full-width">
+        <h2 class="display-4 mb-0" style="line-height: 1">Curated Vintage.
+            <br>
+            Revived Styles.</h2>
+        {{!-- <img class="rounded-corners" src="images/frontpage/hero1.png" alt=""> --}}
     </div>
     <div class="row full-width">
-        <div class="col-lg-8" style="margin-top:1rem;">            
-            <h4 class="mb-5 text-light">With a focus on locally sourced, Australian Made items, this Melbourne based boutique caters to women with an appreciation for quality garments, whilst offering iconic pieces of Australia’s fashion history.  </h4>
+        <div class="col-lg-8" style="margin-top:1rem;">
+            <h4 class="mb-5 text-light">With a focus on locally sourced, Australian Made items, this Melbourne based boutique caters to women with an appreciation for quality garments, whilst offering iconic pieces of Australia’s fashion history.
+            </h4>
             <h4 class="mb-5 text-light">Style does not have to come at the expense of another human being, nor the environment!</h4>
         </div>
-        <hr />
         <div class="row full-width">
-            <h4 class=" text-light ">Support sustainability - our voices are being heard with every dollar we spend!</h4> 
+            <h4 class=" text-light ">Support sustainability - our voices are being heard with every dollar we spend!</h4>
             <a class="btn btn-light btn-block col-6 ml-1" href="/collections">Discover more</a>
         </div>
     </div>
-    <hr />
-{{!-- 
+    <hr/>
+    {{!-- 
     <div class="row full-width">
         <section id="image-carousel" class="splide justify-content-md-center" aria-label="Baja Life">
             <div class="splide__track">
@@ -42,69 +63,117 @@
     </div> --}}
 
 
-    <div class="row full-width pb-3" >
+    <div class="row full-width pb-3">
         <div class="col-lg-8 col-xl-4">
             <h3 class="display-5 mb-1 text-light p-1 pb-3">Latest News..</h3>
             <h4 class="font-weight-bold">May 28 09:00am</h4>
-            <img class="rounded-corners" src="/images/frontpage/shopfront.jpg" style="height:26rem;" />
+            <img class="rounded-corners" src="/images/frontpage/shopfront.jpg" style="height:26rem;"/>
         </div>
         <div class="col-lg-8 col-xl-4">
             <h4 class="mb-5 text-light">We're rolling out the welcome mat in Richmond, we invite you to come on in and see my hand-picked favourite collections!</h4>
         </div>
     </div>
-
-<hr />
-
-    <div class="row full-width" >
+    <hr/>
+    <div class="row full-width">
         <h2>The Baja Eras</h2>
         <p>The Baja collections are inspired through all the golden eras of fashion! Check out our collections throughout the eras..</p>
-        <section id="timeline">
-            <div class="tl-item">
-                <div class="tl-bg" style="background-image: url(/images/frontpage/decade60s.png)"></div>
-                <div class="tl-year">
-                    <h2>1960's</h2>
-                </div>
-                <div class="tl-content">
-                    <h1>Savy Sixties</h1>
-                    <p>Fashion in the 1960s became progressively more casual across all genders and ages.</p>
-                    <a class="btn btn-light btn-block col-6 ml-1" href="/products?collectionId=30">Shop</a>
-                </div>
+        <section id="era-carousel" class="splide" aria-label="Baja Life">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="tl-item">
+                            <div class="tl-bg" style="background-image: url(/images/frontpage/decade60s.png)"></div>
+                            <div class="tl-year">
+                                <h2>Seriously 60s</h2>
+                            </div>
+                            <div class="tl-content">
+                                {{!-- <h1>Seriously 60s</h1> --}}
+                                <p>Fashion in the 1960s became progressively more casual across all genders and ages.</p>
+                                <a class="btn btn-light btn-block col-6 ml-1" href="/products?collectionId=30">Shop</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="tl-item">
+                            <div class="tl-bg" style="background-image: url(/images/frontpage/decade70s.png)"></div>
+                            <div class="tl-year">
+                                <h2>That 70s tho!</h2>
+                            </div>
+                            <div class="tl-content">
+                                {{!-- <h1 class="f3 text--accent ttu">That 70s tho!</h1> --}}
+                                <p>The 1970s had two leading inspirations: 1940’s movie star glamour; and the hippie movement..</p>
+                                <a class="btn btn-light btn-block col-6 ml-1" href="/products?collectionId=31">Shop</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="tl-item">
+                            <div class="tl-bg" style="background-image: url(/images/decade80.jpeg)"></div>
+                            <div class="tl-year">
+                                <h2>80s Dream Queen</h2>
+                            </div>
+                            <div class="tl-content">
+                                {{!-- <h1 class="f3 text--accent ttu">Elegant Eighties</h1> --}}
+                                <p>From the doo, to the do not, the 80s are known for a love of leopard print, lycra, power suits, punk and shoulder pads!</p>
+                                <a class="btn btn-light btn-block col-6 ml-1" href="/products?collectionId=32">Shop</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="tl-item">
+                            <div class="tl-bg" style="background-image: url(/images/decade90.jpeg)"></div>
+                            <div class="tl-year">
+                                <h2>90s like Neve
+                                </h2>
+                            </div>
+                            <div class="tl-content">
+                                {{!-- <h1 class="f3 text--accent ttu">Naughty 90s</h1> --}}
+                                <p>In a time when the supermodels reigned supreme, fashion was taken to new heights..</p>
+                                <a class="btn btn-light btn-block col-6 ml-1" href="/products?collectionId=33">Shop</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="tl-item">
+                            <div class="tl-bg" style="background-image: url(/images/decade90.jpeg)"></div>
+                            <div class="tl-year">
+                                <h2>R U Y2Kray?</h2>
+                            </div>
+                            <div class="tl-content">
+                                {{!-- <h1 class="f3 text--accent ttu">Naughty 90s</h1> --}}
+                                <p>Thank you Brittney, Christina, J-Lo, Paris and Shakira!</p>
+                                <a class="btn btn-light btn-block col-6 ml-1" href="/products?collectionId=34">Shop</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="tl-item">
-                <div class="tl-bg" style="background-image: url(/images/frontpage/decade70s.png)"></div>
-                <div class="tl-year">
-                    <h2>1970s</h2>
-                </div>
-                <div class="tl-content">
-                    <h1 class="f3 text--accent ttu">Swinging 70s</h1>
-                    <p>The 1970s had two leading inspirations: 1940’s movie star glamour; and the hippie movement..</p>
-                    <a class="btn btn-light btn-block col-6 ml-1" href="/products?collectionId=31">Shop</a>
-                </div>
-            </div>
-        </section>
-        <section id="timeline">
-            <div class="tl-item">
-                <div class="tl-bg" style="background-image: url(/images/decade80.jpeg)"></div>
-                <div class="tl-year">
-                    <h2>1980s</h2>
-                </div>
-                <div class="tl-content">
-                    <h1 class="f3 text--accent ttu">Elegant Eighties</h1>
-                    <p>From the doo, to the do not, the 80s are known for a love of leopard print, lycra, power suits, punk and shoulder pads!</p>
-                    <a class="btn btn-light btn-block col-6 ml-1" href="/products?collectionId=32">Shop</a>
-                </div>
-            </div>
-            <div class="tl-item">
-                <div class="tl-bg" style="background-image: url(/images/decade90.jpeg)"></div>
-                <div class="tl-year">
-                    <h2>1990s</h2>
-                </div>
-                <div class="tl-content">
-                    <h1 class="f3 text--accent ttu">Naughty 90s</h1>
-                    <p>In a time when the supermodels reigned supreme, fashion was taken to new heights..</p>
-                    <a class="btn btn-light btn-block col-6 ml-1" href="/products?collectionId=33">Shop</a>
-                </div>
+
+            <div class="era-carousel-progress">
+                <div class="era-carousel-progress-bar"></div>
             </div>
         </section>
     </div>
 </div>
+<hr/>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        var splide = new Splide('#era-carousel', {
+            classes: {
+                arrows: 'splide__arrows arrows',
+                arrow: 'splide__arrow arrow',
+                prev: 'splide__arrow--prev arrow_prev',
+                next: 'splide__arrow--next arrow_next'
+            }
+        });
+        var bar = splide.root.querySelector('.era-carousel-progress-bar');
+
+        // Update the bar width:
+        splide.on('mounted move', function () {
+            var end = splide.Components.Controller.getEnd() + 1;
+            bar.style.width = String(100 * (splide.index + 1) / end) + '%';
+        });
+        splide.mount();
+    });
+</script>

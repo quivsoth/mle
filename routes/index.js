@@ -10,7 +10,6 @@ var Cart = require('../models/cart');
 var Collection = require("../models/collection");
 
 const { deserializeUser } = require('passport');
-
 // var csrf = require('csurf');
 // var csrfProtection = csrf();
 // router.use(csrfProtection);
