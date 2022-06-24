@@ -8,52 +8,65 @@
 
 <nav class="navbar navbar-expand-md navbar-dark" aria-label="Baja La Bruja navbar">
   <div class="container-fluid" style="background-color: #070707;">
-    <a href="/"> <img src="/images/baja_logo.png" style="max-height: 7rem;" /> </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#blj-nav"
-      aria-controls="blj-nav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="blj-nav">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
+
+    <div class="col-4 col-xl-4">
+      <a href="/"> <img src="/images/baja_logo.png" style="max-height: 7rem;" /> </a>
+    </div>
+
+    <div class="col-2">
+      <button
+        class="navbar-toggler me-4"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#blj-nav"
+        aria-controls="blj-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    
+    <div class="collapse navbar-collapse ms-3" id="blj-nav">
+      <ul class="navbar-nav nopadding">
+        <li class="nav-item nopadding t-2">
           <a class="nav-link" href="/">Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item nopadding">
           <a class="nav-link" href="/heritage">La Bruja</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item nopadding">
           <a class="nav-link" href="/collections">Collections</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item nopadding">
           <a class="nav-link" href="/lifestyle">About</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item nopadding">
           <a class="nav-link" href="/mixedmedia">Mixed Media</a>
         </li>
-      </ul>
-      <div class="col-2">
-        {{# unless login }}
-          <a href="/user/signin" style="padding-right:2rem;"><i class="fas fa-sign-in-alt" title="Login"></i></a>
-        {{/unless}}
+        <li class="nav-item nopadding">
+          <div class="row mt-4 mb-4">
+            <div class="col-1">
+              {{# unless login }}
+                <a href="/user/signin"></a><img class="baja-icon" src="images/login-key.png" /></a>
+              {{/unless}}
 
-        {{# if login }}
-          <a href="/user/profile" style="padding-right:2rem;"><i class="fas fa-user" title="User Profile"></i></a>
-          <a href="/user/logout" style="padding-right:2rem;" ><i class="fas fa-sign-out-alt" title="Logout"></i></a>
-        {{/if}}
-        <a href="/shopping-cart" style="text-decoration: none;">
-          <i class="fas fa-shopping-cart " title="Shopping Cart"></i>
-          <span class="badge bg-danger">{{session.cart.qty}}</span>
-        </a>
-      </div>
-    </div>
-  </div>
+              {{# if login }}
+                <a href="/user/profile"><i class="fas fa-user" title="User Profile"></i></a>
+                <a href="/user/logout"><i class="fas fa-sign-out-alt" title="Logout"></i></a>
+              {{/if}}
+            </div>
+            <div class="col-1 ms-5">
+              <a href="/shopping-cart" style="text-decoration: none;">
+              {{!-- <i class="fas fa-shopping-cart " title="Shopping Cart"></i> --}}
+              <img class="baja-icon" src="images/bag.png">
+              <span class="badge bg-danger">{{session.cart.qty}}</span>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div> {{!-- collapse navbar --}}
+  </div>  {{!-- container fluid --}}
 </nav>
 
 <input type="hidden" value="{{messages}}">

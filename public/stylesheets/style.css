@@ -1,3 +1,14 @@
+body {
+  font-family: 'splendid_66regular';
+  background-color: black;
+}
+
+.baja-icon {
+  max-height: 2rem;
+}
+
+
+
 .bg-image {
   width: 100%;
   background: url('/images/fullmoon.png') no-repeat right fixed;
@@ -6,10 +17,6 @@
   /* background-size: 100% auto; */
 }
 
-body {
-  font-family: 'splendid_66regular';
-  background-color: black;
-}
 
 .blockSpace4 {
   padding-bottom: 4rem;
