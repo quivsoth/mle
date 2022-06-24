@@ -1,8 +1,9 @@
 .bg-image {
   width: 100%;
   background: url('/images/fullmoon.png') no-repeat right fixed;
-  /* background-position: 80% 68%; */
+  background-position: 80% 68%;
   background-color: black;
+  background-size: 100% auto;
 }
 
 body {
