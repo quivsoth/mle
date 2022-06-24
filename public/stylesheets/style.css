@@ -3,24 +3,24 @@
   background: url('/images/fullmoon.png') no-repeat right fixed;
   background-position: 80% 68%;
   background-color: black;
-  background-size: 100% auto;
+  /* background-size: 100% auto; */
 }
 
 body {
-    font-family: 'splendid_66regular';
-    background-color: black;
+  font-family: 'splendid_66regular';
+  background-color: black;
 }
 
 .blockSpace4 {
-    padding-bottom: 4rem;
+  padding-bottom: 4rem;
 }
 
 .breadcrumb-item,
 .breadcrumb-item li,
 .breadcrumb-item a {
-    color: silver;
-    text-transform: uppercase;
-    text-decoration: none;
+  color: silver;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .caption {
@@ -31,45 +31,13 @@ body {
 }
 
 .card {
-    text-decoration: none;
-    background-color: #4b4b4b;
+  text-decoration: none;
+  background-color: #4b4b4b;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-
-.carousel {
-    background: #FAFAFA;
-    margin-bottom: 40px;
-}
-
-.carousel-cell {
-    width: 100%;
-    height: 200px;
-    margin-right: 10px;
-    background: #8C8;
-    border-radius: 5px;
-    counter-increment: carousel-cell;
-}
-/* cell number */
-.carousel-cell:before {
-    display: block;
-    text-align: center;
-    content: counter(carousel-cell);
-    line-height: 200px;
-    font-size: 80px;
-    color: white;
-}
-.carousel-nav .carousel-cell {
-    height: 80px;
-    width: 100px;
-}
-.carousel-nav .carousel-cell:before {
-    font-size: 50px;
-    line-height: 80px;
-}
-
 
 .fas {
   color: #414141;
@@ -84,22 +52,32 @@ body {
   background-size: 22rem;
 }
 
+#image-slider {
+  width : 20rem;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+#itemEdit {
+  color: white;
+}
+
 img.rounded-corners {
   border-radius: 1.5rem;
 }
 
 .logoHeader,
 .logoHeader a {
-    text-decoration: none;
-    color: white;
-    font-size: 50px;
-    font-weight: 500;
+  text-decoration: none;
+  color: white;
+  font-size: 50px;
+  font-weight: 500;
 }
 
-
 .menu {
-    font-size: 1.6rem;
-    text-decoration: none;
+  font-size: 1.6rem;
+  text-decoration: none;
 }
 
 .nav-link {
@@ -126,19 +104,9 @@ img.rounded-corners {
 }
 
 .sectionHeader {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 
-#image-slider {
-  width : 20rem;
-  margin-bottom: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-#itemEdit {
-  color: white;
-}
 
 .nopadding {
   padding: 0 !important;

@@ -54,3 +54,22 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+
+
+<!-- views/reviews-edit.handlebars --> 
+    <form method="POST" action="/emailSubscribe?_method=PUT" id="emailSend">
+      <fieldset>
+        <legend>Subscribe</legend>
+        <!-- Email -->
+        <p>
+          <label for="txtEmail">Email</label><br>
+          <input id="txtEmail" type="text" name="email" />
+        </p>
+      </fieldset>
+      
+        <!-- BUTTON -->
+      <div>
+        <button class="btn btn-light" type="submit">Save Changes</button>
+        {{!-- <a class="btn btn-light" href="/item?itemId={{item.productId}}&collectionId={{collectionId}}">Return to Item</a> --}}
+      </div>
+    </form>

@@ -1,13 +1,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
-{{#if hasMessages}}
-  <div class="alert alert-success">
-    {{# each messages}}
-      <p>{{this}}</p>
-    {{/each}}
-  </div>
-{{/if}}
+
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -76,14 +70,9 @@
   </div>
 </div>
 
-<input type="hidden" value="{{messages}}">
-
 <script>
   document.addEventListener( 'DOMContentLoaded', function () {
 	  new Splide( '#image-slider' ).mount();
   } );
-
   console.log("Client side admin page");
-
-
 </script>
