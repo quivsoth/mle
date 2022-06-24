@@ -108,7 +108,6 @@ img.rounded-corners {
 .navbar {
   background-color: #070707;
   border-bottom: 1px solid  #252525;
-
 }
 
 .navbar-nav {
@@ -138,6 +137,11 @@ img.rounded-corners {
 
 #itemEdit {
   color: white;
+}
+
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 #site-footer  {

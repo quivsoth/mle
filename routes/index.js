@@ -20,7 +20,6 @@ router.get('/sp', function(req, res, next) {
 }); 
 
 
-
 /*    Description: View for HOME page.
       Method: GET                     */
 router.get('/', function(req, res, next) {

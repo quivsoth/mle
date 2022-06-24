@@ -2,33 +2,14 @@
 <link rel="stylesheet" href="/stylesheets/splide.min.css">
 <link rel="stylesheet" href="/stylesheets/timeline.css">
 
-<style>
-    .fullscreen-bg {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        overflow: hidden;
-        z-index: -100;
-    }
-    .fullscreen-bg__video {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding-left: 60%;
-    }
-</style>
-
-<div class="container-fluid text-light bg-image p-3 y-5">
-    <div class="row full-width">
+<div class="text-light bg-image">
+    <div class="row full-width p-2">
         <h2 class="display-4 mb-0" style="line-height: 1">Curated Vintage.
             <br>
             Revived Styles.</h2>
         {{!-- <img class="rounded-corners" src="images/frontpage/hero1.png" alt=""> --}}
     </div>
-    <div class="row full-width">
+    <div class="row full-width  p-2">
         <div class="col-lg-8" style="margin-top:1rem;">
             <h5 class="mb-3 text-light">With a focus on locally sourced, Australian Made items, this Melbourne based boutique caters to women with an appreciation for quality garments, whilst offering iconic pieces of Australia’s fashion history.
             </h5>
@@ -42,8 +23,8 @@
     <hr/>
     <div class="row full-width">
         <h2>The Baja Eras</h2>
-        <h5 class=" text-light ">The Baja collections are inspired through all the golden eras of fashion! Scroll through our collections throughout the eras!</h5>
-        <section id="era-carousel" class="splide" aria-label="Baja Life">
+        <h5 class=" text-light pb-2">The Baja collections are inspired through all the golden eras of fashion! Scroll through our collections throughout the eras!</h5>
+        <section id="era-carousel" class="splide" aria-label="Baja Life" style="padding:0">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
@@ -125,8 +106,8 @@
 
 
     {{!-- Latest News --}}
-    <div class="row full-width pb-3">
-      <div class="row full-width">
+    <div class="row full-width p-2">
+      <div class="row full-width nopadding">
         <div class="col-lg-9 col-xl-9">
             <h3 class="display-5 mb-1 text-light p-1 pb-3">Latest News..</h3>            
         </div>
@@ -169,7 +150,7 @@
             <p class="mb-5 text-light">We're rolling out the welcome mat in Richmond, we invite you to come on in and see my hand-picked favourite collections!</p>
           </div>
         </div>
-        <a class="btn btn-light btn-block col-6" style="margin-left: 0.8rem;" href="/mixedmedia">See all media</a>
+        <a class="btn btn-light btn-block col-6 mb-4"  href="/mixedmedia">See all media</a>
         </div>
     </div>
 </div>
