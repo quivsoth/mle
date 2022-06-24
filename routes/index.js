@@ -8,6 +8,7 @@ var router = express.Router();
 
 var Cart = require('../models/cart');
 var Collection = require("../models/collection");
+var Subscriber = require("../models/subscriber");
 
 const {deserializeUser} = require('passport');
 
@@ -183,7 +184,6 @@ router.get('/item_admin', function (req, res, next) {
         Method: GET                            */
 router.get('/addCart', function (req, res, next) {
     (async function () {
-      var messages = req.flash('info');
         let productId = req.query.productId;
         let collectionId = req.query.collectionId;
         var cart = new Cart(req.session.cart ? req.session.cart : {});
@@ -198,12 +198,11 @@ router.get('/addCart', function (req, res, next) {
         Method: GET                           */
 router.get('/deleteCart', function (req, res, next) {
     (async function () {
-      var messages = req.flash('info');
-        let productId = req.query.productId;
-        var cart = new Cart(req.session.cart);
-        cart.delete(productId);
-        req.session.cart = cart;
-        res.redirect('/shopping-cart',);
+      let productId = req.query.productId;
+      var cart = new Cart(req.session.cart);
+      cart.delete(productId);
+      req.session.cart = cart;
+      res.redirect('/shopping-cart',);
     })();
 });
 
@@ -244,6 +243,20 @@ router.get('/checkout', function (req, res, next) {
     })();
 });
 
+/*      Description: Checkout of Shopping Cart.
+        Method: GET                           */
+        router.get('/subscribers', function (req, res, next) {
+          (async function () {
+            const all = await Subscriber.find();
+            var emails = [];
+            for (let i = 0; i < all.length; i++) {
+              emails.push(all[i].email);            
+            }
+            res.render('site/subscribers', {subscribers: emails});
+          })();
+      });
+      
+
 /*      Description: Update item in collection
         Method: PUT                           */
 router.put('/updateProduct/:collection/:id', function (req, res) {
@@ -256,10 +269,17 @@ router.put('/updateProduct/:collection/:id', function (req, res) {
     })();
 });
 
-/*      Description: Update item in collection
+/*      Description: Add email to subscription list
         Method: PUT                           */
 router.put('/emailSubscribe', function (req, res) {
   (async function () {
+    var emailAddress = req.body.email;    
+    const doc = new Subscriber({
+      email: emailAddress
+    });
+
+    await doc.save();
+  
     req.flash('info', 'Thank you for subscribing!');
     var referrer = req.headers['referer'];
     res.redirect(referrer);

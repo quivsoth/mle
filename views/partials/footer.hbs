@@ -14,7 +14,7 @@
     </section>
     <!-- Section: Form -->
     <section class="">
-      <form action="">
+      <form method="POST" action="/emailSubscribe?_method=PUT" id="emailSend">
         <!--Grid row-->
         <div class="row d-flex justify-content-center">
           <!--Grid column-->
@@ -28,8 +28,8 @@
           <div class="col-md-5 col-12">
             <!-- Email input -->
             <div class="form-outline form-white mb-4">
-              <input type="email" id="form5Example21" class="form-control" />
-              <label class="form-label" for="form5Example21">Email address</label>
+              <input type="email" id="txtEmail" name="email" class="form-control" />
+              <label class="form-label" for="txtEmail">Email address</label>
             </div>
           </div>
           <!--Grid column-->
@@ -54,22 +54,3 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
-
-
-<!-- views/reviews-edit.handlebars --> 
-    <form method="POST" action="/emailSubscribe?_method=PUT" id="emailSend">
-      <fieldset>
-        <legend>Subscribe</legend>
-        <!-- Email -->
-        <p>
-          <label for="txtEmail">Email</label><br>
-          <input id="txtEmail" type="text" name="email" />
-        </p>
-      </fieldset>
-      
-        <!-- BUTTON -->
-      <div>
-        <button class="btn btn-light" type="submit">Save Changes</button>
-        {{!-- <a class="btn btn-light" href="/item?itemId={{item.productId}}&collectionId={{collectionId}}">Return to Item</a> --}}
-      </div>
-    </form>
