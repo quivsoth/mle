@@ -77,14 +77,14 @@ router.get('/calculator', function (req, res, next) {
             },
             followAllRedirects: true
         };
-
+        console.log(australiaPostAPI.href);
         request(options, function (error, response) {
             if (error) throw new Error(error);
             var g = JSON.parse(response.body, (key, value) => {
                 if(key == 'total_cost') { cost = value }
                 if(key == 'delivery_time') { deliveryTime = value }
                 if(key == 'service') { service = value }
-                // console.log(key); // log the current property name, the last is "".
+                console.log(key); // log the current property name, the last is "".
                 return value;     // return the unchanged property value.
             });
 
