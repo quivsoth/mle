@@ -9,10 +9,10 @@
 <nav class="navbar navbar-expand-md navbar-dark" aria-label="Baja La Bruja navbar">
   <div class="container-fluid" style="background-color: #070707;">
     <div class="row" style="width:100%" >
-      <div class="col-9">
+      <div class="col-8">
         <a href="/"> <img src="/images/baja_logo.png" style="max-height: 7rem;" /> </a>
       </div>
-      <div class="col-3">
+      <div class="col-4">
         <div class="row">
           <div class="col-1">
             {{# unless login }}
@@ -29,6 +29,13 @@
             {{!-- <i class="fas fa-shopping-cart " title="Shopping Cart"></i> --}}
             <img class="baja-icon" src="images/bag.png">
             <span class="badge bg-danger">{{session.cart.qty}}</span>
+            </a>
+          </div>
+          <div class="col-1 ms-3">
+            <a href="/#" style="text-decoration: none;">
+
+            <img class="baja-icon" src="images/moon-icon.png">
+
             </a>
           </div>
         </div>
