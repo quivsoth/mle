@@ -1,13 +1,33 @@
+/* ---------------- HTML ---------------- */
+
 body {
   font-family: 'splendid_66regular';
   background-color: black;
 }
 
+/* ---------------- IDs ---------------- */
+
+#image-slider {
+  width : 20rem;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+#itemEdit {
+  color: white;
+}
+
+#site-footer  {
+  font-size: 1.2rem;
+}
+
+/* ---------------- Classes ---------------- */
+
+
 .baja-icon {
   max-height: 2rem;
 }
-
-
 
 .bg-image {
   width: 100%;
@@ -16,7 +36,6 @@ body {
   background-color: black;
   /* background-size: 100% auto; */
 }
-
 
 .blockSpace4 {
   padding-bottom: 4rem;
@@ -59,21 +78,10 @@ body {
   background-size: 22rem;
 }
 
-#image-slider {
-  width : 20rem;
-  margin-bottom: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-#itemEdit {
-  color: white;
-}
-
 img.rounded-corners {
   border-radius: 1.5rem;
 }
-
+ 
 .logoHeader,
 .logoHeader a {
   text-decoration: none;
@@ -105,6 +113,11 @@ img.rounded-corners {
   padding-left: 2rem;
 }
 
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 .price {
   font-weight: bold;
   font-size: x-large;
@@ -112,16 +125,6 @@ img.rounded-corners {
 
 .sectionHeader {
   font-size: xx-large;
-}
-
-
-.nopadding {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-#site-footer  {
-  font-size: 1.2rem;
 }
 
 .videoControl {
