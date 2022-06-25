@@ -68,8 +68,6 @@ router.get('/calculator', function (req, res, next) {
         australiaPostAPI.searchParams.append("from_postcode", postCodeFrom);
         australiaPostAPI.searchParams.append("to_postcode", postCodeTo);
         australiaPostAPI.searchParams.append("service_code", service_code);
-        
-        console.log(australiaPostAPI.href);
 
         var options = {
             'method': 'POST',
@@ -95,6 +93,8 @@ router.get('/calculator', function (req, res, next) {
                 cost: cost,
                 deliveryTime: deliveryTime,
                 service: service,
+                postCodeFrom: postCodeFrom,
+                postCodeTo: postCodeTo,
                 hasCost: cost.length > 0,
                 hasMessages: messages.length > 0
             });
