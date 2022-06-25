@@ -1,0 +1,118 @@
+<div class="row justify-content-md-center">
+    {{#if hasCost}}
+    <div class="m-3">
+        <div class="row col-12 bg-primary">
+            <h2 class=" ps-3 m-0 me-3">Results</h2>
+        </div>
+        <div class="row col-12 full-width bg-success">
+            <div class="row col-12 full-width">
+                <div class="col-3 bg-secondary">Cost: </div>
+                <div class="col-9 ps-1 bg-success">{{cost}}</div>
+            </div>
+            <div class="row full-width">
+                <div class="col-3 bg-secondary">Service: </div>
+                <div class="col-9 ps-1 bg-success">{{service}}</div>
+            </div>
+        </div>
+    </div>
+    {{!-- <div class="row bg-info"><div class="col-5">Delivery Time: </div><div class="col-6 bg-success">{{deliveryTime}}</div></div> --}}
+    {{/if}}
+
+    <form class="ms-3 p-3" method="POST" action="/calculator?_method=GET" id="calculate">
+    <legend>Calculate Shipping</legend>
+  <div class="form-group row">
+    <label for="inputLength" class="col-5 col-sm-2 col-form-label">Length (cm)</label>
+    <div class="col-sm-1 col-3">
+      <input type="number" min="5" max="100" class="form-control" id="inputLength" placeholder="Length" name="length">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputWidth" class="col-5 col-sm-2 col-form-label">Width (cm)</label>
+    <div class="col-sm-1 col-3">
+      <input type="number" min="5" max="100" class="form-control" id="inputWidth" placeholder="Width" name="width">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputHeight" class="col-5 col-sm-2 col-form-label">Height (cm)</label>
+    <div class="col-sm-1 col-3">
+      <input type="number" min="10" max="100" class="form-control" id="inputHeight" placeholder="Height" name="height">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputWeight" class="col-5 col-sm-2 col-form-label">Weight (kg)</label>
+    <div class="col-sm-1 col-3">
+      <input type="number" min="1" max="5" class="form-control" id="inputWeight" placeholder="Weight" name="weight">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPostCodeFrom" class="col-5 col-sm-2 col-form-label">Post Code From</label>
+    <div class="col-sm-1 col-3">
+      <input type="number" min="0000" max="9999" class="form-control" id="inputPostCodeFrom" placeholder="From" name="postCodeFrom">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPostCodeTo" class="col-5 col-sm-2 col-form-label">Post Code From</label>
+    <div class="col-sm-1 col-3">
+      <input type="number" min="0000" max="9999" class="form-control" id="inputPostCodeTo" placeholder="To" name="postCodeTo">
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Calculate</button>
+    </div>
+  </div>
+</form>
+
+{{!-- 
+    <form class="ms-3" method="POST" action="/calculator?_method=GET" id="calculate">
+        <fieldset>
+        <legend>Calculate Shipping</legend>
+        <div class="row">
+            <div class="col-2 mx-auto">
+                <!-- LENGTH -->
+                <p>
+                    <label for="txtLength">Length (cm)</label><br>
+                    <input id="txtLength" type="text" name="length" size="4" />
+                </p>
+
+                <!-- WIDTH -->
+                <p>
+                    <label for="txtWidth">Width  (cm)</label><br>      
+                    <input id="txtWidth" name="width" size="4" />
+                </p>
+
+                <!-- HEIGHT -->
+                <p>
+                    <label for="txtHeight">Height (cm)</label><br>
+                    <input id="txtHeight" type="text" name="height" size="4" />
+                </p>
+                
+                <!-- WEIGHT -->
+                <p>
+                    <label for="txtWeight">Weight (kg)</label><br>
+                    <input id="txtWeight" type="text" name="weight" size="4" />
+                </p>
+            </div>
+            <div class="col-6">
+                <!-- FROM -->
+                <p>
+                    <label for="txtPostCodeFrom">Postcode From</label><br>
+                    <input id="txtPostCodeFrom" type="text" size="4" name="postCodeFrom" />
+                </p>
+
+                <!-- TO -->
+                <p>
+                    <label for="txtPostCodeTo">Postcode To</label><br>
+                    <input id="txtPostCodeTo" type="text" size="4" name="postCodeTo" />
+                </p>
+            </div>
+        </div>
+        </fieldset>
+        <!-- BUTTON -->
+        <div class="mb-5 ms-5">
+            <button class="btn btn-light" type="submit">Calculate Shipping</button>
+        </div>
+    </form> --}}
+</div>
