@@ -28,6 +28,9 @@
         </div>
         <div class="row pt-4">
           <div class="col-1">
+            <div class="col-1 ms-3">
+            <a href="/#" style="text-decoration: none;"><img class="baja-icon" src="images/moon-icon.png"></a>
+          </div>
             {{# unless login }}
               <a href="/user/signin"></a><img class="baja-icon" src="images/login-key.png" /></a>
             {{/unless}}
@@ -44,13 +47,7 @@
             <span class="badge bg-danger">{{session.cart.qty}}</span>
             </a>
           </div>
-          <div class="col-1 ms-3">
-            <a href="/#" style="text-decoration: none;">
-
-            <img class="baja-icon" src="images/moon-icon.png">
-
-            </a>
-          </div>
+          
         </div>
       </div>
         
