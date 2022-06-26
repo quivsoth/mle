@@ -26,7 +26,12 @@
           </button>
       </div>
       <div class="col-1 mt-3">
-          <div class="row ">
+          <div class="row">
+              <a href="/#" style="text-decoration: none;">
+              <img class="baja-icon" src="images/moon-icon.png">
+              </a>
+          </div>
+          <div class="row pt-3">
               {{# unless login }}
                 <a href="/user/signin"><img class="baja-icon" src="images/login-key.png" /></a>
               {{/unless}}
@@ -36,7 +41,7 @@
               {{/if}}
           </div>
 
-          <div class="row pt-2">
+          <div class="row pt-3">
               <a href="/shopping-cart" style="text-decoration: none;">
               {{!-- <i class="fas fa-shopping-cart " title="Shopping Cart"></i> --}}
               <img class="baja-icon" src="images/bag.png">
@@ -44,11 +49,7 @@
               </a>
           </div>
 
-          <div class="row pt-2">
-              <a href="/#" style="text-decoration: none;">
-              <img class="baja-icon" src="images/moon-icon.png">
-              </a>
-          </div>
+          
         </div>
         {{!-- <div class="row ps-5 pt-4">
           <button
