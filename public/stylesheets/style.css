@@ -24,6 +24,18 @@ body {
 
 /* ---------------- Classes ---------------- */
 
+.baja-font-larger {
+  font-size: larger;
+}
+
+.baja-font-large {
+  font-size: large;
+}
+
+.baja-font-small {
+  font-size:small;
+}
+
 
 .baja-icon {
   max-height: 2rem;
