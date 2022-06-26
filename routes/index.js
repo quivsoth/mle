@@ -14,11 +14,9 @@ var Subscriber = require("../models/subscriber");
 
 const {deserializeUser} = require('passport');
 
-
 // var csrf = require('csurf');
 // var csrfProtection = csrf();
 // router.use(csrfProtection);
-
 
 router.get('/sp', function (req, res, next) {
     res.render("site/scratchpad");
@@ -101,8 +99,6 @@ router.get('/calculator', function (req, res, next) {
         });
     })();
 });
-
-
 
 /*    Description: View for lifestyle page.
       Method: GET                     */
