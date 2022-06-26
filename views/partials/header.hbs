@@ -26,11 +26,13 @@
               <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-        <div class="row pt-4">
+        <div class="row pt-3">
           <div class="col-1">
-            <div class="col-1 ms-3">
-            <a href="/#" style="text-decoration: none;"><img class="baja-icon" src="images/moon-icon.png"></a>
+            <a href="/#" style="text-decoration: none;">
+            <img class="baja-icon" src="images/moon-icon.png">
+            </a>
           </div>
+          <div class="col-1 ps-4">
             {{# unless login }}
               <a href="/user/signin"></a><img class="baja-icon" src="images/login-key.png" /></a>
             {{/unless}}
@@ -40,16 +42,14 @@
               <a href="/user/logout"><i class="fas fa-sign-out-alt" title="Logout"></i></a>
             {{/if}}
           </div>
-          <div class="col-1 ms-3">
+          <div class="col-1  ps-4">
             <a href="/shopping-cart" style="text-decoration: none;">
             {{!-- <i class="fas fa-shopping-cart " title="Shopping Cart"></i> --}}
             <img class="baja-icon" src="images/bag.png">
             <span class="badge bg-danger">{{session.cart.qty}}</span>
             </a>
           </div>
-          
         </div>
-      </div>
         
 
       <div class="collapse navbar-collapse ms-3" id="blj-nav">
