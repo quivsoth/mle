@@ -8,38 +8,49 @@
 
 <nav class="navbar navbar-expand-md navbar-dark" aria-label="Baja La Bruja navbar">
   <div class="container-fluid" style="background-color: #070707;">
-    <div class="row" style="width:100%" >
+    <div class="row" style="width:100%">
       <div class="col-8">
         <a href="/"> <img src="/images/baja_logo.png" style="max-height: 7rem;" /> </a>
+      </div> {{!-- bajalogo --}}
+      <div class="col-3 pt-5">
+        <button
+            style="width:4rem"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#blj-nav"
+            aria-controls="blj-nav"
+            aria-expanded="true"
+            aria-label="Toggle Baja Navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
       </div>
-      <div class="col-4">
-        <div class="row">
-          <div class="col-1">
-            {{# unless login }}
-              <a href="/user/signin"></a><img class="baja-icon" src="images/login-key.png" /></a>
-            {{/unless}}
-
-            {{# if login }}
-              <a href="/user/profile"><i class="fas fa-user" title="User Profile"></i></a>
-              <a href="/user/logout"><i class="fas fa-sign-out-alt" title="Logout"></i></a>
-            {{/if}}
+      <div class="col-1 mt-3">
+          <div class="row ">
+              {{# unless login }}
+                <a href="/user/signin"><img class="baja-icon" src="images/login-key.png" /></a>
+              {{/unless}}
+              {{# if login }}
+                <a href="/user/profile"><i class="fas fa-user" title="User Profile"></i></a>
+                <a href="/user/logout"><i class="fas fa-sign-out-alt" title="Logout"></i></a>
+              {{/if}}
           </div>
-          <div class="col-1 ms-2">
-            <a href="/shopping-cart" style="text-decoration: none;">
-            {{!-- <i class="fas fa-shopping-cart " title="Shopping Cart"></i> --}}
-            <img class="baja-icon" src="images/bag.png">
-            <span class="badge bg-danger">{{session.cart.qty}}</span>
-            </a>
+
+          <div class="row pt-2">
+              <a href="/shopping-cart" style="text-decoration: none;">
+              {{!-- <i class="fas fa-shopping-cart " title="Shopping Cart"></i> --}}
+              <img class="baja-icon" src="images/bag.png">
+              <span class="badge bg-danger">{{session.cart.qty}}</span>
+              </a>
           </div>
-          <div class="col-1 ms-3">
-            <a href="/#" style="text-decoration: none;">
 
-            <img class="baja-icon" src="images/moon-icon.png">
-
-            </a>
+          <div class="row pt-2">
+              <a href="/#" style="text-decoration: none;">
+              <img class="baja-icon" src="images/moon-icon.png">
+              </a>
           </div>
         </div>
-        <div class="row ps-5 pt-4">
+        {{!-- <div class="row ps-5 pt-4">
           <button
             style="width:4rem"
             class="navbar-toggler"
@@ -51,7 +62,7 @@
             aria-label="Toggle Baja Navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
-        </div>
+        </div> --}}
       </div>
 
       <div class="collapse navbar-collapse ms-3" id="blj-nav">
