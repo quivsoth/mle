@@ -3,6 +3,8 @@
 body {
   font-family: 'splendid_66regular';
   background-color: black;
+  color: #FFF;
+  margin-top: 145px; /* This is needed for a fixed header, remove if not using fixed header */
 }
 
 /* ---------------- IDs ---------------- */
@@ -81,6 +83,10 @@ body {
   color: #414141;
 }
 
+.full-width {
+  width:100%;
+}
+
 .imageFloat {
   padding: 2rem;
   margin-top: -3rem;
@@ -114,6 +120,7 @@ img.rounded-corners {
 .navbar {
   background-color: #070707;
   border-bottom: 1px solid  #252525;
+  z-index:1; /*Add this*/
 }
 
 .navbar-nav {
@@ -122,7 +129,7 @@ img.rounded-corners {
 }
 
 .nav-item {
-  padding-left: 2rem;
+  
 }
 
 .nopadding {
@@ -142,3 +149,12 @@ img.rounded-corners {
 .videoControl {
   width: 100%;
 }
+
+
+
+.navbar-collapse {
+  top:0px;
+  left:0px;
+}
+
+

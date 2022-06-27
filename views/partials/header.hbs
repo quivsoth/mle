@@ -1,77 +1,57 @@
-{{#if hasMessages}}
-  <div class="alert alert-success">
-    {{# each messages}}
-      <p>{{this}}</p>
-    {{/each}}
-  </div>
-{{/if}}
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" aria-label="Baja La Bruja Navigation Bar">
+  <div class="container-fluid full-width" style="background-color: #070707;">
+    
+    {{!-- LOGO --}}
+    <a class="navbar-brand" href="/"> <img src="/images/baja_logo.png" style="max-height: 7rem;" /> </a>
+    
+    {{!-- TOGGLE BUTTON --}}
+    <button        
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#blj-nav"
+        aria-controls="blj-nav"
+        aria-expanded="true"
+        aria-label="Toggle Baja Navigation">
+            <span class="navbar-toggler-icon"></span>
+    </button>
 
-<nav class="navbar navbar-expand-md navbar-dark" aria-label="Baja La Bruja navbar">
-  <div class="container-fluid" style="background-color: #070707;">
-    <div class="row" style="width:100%" >
-      <div class="col-8">
-        <a href="/"> <img src="/images/baja_logo.png" style="max-height: 7rem;" /> </a>
-      </div>
-      <div class="col-4">
-        <div class="row ms-5 mt-3">
-          <button
-            style="width:4rem"
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#blj-nav"
-            aria-controls="blj-nav"
-            aria-expanded="true"
-            aria-label="Toggle Baja Navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <div class="row pt-3">
-          <div class="col-1">
-            <a href="/#" style="text-decoration: none;">
-            <img class="baja-icon" src="images/moon-icon.png">
-            </a>
-          </div>
-          <div class="col-1 ps-4">
-            {{# unless login }}
-              <a href="/user/signin"></a><img class="baja-icon" src="images/login-key.png" /></a>
-            {{/unless}}
-
-            {{# if login }}
-              <a href="/user/profile"><i class="fas fa-user" title="User Profile"></i></a>
-              <a href="/user/logout"><i class="fas fa-sign-out-alt" title="Logout"></i></a>
-            {{/if}}
-          </div>
-          <div class="col-1  ps-4">
-            <a href="/shopping-cart" style="text-decoration: none;">
-            {{!-- <i class="fas fa-shopping-cart " title="Shopping Cart"></i> --}}
-            <img class="baja-icon" src="images/bag.png">
-            <span class="badge bg-danger">{{session.cart.qty}}</span>
-            </a>
-          </div>
-        </div>
-    </div>
-    <div class="row" style="width:100%" >
-      <div class="collapse navbar-collapse ms-3" id="blj-nav">
+    {{!-- MENU --}}
+    <div class="collapse navbar-collapse m-2" id="blj-nav">
         <ul class="navbar-nav nopadding">
-          <li class="nav-item nopadding t-2">
+          <li class="nav-item">
             <a class="nav-link" href="/">Home</a>
           </li>
-          <li class="nav-item nopadding">
+          <li class="nav-item">
             <a class="nav-link" href="/heritage">La Bruja</a>
           </li>
-          <li class="nav-item nopadding">
+          <li class="nav-item">
             <a class="nav-link" href="/collections">Collections</a>
           </li>
-          <li class="nav-item nopadding">
+          <li class="nav-item">
             <a class="nav-link" href="/lifestyle">About</a>
           </li>
-          <li class="nav-item nopadding">
+          <li class="nav-item">
             <a class="nav-link" href="/mixedmedia">Mixed Media</a>
+          </li>
+          {{# unless login }}
+          <li class="ms-4">
+              <a href="/user/signin"></a><img class="baja-icon" src="images/login-key.png" /></a>
+          </li>
+          {{/unless}}
+          {{# if login }}
+          <li>
+            <a href="/user/profile"><i class="fas fa-user" title="User Profile"></i></a>
+            <a href="/user/logout"><i class="fas fa-sign-out-alt" title="Logout"></i></a>
+          </li>
+          {{/if}}
+          <li class="ms-4">
+            <a href="/shopping-cart" style="text-decoration: none;">
+                <img class="baja-icon" src="images/bag.png">
+                <span class="badge bg-danger">{{session.cart.qty}}</span>
+            </a>
           </li>
         </ul>
       </div> {{!-- collapse navbar --}}
-    </div> {{!-- row --}}
-  </div>  {{!-- container fluid --}}
+  </div> {{!-- container fluid navbar --}}
 </nav>
-<input type="hidden" value="{{messages}}">
