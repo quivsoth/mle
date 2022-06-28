@@ -10,7 +10,7 @@ body {
     /* background-position: 80% 68%; */
 
 
-    background-position-x: center;
+    background-position-x: center 15rem;
     background-position-y: top 10px;
-    background-size: 50% auto; 
+    background-size: 90% auto; 
   }
