@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+
 var productSchema = new Schema({
     productId: { type:Number, required:true },
     productName: { type:String, required:true },
@@ -23,4 +24,6 @@ var collectionSchema = new Schema({
 { collection : 'bruja' });
 
 module.exports = mongoose.model('Product', productSchema);
+// var collectionModel = mongoose.model('collections',collectionSchema);
+// module.exports = mongoose.model("Collections", collectionModel);
 module.exports = mongoose.model('Collection', collectionSchema);

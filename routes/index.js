@@ -2,21 +2,25 @@ const {createServer} = require('livereload');
 const https = require('https');
 const request = require('request');
 const {registerHelper} = require('hbs');
+const mongoose = require('mongoose');
+
+
 const {MongoClient} = require('mongodb');
 const uri = process.env.MONGO_DB;
 
 var express = require('express');
 var router = express.Router();
 
-var Cart = require('../models/cart');
-var Collection = require("../models/collection");
-var Subscriber = require("../models/subscriber");
-
+//Security
 const {deserializeUser} = require('passport');
-
 // var csrf = require('csurf');
 // var csrfProtection = csrf();
 // router.use(csrfProtection);
+
+// Models
+var Cart = require('../models/cart');
+var Collection = require("../models/collection");
+var Subscriber = require("../models/subscriber");
 
 router.get('/sp', function (req, res, next) {
     res.render("site/scratchpad");
@@ -329,6 +333,7 @@ router.get('/checkout', function (req, res, next) {
         Method: PUT                           */
 router.put('/updateProduct/:collection/:id', function (req, res) {
     (async function () {
+        console.log("Update Product");
         let itemId = parseInt(req.params.id);
         let collectionId = parseInt(req.params.collection);
         await updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size);
@@ -402,6 +407,21 @@ async function getItem(productId, collectionId) {
 }
 
 async function updateItem(productId, collectionId, productName, description, price, size) {
+
+    console.log("productId : " + productId);
+    console.log("collectionId : " + collectionId);
+    console.log("productName : " + productName);
+    console.log("description : " + description);
+    console.log("price : " + price);
+    console.log("size : " + size);
+
+
+    console.log("Connected: " + mongoose.connection.readyState);
+
+    // const filter = {};
+    // const all = await Collection.find(filter);
+    // console.log(all);
+
     var query = {
         collectionId: collectionId
     };
@@ -410,7 +430,7 @@ async function updateItem(productId, collectionId, productName, description, pri
             console.log(err);
         }
         var p = result.products.filter(function (item) {
-            return item.productId === productId;
+            return item.productId === productId; 
         }).pop();
         p.productName = productName;
         p.description = description;
