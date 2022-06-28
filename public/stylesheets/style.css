@@ -24,6 +24,7 @@ body {
   font-size: 1.2rem;
 }
 
+
 /* ---------------- Classes ---------------- */
 
 .baja-font-larger {
@@ -78,6 +79,8 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.fade-in-image, .fade-in-text { animation: fadeIn 5s; }
 
 .fas {
   color: #414141;
@@ -157,4 +160,37 @@ img.rounded-corners {
 
 .videoControl {
   width: 100%;
+}
+
+
+
+/* ---------------- Keyframess ---------------- */
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
