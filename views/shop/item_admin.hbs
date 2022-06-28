@@ -1,8 +1,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
-
-
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -11,62 +9,59 @@
     <li class="breadcrumb-item active" aria-current="page">{{ item.productName }}</li>
   </ol>
 </nav>
-<div class="container">
-  <div class="row bg-image">
-    {{!-- COLUMN 1 --}}
-    <div class="col-md-2">
-      <div id="image-slider" class="splide">
-        <div class="splide__track">
-          <ul class="splide__list">
-            {{#each item.productThumbs}}
-              <li class="splide__slide"><img src="images/products/{{this}}"></li>
-            {{/each}}
-          </ul>
-        </div>
+
+<div class="row mb-3">
+  {{!-- COLUMN 1 --}}
+  <div class="col-lg-4 col-md-5">
+    <div id="image-slider" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {{#each item.productThumbs}}
+            <li class="splide__slide"><img class="img-responsive img-fluid" src="images/products/{{this}}"></li>
+          {{/each}}
+        </ul>
       </div>
     </div>
-    {{!-- COLUMN 2 --}}
-    <div class="col-lg-3"></div>
-    <div class="col-md-7" style="margin-bottom: 3rem;">
-      
+  </div>
+  {{!-- COLUMN 2 --}}
+   <div class="col-lg-6 col-md-6 ms-3 mt-3">
     <!-- views/reviews-edit.handlebars --> 
     <form method="POST" action="/updateProduct/{{collectionId}}/{{item.productId}}?_method=PUT" id="itemEdit">
       <fieldset>
         <legend>Edit Item</legend>
-        
-        
-        <!-- PRODUCT NAME -->
-        <p>
-          <label for="productName">Product Name</label><br>
-          <input id="productName" type="text" name="productName" value="{{item.productName}}"/>
-        </p>
 
-        <!-- DESCRIPTION -->
-        <p>
-          <label for="description">Description</label><br>      
-          <textarea id="description" name="description" rows="10" />{{item.description}}</textarea>
-        </p>
 
-        <!-- SIZE -->
-        <p>
-          <label for="size">Size</label><br>
-          <input id="size" type="text" name="size" value="{{item.size}}"/>
-        </p>
-        
-        <!-- PRICE -->
-        <p>
-          <label for="price">Price</label><br>
-          <input id="price" type="text" name="price" value="{{item.price}}"/>
-        </p>
+      <!-- PRODUCT NAME -->
+      <p>
+        <label for="productName">Product Name</label><br>
+        <input id="productName" type="text" name="productName" value="{{item.productName}}"/>
+      </p>
+
+      <!-- DESCRIPTION -->
+      <p>
+        <label for="description">Description</label><br>      
+        <textarea id="description" name="description" rows="10" />{{item.description}}</textarea>
+      </p>
+
+      <!-- SIZE -->
+      <p>
+        <label for="size">Size</label><br>
+        <input id="size" type="text" name="size" value="{{item.size}}"/>
+      </p>
+
+      <!-- PRICE -->
+      <p>
+        <label for="price">Price</label><br>
+        <input id="price" type="text" name="price" value="{{item.price}}"/>
+      </p>
 
       </fieldset>
-        <!-- BUTTON -->
+      <!-- BUTTON -->
       <div>
         <button class="btn btn-light" type="submit">Save Changes</button>
         <a class="btn btn-light" href="/item?itemId={{item.productId}}&collectionId={{collectionId}}">Return to Item</a>
       </div>
     </form>
-    </div>
   </div>
 </div>
 
