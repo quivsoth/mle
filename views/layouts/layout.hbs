@@ -3,13 +3,17 @@
   <head>
     <title>{{title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    {{!-- Font awesome --}}
     <link rel='stylesheet' href='/stylesheets/fontawesome/all.min.css' />
-
+    <link rel='stylesheet' href='/fonts/stylesheet.css' />
+    
+    {{!-- Bootstrap --}}
     <link href="/stylesheets/bootstrap@5.0.2.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="/javascripts/bootstrap@5.0.2.min.js"  crossorigin="anonymous"></script>
 
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel='stylesheet' href='/fonts/stylesheet.css' />
+    
 
     <link rel='stylesheet' media='screen and (max-width: 576px)' href='stylesheets/smallscreen.css' />
   </head>
@@ -19,7 +23,6 @@
     <div class="container nopadding bg-image">
       <!-- Content here -->
       {{{body}}}
-
       {{> footer}}
     </div>
   </body>
