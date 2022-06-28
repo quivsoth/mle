@@ -24,6 +24,4 @@ var collectionSchema = new Schema({
 { collection : 'bruja' });
 
 module.exports = mongoose.model('Product', productSchema);
-// var collectionModel = mongoose.model('collections',collectionSchema);
-// module.exports = mongoose.model("Collections", collectionModel);
 module.exports = mongoose.model('Collection', collectionSchema);

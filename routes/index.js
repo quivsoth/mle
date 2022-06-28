@@ -4,7 +4,6 @@ const request = require('request');
 const {registerHelper} = require('hbs');
 const mongoose = require('mongoose');
 
-
 const {MongoClient} = require('mongodb');
 const uri = process.env.MONGO_DB;
 
@@ -407,21 +406,6 @@ async function getItem(productId, collectionId) {
 }
 
 async function updateItem(productId, collectionId, productName, description, price, size) {
-
-    console.log("productId : " + productId);
-    console.log("collectionId : " + collectionId);
-    console.log("productName : " + productName);
-    console.log("description : " + description);
-    console.log("price : " + price);
-    console.log("size : " + size);
-
-
-    console.log("Connected: " + mongoose.connection.readyState);
-
-    // const filter = {};
-    // const all = await Collection.find(filter);
-    // console.log(all);
-
     var query = {
         collectionId: collectionId
     };
