@@ -100,18 +100,7 @@ img.rounded-corners {
   border-radius: 1.5rem;
 }
  
-.logoHeader,
-.logoHeader a {
-  text-decoration: none;
-  color: white;
-  font-size: 50px;
-  font-weight: 500;
-}
 
-.menu {
-  font-size: 1.6rem;
-  text-decoration: none;
-}
 
 .nav-link {
   font-size:larger;
@@ -120,8 +109,14 @@ img.rounded-corners {
 
 .navbar {
   background-color: #070707;
+  /* background-color: yellow; */
   /* border-bottom: 1px solid  #252525; */
 
+}
+
+.navbar-brand img {
+  height: 7rem;
+  
 }
 
 .navbar-nav {
@@ -164,12 +159,3 @@ img.rounded-corners {
 .videoControl {
   width: 100%;
 }
-
-
-
-.navbar-collapse {
-  top:0px;
-  left:0px;
-}
-
-
