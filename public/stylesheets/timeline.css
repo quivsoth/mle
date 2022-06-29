@@ -18,11 +18,11 @@
 }
 
 .era-carousel-progress {
-  background: #ccc;
+  background: #000;
 }
 
 .era-carousel-progress-bar {
-  background: greenyellow;
+  background: #FFF;
   height: 2px;
   transition: width 400ms ease;
   width: 0;
