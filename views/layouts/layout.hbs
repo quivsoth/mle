@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>{{title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Baja La Bruja is an online shop for revitalized vitage and curated fashion!">
+
     {{!-- Font awesome --}}
     <link rel='stylesheet' href='/stylesheets/fontawesome/all.min.css' />
     <link rel='stylesheet' href='/fonts/stylesheet.css' />
@@ -14,16 +15,20 @@
 
     <link rel='stylesheet' href='/stylesheets/style.css' />
     
-
     <link rel='stylesheet' media='screen and (max-width: 576px)' href='stylesheets/smallscreen.css' />
   </head>
   <body>
-    
+
     {{> header}}
+
     <div class="nopadding bg-image">
+
       <!-- Content here -->
+
       {{{body}}}
+
       {{> footer}}
+      
     </div>
   </body>
 </html>

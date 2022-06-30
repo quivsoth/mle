@@ -1,10 +1,13 @@
 /* ---------------- HTML ---------------- */
 
+
 body {
   font-family: 'splendid_66regular';
   background-color: black;
   color: #FFF;
-  margin-top: 145px; /* This is needed for a fixed header, remove if not using fixed header */
+  margin: 0;
+  padding: 0;
+  margin-top: 145px;  /* This is needed for a fixed header, remove if not using fixed header */
 }
 
 /* ---------------- IDs ---------------- */
@@ -113,6 +116,8 @@ img.rounded-corners {
 
 .navbar {
   background-color: #070707;
+  margin: 0;
+  padding: 0;
   /* background-color: yellow; */
   /* border-bottom: 1px solid  #252525; */
 
