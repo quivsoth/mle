@@ -7,7 +7,7 @@ body {
   color: #FFF;
   margin: 0;
   padding: 0;
-  margin-top: 145px;  /* This is needed for a fixed header, remove if not using fixed header */
+  margin-top: 125px;  /* This is needed for a fixed header, remove if not using fixed header */
 }
 
 /* ---------------- IDs ---------------- */
