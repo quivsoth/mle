@@ -30,6 +30,11 @@ body {
 
 /* ---------------- Classes ---------------- */
 
+
+.baja-font-135 {
+  font-size:135%;
+}
+
 .baja-font-larger {
   font-size: larger;
 }
