@@ -12,23 +12,22 @@
     {{!-- Bootstrap --}}
     <link href="/stylesheets/bootstrap@5.0.2.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="/javascripts/bootstrap@5.0.2.min.js"  crossorigin="anonymous"></script>
-
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    
     <link rel='stylesheet' media='screen and (max-width: 576px)' href='stylesheets/smallscreen.css' />
+
   </head>
   <body>
-
     {{> header}}
-
     <div class="nopadding bg-image">
-
       <!-- Content here -->
-
       {{{body}}}
-
       {{> footer}}
-      
-    </div>
+    </div> 
+
+  
   </body>
+    {{!-- Image Wordplay --}}
+    <script src="/javascripts/imagesloaded.pkgd.min.js"></script>
+    <script src="/javascripts/charming.min.js"></script>
+    <script src="/javascripts/scrollingletters.js"></script>
 </html>

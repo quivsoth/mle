@@ -13,7 +13,10 @@ var flash = require('connect-flash');
 var validator = require('express-validator');
 var MongoStore = require('connect-mongo');
 
+
 var indexRouter = require('./routes/index');
+var shippingRouter = require('./routes/shipping');
+var shopRouter = require('./routes/shop');
 var userRouter = require('./routes/user');
 
 var app = express();
@@ -50,8 +53,11 @@ app.use(function(req,res,next){
   next();
 });
 
-app.use('/user', userRouter);
 app.use('/', indexRouter);
+app.use('/', shippingRouter);
+app.use('/', shopRouter);
+app.use('/user', userRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

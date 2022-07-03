@@ -8,29 +8,40 @@
     }
 </style>
 <div class="container ">
-    <section clas="col-lg-12 col-md-12 col-xs-12 g0">
+    {{!-- Main Header Text --}} 
+    <section clas="col-lg-12 col-md-12 col-xs-12 g0">	
         <h1 class="display-4 fade-in-text" style="line-height: 1; margin-left:7px;">
-            Curated Vintage.<br>
-            Revived Styles.
+        Curated Vintage.<br>
+        Revived Styles.
         </h1>
-    </section>  {{!-- Main Header Text --}} 
+    </section>  
 
+    {{!-- First Paragraph Text --}} 
     <section class="mx-2">
         <div class="col-lg-8 col-md-10">
             <p class="baja-font-larger fade-in-text">Our Melbourne based boutique offers a diverse collection of quality Australian Made, women’s clothing. Locally sourced pieces of this country’s fashion history are the focus of our range.  </p>   
         </div>        
-    </section> {{!-- First Paragraph Text --}} 
+    </section> 
 
+    {{!-- Support Sustainability --}}
     <section class="mx-2">
-        
+        <a class="learn-more" >
+            <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">Learn More</span>
+        </a>
         <a class="ms-1 btn btn-primary btn-light btn-block col-5 col-sm-4 col-md-3 col-lg-2" href="/collections">Discover More!</a>
-    </section> {{!-- Support Sustainability --}}
-
+    </section> 
+    
     <hr/>
 
+    {{!-- Eras --}}
     {{!-- <section class="col-12 col-sm-4 col-md-3 col-lg-2 full-width nopadding"> --}}
     <section>
-        <h2 class="mx-2 fade-in-text">The Baja Eras</h2>
+        <div class="content__section">
+		    <h2 class="fade-in-text mx-2 content__text">The Baja Eras</h2>
+        </div>
         <h5 class="pb-2 mx-2 fade-in-text">Traverse the eras effortlessly, with Baja la Bruja’s hand curated vintage revival.</h5>
         <section id="era-carousel" class="splide" aria-label="Baja Life" >
             <div class="splide__track">
@@ -81,10 +92,11 @@
                 <div class="era-carousel-progress-bar"></div>
             </div>
         </section>
-    </section>  {{!-- Eras --}}
+    </section>  
 
     <hr />
 
+    {{!-- Fuck Fast Fashion --}}
     <section class="col-lg-8 col-md-10">
         <h3 class="display-5 mx-2">F#ck Fast Fashion</h3>
         <div class="row">
@@ -97,7 +109,7 @@
                 <p class="baja-font-larger"><strong>‘Perceived obsolescence’</strong> is a mentality that should be deemed obsolete, as the industry continues to follow repetitious patterns. Trends do not have to come at the expense of another human being, nor the environment.</p>
             </div>
         </div>
-    </section> {{!-- Mannequin --}}
+    </section> 
 
     <hr />
 
@@ -130,7 +142,6 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-
         var splide = new Splide('#era-carousel', {
             classes: {
                 arrows: 'splide__arrows arrows',
