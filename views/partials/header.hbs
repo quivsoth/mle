@@ -12,7 +12,7 @@
 
   <div class="container-fluid full-width nopadding" >
     {{!-- LOGO --}}
-    <a class="navbar-brand ms-3 mb-1" href="/"> <img src="/images/baja_logo.png" style="max-height: 7rem;" /> </a>
+    <a class="navbar-brand ms-3 mb-1" href="/"> <img src="/images/baja_logo.png" style="max-height: 7rem;" alt="Baja la Bruja Logo" /> </a>
     
     {{!-- TOGGLE BUTTON --}}
     <button style="margin-top: 4rem" class="navbar-toggler position-absolute top-0 end-0 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#blj-nav"
@@ -42,7 +42,7 @@
     </div> {{!-- collapse navbar --}}
     <div class="position-absolute top-0 end-0 p-3">
       {{# unless login }}
-        <a href="/user/signin"></a><img class="baja-icon pe-2" src="images/login-key.png" /></a>
+        <a href="/user/signin"></a><img class="baja-icon pe-2" src="images/login-key.png" alt="Baja la Bruja Login Image" /></a>
       {{/unless}}
 
       {{# if login }}
@@ -53,13 +53,13 @@
 
       <a href="/shopping-cart" class="pe-2" style="text-decoration: none;">
         {{!-- <i class="fas fa-shopping-cart " title="Shopping Cart"></i> --}}
-        <img class="baja-icon" src="images/bag.png">
+        <img class="baja-icon" src="images/bag.png" alt="Baja la Bruja Shopping Bag">
         <span class="badge bg-danger">{{session.cart.qty}}</span>
       </a>
 
 
       <a href="/#" style="text-decoration: none;">
-        <img class="baja-icon" src="images/moon-icon.png">
+        <img class="baja-icon" src="images/moon-icon.png" alt="Baja la Bruja Moon Photo">
       </a>
     </div>
   </div>
