@@ -197,17 +197,11 @@ router.put('/updateProduct/:collection/:id', function (req, res) {
             let itemId = 21534;
             let collectionId = 5;
             // if(req.session.cart.items[itemId]) inCart = true;
-            await getItem2(itemId, collectionId);
-            // console.log(item);
-            // res.render('shop/item', {
-            //     title: 'Baja La Bruja - Items',
-            //     item: item.item,
-            //     collectionId: collectionId,
-            //     collectionName: item.collectioName,
-            //     inCart: inCart,
-            //     messages: messages,
-            //     hasMessages: messages.length > 0
-            // });
+            var result = await getItem2(itemId, collectionId);
+
+            //todo render json
+            //res.render()
+
         })();
     });
 
@@ -263,15 +257,16 @@ async function getItem(productId, collectionId) {
 // TEMP FUNCTION THIS IS USING MONGOOSE _ THIS WILL REPLACE IT ALL
 async function getItem2(productId, collectionId) {
     var query = { collectionId: collectionId };
+    var p;
     Collection.findOne(query, function (err, result) {
         if (err) {
             console.log(err);
         }
-        var p = result.products.filter(function (item) {
+        p = result.products.filter(function (item) {
             return item.productId === productId;
         }).pop();
-        console.log("p : " + result);
     });
+    return p;
 }
 
 async function updateItem(productId, collectionId, productName, description, price, size) {
