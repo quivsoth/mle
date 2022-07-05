@@ -26,7 +26,7 @@ var addressSchema = new Schema({
     city: { type:String, required:true },
     state: { type:String, required:true },
     postcode: { type:Number, required:true },
-    specialNotes: { type:String, required:true },
+    specialNotes: { type:String, required:false },
     active: { type:Boolean, required:true }
 },
 { collection : 'users' });
