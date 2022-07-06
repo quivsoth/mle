@@ -23,6 +23,7 @@ var app = express();
 const uri = process.env.MONGO_DB;
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
+app.use(connectLivereload());
 require('./config/passport');
 
 // view engine setup
