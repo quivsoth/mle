@@ -1,10 +1,13 @@
 var express = require("express");
 var router = express.Router();
 var Cart = require('../models/cart');
+// var Clothing = require("../models/collection");
 var Collection = require("../models/collection");
 const mongoose = require('mongoose');
 const {MongoClient} = require('mongodb');
 const uri = process.env.MONGO_DB;
+const _ = require('lodash');
+
 
 /*    Description: View for Viedo page.
       Method: GET                     */
@@ -127,18 +130,6 @@ router.get('/addCart', function (req, res, next) {
     })();
 });
 
-/*      Description: Delete item in Shopping Cart.
-            Method: GET                           */
-router.get('/deleteCart', function (req, res, next) {
-    (async function () {
-        let productId = req.query.productId;
-        var cart = new Cart(req.session.cart);
-        cart.delete(productId);
-        req.session.cart = cart;
-        res.redirect('/shopping-cart',);
-    })();
-});
-
 /*      Description: View Shopping Cart.
             Method: GET                           */
 router.get('/shopping-cart', function (req, res, next) {
@@ -187,6 +178,22 @@ router.put('/updateProduct/:collection/:id', function (req, res) {
         await updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size);
         req.flash('info', 'Item # ' + itemId + 'has been updated');
         res.redirect('/item_admin?itemId=' + itemId + "&collectionId=" + collectionId);
+    })();
+});
+
+/*      Description: Delete Thumb in collection
+        Method: PUT                           */
+router.get('/deleteThumb/:collection/:productId/:thumb', async (req, res)=> {
+    (async function () {
+
+        let collectionId = req.params.collection;
+        let productId = req.params.productId;
+        let thumb = req.params.thumb;
+
+        await deleteThumb(productId, collectionId, thumb);
+        // req.flash('info', 'Item # ' + itemId + 'has been updated');
+        // res.redirect('/item_admin?itemId=' + itemId + "&collectionId=" + collectionId);
+        //res.send("Push");
     })();
 });
 
@@ -286,4 +293,37 @@ async function updateItem(productId, collectionId, productName, description, pri
         p.size = size;
         result.save();
     });
+}
+
+async function deleteThumb(productId, collectionId, thumb) {
+    var query = { collectionId: collectionId, "products.productId": productId };
+
+    console.log("collectionId : " + collectionId);
+    console.log("productId : " + productId);
+    console.log("thumb : " + thumb);
+
+    Collection.findOne(query, function (err, result) {
+        if (err) { console.log(err); }
+        console.log(result);
+    });
+
+    /*
+    Clothing.findOne(query, (err, result) => {
+        if (err) { console.log(err); }
+        // console.log(result);
+        
+    //    const items = category.products; //the array of items
+    // console.log(items); //gives an array back
+        const item = _.find(result, { productId: productId });
+        console.log(item); //gives the value of 'undefined' for whatever reason
+
+    //     var g;
+    //     console.log(category);
+    //    var p = category.products.filter(function (item) {
+    //         return item.productId === productId;
+    //     }).pop();
+
+    //     console.log(p);
+    });
+    */
 }

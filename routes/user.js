@@ -3,6 +3,7 @@ var router = express.Router();
 const uri = process.env.MONGO_DB;
 var csrf = require("csurf");
 var passport = require("passport");
+var User = require("../models/user");
 
 // var csrfProtection = csrf();
 // router.use(csrfProtection);
@@ -91,6 +92,36 @@ router.put('/emailSubscribe', function (req, res) {
         req.flash('info', 'Thank you for subscribing!');
         var referrer = req.headers['referer'];
         res.redirect(referrer);
+    })();
+});
+
+/*      Description: Add email to subscription list
+        Method: PUT                           */
+router.put('/newUser', function (req, res) {
+    (async function () {
+        console.log("New User Functionality");
+
+        var address = {
+            streetName: "21 Highview Grove", 
+            city: "Burwood East",
+            state:  "VIC",
+            postcode: "3151",
+            specialNotes: "deliver at garage",
+            active: true
+        };
+
+        var person = new User({
+            firstName: "First",
+            lastName: "Person",
+            phoneNumber: "98036705",
+            email: "james.jogn@gmail.com",
+            password: "$r3#b4t434!!@",
+            billingAddress: address,
+            shippingAddress: address
+        });
+        await person.save();
+        res.send(person);
+
     })();
 });
 

@@ -13,7 +13,7 @@ var flash = require('connect-flash');
 var validator = require('express-validator');
 var MongoStore = require('connect-mongo');
 
-
+var adminRouter = require('./routes/admin');
 var indexRouter = require('./routes/index');
 var shippingRouter = require('./routes/shipping');
 var shopRouter = require('./routes/shop');
@@ -23,7 +23,6 @@ var app = express();
 const uri = process.env.MONGO_DB;
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-app.use(connectLivereload());
 require('./config/passport');
 
 // view engine setup
@@ -54,6 +53,7 @@ app.use(function(req,res,next){
   next();
 });
 
+app.use('/', adminRouter);
 app.use('/', indexRouter);
 app.use('/', shippingRouter);
 app.use('/', shopRouter);

@@ -81,8 +81,27 @@ body {
 
 .card {
   text-decoration: none;
-  background-color: #4b4b4b;
+  background-color: #000;
 }
+
+
+.card:hover {
+  text-decoration: none;
+
+  animation: onHoverAnimation 0.5s ease-in both;
+}
+
+@keyframes onHoverAnimation {
+  0% {
+    color: #fff;
+      background-color: #000;
+  }
+  100% {
+      color: #000;  
+      background-color:#414141;
+  }
+}
+
 
 * {
   box-sizing: border-box;
