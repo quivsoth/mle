@@ -168,18 +168,18 @@ router.get('/checkout', function (req, res, next) {
 });
 
 
-/*      Description: Update item in collection
-        Method: PUT                           */
-router.put('/updateProduct/:collection/:id', function (req, res) {
-    (async function () {
-        console.log("Update Product");
-        let itemId = parseInt(req.params.id);
-        let collectionId = parseInt(req.params.collection);
-        await updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size);
-        req.flash('info', 'Item # ' + itemId + 'has been updated');
-        res.redirect('/item_admin?itemId=' + itemId + "&collectionId=" + collectionId);
-    })();
-});
+// /*      Description: Update item in collection
+//         Method: PUT                           */
+// router.put('/updateProduct/:collection/:id', function (req, res) {
+//     (async function () {
+//         console.log("-- Update thi Product: " + req.params.collection);
+//         let itemId = parseInt(req.params.id);
+//         let collectionId = parseInt(req.params.collection);
+//         await updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size, req.body.measurements);
+//         req.flash('info', 'Item # ' + itemId + 'has been updated');
+//         res.redirect('/item_admin?itemId=' + itemId + "&collectionId=" + collectionId);
+//     })();
+// });
 
 /*      Description: Delete Thumb in collection
         Method: PUT                           */
@@ -276,24 +276,29 @@ async function getItem2(productId, collectionId) {
     return p;
 }
 
-async function updateItem(productId, collectionId, productName, description, price, size) {
-    var query = {
-        collectionId: collectionId
-    };
-    Collection.findOne(query, function (err, result) {
-        if (err) {
-            console.log(err);
-        }
-        var p = result.products.filter(function (item) {
-            return item.productId === productId;
-        }).pop();
-        p.productName = productName;
-        p.description = description;
-        p.price = price;
-        p.size = size;
-        result.save();
-    });
-}
+// async function updateItem(productId, collectionId, productName, description, price, size, measurements) {
+    
+//     console.log("----------------updateItem");
+
+//     var query = {
+//         collectionId: collectionId
+//     };
+//     Collection.findOne(query, function (err, result) {
+//         if (err) {
+//             console.log(err);
+//         }
+//         var p = result.products.filter(function (item) {
+//             return item.productId === productId;
+//         }).pop();
+//         console.log(p);
+//         p.productName = productName;
+//         p.description = description;
+//         p.price = price;
+//         p.size = size;
+//         p.measurements = measurements;
+//         result.save();
+//     });
+// }
 
 async function deleteThumb(productId, collectionId, thumb) {
     var query = { collectionId: collectionId, "products.productId": productId };

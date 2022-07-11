@@ -8,6 +8,8 @@ var productSchema = new Schema({
     productThumbs: {type: [String], required: true},
     price: { type:Number, required:true },
     size: { type:Number, required:true },
+    measurements: { type:String, required:false },
+    ausPostParcel: { type:String, required:false },
     active: { type:Boolean, required:true }
 },
 { collection : 'bruja' });

@@ -139,25 +139,13 @@ router.put('/updateProduct/:collection/:id', function (req, res) {
         console.log("Update Product");
         let itemId = parseInt(req.params.id);
         let collectionId = parseInt(req.params.collection);
-        await updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size);
+        await updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size, req.body.measurements, req.body.parcel);
         req.flash('info', 'Item # ' + itemId + 'has been updated');
         res.redirect('/item_admin?itemId=' + itemId + "&collectionId=" + collectionId);
     })();
 });
 
 
-/*      Description: Update item in collection
-        Method: PUT                           */
-router.put('/updateProduct/:collection/:id', function (req, res) {
-    (async function () {
-        console.log("Update Product");
-        let itemId = parseInt(req.params.id);
-        let collectionId = parseInt(req.params.collection);
-        await updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size);
-        req.flash('info', 'Item # ' + itemId + 'has been updated');
-        res.redirect('/item_admin?itemId=' + itemId + "&collectionId=" + collectionId);
-    })();
-});
 
 module.exports = router;
 
@@ -180,7 +168,7 @@ async function getItem(productId, collectionId) {
     }
 }
 
-async function updateItem(productId, collectionId, productName, description, price, size) {
+async function updateItem(productId, collectionId, productName, description, price, size, measurements, ausPostParcel) {
     var query = {
         collectionId: collectionId
     };
@@ -195,6 +183,8 @@ async function updateItem(productId, collectionId, productName, description, pri
         p.description = description;
         p.price = price;
         p.size = size;
+        p.measurements = measurements;
+        p.ausPostParcel = ausPostParcel;
         result.save();
     });
 }
