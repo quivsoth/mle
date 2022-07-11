@@ -6,7 +6,7 @@
   "collectionName": "Intimates",
   "image": "intimates.png",
   "description": "description....",
-  "active": true,
+  "active": false,
   "products": [
     {
       "productThumbs": [
@@ -22,6 +22,8 @@
       "description": "description from postman 20 sep, revision 10.3",
       "price": 55,
       "size": 2,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -36,6 +38,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -51,6 +55,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -66,6 +72,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -81,6 +89,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -89,13 +99,14 @@
         "intimates/IMG_1451.PNG",
         "intimates/IMG_1458.PNG",
         "intimates/IMG_1459.PNG"
-
       ],
       "productId": 84391,
       "productName": "Intimates #6",
       "description": "tudors99",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -111,6 +122,8 @@
       "description": "descr.",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     }
   ],
@@ -141,8 +154,10 @@
       "productId": 21534,
       "productName": "She's got knits #1",
       "description": "tudors99",
-      "price": 111,
+      "price": 45,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -169,8 +184,10 @@
       "productId": 80537,
       "productName": "She's got knits #2",
       "description": "Description",
-      "price": 111,
+      "price": 120,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -193,6 +210,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -225,8 +244,10 @@
       "productId": 39729,
       "productName": "She's got knits #4",
       "description": "Description",
-      "price": 111,
+      "price": 110,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -252,6 +273,8 @@
       "description": "Description",
       "price": 111,
       "size": 3,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -260,13 +283,14 @@
         "shes_got_knits/IMG_4653.PNG",
         "shes_got_knits/IMG_4652.PNG",
         "shes_got_knits/IMG_4650.PNG"
-
       ],
       "productId": 3981,
       "productName": "She's got knits #6",
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -280,6 +304,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -302,6 +328,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -321,6 +349,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -339,6 +369,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -358,6 +390,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -375,6 +409,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -402,8 +438,10 @@
       "productId": 9813,
       "productName": "She's got knits #13",
       "description": "Description",
-      "price": 111,
+      "price": 110,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -421,10 +459,12 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     }
   ],
-  "__v": 6
+  "__v": 10
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9c6"
@@ -433,7 +473,7 @@
   "collectionName": "Slip it Slow",
   "image": "slip_it_slow.png",
   "description": "collection description",
-  "active": true,
+  "active": false,
   "products": [
     {
       "productId": 24394,
@@ -449,6 +489,8 @@
       ],
       "price": 21,
       "size": 6,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -464,6 +506,8 @@
       ],
       "price": 500,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -478,6 +522,8 @@
       ],
       "price": 26,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -498,6 +544,8 @@
       ],
       "price": 122,
       "size": 10,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -517,6 +565,8 @@
       ],
       "price": 120,
       "size": 6,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -533,6 +583,8 @@
       ],
       "price": 160,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -550,6 +602,8 @@
       ],
       "price": 45,
       "size": 7,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -565,6 +619,8 @@
       ],
       "price": 97,
       "size": 5,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -579,6 +635,8 @@
       ],
       "price": 200,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -596,6 +654,8 @@
       ],
       "price": 52,
       "size": 3,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -611,6 +671,8 @@
       ],
       "price": 102,
       "size": 9,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -626,6 +688,8 @@
       ],
       "price": 100,
       "size": 5,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -642,6 +706,8 @@
       ],
       "price": 50,
       "size": 6,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -662,6 +728,8 @@
       ],
       "price": 290,
       "size": 3,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     }
   ]
@@ -676,9 +744,6 @@
   "active": true,
   "products": [
     {
-      "productId": 89587,
-      "productName": "Warmer 1",
-      "description": "product description",
       "productThumbs": [
         "winter_warmers/IMG_1693.PNG",
         "winter_warmers/IMG_1695.PNG",
@@ -688,14 +753,16 @@
         "winter_warmers/IMG_1704.PNG",
         "winter_warmers/IMG_1707.PNG"
       ],
-      "price": 21,
-      "size": 6,
+      "productId": 89587,
+      "productName": "Warmer 1",
+      "description": "product description",
+      "price": 220,
+      "size": 10,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 74288,
-      "productName": "Warmer 2",
-      "description": "product description 2",
       "productThumbs": [
         "winter_warmers/IMG_3429.png",
         "winter_warmers/IMG_3427.png",
@@ -706,14 +773,16 @@
         "winter_warmers/IMG_3436.png",
         "winter_warmers/IMG_3437.png"
       ],
-      "price": 451,
+      "productId": 74288,
+      "productName": "Warmer 2",
+      "description": "product description 2",
+      "price": 80,
       "size": 6,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 32771,
-      "productName": "Warmer 3",
-      "description": "product description 3",
       "productThumbs": [
         "winter_warmers/IMG_3445.png",
         "winter_warmers/IMG_3438.png",
@@ -724,14 +793,16 @@
         "winter_warmers/IMG_3444.png",
         "winter_warmers/IMG_3446.png"
       ],
-      "price": 26,
+      "productId": 32771,
+      "productName": "Warmer 3",
+      "description": "product description 3",
+      "price": 140,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 73582,
-      "productName": "Winter Warmer 4",
-      "description": "product description 4",
       "productThumbs": [
         "winter_warmers/IMG_3461.png",
         "winter_warmers/IMG_3448.png",
@@ -746,14 +817,16 @@
         "winter_warmers/IMG_3463.png",
         "winter_warmers/IMG_3464.png"
       ],
-      "price": 26,
+      "productId": 73582,
+      "productName": "Winter Warmer 4",
+      "description": "product description 4",
+      "price": 260,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 67865,
-      "productName": "Winter Warmer 5",
-      "description": "product description 5",
       "productThumbs": [
         "winter_warmers/IMG_3471.png",
         "winter_warmers/IMG_3465.png",
@@ -773,14 +846,16 @@
         "winter_warmers/IMG_3481.png",
         "winter_warmers/IMG_3483.png"
       ],
-      "price": 26,
+      "productId": 67865,
+      "productName": "Winter Warmer 5",
+      "description": "product description 5",
+      "price": 65,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 92049,
-      "productName": "Winter Warmer 6",
-      "description": "product description 6",
       "productThumbs": [
         "winter_warmers/IMG_3488.png",
         "winter_warmers/IMG_3487.png",
@@ -789,14 +864,16 @@
         "winter_warmers/IMG_3492.png",
         "winter_warmers/IMG_3494.png"
       ],
-      "price": 26,
+      "productId": 92049,
+      "productName": "Winter Warmer 6",
+      "description": "product description 6",
+      "price": 260,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 91810,
-      "productName": "Winter Warmer 8",
-      "description": "product description 8",
       "productThumbs": [
         "winter_warmers/IMG_7892.PNG",
         "winter_warmers/IMG_7886.PNG",
@@ -808,14 +885,16 @@
         "winter_warmers/IMG_7896.PNG",
         "winter_warmers/IMG_7898.PNG"
       ],
-      "price": 26,
+      "productId": 91810,
+      "productName": "Winter Warmer 8",
+      "description": "product description 8",
+      "price": 120,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 47715,
-      "productName": "Winter Warmer 8",
-      "description": "product description 8",
       "productThumbs": [
         "winter_warmers/IMG_7900.PNG",
         "winter_warmers/IMG_7901.PNG",
@@ -825,14 +904,16 @@
         "winter_warmers/IMG_7909.PNG",
         "winter_warmers/IMG_7910.PNG"
       ],
-      "price": 26,
+      "productId": 47715,
+      "productName": "Winter Warmer 8",
+      "description": "product description 8",
+      "price": 120,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 63660,
-      "productName": "Winter Warmer 9",
-      "description": "product description 9",
       "productThumbs": [
         "winter_warmers/IMG_8158.PNG",
         "winter_warmers/IMG_8148.PNG",
@@ -842,14 +923,16 @@
         "winter_warmers/IMG_8157.PNG",
         "winter_warmers/IMG_8159.PNG"
       ],
+      "productId": 63660,
+      "productName": "Winter Warmer 9",
+      "description": "product description 9",
       "price": 26,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 23606,
-      "productName": "Winter Warmer 10",
-      "description": "product description 10",
       "productThumbs": [
         "winter_warmers/IMG_8556.PNG",
         "winter_warmers/IMG_8559.PNG",
@@ -859,14 +942,16 @@
         "winter_warmers/IMG_8574.PNG",
         "winter_warmers/IMG_8575.PNG"
       ],
-      "price": 26,
+      "productId": 23606,
+      "productName": "Winter Warmer 10",
+      "description": "product description 10",
+      "price": 150,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 82004,
-      "productName": "Winter Warmer 11",
-      "description": "product description 11",
       "productThumbs": [
         "winter_warmers/IMG_8974.PNG",
         "winter_warmers/IMG_8971.PNG",
@@ -879,11 +964,17 @@
         "winter_warmers/IMG_8996.PNG",
         "winter_warmers/IMG_8998.PNG"
       ],
-      "price": 26,
+      "productId": 82004,
+      "productName": "Winter Warmer 11",
+      "description": "product description 11",
+      "price": 80,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     }
-  ]
+  ],
+  "__v": 15
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9c8"
@@ -895,9 +986,6 @@
   "active": true,
   "products": [
     {
-      "productId": 68682,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_8138.PNG",
         "check_please/IMG_8146.PNG",
@@ -907,14 +995,16 @@
         "check_please/IMG_8136.PNG",
         "check_please/IMG_8135.PNG"
       ],
-      "price": 111,
+      "productId": 68682,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 220,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 47758,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3775.png",
         "check_please/IMG_3774.png",
@@ -922,28 +1012,32 @@
         "check_please/IMG_3773.png",
         "check_please/IMG_3772.png"
       ],
-      "price": 111,
+      "productId": 47758,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 140,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 12564,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3790.png",
         "check_please/IMG_3787.png",
         "check_please/IMG_3789.png",
         "check_please/IMG_3788.png"
       ],
-      "price": 111,
+      "productId": 12564,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 65,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 64302,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3757.png",
         "check_please/IMG_3756.png",
@@ -952,28 +1046,32 @@
         "check_please/IMG_3758.png",
         "check_please/IMG_3759.png"
       ],
+      "productId": 64302,
+      "productName": "Check Please! ",
+      "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 32102,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_5384.PNG",
         "check_please/IMG_5395.PNG",
         "check_please/IMG_5373.PNG",
         "check_please/IMG_5398.PNG"
       ],
-      "price": 111,
+      "productId": 32102,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 140,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 64307,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3754.png",
         "check_please/IMG_3755.png",
@@ -984,14 +1082,16 @@
         "check_please/IMG_3749.png",
         "check_please/IMG_3748.png"
       ],
-      "price": 111,
+      "productId": 64307,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 160,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 34475,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_6764.PNG",
         "check_please/IMG_6765.PNG",
@@ -1001,14 +1101,16 @@
         "check_please/IMG_6787.PNG",
         "check_please/IMG_6780.PNG"
       ],
-      "price": 111,
+      "productId": 34475,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 80,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 22682,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_1421.PNG",
         "check_please/IMG_1409.PNG",
@@ -1016,14 +1118,16 @@
         "check_please/IMG_1403.PNG",
         "check_please/IMG_1417.PNG"
       ],
-      "price": 111,
+      "productId": 22682,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 340,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 39415,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3783.png",
         "check_please/IMG_3782.png",
@@ -1035,14 +1139,16 @@
         "check_please/IMG_3779.png",
         "check_please/IMG_3778.png"
       ],
-      "price": 111,
+      "productId": 39415,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 180,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 44464,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_9858.PNG",
         "check_please/IMG_9860.PNG",
@@ -1051,28 +1157,32 @@
         "check_please/IMG_9855.PNG",
         "check_please/IMG_9857.PNG"
       ],
-      "price": 111,
+      "productId": 44464,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 85,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 75600,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3762.png",
         "check_please/IMG_3763.png",
         "check_please/IMG_3764.png",
         "check_please/IMG_3765.png"
       ],
-      "price": 111,
+      "productId": 75600,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 65,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 51350,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_2628.PNG",
         "check_please/IMG_2629.PNG",
@@ -1084,14 +1194,16 @@
         "check_please/IMG_2627.PNG",
         "check_please/IMG_2632.PNG"
       ],
-      "price": 111,
+      "productId": 51350,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 140,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 76028,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_4113.PNG",
         "check_please/IMG_4129.PNG",
@@ -1100,14 +1212,16 @@
         "check_please/IMG_4122.PNG",
         "check_please/IMG_4120.PNG"
       ],
-      "price": 111,
+      "productId": 76028,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 110,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 35512,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_2059.PNG",
         "check_please/IMG_2052.PNG",
@@ -1116,14 +1230,16 @@
         "check_please/IMG_2056.PNG",
         "check_please/IMG_2057.PNG"
       ],
-      "price": 111,
+      "productId": 35512,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 65,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 51369,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3806.png",
         "check_please/IMG_3804.png",
@@ -1132,28 +1248,32 @@
         "check_please/IMG_3808.png",
         "check_please/IMG_3809.png"
       ],
-      "price": 111,
+      "productId": 51369,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 65,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 19860,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_1838.PNG",
         "check_please/IMG_1839.PNG",
         "check_please/IMG_1834.PNG",
         "check_please/IMG_1833.PNG"
       ],
-      "price": 111,
+      "productId": 19860,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 220,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 44574,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3815.png",
         "check_please/IMG_3814.png",
@@ -1165,14 +1285,16 @@
         "check_please/IMG_3821.png",
         "check_please/IMG_3822.png"
       ],
+      "productId": 44574,
+      "productName": "Check Please! ",
+      "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 50984,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_2666.PNG",
         "check_please/IMG_2659.PNG",
@@ -1181,14 +1303,16 @@
         "check_please/IMG_2657.PNG",
         "check_please/IMG_2652.PNG"
       ],
-      "price": 111,
+      "productId": 50984,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 35,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 13268,
-      "productName": "Check Please! ",
-      "description": "Description",
       "productThumbs": [
         "check_please/IMG_3829.png",
         "check_please/IMG_3828.png",
@@ -1200,11 +1324,17 @@
         "check_please/IMG_3824.png",
         "check_please/IMG_3823.png"
       ],
-      "price": 111,
+      "productId": 13268,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 140,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     }
-  ]
+  ],
+  "__v": 21
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9c9"
@@ -1216,9 +1346,6 @@
   "active": true,
   "products": [
     {
-      "productId": 84501,
-      "productName": "Trench Coat #1",
-      "description": "Description",
       "productThumbs": [
         "trenched/IMG_3569.png",
         "trenched/IMG_3568.png",
@@ -1228,14 +1355,16 @@
         "trenched/IMG_3570.png",
         "trenched/IMG_3566.png"
       ],
-      "price": 111,
+      "productId": 84501,
+      "productName": "Trench Coat #1",
+      "description": "Description",
+      "price": 220,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 84307,
-      "productName": "Trench Coat #2",
-      "description": "Description",
       "productThumbs": [
         "trenched/IMG_2232.PNG",
         "trenched/IMG_2233.PNG",
@@ -1245,42 +1374,48 @@
         "trenched/IMG_2237.PNG",
         "trenched/IMG_2236.PNG"
       ],
-      "price": 111,
+      "productId": 84307,
+      "productName": "Trench Coat #2",
+      "description": "Description",
+      "price": 160,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 81226,
-      "productName": "Trench Coat #3",
-      "description": "Description",
       "productThumbs": [
         "trenched/IMG_3541.png",
         "trenched/IMG_3540.png",
         "trenched/IMG_3539.png",
         "trenched/IMG_3538.png"
       ],
-      "price": 111,
+      "productId": 81226,
+      "productName": "Trench Coat #3",
+      "description": "Description",
+      "price": 120,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 30209,
-      "productName": "Trench Coat #4",
-      "description": "Description",
       "productThumbs": [
         "trenched/IMG_3542.png",
         "trenched/IMG_1779.PNG",
         "trenched/IMG_3543.png",
         "trenched/IMG_3544.png"
       ],
-      "price": 111,
+      "productId": 30209,
+      "productName": "Trench Coat #4",
+      "description": "Description",
+      "price": 240,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 63124,
-      "productName": "Trench Coat #5",
-      "description": "Description",
       "productThumbs": [
         "trenched/IMG_3290.PNG",
         "trenched/IMG_3287.PNG",
@@ -1294,14 +1429,16 @@
         "trenched/IMG_3288.PNG",
         "trenched/IMG_3289.PNG"
       ],
-      "price": 111,
+      "productId": 63124,
+      "productName": "Trench Coat #5a",
+      "description": "Description",
+      "price": 80,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 26126,
-      "productName": "Trench Coat #6",
-      "description": "Description",
       "productThumbs": [
         "trenched/IMG_3550.png",
         "trenched/IMG_3551.png",
@@ -1312,11 +1449,17 @@
         "trenched/IMG_3548.png",
         "trenched/IMG_3549.png"
       ],
-      "price": 111,
+      "productId": 26126,
+      "productName": "Trench Coat #6e",
+      "description": "Description",
+      "price": 240,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     }
-  ]
+  ],
+  "__v": 9
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9ca"
@@ -1358,9 +1501,6 @@
   "active": true,
   "products": [
     {
-      "productId": 58250,
-      "productName": "L.B.D  #1",
-      "description": "Description",
       "productThumbs": [
         "lbd/IMG_9225.PNG",
         "lbd/IMG_9219.PNG",
@@ -1371,14 +1511,16 @@
         "lbd/IMG_9222.PNG",
         "lbd/IMG_9206.PNG"
       ],
-      "price": 111,
+      "productId": 58250,
+      "productName": "L.B.D  #1",
+      "description": "Description",
+      "price": 150,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 22967,
-      "productName": "L.B.D  #2",
-      "description": "Description",
       "productThumbs": [
         "lbd/IMG_0077.PNG",
         "lbd/IMG_0076.PNG",
@@ -1395,14 +1537,16 @@
         "lbd/IMG_0067.PNG",
         "lbd/IMG_0068.PNG"
       ],
-      "price": 111,
+      "productId": 22967,
+      "productName": "L.B.D  #2",
+      "description": "Description",
+      "price": 220,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 83387,
-      "productName": "L.B.D  #3",
-      "description": "Description",
       "productThumbs": [
         "lbd/IMG_8515.PNG",
         "lbd/IMG_8511.PNG",
@@ -1426,14 +1570,16 @@
         "lbd/IMG_8518.PNG",
         "lbd/IMG_8531.PNG"
       ],
-      "price": 111,
+      "productId": 83387,
+      "productName": "L.B.D  #3",
+      "description": "Description",
+      "price": 380,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 18231,
-      "productName": "L.B.D  #4",
-      "description": "Description",
       "productThumbs": [
         "lbd/IMG_5090.png",
         "lbd/IMG_5091.png",
@@ -1446,14 +1592,16 @@
         "lbd/IMG_5098.png",
         "lbd/IMG_5089.png"
       ],
-      "price": 111,
+      "productId": 18231,
+      "productName": "L.B.D  #4",
+      "description": "Description",
+      "price": 120,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 91806,
-      "productName": "L.B.D  #5",
-      "description": "Description",
       "productThumbs": [
         "lbd/IMG_5084.png",
         "lbd/IMG_5085.png",
@@ -1467,14 +1615,16 @@
         "lbd/IMG_5088.png",
         "lbd/IMG_5076.png"
       ],
-      "price": 111,
+      "productId": 91806,
+      "productName": "L.B.D  #5",
+      "description": "Description",
+      "price": 180,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 50261,
-      "productName": "L.B.D  #6",
-      "description": "Description",
       "productThumbs": [
         "lbd/IMG_9197.PNG",
         "lbd/IMG_8629.PNG",
@@ -1489,11 +1639,17 @@
         "lbd/IMG_8630.PNG",
         "lbd/IMG_8624.PNG"
       ],
+      "productId": 50261,
+      "productName": "L.B.D  #6",
+      "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     }
-  ]
+  ],
+  "__v": 5
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9ce"
@@ -1520,6 +1676,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -1539,6 +1697,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -1554,6 +1714,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -1571,6 +1733,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -1589,6 +1753,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -1608,6 +1774,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -1635,6 +1803,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -1653,6 +1823,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -1669,6 +1841,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -1685,6 +1859,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -1700,6 +1876,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -1718,6 +1896,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     }
   ]
@@ -1732,9 +1912,6 @@
   "active": true,
   "products": [
     {
-      "productId": 31929,
-      "productName": "Lace it up #1",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_4064.png",
         "lace_it_up/IMG_4070.png",
@@ -1747,14 +1924,16 @@
         "lace_it_up/IMG_4068.png",
         "lace_it_up/IMG_4069.png"
       ],
-      "price": 111,
+      "productId": 31929,
+      "productName": "Lace it up #1",
+      "description": "Description",
+      "price": 160,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 39180,
-      "productName": "Lace it up #2",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_4081.png",
         "lace_it_up/IMG_4085.png",
@@ -1762,14 +1941,16 @@
         "lace_it_up/IMG_4083.png",
         "lace_it_up/IMG_4082.png"
       ],
-      "price": 111,
+      "productId": 39180,
+      "productName": "Lace it up #2",
+      "description": "Description rest",
+      "price": 65,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 86603,
-      "productName": "Lace it up #3",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_4029.png",
         "lace_it_up/IMG_4028.png",
@@ -1777,14 +1958,16 @@
         "lace_it_up/IMG_4031.png",
         "lace_it_up/IMG_4034.png"
       ],
+      "productId": 86603,
+      "productName": "Lace it up #3",
+      "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 51388,
-      "productName": "Lace it up #4",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_8343.PNG",
         "lace_it_up/IMG_8358.PNG",
@@ -1796,14 +1979,16 @@
         "lace_it_up/IMG_8347.PNG",
         "lace_it_up/IMG_8356.PNG"
       ],
-      "price": 111,
+      "productId": 51388,
+      "productName": "Lace it up #4",
+      "description": "Description",
+      "price": 140,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 18076,
-      "productName": "Lace it up #5",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_4025.png",
         "lace_it_up/IMG_4026.png",
@@ -1814,14 +1999,16 @@
         "lace_it_up/IMG_4023.png",
         "lace_it_up/IMG_4022.png"
       ],
-      "price": 111,
+      "productId": 18076,
+      "productName": "Lace it up #5",
+      "description": "Description",
+      "price": 120,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 63225,
-      "productName": "Lace it up #6",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_8430.PNG",
         "lace_it_up/IMG_8436.PNG",
@@ -1834,28 +2021,32 @@
         "lace_it_up/IMG_8450.PNG",
         "lace_it_up/IMG_8445.PNG"
       ],
-      "price": 111,
+      "productId": 63225,
+      "productName": "Lace it up #6",
+      "description": "Description",
+      "price": 340,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 27520,
-      "productName": "Lace it up #7",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_0523.PNG",
         "lace_it_up/IMG_0518.PNG",
         "lace_it_up/IMG_0520.PNG",
         "lace_it_up/IMG_0522.PNG"
       ],
-      "price": 111,
+      "productId": 27520,
+      "productName": "Lace it up #7",
+      "description": "Description",
+      "price": 120,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 61261,
-      "productName": "Lace it up #8",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_4077.png",
         "lace_it_up/IMG_4076.png",
@@ -1865,14 +2056,16 @@
         "lace_it_up/IMG_4078.png",
         "lace_it_up/IMG_4080.png"
       ],
-      "price": 111,
+      "productId": 61261,
+      "productName": "Lace it up #8",
+      "description": "Description",
+      "price": 250,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 91191,
-      "productName": "Lace it up #9",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_4053.png",
         "lace_it_up/IMG_4058.png",
@@ -1885,14 +2078,16 @@
         "lace_it_up/IMG_4054.png",
         "lace_it_up/IMG_4055.png"
       ],
-      "price": 111,
+      "productId": 91191,
+      "productName": "Lace it up #9",
+      "description": "Description",
+      "price": 240,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 12068,
-      "productName": "Lace it up #10",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_4005.png",
         "lace_it_up/IMG_4007.png",
@@ -1901,28 +2096,32 @@
         "lace_it_up/IMG_4008.png",
         "lace_it_up/IMG_4009.png"
       ],
-      "price": 111,
+      "productId": 12068,
+      "productName": "Lace it up #10",
+      "description": "Description",
+      "price": 220,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 10535,
-      "productName": "Lace it up #11",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_5526.PNG",
         "lace_it_up/IMG_5536.PNG",
         "lace_it_up/IMG_5534.PNG",
         "lace_it_up/IMG_5533.PNG"
       ],
-      "price": 111,
+      "productId": 10535,
+      "productName": "Lace it up #11",
+      "description": "Description",
+      "price": 45,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 30029,
-      "productName": "Lace it up #12",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_3991.png",
         "lace_it_up/IMG_3998.png",
@@ -1930,14 +2129,16 @@
         "lace_it_up/IMG_3996.png",
         "lace_it_up/IMG_3994.png"
       ],
-      "price": 111,
+      "productId": 30029,
+      "productName": "Lace it up #12",
+      "description": "Description",
+      "price": 140,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 9100,
-      "productName": "Lace it up #13",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_4088.png",
         "lace_it_up/IMG_4089.png",
@@ -1947,14 +2148,16 @@
         "lace_it_up/IMG_4091.png",
         "lace_it_up/IMG_4090.png"
       ],
-      "price": 111,
+      "productId": 9100,
+      "productName": "Lace it up #13",
+      "description": "Description",
+      "price": 80,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 65693,
-      "productName": "Lace it up #14",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_1061.PNG",
         "lace_it_up/IMG_1069.PNG",
@@ -1967,14 +2170,16 @@
         "lace_it_up/IMG_1065.PNG",
         "lace_it_up/IMG_1071.PNG"
       ],
-      "price": 111,
+      "productId": 65693,
+      "productName": "Lace it up #14",
+      "description": "Description",
+      "price": 220,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 74460,
-      "productName": "Lace it up #15",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_4126.png",
         "lace_it_up/IMG_4117.png",
@@ -1985,14 +2190,16 @@
         "lace_it_up/IMG_4120.png",
         "lace_it_up/IMG_4121.png"
       ],
+      "productId": 74460,
+      "productName": "Lace it up #15",
+      "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 45899,
-      "productName": "Lace it up #16",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_4014.png",
         "lace_it_up/IMG_4013.png",
@@ -2001,14 +2208,16 @@
         "lace_it_up/IMG_4015.png",
         "lace_it_up/IMG_4016.png"
       ],
-      "price": 111,
+      "productId": 45899,
+      "productName": "Lace it up #16",
+      "description": "Description",
+      "price": 80,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 37004,
-      "productName": "Lace it up #17",
-      "description": "Description",
       "productThumbs": [
         "lace_it_up/IMG_4128.png",
         "lace_it_up/IMG_4129.png",
@@ -2018,11 +2227,17 @@
         "lace_it_up/IMG_4127.png",
         "lace_it_up/IMG_4133.png"
       ],
+      "productId": 37004,
+      "productName": "Lace it up #17",
+      "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     }
-  ]
+  ],
+  "__v": 18
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9d0"
@@ -2137,6 +2352,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": false
     },
     {
@@ -2156,6 +2373,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2175,6 +2394,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2192,6 +2413,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2212,6 +2435,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2229,6 +2454,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2248,6 +2475,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2263,6 +2492,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2283,6 +2514,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2303,6 +2536,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2319,6 +2554,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2338,6 +2575,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2351,6 +2590,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2369,6 +2610,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2389,6 +2632,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2406,6 +2651,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2423,6 +2670,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2443,6 +2692,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2461,6 +2712,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     }
   ]
@@ -2515,23 +2768,22 @@
   "active": true,
   "products": [
     {
-      "productId": 13115,
-      "productName": "Seriously 60s #1",
-      "description": "Description",
       "productThumbs": [
         "seriously_60s/IMG_4193.png",
         "seriously_60s/IMG_4191.png",
         "seriously_60s/IMG_4186.png",
         "seriously_60s/IMG_4190.png"
       ],
-      "price": 111,
+      "productId": 13115,
+      "productName": "Seriously 60s #1",
+      "description": "Description",
+      "price": 240,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 75200,
-      "productName": "Seriously 60s #2",
-      "description": "Description",
       "productThumbs": [
         "seriously_60s/IMG_4147.png",
         "seriously_60s/IMG_4143.png",
@@ -2539,67 +2791,81 @@
         "seriously_60s/IMG_4146.png",
         "seriously_60s/IMG_4142.png"
       ],
-      "price": 111,
+      "productId": 75200,
+      "productName": "Seriously 60s #2",
+      "description": "Description",
+      "price": 140,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 22125,
-      "productName": "Seriously 60s #3",
-      "description": "Description",
       "productThumbs": [
         "seriously_60s/IMG_4166.png",
         "seriously_60s/IMG_4172.png",
         "seriously_60s/IMG_4168.png",
         "seriously_60s/IMG_4173.png"
       ],
-      "price": 111,
+      "productId": 22125,
+      "productName": "Seriously 60s #3",
+      "description": "Description",
+      "price": 45,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 88054,
-      "productName": "Seriously 60s #4",
-      "description": "Description",
       "productThumbs": [
         "seriously_60s/IMG_4160.png",
         "seriously_60s/IMG_4157.png",
         "seriously_60s/IMG_4158.png",
         "seriously_60s/IMG_4163.png"
       ],
-      "price": 111,
+      "productId": 88054,
+      "productName": "Seriously 60s #4",
+      "description": "Description",
+      "price": 110,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 69710,
-      "productName": "Seriously 60s #5",
-      "description": "Description",
       "productThumbs": [
         "seriously_60s/IMG_4149.png",
         "seriously_60s/IMG_4153.png",
         "seriously_60s/IMG_4150.png",
         "seriously_60s/IMG_4156.png"
       ],
-      "price": 111,
+      "productId": 69710,
+      "productName": "Seriously 60s #5",
+      "description": "Description",
+      "price": 120,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 56123,
-      "productName": "Seriously 60s #6",
-      "description": "Description",
       "productThumbs": [
         "seriously_60s/IMG_4178.png",
         "seriously_60s/IMG_4182.png",
         "seriously_60s/IMG_4175.png",
         "seriously_60s/IMG_4176.png"
       ],
-      "price": 111,
+      "productId": 56123,
+      "productName": "Seriously 60s #6",
+      "description": "Description",
+      "price": 110,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     }
-  ]
+  ],
+  "__v": 6
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9e1"
@@ -2621,37 +2887,38 @@
   "active": true,
   "products": [
     {
-      "productId": 73325,
-      "productName": "That 70s tho!#2",
-      "description": "Description",
       "productThumbs": [
         "that_70s_tho/IMG_4292.png",
         "that_70s_tho/IMG_4289.png",
         "that_70s_tho/IMG_4288.png",
         "that_70s_tho/IMG_4290.png"
       ],
-      "price": 111,
+      "productId": 73325,
+      "productName": "That 70s tho!#2",
+      "description": "Description",
+      "price": 85,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 72706,
-      "productName": "That 70s tho!#3",
-      "description": "Description",
       "productThumbs": [
         "that_70s_tho/IMG_4263.png",
         "that_70s_tho/IMG_4265.png",
         "that_70s_tho/IMG_4267.png",
         "that_70s_tho/IMG_4269.png"
       ],
-      "price": 111,
+      "productId": 72706,
+      "productName": "That 70s tho!#3",
+      "description": "Description",
+      "price": 120,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 81902,
-      "productName": "That 70s tho!#4",
-      "description": "Description",
       "productThumbs": [
         "that_70s_tho/IMG_4258.png",
         "that_70s_tho/IMG_4253.png",
@@ -2661,14 +2928,16 @@
         "that_70s_tho/IMG_4256.png",
         "that_70s_tho/IMG_4257.png"
       ],
-      "price": 111,
+      "productId": 81902,
+      "productName": "That 70s tho!#4",
+      "description": "Description",
+      "price": 220,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 55722,
-      "productName": "That 70s tho!#5",
-      "description": "Description",
       "productThumbs": [
         "that_70s_tho/IMG_4205.png",
         "that_70s_tho/IMG_4206.png",
@@ -2676,14 +2945,16 @@
         "that_70s_tho/IMG_4209.png",
         "that_70s_tho/IMG_4204.png"
       ],
+      "productId": 55722,
+      "productName": "That 70s tho!#5",
+      "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 43126,
-      "productName": "That 70s tho!#6",
-      "description": "Description",
       "productThumbs": [
         "that_70s_tho/IMG_4284.png",
         "that_70s_tho/IMG_4279.png",
@@ -2691,14 +2962,16 @@
         "that_70s_tho/IMG_4278.png",
         "that_70s_tho/IMG_4283.png"
       ],
-      "price": 111,
+      "productId": 43126,
+      "productName": "That 70s tho!#6",
+      "description": "Description",
+      "price": 160,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 12172,
-      "productName": "That 70s tho!#7",
-      "description": "Description",
       "productThumbs": [
         "that_70s_tho/IMG_4275.png",
         "that_70s_tho/IMG_4270.png",
@@ -2706,28 +2979,32 @@
         "that_70s_tho/IMG_4274.png",
         "that_70s_tho/IMG_4277.png"
       ],
-      "price": 111,
+      "productId": 12172,
+      "productName": "That 70s tho!#7",
+      "description": "Description",
+      "price": 120,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 53565,
-      "productName": "That 70s tho!#8",
-      "description": "Description",
       "productThumbs": [
         "that_70s_tho/IMG_4236.png",
         "that_70s_tho/IMG_4240.png",
         "that_70s_tho/IMG_4239.png",
         "that_70s_tho/IMG_4235.png"
       ],
-      "price": 111,
+      "productId": 53565,
+      "productName": "That 70s tho!#8",
+      "description": "Description",
+      "price": 120,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 23175,
-      "productName": "That 70s tho!#9",
-      "description": "Description",
       "productThumbs": [
         "that_70s_tho/IMG_4230.png",
         "that_70s_tho/IMG_4228.png",
@@ -2735,14 +3012,16 @@
         "that_70s_tho/IMG_4220.png",
         "that_70s_tho/IMG_4219.png"
       ],
-      "price": 111,
+      "productId": 23175,
+      "productName": "That 70s tho!#9",
+      "description": "Description",
+      "price": 140,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 46212,
-      "productName": "That 70s tho!#10",
-      "description": "Description",
       "productThumbs": [
         "that_70s_tho/IMG_4295.png",
         "that_70s_tho/IMG_4298.png",
@@ -2750,56 +3029,64 @@
         "that_70s_tho/IMG_4300.png",
         "that_70s_tho/IMG_4294.png"
       ],
-      "price": 111,
+      "productId": 46212,
+      "productName": "That 70s tho!#10",
+      "description": "Description",
+      "price": 120,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 24052,
-      "productName": "That 70s tho!#11",
-      "description": "Description",
       "productThumbs": [
         "that_70s_tho/IMG_4215.png",
         "that_70s_tho/IMG_4217.png",
         "that_70s_tho/IMG_4210.png",
         "that_70s_tho/IMG_4214.png"
       ],
-      "price": 111,
+      "productId": 24052,
+      "productName": "That 70s tho!#11",
+      "description": "Description",
+      "price": 120,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 12773,
-      "productName": "That 70s tho!#12",
-      "description": "Description",
       "productThumbs": [
         "that_70s_tho/IMG_4304.png",
         "that_70s_tho/IMG_4307.png",
         "that_70s_tho/IMG_4306.png",
         "that_70s_tho/IMG_4308.png"
       ],
-      "price": 111,
+      "productId": 12773,
+      "productName": "That 70s tho!#12",
+      "description": "Description",
+      "price": 65,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 74960,
-      "productName": "That 70s tho!#13",
-      "description": "Description",
       "productThumbs": [
         "that_70s_tho/IMG_4245.png",
         "that_70s_tho/IMG_4255.png",
         "that_70s_tho/IMG_4257.png",
         "that_70s_tho/IMG_4254.png"
       ],
+      "productId": 74960,
+      "productName": "That 70s tho!#13",
+      "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 5906,
-      "productName": "That 70s tho!#14",
-      "description": "Description",
       "productThumbs": [
         "that_70s_tho/IMG_4313.png",
         "that_70s_tho/IMG_4321.png",
@@ -2807,11 +3094,17 @@
         "that_70s_tho/IMG_4316.png",
         "that_70s_tho/IMG_4320.png"
       ],
-      "price": 111,
+      "productId": 5906,
+      "productName": "That 70s tho!#14",
+      "description": "Description",
+      "price": 80,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     }
-  ]
+  ],
+  "__v": 11
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9e3"
@@ -2823,23 +3116,22 @@
   "active": true,
   "products": [
     {
-      "productId": 67704,
-      "productName": "80s Dream Queen#1",
-      "description": "Description",
       "productThumbs": [
         "80s_dream_queen/IMG_4412.png",
         "80s_dream_queen/IMG_4415.png",
         "80s_dream_queen/IMG_4416.png",
         "80s_dream_queen/IMG_4418.png"
       ],
-      "price": 111,
+      "productId": 67704,
+      "productName": "80s Dream Queen#1",
+      "description": "Description",
+      "price": 240,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 68348,
-      "productName": "80s Dream Queen#2",
-      "description": "Description",
       "productThumbs": [
         "80s_dream_queen/IMG_3317.PNG",
         "80s_dream_queen/IMG_3308.PNG",
@@ -2847,14 +3139,16 @@
         "80s_dream_queen/IMG_3321.PNG",
         "80s_dream_queen/IMG_3306.PNG"
       ],
-      "price": 111,
-      "size": 4,
+      "productId": 68348,
+      "productName": "'Sophisticated-Eight'",
+      "description": " Late 80s/early 90s intrepid blazer. Whimsical stars, hearts and bows, sit understated in velvet - a subtle contrast to the bold black and gold buttons. Fully lined. Discreet structured shoulders. ",
+      "price": 120,
+      "size": 12,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 70377,
-      "productName": "80s Dream Queen#3",
-      "description": "Description",
       "productThumbs": [
         "80s_dream_queen/IMG_4400.png",
         "80s_dream_queen/IMG_4397.png",
@@ -2862,42 +3156,48 @@
         "80s_dream_queen/IMG_4393.png",
         "80s_dream_queen/IMG_4389.png"
       ],
-      "price": 111,
+      "productId": 70377,
+      "productName": "80s Dream Queen#3",
+      "description": "Description",
+      "price": 240,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 57264,
-      "productName": "80s Dream Queen#4",
-      "description": "Description",
       "productThumbs": [
         "80s_dream_queen/IMG_4356.PNG",
         "80s_dream_queen/IMG_4357.PNG",
         "80s_dream_queen/IMG_4349.PNG",
         "80s_dream_queen/IMG_4342.PNG"
       ],
-      "price": 111,
+      "productId": 57264,
+      "productName": "80s Dream Queen#4",
+      "description": "Description",
+      "price": 200,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 75669,
-      "productName": "80s Dream Queen#5",
-      "description": "Description",
       "productThumbs": [
         "80s_dream_queen/IMG_4207.PNG",
         "80s_dream_queen/IMG_4197.PNG",
         "80s_dream_queen/IMG_4195.PNG",
         "80s_dream_queen/IMG_4186.PNG"
       ],
-      "price": 111,
+      "productId": 75669,
+      "productName": "80s Dream Queen#5",
+      "description": "Description",
+      "price": 140,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
-      "productId": 29108,
-      "productName": "80s Dream Queen#6",
-      "description": "Description",
       "productThumbs": [
         "80s_dream_queen/IMG_4407.png",
         "80s_dream_queen/IMG_4406.png",
@@ -2905,11 +3205,17 @@
         "80s_dream_queen/IMG_4402.png",
         "80s_dream_queen/IMG_4401.png"
       ],
-      "price": 111,
+      "productId": 29108,
+      "productName": "80s Dream Queen#6",
+      "description": "Description",
+      "price": 220,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     }
-  ]
+  ],
+  "__v": 7
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9e4"
@@ -2930,8 +3236,10 @@
       "productId": 35479,
       "productName": "90s Like Nieve  #1",
       "description": "Description",
-      "price": 111,
+      "price": 45,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2945,8 +3253,10 @@
       "productId": 18567,
       "productName": "90s Like Nieve  #2",
       "description": "Description",
-      "price": 111,
+      "price": 160,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2961,6 +3271,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2975,6 +3287,8 @@
       "description": "ooooh nice feature ",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -2989,6 +3303,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3003,6 +3319,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3017,6 +3335,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3031,6 +3351,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3044,7 +3366,9 @@
       "description": "Description",
       "price": 111,
       "size": 4,
-      "active": true
+      "measurements" : "",
+      "ausPostParcel": "",
+      "active": false
     },
     {
       "productThumbs": [
@@ -3058,6 +3382,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3073,6 +3399,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3087,6 +3415,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3102,6 +3432,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3116,6 +3448,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3131,6 +3465,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3149,6 +3485,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3163,6 +3501,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3177,6 +3517,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3191,6 +3533,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3206,6 +3550,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3220,6 +3566,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3240,6 +3588,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3255,6 +3605,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3269,6 +3621,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3283,10 +3637,12 @@
       "description": "Description",
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     }
   ],
-  "__v": 1
+  "__v": 3
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9e5"
@@ -3309,6 +3665,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3323,6 +3681,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3343,6 +3703,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3360,6 +3722,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3374,6 +3738,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3388,6 +3754,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3406,6 +3774,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3420,6 +3790,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3434,6 +3806,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3448,6 +3822,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3462,6 +3838,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3476,6 +3854,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3490,6 +3870,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3504,6 +3886,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3518,6 +3902,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3532,6 +3918,8 @@
       ],
       "price": 111,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     }
   ]
@@ -3564,10 +3952,12 @@
         "beauty_sleeping/IMG_2726.png"
       ],
       "productId": 21491,
-      "productName": "Nightie 2",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 451,
-      "size": 6,
+      "productName": "‘Miss Gloria’",
+      "description": "- sheer, candy pink seersucker babydoll nightgown. Featuring crimped opaque horizontal stripes, ruffled peasant hem, lace bib trimming and two small sateen floral bows. Two matching pink \r\npearlescent bubble buttons. \r\n\r\nMATERIAL - BRï NYLON\r\n\r\nL 94cm B 90cm W 70cm H 95cm",
+      "price": 45,
+      "size": 14,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3580,8 +3970,10 @@
       "productId": 37770,
       "productName": "Nightie 3",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 26,
+      "price": 60,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3596,8 +3988,10 @@
       "productId": 61761,
       "productName": "Nightie 4",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 26,
+      "price": 45,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3610,8 +4004,10 @@
       "productId": 31030,
       "productName": "Nightie 5",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 26,
+      "price": 75,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3624,8 +4020,10 @@
       "productId": 77600,
       "productName": "Nightie 6",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 26,
+      "price": 50,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3639,8 +4037,10 @@
       "productId": 68274,
       "productName": "Nightie 7",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 26,
+      "price": 35,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3653,8 +4053,10 @@
       "productId": 97433,
       "productName": "Nightie 8",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 26,
+      "price": 45,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3667,8 +4069,10 @@
       "productId": 64658,
       "productName": "Nightie 9",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 26,
+      "price": 65,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3681,8 +4085,10 @@
       "productId": 83530,
       "productName": "Nightie 11",
       "description": "product description 10",
-      "price": 26,
+      "price": 50,
       "size": 8,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3695,8 +4101,10 @@
       "productId": 72436,
       "productName": "Nightie 12",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 31,
+      "price": 65,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3709,8 +4117,10 @@
       "productId": 63063,
       "productName": "Nightie 13",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 31,
+      "price": 35,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3728,8 +4138,10 @@
       "productId": 58009,
       "productName": "Nightie 14",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 31,
+      "price": 65,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3743,8 +4155,10 @@
       "productId": 68874,
       "productName": "Nightie 15",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 31,
+      "price": 65,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3763,6 +4177,8 @@
       "description": "Product description will go here - a brief two sentence description about the product...",
       "price": 31,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3775,8 +4191,10 @@
       "productId": 49106,
       "productName": "Nightie 17",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 31,
+      "price": 45,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3790,8 +4208,10 @@
       "productId": 70970,
       "productName": "Nightie 18",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 31,
+      "price": 85,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3804,8 +4224,10 @@
       "productId": 23911,
       "productName": "Nightie 19",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 31,
+      "price": 65,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3818,8 +4240,10 @@
       "productId": 86014,
       "productName": "Nightie 20",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 31,
+      "price": 45,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3833,8 +4257,10 @@
       "productId": 49008,
       "productName": "Nightie 21",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 31,
+      "price": 65,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3848,8 +4274,10 @@
       "productId": 68593,
       "productName": "Nightie 22",
       "description": "Product Description to go here..",
-      "price": 49,
+      "price": 45,
       "size": 3,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     },
     {
@@ -3862,10 +4290,12 @@
       "productId": 41408,
       "productName": "Nightie 23",
       "description": "Product Description goes here",
-      "price": 83,
+      "price": 65,
       "size": 4,
+      "measurements" : "",
+      "ausPostParcel": "",
       "active": true
     }
   ],
-  "__v": 1
+  "__v": 34
 }]
