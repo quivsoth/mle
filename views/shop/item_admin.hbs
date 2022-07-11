@@ -46,44 +46,48 @@
     <form method="POST" action="/updateProduct/{{collectionId}}/{{item.productId}}?_method=PUT" id="itemEdit">
       <fieldset>
         <legend>Edit Item</legend>
+        <!-- PRODUCT NAME -->
+        <p>
+          <label for="productName">Product Name</label><br>
+          <input id="productName" type="text" name="productName" value="{{item.productName}}"/>
+        </p>
 
+        <!-- DESCRIPTION -->
+        <p>
+          <label for="description">Description</label><br>      
+          <textarea id="description" name="description" rows="10" />{{item.description}}</textarea>
+        </p>
 
-      <!-- PRODUCT NAME -->
-      <p>
-        <label for="productName">Product Name</label><br>
-        <input id="productName" type="text" name="productName" value="{{item.productName}}"/>
-      </p>
+        <!-- SIZE -->
+        <p>
+          <label for="size">Size</label><br>
+          <input id="size" type="text" name="size" value="{{item.size}}"/>
+        </p>
 
-      <!-- DESCRIPTION -->
-      <p>
-        <label for="description">Description</label><br>      
-        <textarea id="description" name="description" rows="10" />{{item.description}}</textarea>
-      </p>
+        <!-- PRICE -->
+        <p>
+          <label for="price">Price</label><br>
+          <input id="price" type="text" name="price" value="{{item.price}}"/>
+        </p>
 
-      <!-- SIZE -->
-      <p>
-        <label for="size">Size</label><br>
-        <input id="size" type="text" name="size" value="{{item.size}}"/>
-      </p>
+        <!-- MEASUREMENTS -->
+        <p>
+          <label for="measurements">Measurements</label><br>
+          <input id="measurements" type="text" name="measurements" value="{{item.measurements}}"/>
+        </p>
 
-      <!-- PRICE -->
-      <p>
-        <label for="price">Price</label><br>
-        <input id="price" type="text" name="price" value="{{item.price}}"/>
-      </p>
-
-      <!-- MEASUREMENTS -->
-      <p>
-        <label for="measurements">Measurements</label><br>
-        <input id="measurements" type="text" name="measurements" value="{{item.measurements}}"/>
-      </p>
-
-      <!-- AUS POST PARCEL -->
-      <p>
-        <label for="parcel">Parcel Type</label><br>
-        <input id="parcel" type="text" name="parcel" value="{{item.ausPostParcel}}"/>
-      </p>
-
+        <!-- AUS POST PARCEL -->
+        <p>
+          <label for="parcel">Parcel Type</label> : {{item.ausPostParcel}}
+          <br>
+          <select name="parcel" id="parcel" >
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+        </p>
       </fieldset>
       <!-- BUTTON -->
       <div>

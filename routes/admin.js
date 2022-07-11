@@ -1,10 +1,13 @@
 var express = require("express");
 var router = express.Router();
 var Collection = require("../models/collection");
-const nodemailer = require("nodemailer");
+var SibApiV3Sdk = require("sib-api-v3-sdk");
 
 const {MongoClient} = require('mongodb');
 const uri = process.env.MONGO_DB;
+
+
+
 
 /*    Description: Get a Product Item
       Method: GET                     */
@@ -17,105 +20,34 @@ router.get('/getItem', function (req, res, next) {
     })();
 });
 
-/*    Description: Get a Product Item
-      Method: GET                     */
-    //   router.get('/sendEmail', function (req, res, next) {
-    //     (async function () {
-            
-    //         // Generate test SMTP service account from ethereal.email
-    //         // Only needed if you don't have a real mail account for testing
-    //         let testAccount = await nodemailer.createTestAccount();
+router.get('/sendEmail', function (req, res, next) {
+    (async function () { // Configure API key authorization: api-key
+        var defaultClient = SibApiV3Sdk.ApiClient.instance;
+        var apiKey = defaultClient.authentications["api-key"];
+        apiKey.apiKey = process.env.smtp_key;
 
-    //         // create reusable transporter object using the default SMTP transport
-    //         let transporter = nodemailer.createTransport({
-    //             host: "smtp.ethereal.email",
-    //             port: 587,
-    //             secure: false, // true for 465, false for other ports
-    //             auth: {
-    //             user: testAccount.user, // generated ethereal user
-    //             pass: testAccount.pass, // generated ethereal password
-    //             },
-    //         });
-
-    //         // send mail with defined transport object
-    //         let info = await transporter.sendMail({
-    //             from: '"Mailer" <info@bajalabruja.org>', // sender address
-    //             to: "pksubscriber@gmail.com, pksubscriber@gmail.com", // list of receivers
-    //             subject: "Hello", // Subject line
-    //             text: "Hello world?", // plain text body
-    //             html: "<b>Hello world?</b>", // html body
-    //         });
-
-    //         console.log("Message sent: %s", info.messageId);
-    //          // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-
-    //         // Preview only available when sending through an Ethereal account
-    //         console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    //         // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-    //     })();
-    // }); 
-
-// router.get('/sendEmail', function (req, res, next) {
-//     (async function () {
-//         // Use at least Nodemailer v4.1.0
-// const nodemailer = require('nodemailer');
-
-// // Generate SMTP service account from ethereal.email
-// nodemailer.createTestAccount((err, account) => {
-//             if (err) {
-//                 console.error('Failed to create a testing account. ' + err.message);
-//                 return process.exit(1);
-//             }
-
-//             console.log('Credentials obtained, sending message...');
-
-//             // Create a SMTP transporter object
-//             // let transporter = nodemailer.createTransport({
-//             //     host: account.smtp.host,
-//             //     port: account.smtp.port,
-//             //     secure: account.smtp.secure,
-//             //     auth: {
-//             //         user: account.user,
-//             //         pass: account.pass
-//             //     }
-//             // });
-
-//             let transporter = nodemailer.createTransport({
-//                 host: "mail.bajalabruja.org",
-//                 port: 2079,
-//                 secure: true,
-//                 auth: {
-//                   user: "billing@bajalabruja.org",
-//                   pass: "Samnmax11!"
-//                 },
-//                 tls: {
-//                     rejectUnauthorized: false
-//                 }
-//              });
-
-//             // Message object
-//             let message = {
-//                 from: 'Sender Name <billing@bajalabruja.org>',
-//                 to: 'Recipient <pksubscriber@gmail.com>',
-//                 subject: 'Nodemailer is unicode friendly',
-//                 text: 'Hello to myself!',
-//                 html: '<p><b>Hello</b> to myself!</p>'
-//             };
-
-//             transporter.sendMail(message, (err, info) => {
-//                 if (err) {
-//                     console.log('Error occurred. ' + err.message);
-//                     return process.exit(1);
-//                 }
-
-//                 console.log('Message sent: %s', info.messageId);
-//                 // Preview only available when sending through an Ethereal account
-//                 console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-//             });
-//         });
-//     })();
-// }); 
-
+        var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+        var sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail(); // SendSmtpEmail | Values to send a transactional email
+        sendSmtpEmail = {
+            sender: {
+                email: "billing@bajalabruja.org"
+            },
+            to: [
+                {
+                    email: "pksubscriber@gmail.com",
+                    name: "Phillip Knezevich"
+                },
+            ],
+            subject: "Test Email",
+            textContent: "Test Email Content"
+        };
+        apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data) {
+            console.log("API called successfully. Returned data: " + data);
+        }, function (error) {
+            console.error(error);
+        });
+    })();
+});
 
 // /*    Description: Delete Product Thumb
 //       Method: PUT                     */
@@ -131,7 +63,6 @@ router.get('/getItem', function (req, res, next) {
 // });
 
 
-
 /*      Description: Update item in collection
         Method: PUT                           */
 router.put('/updateProduct/:collection/:id', function (req, res) {
@@ -144,7 +75,6 @@ router.put('/updateProduct/:collection/:id', function (req, res) {
         res.redirect('/item_admin?itemId=' + itemId + "&collectionId=" + collectionId);
     })();
 });
-
 
 
 module.exports = router;
@@ -188,6 +118,3 @@ async function updateItem(productId, collectionId, productName, description, pri
         result.save();
     });
 }
-
-
-
