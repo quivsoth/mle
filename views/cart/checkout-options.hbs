@@ -1,0 +1,63 @@
+<div class="container nopadding">
+    <section clas="col-lg-8 col-md-10 ">
+        <h1 class="display-4 ps-2 text-center" style="line-height: 1">
+            Check-out Options
+        </h1>
+    </section>
+    <div class="row ps-4 col-md-10 col-lg-6 col-xl-6">
+        <form method="POST" action="/order/checkout-payment?_method=POST" id="cart1" enctype="application/x-www-form-urlencoded">
+            <h2 class="mb-4 mt-4 mt-3 border-bottom">Gift Message</h2>
+            <textarea class="form-control" name="giftMessage" rows="4" placeholder="Optional gift message here.."></textarea>
+
+            <h2 class="mb-4 mt-3 border-bottom">Shipping Method</h2>
+             <ul class="list-group">
+                <li class="list-group-item">
+                    <label>
+                        <input type="radio" name="standardShipping" value="standard" checked="checked"> Standard (5-7 days)
+                    </label>
+                </li>                
+            </ul>
+        
+            <h2 class="mb-4 mt-3 border-bottom">Order Summary</h2>
+            <h3>Items</h3>            
+            <ul class="list-group">
+            {{#each product  }}
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col col-lg-2">
+                            <img style="max-height: 6rem;border-radius:0.5rem" src="/images/products/{{this.item.productThumbs.[1]}}" />
+                        </div>
+                        <div class="col">
+                            <p>{{this.item.productName}}</p>
+                            <p class="display-6">${{this.item.price}}</p>
+                        </div>
+                    </div>
+                    
+                    
+                </li>
+            {{/each}}
+
+            </ul>
+
+            <h3>Payment Summary</h3>  
+            <ul class="list-group">
+                <li class="list-group-item">Total Item(s): {{qty}}</li>
+                <li class="list-group-item">Item Cost: ${{totalPrice}}</li>
+                <li class="list-group-item">Shipping Cost: ${{shippingPrice}}</li>
+                <li class="list-group-item">Final Price: <span class="baja-font-135">${{finalPrice}}</span></li>
+            </ul>
+
+
+
+            <h2 class="mb-4 mt-3 border-bottom">Payment</h2>
+
+            <div class="mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkSubscribe">
+                    <label class="form-check-label" for="checkSubscribe">Subscribe to Mailing List</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Pay and Place Order</button>
+        </form>
+    </div>
+</div>

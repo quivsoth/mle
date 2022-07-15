@@ -1,0 +1,119 @@
+
+<style>
+    .box{
+        color: #fff;
+        padding: 20px;
+        display: none;
+        margin-top: 20px;
+    }
+    .red{ background: #ff0000; }
+    .green{ background: #228B22; }
+    .blue{ background: #0000ff; }
+</style>
+
+
+<script>
+$(document).ready(function(){
+    $('input[type="radio"]').click(function(){
+        var inputValue = $(this).attr("value");
+        var targetBox = $("." + inputValue);
+        $(".box").not(targetBox).hide();
+        $(targetBox).show();
+    });
+
+    $(window).load(function(){
+         $("isBillingYes").show();
+    });
+});
+</script>
+
+
+ 
+
+
+<div class="container nopadding">
+    <section clas="col-lg-8 col-md-10 ">
+        <h1 class="display-4 ps-2 text-center" style="line-height: 1">
+            Check-out 
+        </h1>
+    </section>
+    <div class="row ps-4 col-md-6">
+        <h2 class="mb-4 mt-3 border-bottom">Shipping Address</h2>
+        <form>
+            <div class="mb-4">
+                <label class="form-label" for="inputFirstName">First Name</label>
+                <input type="text" class="form-control" id="inputFirstName" placeholder="First Name" required>
+            </div>
+            <div class="mb-4">
+                <label class="form-label" for="inputLastName">Last Name</label>
+                <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" required>
+            </div>
+            <div class="mb-4">
+                <label class="form-label" for="inputEmail">Email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email Address" required>
+            </div>
+            <div class="mb-4">
+                <label class="form-label" for="inputAddress1">Address line 1</label>
+                <input type="text" class="form-control" id="inputAddress1" placeholder="Address line 1" required>
+            </div>
+            <div class="mb-4">
+                <label class="form-label" for="inputAddress2">Address line 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Address line 2">
+            </div>
+            <div class="mb-4">
+                <label class="form-label" for="inputCity">City / Suburb</label>
+                <input type="text" class="form-control" id="inputCity" placeholder="City / Suburb">
+            </div>
+            <div class="mb-4">
+                <label class="form-label" for="inputZipcode">Zip / Postcode</label>
+                <input type="text" class="form-control" id="inputZipcode" placeholder="Zip / Postcode" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label" for="inputCity">State</label>
+                <select aria-label="State / Province" class="form-control input-validation-error" data-val="true" >
+                    <option value="">Please select</option>
+                    <option value="ACT" data-code="ACT">Australian Capital Territory</option>
+                    <option value="NSW" data-code="NSW">New South Wales</option>
+                    <option value="NT" data-code="NT">Northern  Territory</option>
+                    <option value="QLD" data-code="QLD">Queensland</option>
+                    <option value="SA" data-code="SA">South  Australia</option>
+                    <option value="TAS" data-code="TAS">Tasmania</option>
+                    <option value="VIC" data-code="VIC">Victoria</option>
+                    <option value="WA" data-code="WA">Western  Australia</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="form-label" for="inputMobilePhone">Mobile Phone</label>
+                <input type="text" class="form-control" id="inputMobilePhone" placeholder="Mobile Phone">
+            </div>
+
+
+            <h2 class="mb-4 mt-3 border-bottom">Billing Address</h2>
+            <div>
+                <label><input type="radio" name="isBilling" value="isBillingYes" checked="checked">Default (Same as Shipping Address)</label><br>
+                <label><input type="radio" name="isBilling" value="isBillingNo">Add Billing Address</label>
+            </div>
+            <div class="isBillingYes box"><i class="fas fa-check-square"></i>Use Shipping Address</div>
+            <div class="isBillingNo box">You have selected <strong>green radio button</strong> so i am here</div>
+            
+
+
+            <h2 class="mb-4 mt-3 border-bottom">Shipping Method</h2>
+
+            <h2 class="mb-4 mt-3 border-bottom">Gift Message</h2>
+
+            <h2 class="mb-4 mt-3 border-bottom">Order Summary</h2>
+
+            <h2 class="mb-4 mt-3 border-bottom">Payment</h2>
+
+            <div class="mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkSubscribe">
+                    <label class="form-check-label" for="checkSubscribe">Subscribe to Mailing List</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Pay and Place Order</button>
+        </form>
+    </div>
+</div>

@@ -13,7 +13,6 @@ module.exports = function Cart(currentCart) {
             this.totalPrice += storedItem.item.price;
             this.qty++;
         }
-
     }
 
     this.delete = function(productId) {

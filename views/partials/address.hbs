@@ -1,0 +1,31 @@
+
+<div class="mb-4">
+    <label class="form-label" for="{{addressType}}Address1">Address line 1</label>
+    <input type="text" class="form-control" name="{{addressType}}Address1" placeholder="Address line 1">
+</div>
+<div class="mb-4">
+    <label class="form-label" for="{{addressType}}Address2">Address line 2</label>
+    <input type="text" class="form-control" name="{{addressType}}Address2" placeholder="Address line 2">
+</div>
+<div class="mb-4">
+    <label class="form-label" for="{{addressType}}City">City / Suburb</label>
+    <input type="text" class="form-control" name="{{addressType}}City" placeholder="City / Suburb">
+</div>
+<div class="mb-4">
+    <label class="form-label" for="{{addressType}}State">State</label>
+    <select aria-label="State / Province" class="form-control input-validation-error" data-val="true" name="{{addressType}}State">
+        <option value="">Please select</option>
+        <option value="ACT" data-code="ACT">Australian Capital Territory</option>
+        <option value="NSW" data-code="NSW">New South Wales</option>
+        <option value="NT" data-code="NT">Northern  Territory</option>
+        <option value="QLD" data-code="QLD">Queensland</option>
+        <option value="SA" data-code="SA">South  Australia</option>
+        <option value="TAS" data-code="TAS">Tasmania</option>
+        <option value="VIC" data-code="VIC">Victoria</option>
+        <option value="WA" data-code="WA">Western  Australia</option>
+    </select>
+</div>
+<div class="mb-4">
+    <label class="form-label" for="{{addressType}}Zipcode">Zip / Postcode</label>
+    <input type="text" class="form-control" name="{{addressType}}Zipcode" placeholder="Zip / Postcode">
+</div>

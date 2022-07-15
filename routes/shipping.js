@@ -20,7 +20,7 @@ router.get('/shipping', function (req, res, next) {
               Method: GET                     */
 router.get('/calculator', function (req, res, next) {
     (async function () {
-        var messages = req.flash('info');
+
         var request = require('request');
         var cost = 0,
             deliveryTime,
@@ -72,20 +72,18 @@ router.get('/calculator', function (req, res, next) {
                 if (key == 'service') {
                     service = value
                 }
-                console.log(key); // log the current property name, the last is "".
+                console.log("key  : " + key); // log the current property name, the last is "".
                 return value; // return the unchanged property value.
             });
 
             res.render('site/shipping', {
                 title: 'Baja La Bruja - Shipping',
-                messages: messages,
                 cost: cost,
                 deliveryTime: deliveryTime,
                 service: service,
                 postCodeFrom: postCodeFrom,
                 postCodeTo: postCodeTo,
-                hasCost: cost.length > 0,
-                hasMessages: messages.length > 0
+                hasCost: cost.length > 0
             });
         });
     })();

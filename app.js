@@ -12,9 +12,11 @@ var passport = require('passport');
 var flash = require('connect-flash');
 var validator = require('express-validator');
 var MongoStore = require('connect-mongo');
+const bodyParser = require('body-parser');
 
 var adminRouter = require('./routes/admin');
 var indexRouter = require('./routes/index');
+var orderRouter = require('./routes/order');
 var shippingRouter = require('./routes/shipping');
 var shopRouter = require('./routes/shop');
 var userRouter = require('./routes/user');
@@ -34,6 +36,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(validator());
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
   secret: 'bajasecurity',
   resave: false,
@@ -55,6 +58,7 @@ app.use(function(req,res,next){
 
 app.use('/', adminRouter);
 app.use('/', indexRouter);
+app.use('/order', orderRouter);
 app.use('/', shippingRouter);
 app.use('/', shopRouter);
 app.use('/user', userRouter);

@@ -33,7 +33,7 @@
             </div>
             <div class="d-flex justify-content-between text-dark" style="padding-bottom: 1rem;">
                 <div>Estimated GST</div>
-                <div class="text-right">$0</div>
+                <div class="text-right">N/A</div>
             </div>
             <div class="d-flex justify-content-between text-dark" style="padding-bottom: 2rem;">
                 <div>Shipping Costs (calc. at checkout)</div>
@@ -41,13 +41,14 @@
             </div>
             <div class="d-flex justify-content-between text-dark" style="padding-bottom: 1rem;">
                 <div>Total Cost</div>
-                <div class="text-right"><span class="badge rounded-pill bg-primary">${{totalPrice}}</span></div>
+                <div class="text-right"><span class="badge bg-primary">${{totalPrice}}</span></div>
             </div>
 
             <div class="text-dark text-center" style="padding-bottom: 1rem;">
-                <button type="button" class="btn btn-success" style="width: 10rem">CHECKOUT</button>
+                <a href="/order/checkout" class="btn btn-primary btn-lg" role="button">CHECKOUT</a>
+
             </div>
-            <div class="text-dark text-center" style="padding-bottom: 1rem;">
+            {{!-- <div class="text-dark text-center" style="padding-bottom: 1rem;">
                 <a href="#"><img src="images/paypal-button@2x.png" style="max-height: 2rem;" /></a>
             </div>
             <div class="text-dark text-center" style="padding-bottom: 1rem;">
@@ -55,7 +56,7 @@
             </div>
             <div class="text-dark text-center" style="padding-bottom: 1rem;">
                 <a href="#"><img src="images/visa.png" style="max-height: 2rem;" /></a>
-            </div>
+            </div> --}}
         </div>
     </div>
     <div class="row">

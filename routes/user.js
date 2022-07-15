@@ -55,6 +55,15 @@ router.get("/logout", function (req, res, next) {
     res.redirect("/");
 });
 
+/*      Description: Checkout of Shopping Cart.
+        Method: GET                           */
+router.get('/checkout1', function (req, res, next) {
+    (async function () {
+        res.render('cart/checkout', {});
+    })();
+});
+
+
 var Subscriber = require("../models/subscriber");
 /*    Description: View for HOME page.
       Method: GET                     */
