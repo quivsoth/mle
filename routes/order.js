@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var mongo = require('mongodb');
 var request = require('request');
+var braintree = require('braintree');
 var Order = require("../models/order");
 var Cart = require('../models/cart');
 var ParcelSize = require('../models/parcelSize');
@@ -89,6 +90,7 @@ router.post('/checkout-options', function (req, res, next) {
                 title: 'Baja La Bruja - Checkout Step 2',
                 messages: messages,
                 hasMessages: messages.length > 0,
+                order: order,
                 totalPrice: cart.totalPrice,
                 shippingPrice: result.postage_result.total_cost,
                 qty: cart.qty,
@@ -105,8 +107,8 @@ router.post('/checkout-payment', function (req, res, next) {
     var messages = req.flash('info');
     var cart = new Cart(req.session.cart);
 
-    res.render('cart/checkout-options', {
-        title: 'Baja La Bruja - Checkout Step 2',
+    res.render('cart/checkout-payment', {
+        title: 'Baja La Bruja - Checkout Final Step',
         product: cart.generateArray(),
         messages: messages,
         hasMessages: messages.length > 0
@@ -150,11 +152,53 @@ router.get('/shippingCalculator', function (req, res, next) {
     })();
 });
 
-router.get('/tester', function (req, res, next) { 
-    
-    var s = JSON.parse("{\"postage_result\":{\"service\":\"Parcel Post\",\"delivery_time\":\"Delivered in Temporary delays\",\"total_cost\":\"15.95\",\"costs\":{\"cost\":{\"item\":\"Parcel Post\",\"cost\":\"15.95\"}}}}");
-    console.log(s.postage_result);
-    // console.log(new parcelSize().parcelSize.L);
+
+/*    Description: Braintree Drop In.
+      Method: GET                     */
+router.get('/cardDetails', function (req, res, next) {
+    var messages = req.flash('info');
+    res.render('cart/cardDetails', {
+        title: 'Baja La Bruja - Paypal Braintree',
+        messages: messages,
+        hasMessages: messages.length > 0
+    });
 });
+
+/*    Description: Braintree Drop In.
+      Method: POST                     */
+router.post('/cardSubmit', function (req, res, next) {
+    var messages = req.flash('info');
+
+    const gateway = new braintree.BraintreeGateway({
+        environment: braintree.Environment.Sandbox,
+        // Use your own credentials from the sandbox Control Panel here
+        merchantId: 'vjv27yn66fsvnpnm',
+        publicKey: '4ptc6ftc54hzdfcy',
+        privateKey: '2a7a374115893d9dcae4e77314d65272'
+    });
+
+    // Use the payment method nonce here
+    const nonceFromTheClient = req.body.paymentMethodNonce;
+    console.log(nonceFromTheClient);
+  
+    // Create a new transaction for $10
+    const newTransaction = gateway.transaction.sale({
+        amount: '10.00',
+        paymentMethodNonce: nonceFromTheClient,
+        options: {
+            // This option requests the funds from the transaction
+            // once it has been authorized successfully
+            submitForSettlement: true
+        }
+    }, (error, result) => {
+        if (result) {
+            res.send(result);
+        } else {
+            console.log(error);
+            res.status(500).send(error);
+        }
+    });
+});
+    
 
 module.exports = router;

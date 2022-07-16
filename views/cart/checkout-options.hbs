@@ -9,7 +9,7 @@
             <h2 class="mb-4 mt-4 mt-3 border-bottom">Gift Message</h2>
             <textarea class="form-control" name="giftMessage" rows="4" placeholder="Optional gift message here.."></textarea>
 
-            <h2 class="mb-4 mt-3 border-bottom">Shipping Method</h2>
+            <h2 class="mb-4 mt-5 border-bottom">Shipping Method</h2>
              <ul class="list-group">
                 <li class="list-group-item">
                     <label>
@@ -18,7 +18,7 @@
                 </li>                
             </ul>
         
-            <h2 class="mb-4 mt-3 border-bottom">Order Summary</h2>
+            <h2 class="mb-4 mt-5 border-bottom">Order Summary</h2>
             <h3>Items</h3>            
             <ul class="list-group">
             {{#each product  }}
@@ -31,33 +31,29 @@
                             <p>{{this.item.productName}}</p>
                             <p class="display-6">${{this.item.price}}</p>
                         </div>
-                    </div>
-                    
-                    
+                    </div>      
                 </li>
             {{/each}}
-
             </ul>
 
-            <h3>Payment Summary</h3>  
+            <h3 class="mt-4">Shipping Address</h3>
+            <div class="bg-light text-dark p-2">
+                <p>To: {{order.firstName}} {{order.lastName}}</p>
+                {{order.shippingAddress.shippingAddress1}} 
+                {{order.shippingAddress.shippingAddress2}}<br>
+                {{order.shippingAddress.shippingCity}}<br>
+                {{order.shippingAddress.shippingState}}<br>
+                {{order.shippingAddress.shippingZipcode}}<br>
+            </div> 
+
+            <h3 class="mt-4">Payment Summary</h3>  
             <ul class="list-group">
                 <li class="list-group-item">Total Item(s): {{qty}}</li>
                 <li class="list-group-item">Item Cost: ${{totalPrice}}</li>
                 <li class="list-group-item">Shipping Cost: ${{shippingPrice}}</li>
                 <li class="list-group-item">Final Price: <span class="baja-font-135">${{finalPrice}}</span></li>
             </ul>
-
-
-
-            <h2 class="mb-4 mt-3 border-bottom">Payment</h2>
-
-            <div class="mb-3">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="checkSubscribe">
-                    <label class="form-check-label" for="checkSubscribe">Subscribe to Mailing List</label>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Pay and Place Order</button>
+            <button type="submit" class="mb-3 mt-4 btn btn-primary">Proceed To Payment</button>
         </form>
     </div>
 </div>
