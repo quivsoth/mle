@@ -84,8 +84,13 @@ router.post('/checkout-options', function (req, res, next) {
         };
         request(options, function (error, response) {
             if (error) { throw new Error(error); }
-            var result = JSON.parse("{\"postage_result\":{\"service\":\"Parcel Post\",\"delivery_time\":\"Delivered in Temporary delays\",\"total_cost\":\"15.95\",\"costs\":{\"cost\":{\"item\":\"Parcel Post\",\"cost\":\"15.95\"}}}}");
-            // return response.body;
+            
+            var result = JSON.parse(response.body);
+            var finalPrice = parseFloat(result.postage_result.total_cost) + parseFloat(cart.totalPrice);
+
+            var viewable = false;
+            if(order.user != '' && cart.generateArray().length > 0) viewable = true;
+
             res.render('cart/checkout-options', {
                 title: 'Baja La Bruja - Checkout Step 2',
                 messages: messages,
@@ -94,8 +99,10 @@ router.post('/checkout-options', function (req, res, next) {
                 totalPrice: cart.totalPrice,
                 shippingPrice: result.postage_result.total_cost,
                 qty: cart.qty,
-                finalPrice: parseInt(cart.totalPrice) + parseInt(result.postage_result.total_cost),
-                product: cart.generateArray()
+                finalPrice: finalPrice.toFixed(2),
+                product: cart.generateArray(),
+                viewable: viewable,
+
             });
         }); 
     })();
@@ -199,6 +206,5 @@ router.post('/cardSubmit', function (req, res, next) {
         }
     });
 });
-    
 
 module.exports = router;
