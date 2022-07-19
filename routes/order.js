@@ -114,6 +114,9 @@ router.post('/checkout-payment', function (req, res, next) {
     var messages = req.flash('info');
     var cart = new Cart(req.session.cart);
 
+    var order = req.session.order = order;
+    if(req.body.giftMessage != '') order.giftMessage = req.body.giftMessage;
+    
     res.render('cart/checkout-payment', {
         title: 'Baja La Bruja - Checkout Final Step',
         product: cart.generateArray(),
@@ -205,6 +208,21 @@ router.post('/cardSubmit', function (req, res, next) {
             res.status(500).send(error);
         }
     });
+});
+
+/*    Description: Post payment activities.
+      Method: POST                     */
+// router.post('/cardSuccess', function (req, res, next) {
+//     var messages = req.flash('info');
+//     res.send("success");
+// });
+
+router.post("/cardSuccess", (req, res) => {
+    // clear the cart
+    // send email
+    // send order receipt number
+    // save order to database
+    res.status(200).send({ cityID: '123' });
 });
 
 module.exports = router;
