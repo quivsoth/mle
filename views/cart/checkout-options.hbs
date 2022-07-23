@@ -6,6 +6,7 @@
     </section>
     {{#if viewable }}
     <div class="row ps-4 col-md-10 col-lg-6 col-xl-6">
+        {{!-- <form method="POST" action="/order/checkout-payment?_method=POST" id="cart1" enctype="application/x-www-form-urlencoded"> --}}
         <form method="POST" action="/order/checkout-payment?_method=POST" id="cart1" enctype="application/x-www-form-urlencoded">
             <h2 class="mb-4 mt-4 mt-3 border-bottom">Gift Message</h2>
             <textarea class="form-control" name="giftMessage" rows="4" placeholder="Optional gift message here.."></textarea>
@@ -50,7 +51,7 @@
             <h3 class="mt-4">Payment Summary</h3>  
             <ul class="list-group">
                 <li class="list-group-item">Total Item(s): {{qty}}</li>
-                <li class="list-group-item">Item Cost: ${{totalPrice}}</li>
+                <li class="list-group-item">Item Cost: ${{subtotal}}</li>
                 <li class="list-group-item">Shipping Cost: ${{shippingPrice}}</li>
                 <li class="list-group-item">Final Price: <span class="baja-font-135">${{finalPrice}}</span></li>
             </ul>

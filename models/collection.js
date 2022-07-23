@@ -7,7 +7,7 @@ var productSchema = new Schema({
     description: { type:String, required:true },
     productThumbs: {type: [String], required: true},
     price: { type:Number, required:true },
-    size: { type:Number, required:true },
+    size: { type:String, required:true },
     measurements: { type:String, required:false },
     ausPostParcel: { type:String, required:false },
     active: { type:Boolean, required:true }

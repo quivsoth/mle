@@ -37,22 +37,8 @@
               $('#submit-button').remove();
             }
           });
-
           if (result.success) {
-              $.ajax({
-              url: "/order/cardSuccess",
-              type: "POST",
-              data: "result=success",
-              success: function(data){
-                  console.log("data success" + data.cityID);
-                  $('#checkout-message').html('<h1>Success</h1><p>Your payment was approved! Check your <a href="https://sandbox.braintreegateway.com/login">sandbox Control Panel</a> for your test transactions.</p><p>Refresh to try another transaction.</p>');
-              }
-          });
-            
-
-
-
-
+              window.location.replace("/order/success");
           } else {
             console.log(result);
             $('#checkout-message').html('<h1>Error</h1><p>Check your console.</p>');

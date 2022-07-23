@@ -17,6 +17,7 @@ const bodyParser = require('body-parser');
 var adminRouter = require('./routes/admin');
 var indexRouter = require('./routes/index');
 var orderRouter = require('./routes/order');
+var paymentRouter = require('./routes/payment');
 var shippingRouter = require('./routes/shipping');
 var shopRouter = require('./routes/shop');
 var userRouter = require('./routes/user');
@@ -59,6 +60,7 @@ app.use(function(req,res,next){
 app.use('/', adminRouter);
 app.use('/', indexRouter);
 app.use('/order', orderRouter);
+app.use('/', paymentRouter);
 app.use('/', shippingRouter);
 app.use('/', shopRouter);
 app.use('/user', userRouter);
@@ -78,6 +80,14 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+// Handlebars custom handlers
+var hbs = expressHbs.create({});
+
+// register new function
+hbs.handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
+  return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
 });
 
 module.exports = app;

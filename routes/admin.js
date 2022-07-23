@@ -7,8 +7,6 @@ const {MongoClient} = require('mongodb');
 const uri = process.env.MONGO_DB;
 
 
-
-
 /*    Description: Get a Product Item
       Method: GET                     */
 router.get('/getItem', function (req, res, next) {
@@ -21,16 +19,29 @@ router.get('/getItem', function (req, res, next) {
 });
 
 router.get('/sendEmail', function (req, res, next) {
-    (async function () { // Configure API key authorization: api-key
+    (async function () { // Configure API key authorization: api-key        
+        
+        var order = req.body.order;
+        
+        if(order!= undefined){
+            console.log("There is an order here");
+        }
+
+        if(order == undefined){
+            console.log("There is no order in session");
+        }
+
         var defaultClient = SibApiV3Sdk.ApiClient.instance;
         var apiKey = defaultClient.authentications["api-key"];
-        apiKey.apiKey = process.env.smtp_key;
+        apiKey.apiKey = process.env.SENDINBLUE_SMTP_KEY;
+        console.log("Email Key: " + apiKey.apiKey);
 
         var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
         var sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail(); // SendSmtpEmail | Values to send a transactional email
         sendSmtpEmail = {
             sender: {
-                email: "billing@bajalabruja.org"
+                email: "billing@bajalabruja.org",
+                name: "bajalabruja.org"
             },
             to: [
                 {
@@ -38,12 +49,14 @@ router.get('/sendEmail', function (req, res, next) {
                     name: "Phillip Knezevich"
                 },
             ],
-            subject: "Test Email",
-            textContent: "Test Email Content"
+            subject: "Thanks for your order!",
+            htmlContent: EmailBody(order)
         };
         apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data) {
             console.log("API called successfully. Returned data: " + data);
+            res.sendStatus(200);
         }, function (error) {
+            console.log(error);
             console.error(error);
         });
     })();
@@ -70,12 +83,11 @@ router.put('/updateProduct/:collection/:id', function (req, res) {
         console.log("Update Product");
         let itemId = parseInt(req.params.id);
         let collectionId = parseInt(req.params.collection);
-        await updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size, req.body.measurements, req.body.parcel);
+        await updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size, req.body.measurements, req.body.parcel, req.body.isActive);
         req.flash('info', 'Item # ' + itemId + 'has been updated');
         res.redirect('/item_admin?itemId=' + itemId + "&collectionId=" + collectionId);
     })();
 });
-
 
 module.exports = router;
 
@@ -98,7 +110,7 @@ async function getItem(productId, collectionId) {
     }
 }
 
-async function updateItem(productId, collectionId, productName, description, price, size, measurements, ausPostParcel) {
+async function updateItem(productId, collectionId, productName, description, price, size, measurements, ausPostParcel, isActive) {
     var query = {
         collectionId: collectionId
     };
@@ -115,6 +127,8 @@ async function updateItem(productId, collectionId, productName, description, pri
         p.size = size;
         p.measurements = measurements;
         p.ausPostParcel = ausPostParcel;
+        p.active = isActive;
         result.save();
     });
 }
+

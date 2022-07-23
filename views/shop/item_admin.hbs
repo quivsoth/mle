@@ -46,6 +46,12 @@
     <form method="POST" action="/updateProduct/{{collectionId}}/{{item.productId}}?_method=PUT" id="itemEdit">
       <fieldset>
         <legend>Edit Item</legend>
+        <!-- ACTIVE -->
+        <p>
+          <label for="isActive">Active</label><br>
+          <input id="isActive" type="text" name="isActive" value="{{item.active}}"/>
+        </p>
+
         <!-- PRODUCT NAME -->
         <p>
           <label for="productName">Product Name</label><br>
@@ -75,6 +81,7 @@
           <label for="measurements">Measurements</label><br>
           <input id="measurements" type="text" name="measurements" value="{{item.measurements}}"/>
         </p>
+        
 <hr>
         <!-- AUS POST PARCEL -->
         <p>
