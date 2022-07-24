@@ -53,15 +53,16 @@
   }
 
   // status is either SUCCESS or FAILURE;
-  function displayPaymentResults(status, data) {
-    console.log("success | " +  JSON.stringify(data));
+  function displayPaymentResults(status, orderId) {
+    console.log("success | " +  JSON.stringify(orderId));
     const statusContainer = document.getElementById(
       'payment-status-container'
     );
     if (status === 'SUCCESS') {
       statusContainer.classList.remove('is-failure');
       statusContainer.classList.add('is-success');
-      //window.location.href = "/success";
+      //window.location.href = "/order/success/";
+      location.replace('/order/success/' + orderId);
 
     } else {
       statusContainer.classList.remove('is-success');
@@ -106,7 +107,7 @@
         const token = await tokenize(paymentMethod);
         const paymentResults = await createPayment(token);
         console.log("paymentResults : " + paymentResults.payment.orderId);
-        displayPaymentResults('SUCCESS');
+        displayPaymentResults('SUCCESS', paymentResults.payment.orderId);
 
         console.debug('Payment Success', paymentResults);
       } catch (e) {
@@ -124,7 +125,7 @@
 </script>
 <div class="container nopadding">
     <section clas="col-lg-8 col-md-10 ">
-        <h1 class="display-4 ps-2 text-left" style="line-height: 1">
+        <h1 class="display-4 ps-2 text-center" style="line-height: 1">
             Payment
         </h1>
     </section>

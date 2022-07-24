@@ -3,8 +3,8 @@ var router = express.Router();
 
 // Security
 const {deserializeUser} = require('passport');
-// var csrf = require('csurf');
-// var csrfProtection = csrf();
+var csrf = require('csurf');
+var csrfProtection = csrf();
 // router.use(csrfProtection);
 
 

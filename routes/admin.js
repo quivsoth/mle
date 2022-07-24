@@ -83,29 +83,7 @@ router.get('/item_admin/:collection/:item', function (req, res, next) {
     })();
 });
 
-
-
-
-
-
-
-
-// /*    Description: Delete Product Thumb
-//       Method: PUT                     */
-// router.put('/deleteThumb/:collection/:productId/:thumb', function (req, res, next) {
-//     (async function () {
-//         let itemId = req.params.productId;
-//         let collectionId = req.params.collection;
-//         let thumb = req.params.thumb;
-//         const item = await deleteThumb(itemId, collectionId, thumb);
-//         console.log(item);
-//         res.send(item);
-//     })();
-// });
-
-
-/*      Description: Update item in collection
-        Method: PUT                           */
+/* Update item in collection                    */
 router.put('/updateProduct/:collection/:id', function (req, res) {
     (async function () {
         console.log("Update Product");

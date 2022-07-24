@@ -7,17 +7,17 @@
 {{# if products }}
     <div class="row">
         <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 m-1">
-            <div class="bg-light justify-content-between text-dark p-3" style="padding-bottom: 1rem;border-radius:0.5rem;">
+            <div class="bg-light justify-content-between text-dark p-3" style="padding-bottom: 1rem;border-radius:0.3rem;">
                 <h4 class="text-center text-dark" style="padding-bottom: 1rem;">Items in your bag</h4>
             <ul class="list-group" >
                 {{#each products  }}
                 <li class="list-group-item" style="border: 1px solid lightgrey;margin-top:0.2rem">
-                    <img style="max-height: 6rem;border-radius:6rem" src="/images/products/{{this.item.productThumbs.[1]}}" />
+                    <img style="max-height: 6rem;border-radius:0.3rem" src="/images/products/{{this.item.productThumbs.[1]}}" />
                     {{this.item.productName}}
 
                     <div style="float:right;margin-top:2rem;">
-                        <span  class="badge bg-primary">${{this.item.price}}</span>
-                        <a title="Remove From Bag" class="btn btn-close" href="/deleteCart/{{this.item.productId}}" style="background-color: red;" role="button"></a>
+                        <span class="p-2 baja-font-larger text-dark">${{this.item.price}}</span>
+                        <a title="Remove From Bag" class="p-2 btn btn-close" href="/deleteCart/{{this.item.productId}}" style="background-color: red;" role="button"></a>
                     </div>
                     {{!-- to do remove --}}
                 </li>
@@ -37,11 +37,11 @@
             </div>
             <div class="d-flex justify-content-between text-dark" style="padding-bottom: 2rem;">
                 <div>Shipping Costs (calc. at checkout)</div>
-                <div class="text-right">$TBC</div>
+                <div class="text-right">@Checkout</div>
             </div>
             <div class="d-flex justify-content-between text-dark" style="padding-bottom: 1rem;">
                 <div>Total Cost</div>
-                <div class="text-right"><span class="badge bg-primary">${{totalPrice}}</span></div>
+                <div class="text-right"><span class="badge baja-font-larger bg-success">${{totalPrice}}</span></div>
             </div>
 
             <div class="text-dark text-center" style="padding-bottom: 1rem;">

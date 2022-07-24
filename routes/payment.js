@@ -36,6 +36,8 @@ router.post('/pay', async (req, res, next) => {
   var order = req.session.order;
   if(order == undefined) { throw new Error("Order is Missing"); }
 
+  req.body.giftMessage == '' ? req.session.order.giftMessage = 'No message.' : req.session.order.giftMessage = req.body.giftMessage;
+  
   res.render('cart/pay', {
       title: 'Baja La Bruja - Pay for Items and Checkout',
       messages: messages,

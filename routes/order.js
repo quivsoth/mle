@@ -3,11 +3,9 @@ var router = express.Router();
 var mongo = require('mongodb');
 var request = require('request');
 
-var Admin = require('./admin');
 var Order = require('../models/order');
 var Cart = require('../models/cart');
 var ParcelSize = require('../models/parcelSize');
-
 var SibApiV3Sdk = require("sib-api-v3-sdk");
 
 // Security
@@ -17,8 +15,7 @@ const { clearTimeout } = require('timers');
 var csrfProtection = csrf();
 // router.use(csrfProtection);
 
-/*    Description: Checkout Step 1.
-      Method: GET                     */
+/* Checkout (Cart Review) - Step 1.                 */                   
 router.get('/checkout', function (req, res, next) {
     var messages = req.flash('info');
     res.render('cart/checkout', {
@@ -28,8 +25,7 @@ router.get('/checkout', function (req, res, next) {
     });
 });
 
-/*    Description: Checkout Step 2.
-      Method: POST                     */
+/* Options Checkout - Step 2.                        */                    
 router.post('/checkout-options', function (req, res, next) {
     (async function () {
         var messages = req.flash('info');
@@ -61,7 +57,7 @@ router.post('/checkout-options', function (req, res, next) {
 
         var order = {
             user: new ObjectID(),
-            orderNumber: orderNumberGenerator(),
+            orderNumber: 0,
             firstName: req.body.inputFirstName,
             lastName: req.body.inputLastName,
             phone: req.body.inputMobilePhone,
@@ -76,7 +72,6 @@ router.post('/checkout-options', function (req, res, next) {
             finalPrice: 0
         };
         
-
         //CALCULATE SHIPPING
         var packageSizer = JSON.parse(new ParcelSize().parcelSize.M); //you need to get the size here
         const australiaPostAPI = new URL(process.env.AP_API);
@@ -122,26 +117,60 @@ router.post('/checkout-options', function (req, res, next) {
     })();
 });
 
-/*    Description: Checkout Step 3.
-      Method: POST                     */
-router.post('/checkout-payment', async (req, res, next) => {
-    var messages = req.flash('info');
-    var cart = new Cart(req.session.cart);
+/* Called when payment is successful - Step 3         */   
+router.get("/success/:orderNumber", function (req, res, next) {
+    // (async function () {
+        var messages = req.flash('info');
+        var cart = new Cart(req.session.cart);
 
-    var order = req.session.order;
-    order.giftMessage = req.body.giftMessage;
-    
-    SendEmail(order, cart.generateArray());  
+        var successOrder = new Order({
+            user: req.session.order.user,
+            orderNumber: req.params.orderNumber,
+            firstName: req.session.order.firstName,
+            lastName: req.session.order.lastName,
+            phone: req.session.order.phone,
+            email: req.session.order.email,
+            cart: req.session.cart,
+            billingAddress: req.session.order.billingAddress,
+            shippingAddress: req.session.order.shippingAddress,
+            giftMessage: req.session.order.giftMessage,
+            subtotal: req.session.order.subtotal,
+            shippingCost: req.session.order.shippingCost,
+            GST: req.session.order.GST,
+            finalPrice: req.session.order.finalPrice
+        });
 
-    // res.render('cart/checkout-payment', {
-    //     title: 'Baja La Bruja - Checkout Final Step',
-    //     product: cart.generateArray(),
-    //     messages: messages,
-    //     hasMessages: messages.length > 0
+        successOrder.save();
+        SendEmail(successOrder, cart.generateArray());
+        delete req.session.cart;
+        delete req.session.order;
+
+        res.render('cart/success', {
+            title: 'Baja La Bruja - Order Successful',
+            messages: messages,
+            hasMessages: messages.length > 0,
+            orderNumber: req.params.orderNumber,
+            viewable: true
+        });
+
+        // successOrder.save(function (err, product, rowsAffected) {
+        //     if (err) { throw new Error("Unable to save to DB reason: " + err); }
+        //     delete req.session.cart;
+        //     delete req.session.order;
+
+        //     SendEmail(product, cart.generateArray()); 
+
+        //     res.render('cart/success', {
+        //         title: 'Baja La Bruja - Order Successful',
+        //         messages: messages,
+        //         hasMessages: messages.length > 0,
+        //         orderNumber: product.orderNumber,
+        //     });
+        // });
     // });
 });
 
-/*    Description: Calculates the Shipping from Australia Post  */
+/* Calculates the Shipping from Australia Post  */
 router.get('/shippingCalculator', function (req, res, next) {
     (async function () {
         var request = require('request');
@@ -179,104 +208,7 @@ router.get('/shippingCalculator', function (req, res, next) {
     })();
 });
 
-
-/*    Description: Braintree Drop In.
-      Method: GET                     */
-router.get('/cardDetails', function (req, res, next) {
-    var messages = req.flash('info');
-    res.render('cart/cardDetails', {
-        title: 'Baja La Bruja - Paypal Braintree',
-        messages: messages,
-        hasMessages: messages.length > 0
-    });
-});
-
-/*    Description: Braintree Drop In.*/
-router.post('/cardSubmit', function (req, res, next) {
-    var messages = req.flash('info');
-
-    const gateway = new braintree.BraintreeGateway({
-        environment: braintree.Environment.Sandbox,
-        // Use your own credentials from the sandbox Control Panel here
-        merchantId: 'vjv27yn66fsvnpnm',
-        publicKey: '4ptc6ftc54hzdfcy',
-        privateKey: '2a7a374115893d9dcae4e77314d65272'
-    });
-
-    // Use the payment method nonce here
-    const nonceFromTheClient = req.body.paymentMethodNonce;
-    console.log(nonceFromTheClient);
-  
-    // Create a new transaction for $10
-    const newTransaction = gateway.transaction.sale({
-        amount: '10.00',
-        paymentMethodNonce: nonceFromTheClient,
-        options: {
-            // This option requests the funds from the transaction
-            // once it has been authorized successfully
-            submitForSettlement: true
-        }
-    }, (error, result) => {
-        if (result) {
-            res.send(result);
-        } else {
-            console.log(error);
-            res.status(500).send(error);
-        }
-    });
-});
-
-
-
-
-
-
-
-/*    Description: Called when payment is successful */   
-router.get("/success", (req, res) => {
-    (async function () {
-        var messages = req.flash('info');
-
-        var successOrder = new Order({
-            user: req.session.order.user,
-            orderNumber: req.session.order.orderNumber,
-            firstName: req.session.order.firstName,
-            lastName: req.session.order.lastName,
-            phone: req.session.order.phone,
-            email: req.session.order.email,
-            cart: req.session.cart,
-            billingAddress: req.session.order.billingAddress,
-            shippingAddress: req.session.order.shippingAddress,
-            giftMessage: req.session.order.giftMessage
-        });
-        
-        successOrder.save();
-        delete req.session.cart;
-        delete req.session.order;
-
-        res.render('cart/success', {
-            title: 'Baja La Bruja - Order Successful',
-            messages: messages,
-            hasMessages: messages.length > 0,
-            orderNumber: successOrder.orderNumber,
-        });
-    });
-});
-
-
-
-//---------------- HELPER FUNCTIONS ----------------------
-
-function orderNumberGenerator() {
-    let now = Date.now().toString() // '1492341545873'
-    // pad with extra random digit
-    now += now + Math.floor(Math.random() * 10)
-    // format
-    return  [now.slice(0, 4), now.slice(4, 10), now.slice(10, 14)].join('-')
-}
-
-
-
+//---------------- EMAIL FUNCTIONS ----------------------
 function SendEmail(order, cart) {
     (async function () { 
         if(order == undefined) throw new Error('There is no order here');
@@ -284,7 +216,6 @@ function SendEmail(order, cart) {
         var defaultClient = SibApiV3Sdk.ApiClient.instance;
         var apiKey = defaultClient.authentications["api-key"];
         apiKey.apiKey = process.env.SENDINBLUE_SMTP_KEY;
-        console.log("Email Key: " + apiKey.apiKey);
 
         var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
         var sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail(); // SendSmtpEmail | Values to send a transactional email
@@ -324,7 +255,7 @@ function EmailBody(order, cart) {
         var image = `<img src="https://baja.a2hosted.com/images/products/${item.item.productThumbs[0]}" style="max-height:50px" />`;
         var name = `<span>${item.item.productName}</span><br>`;
         var price = `<span>$${item.item.price}</span>`;        
-        var line = `<tr><td vertical-align:top">Price: ${image}</td><td style="margin-left:5px;vertical-align:top"> ${name} ${price}</td></li>`
+        var line = `<td vertical-align:top">${image}</td><td style="margin-left:5px;vertical-align:top"> ${name} ${price}</td>`
         items += line;
     });
 
@@ -395,11 +326,13 @@ function EmailBody(order, cart) {
                                 <td style="margin-top:1rem;padding:1rem; background-color: #F2F2F3; color: #000; vertical-align: top;">
                                     <table>
                                         <tr>
-                                            <td>
+                                            <td colspan="2">
                                                 <div style="color: #000;font-size:larger;vertical-align: top;">Item(s): </div>
                                             </td>
                                         </tr>
+                                        <tr>
                                         ${items}
+                                        </tr>
                                     </table>
                                 </td>
                                 <td style="margin-top:1rem;padding:1rem; background-color: #F2F2F3; color: #000;vertical-align: top;">
