@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var dollarsToCents = require('dollars-to-cents');
+
 const { Client, Environment, ApiError } = require('square');
 
 // micro provides http helpers
@@ -28,20 +30,28 @@ var csrf = require('csurf');
 var csrfProtection = csrf();
 // router.use(csrfProtection);
 
-/*    Description: Square Payment     */
-router.get('/pay', async (req, res, next) => {
-    var messages = req.flash('info');
-    let locations = await getLocations();
+/*    Description: Route for successful card pay     */
+router.post('/pay', async (req, res, next) => {
+  var messages = req.flash('info');
+  var order = req.session.order;
+  if(order == undefined) { throw new Error("Order is Missing"); }
 
-    res.render('cart/pay', {
-        title: 'Baja La Bruja - Pay for Items and Checkout',
-        messages: messages,
-        hasMessages: messages.length > 0
-    });
+  res.render('cart/pay', {
+      title: 'Baja La Bruja - Pay for Items and Checkout',
+      messages: messages,
+      hasMessages: messages.length > 0,
+      viewable: (order != undefined)
+  });
 });
 
+/*    Description: Credit Card Processing             */
 router.post('/payment', async(req, res) => {
+  // let locations = await getLocations();  //not used but dont delete, quick way to get location info from square
   try {
+    console.log(req.body.sourceId);
+    var order = req.session.order;
+    if(order == undefined) { throw new Error("Order is Missing"); }
+    var finalPrice = dollarsToCents(order.finalPrice);
     const idempotencyKey = nanoid();
     const payment = {
       idempotencyKey,
@@ -54,7 +64,7 @@ router.post('/payment', async(req, res) => {
       // See Orders documentation: https://developer.squareup.com/docs/orders-api/what-it-does
       amountMoney: {
         // the expected amount is in cents, meaning this is $1.00.
-        amount: '100',
+        amount: BigInt(finalPrice),
         // If you are a non-US account, you must change the currency to match the country in which
         // you are accepting the payment.
         currency: 'AUD',
@@ -79,30 +89,44 @@ router.post('/payment', async(req, res) => {
   }
 })
 
-/*    Description: Square Payment   */
-router.post('/payment1', async (req, res, next) => {
-  console.log("createPayment2 /payment going to async");
+/*    Description: Route for successful card pay     */
+router.get('/success', async (req, res, next) => {
+  var messages = req.flash('info');
+  var order = req.session.order;
+    if(order == undefined) { throw new Error("Order is Missing"); }
 
+  //   var successOrder = new Order({
+  //     user: req.session.order.user,
+  //     orderNumber: req.session.order.orderNumber,
+  //     firstName: req.session.order.firstName,
+  //     lastName: req.session.order.lastName,
+  //     phone: req.session.order.phone,
+  //     email: req.session.order.email,
+  //     cart: req.session.cart,
+  //     billingAddress: req.session.order.billingAddress,
+  //     shippingAddress: req.session.order.shippingAddress,
+  //     giftMessage: req.session.order.giftMessage
+  // });
+  
+  // successOrder.save();
 
-    const appId = 'sandbox-sq0idb-i20LMvpR3vpW8yTtZPb_LQ';
-    const locationId = 'LHVG8FJDDEFK7';
+  // SendEmail();
+  
+  delete req.session.cart;
+  delete req.session.order;
 
-    await createPayment(req, res);
-
-
-    // const payments = Square.payments(appId, locationId);
-    
-    // let locations = await getLocations();
-
-    // res.render('cart/square', {
-    //     title: 'Baja La Bruja - Paypal Braintree',
-    //     messages: messages,
-    //     hasMessages: messages.length > 0
-    // });
+  res.render('cart/success', {
+      title: 'Baja La Bruja - Pay for Items and Checkout',
+      messages: messages,
+      hasMessages: messages.length > 0,
+      orderNumber: order.orderNumber,
+      viewable: (order != undefined),
+  });
 });
 
-module.exports = router;
 
+
+module.exports = router;
 
 //---------------- HELPER FUNCTIONS ----------------------
 async function getLocations() {
@@ -132,80 +156,3 @@ async function getLocations() {
       }
     }
   };
-
-async function createPayment(req, res) {
-  
-  console.log("PAYLOAD");
-
-  const payload = req.body;
-
-  // const payload = await json(req);
-  console.log("PAYLOAD : " + payload);
-  // logger.debug(JSON.stringify(payload));
-  // We validate the payload for specific fields. You may disable this feature
-  // if you would prefer to handle payload validation on your own.
-  // if (!validatePaymentPayload(payload)) {
-  //   throw createError(400, 'Bad Request');
-  // }
-  await retry(async (bail, attempt) => {
-    try {
-      // logger.debug('Creating payment', { attempt });
-
-      const idempotencyKey = payload.idempotencyKey || nanoid();
-      const payment = {
-        idempotencyKey,
-        locationId: payload.locationId,
-        sourceId: payload.sourceId,
-        // While it's tempting to pass this data from the client
-        // Doing so allows bad actor to modify these values
-        // Instead, leverage Orders to create an order on the server
-        // and pass the Order ID to createPayment rather than raw amounts
-        // See Orders documentation: https://developer.squareup.com/docs/orders-api/what-it-does
-        amountMoney: {
-          // the expected amount is in cents, meaning this is $1.00.
-          amount: '100',
-          // If you are a non-US account, you must change the currency to match the country in which
-          // you are accepting the payment.
-          currency: 'AUD',
-        },
-      };
-
-      if (payload.customerId) {
-        payment.customerId = payload.customerId;
-      }
-
-      // VerificationDetails is part of Secure Card Authentication.
-      // This part of the payload is highly recommended (and required for some countries)
-      // for 'unauthenticated' payment methods like Cards.
-      // if (payload.verificationToken) {
-      //   payment.verificationToken = payload.verificationToken;
-      // }
-
-      const { result, statusCode } = await client.paymentsApi.createPayment(
-        payment
-      );
-
-      // logger.info('Payment succeeded!', { result, statusCode });
-
-      send(res, statusCode, {
-        success: true,
-        payment: {
-          id: result.payment.id,
-          status: result.payment.status,
-          receiptUrl: result.payment.receiptUrl,
-          orderId: result.payment.orderId,
-        },
-      });
-    } catch (ex) {
-      if (ex instanceof ApiError) {
-        // likely an error in the request. don't retry
-        logger.error(ex.errors);
-        bail(ex);
-      } else {
-        // IDEA: send to error reporting service
-        logger.error(`Error creating payment on attempt ${attempt}: ${ex}`);
-        throw ex; // to attempt retry
-      }
-    }
-  });
-}
