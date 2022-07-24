@@ -8,8 +8,7 @@ const {deserializeUser} = require('passport');
 // router.use(csrfProtection);
 
 
-/*    Description: View for HOME page.
-      Method: GET                     */
+/* View for HOME page.                           */
 router.get('/', function (req, res, next) {
     var messages = req.flash('info');
     res.render('site/index', {
@@ -19,8 +18,7 @@ router.get('/', function (req, res, next) {
     });
 });
 
-/*    Description: View for La Bruja page.
-      Method: GET                     */
+/* View for La Bruja page.                      */
 router.get('/labruja', function (req, res, next) {
     var messages = req.flash('info');
     res.render('site/labruja', {
@@ -30,8 +28,7 @@ router.get('/labruja', function (req, res, next) {
     });
 });
 
-/*    Description: View for lifestyle page.
-      Method: GET                     */
+/* View for F#ck fast fashion page.             */
 router.get('/fff', function (req, res, next) {
     var messages = req.flash('info');
     res.render('site/fff', {
@@ -41,8 +38,7 @@ router.get('/fff', function (req, res, next) {
     });
 });
 
-/*    Description: View for mixed media page.
-      Method: GET                     */
+/* View for Mixed Media page                     */
 router.get('/mixedmedia', function (req, res, next) {
     var messages = req.flash('info');
     res.render('site/mixedmedia', {
@@ -53,8 +49,7 @@ router.get('/mixedmedia', function (req, res, next) {
 });
 
 
-/*    Description: View for Contact page.
-      Method: GET                     */
+/* View for Contact page                        */
 router.get('/contacts', function (req, res, next) {
     var messages = req.flash('info');
     res.render('site/contacts', {

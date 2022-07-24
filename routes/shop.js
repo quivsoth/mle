@@ -1,27 +1,14 @@
 var express = require("express");
 var router = express.Router();
 var Cart = require('../models/cart');
-// var Clothing = require("../models/collection");
-var Collection = require("../models/collection");
-const mongoose = require('mongoose');
-const {MongoClient} = require('mongodb');
-const uri = process.env.MONGO_DB;
-const _ = require('lodash');
 
+const db = require("./database");
 
-/*    Description: View for Viedo page.
-      Method: GET                     */
-router.get('/video', function (req, res, next) {
-    var messages = req.flash('info');
-    res.render('site/video', {title: 'Baja La Bruja - Fighting Fast Fashion'});
-});
-
-/*    Description: View for Collections page.
-      Method: GET                     */
+/* Collections Page.                                    */
 router.get('/collections', function (req, res, next) {
     (async function () {
         var messages = req.flash('info');
-        const collections = await getCollections();
+        const collections = await db.getCollections();
         var productChunks = [];
         var chunkSize = 5;
         for (let i = 0; i < collections.length; i += chunkSize) {
@@ -36,13 +23,13 @@ router.get('/collections', function (req, res, next) {
     })();
 });
 
-/*      Description: Products in Collection page.
-            Method: GET                    */
-router.get('/products', function (req, res, next) {
+/* Products in Collection page.                         */        
+router.get('/products/:collection', function (req, res, next) {
     (async function () {
         var messages = req.flash('info');
-        let collectionId = req.query.collectionId;
-        const products = await getProducts(collectionId);
+        //let collectionId = req.query.collectionId;
+        let collectionId = req.params.collection;
+        const products = await db.getProducts(collectionId);
 
         var activeProducts = [];
         for (let i = 0; i < products.products.length; i++) {
@@ -66,19 +53,19 @@ router.get('/products', function (req, res, next) {
     })();
 });
 
-/*      Description: Item/Product Detail View.
-            Method: GET                     */
-router.get('/item', function (req, res, next) {
+/* Item/Product Detail View.                            */
+router.get('/item/:collection/:item', function (req, res, next) {
     (async function () {
         var messages = req.flash('info');
-        let itemId = req.query.itemId;
-        let collectionId = req.query.collectionId;
+        let collectionId = req.params.collection;
+        let itemId = req.params.item;
+ 
         let inCart = false;
         if (req.session.hasOwnProperty('cart') && req.session.cart.items[itemId]) {
             inCart = true;
         }
         // if(req.session.cart.items[itemId]) inCart = true;
-        const item = await getItem(itemId, collectionId);
+        const item = await db.getItem(itemId, collectionId);
         res.render('shop/item', {
             title: 'Baja La Bruja - Items',
             item: item.item,
@@ -91,47 +78,43 @@ router.get('/item', function (req, res, next) {
     })();
 });
 
-/*      Description: Item/Product Detail View.
-            Method: GET                     */
-router.get('/item_admin', function (req, res, next) {
+/* Update item in collection                            */
+router.put('/updateProduct/:collection/:item', function (req, res) {
     (async function () {
-        var messages = req.flash('info');
-        let itemId = req.query.itemId;
-        let collectionId = req.query.collectionId;
-        let inCart = false;
-        if (req.session.hasOwnProperty('cart') && req.session.cart.items[itemId]) {
-            inCart = true;
-        }
-        const item = await getItem(itemId, collectionId);
-        var messages = req.flash('info');
-        res.render('shop/item_admin', {
-            title: 'Baja La Bruja - Items',
-            item: item.item,
-            collectionId: collectionId,
-            collectionName: item.collectioName,
-            inCart: inCart,
-            messages: messages,
-            hasMessages: messages.length > 0
-        });
+        console.log("Update Product");
+        let itemId = parseInt(req.params.item);
+        let collectionId = parseInt(req.params.collection);
+        await db.updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size, req.body.measurements, req.body.parcel, req.body.isActive);
+        req.flash('info', 'Item # ' + itemId + 'has been updated');
+        res.redirect('/item_admin/' + collectionId + '/' + itemId);
     })();
 });
 
-/*      Description: Add item to Shopping Cart.
-            Method: GET                            */
-router.get('/addCart', function (req, res, next) {
+/* Add item to Shopping Cart.                           */ 
+router.get('/addCart/:collection/:item', function (req, res, next) {
     (async function () {
-        let productId = req.query.productId;
-        let collectionId = req.query.collectionId;
+        let productId = parseInt(req.params.item);
+        let collectionId = parseInt(req.params.collection);
         var cart = new Cart(req.session.cart ? req.session.cart : {});
-        const item = await getItem(productId, collectionId);
+        const item = await db.getItem(productId, collectionId);
         cart.add(item.item, item.item.productId);
         req.session.cart = cart;
-        res.redirect('/item?itemId=' + productId + "&collectionId=" + collectionId);
+        res.redirect('/item/' + collectionId + '/' + productId);
     })();
 });
 
-/*      Description: View Shopping Cart.
-            Method: GET                           */
+/* Delete item in Shopping Cart                         */
+router.get('/deleteCart/:item', function (req, res, next) {
+    (async function () {
+        let productId = req.params.item;
+        var cart = new Cart(req.session.cart);
+        cart.delete(productId);
+        req.session.cart = cart;
+        res.redirect('/shopping-cart',);
+    })();
+});
+
+/* View Shopping Cart                                   */
 router.get('/shopping-cart', function (req, res, next) {
     (async function () {
         var messages = req.flash('info');
@@ -149,8 +132,7 @@ router.get('/shopping-cart', function (req, res, next) {
     })();
 });
 
-/*      Description: Checkout of Shopping Cart.
-            Method: GET                           */
+/* Checkout of Shopping Cart                             */
 router.get('/checkout', function (req, res, next) {
     (async function () {
         if (! req.session.cart) {
@@ -167,6 +149,22 @@ router.get('/checkout', function (req, res, next) {
     })();
 });
 
+/* View for Video page                                   */
+router.get('/video', function (req, res, next) {
+    var messages = req.flash('info');
+    res.render('site/video', {title: 'Baja La Bruja - Fighting Fast Fashion'});
+});
+
+//--------------------------------------------------------
+/* Item Page       TODO FIX THIS                         */
+// router.get('/getItem', function (req, res, next) {
+//     (async function () {
+//         let itemId = req.query.itemId;
+//         let collectionId = req.query.collectionId;
+//         const item = await db.getItem(itemId, collectionId);
+//         res.json(item);
+//     })();
+// });
 
 // /*      Description: Update item in collection
 //         Method: PUT                           */
@@ -181,154 +179,33 @@ router.get('/checkout', function (req, res, next) {
 //     })();
 // });
 
-/*      Description: Delete Thumb in collection
-        Method: PUT                           */
-router.get('/deleteThumb/:collection/:productId/:thumb', async (req, res)=> {
-    (async function () {
+/*  TODO    Description: Delete Thumb in collection         */
+// router.get('/deleteThumb/:collection/:productId/:thumb', async (req, res)=> {
+//     (async function () {
 
-        let collectionId = req.params.collection;
-        let productId = req.params.productId;
-        let thumb = req.params.thumb;
+//         let collectionId = req.params.collection;
+//         let productId = req.params.productId;
+//         let thumb = req.params.thumb;
 
-        await deleteThumb(productId, collectionId, thumb);
-        // req.flash('info', 'Item # ' + itemId + 'has been updated');
-        // res.redirect('/item_admin?itemId=' + itemId + "&collectionId=" + collectionId);
-        //res.send("Push");
-    })();
-});
+//         await db.deleteThumb(productId, collectionId, thumb);
+//         // req.flash('info', 'Item # ' + itemId + 'has been updated');
+//         // res.redirect('/item_admin?itemId=' + itemId + "&collectionId=" + collectionId);
+//         //res.send("Push");
+//     })();
+// });
 
-/*    Description: View for lifestyle page.
-      Method: GET                     */
-      router.get('/apitester', function (req, res, next) {
-        (async function () {
-            let itemId = 21534;
-            let collectionId = 5;
-            // if(req.session.cart.items[itemId]) inCart = true;
-            var result = await getItem2(itemId, collectionId);
+/*    Description: View for lifestyle page.         */
+// router.get('/getItem2tester', function (req, res, next) {
+//     (async function () {
+//         let itemId = 21534;
+//         let collectionId = 5;
+//         // if(req.session.cart.items[itemId]) inCart = true;
+//         var result = await getItem2(itemId, collectionId);
 
-            //todo render json
-            //res.render()
+//         //todo render json
+//         //res.render()
 
-        })();
-    });
-
+//     })();
+// });
 
 module.exports = router;
-
-// -*-*-*-*-*-*-*-*-*-*-*-*-* DB FUNCTIONS -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
-
-async function getCollections() {
-    const client = new MongoClient(uri, {useUnifiedTopology: true});
-    try {
-        await client.connect();
-        const cursor = client.db("shop").collection("bruja").find({active: true}).sort({collectionId: 1});
-        const results = await cursor.toArray();
-        return results;
-    } catch (e) {
-        console.error(e);
-    } finally {
-        await client.close();
-    }
-}
-
-async function getProducts(collectionId) {
-    const client = new MongoClient(uri, {useUnifiedTopology: true});
-    try {
-        await client.connect();
-        const cursor = await client.db("shop").collection("bruja").findOne({collectionId: Number(collectionId), active: true});
-        return cursor;
-    } catch (e) {
-        console.error(e);
-    } finally {
-        await client.close();
-    }
-}
-
-async function getItem(productId, collectionId) {
-    const client = new MongoClient(uri, {useUnifiedTopology: true});
-    try {
-        await client.connect();
-        var result = {};
-        const cursor = await client.db("shop").collection("bruja").findOne({"collectionId": parseInt(collectionId)});
-        result.collectioName = cursor.collectionName;
-        let item = cursor.products.find(product => product.productId == productId);
-        result.item = item;
-        return result;
-    } catch (e) {
-        console.error(e);
-    } finally {
-        await client.close();
-    }
-}
-
-// TEMP FUNCTION THIS IS USING MONGOOSE _ THIS WILL REPLACE IT ALL
-async function getItem2(productId, collectionId) {
-    var query = { collectionId: collectionId };
-    var p;
-    Collection.findOne(query, function (err, result) {
-        if (err) {
-            console.log(err);
-        }
-        p = result.products.filter(function (item) {
-            return item.productId === productId;
-        }).pop();
-    });
-    return p;
-}
-
-// async function updateItem(productId, collectionId, productName, description, price, size, measurements) {
-    
-//     console.log("----------------updateItem");
-
-//     var query = {
-//         collectionId: collectionId
-//     };
-//     Collection.findOne(query, function (err, result) {
-//         if (err) {
-//             console.log(err);
-//         }
-//         var p = result.products.filter(function (item) {
-//             return item.productId === productId;
-//         }).pop();
-//         console.log(p);
-//         p.productName = productName;
-//         p.description = description;
-//         p.price = price;
-//         p.size = size;
-//         p.measurements = measurements;
-//         result.save();
-//     });
-// }
-
-async function deleteThumb(productId, collectionId, thumb) {
-    var query = { collectionId: collectionId, "products.productId": productId };
-
-    console.log("collectionId : " + collectionId);
-    console.log("productId : " + productId);
-    console.log("thumb : " + thumb);
-
-    Collection.findOne(query, function (err, result) {
-        if (err) { console.log(err); }
-        console.log(result);
-    });
-
-    /*
-    Clothing.findOne(query, (err, result) => {
-        if (err) { console.log(err); }
-        // console.log(result);
-        
-    //    const items = category.products; //the array of items
-    // console.log(items); //gives an array back
-        const item = _.find(result, { productId: productId });
-        console.log(item); //gives the value of 'undefined' for whatever reason
-
-    //     var g;
-    //     console.log(category);
-    //    var p = category.products.filter(function (item) {
-    //         return item.productId === productId;
-    //     }).pop();
-
-    //     console.log(p);
-    });
-    */
-}

@@ -12,12 +12,12 @@
             <ul class="list-group" >
                 {{#each products  }}
                 <li class="list-group-item" style="border: 1px solid lightgrey;margin-top:0.2rem">
-                    <img style="max-height: 6rem;border-radius:6rem" src="images/products/{{this.item.productThumbs.[1]}}" />
+                    <img style="max-height: 6rem;border-radius:6rem" src="/images/products/{{this.item.productThumbs.[1]}}" />
                     {{this.item.productName}}
 
                     <div style="float:right;margin-top:2rem;">
                         <span  class="badge bg-primary">${{this.item.price}}</span>
-                        <a title="Remove From Bag" class="btn btn-close" href="/deleteCart?productId={{this.item.productId}}" style="background-color: red;" role="button"></a>
+                        <a title="Remove From Bag" class="btn btn-close" href="/deleteCart/{{this.item.productId}}" style="background-color: red;" role="button"></a>
                     </div>
                     {{!-- to do remove --}}
                 </li>

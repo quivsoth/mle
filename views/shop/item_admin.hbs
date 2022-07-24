@@ -22,7 +22,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
     <li class="breadcrumb-item"><a href="/collections">Collections</a></li>
-    <li class="breadcrumb-item"><a href="/products?collectionId={{collectionId}}">{{collectionName}}</a></li>
+    <li class="breadcrumb-item"><a href="/products/{{collectionId}}">{{collectionName}}</a></li>
     <li class="breadcrumb-item active" aria-current="page">{{ item.productName }}</li>
   </ol>
 </nav>
@@ -34,7 +34,7 @@
       <div class="splide__track">
         <ul class="splide__list">
           {{#each item.productThumbs}}
-            <li class="splide__slide"><img class="img-responsive img-fluid" src="images/products/{{this}}"></li>
+            <li class="splide__slide"><img class="img-responsive img-fluid" src="/images/products/{{this}}"></li>
           {{/each}}
         </ul>
       </div>
@@ -150,7 +150,7 @@
       <!-- BUTTON -->
       <div>
         <button class="btn btn-light" type="submit">Save Changes</button>
-        <a class="btn btn-light" href="/item?itemId={{item.productId}}&collectionId={{collectionId}}">Return to Item</a>
+        <a class="btn btn-light" href="/item/{{collectionId}}/{{item.productId}}">Return to Item</a>
       </div>
     </form>
   </div>

@@ -1,12 +1,7 @@
 var express = require("express");
 var router = express.Router();
-const mongoose = require('mongoose');
 
-const https = require('https');
-const request = require('request');
-
-/*    Description: Shipping Home Page
-      Method: GET                     */
+/* Shipping Home Page                           */
 router.get('/shipping', function (req, res, next) {
     var messages = req.flash('info');
     res.render('site/shipping', {
@@ -16,8 +11,7 @@ router.get('/shipping', function (req, res, next) {
     });
 });
 
-/*    Description: Shipping Calculator
-              Method: GET                     */
+/* Shipping Calculator                         */
 router.get('/calculator', function (req, res, next) {
     (async function () {
 

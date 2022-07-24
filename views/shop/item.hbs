@@ -22,7 +22,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
     <li class="breadcrumb-item"><a href="/collections">Collections</a></li>
-    <li class="breadcrumb-item"><a href="/products?collectionId={{collectionId}}">{{collectionName}}</a></li>
+    <li class="breadcrumb-item"><a href="/products/{{collectionId}}">{{collectionName}}</a></li>
     <li class="breadcrumb-item active" aria-current="page">{{ item.productName }}</li>
   </ol>
 </nav>
@@ -36,7 +36,7 @@
         <div class="splide__track">
           <ul class="splide__list full-width">
             {{#each item.productThumbs}}
-              <li class="full-width splide__slide"><img class="img-responsive img-fluid" src="images/products/{{this}}" ></li>
+              <li class="full-width splide__slide"><img class="img-responsive img-fluid" src="/images/products/{{this}}" ></li>
             {{/each}}
           </ul>
         </div>
@@ -52,7 +52,7 @@
       <div>
         <h1>{{ item.productName }}</h1>
         {{# unless login }}
-          <a href="/item_admin?itemId={{item.productId}}&collectionId={{collectionId}}" style="padding-right:2rem;">[Edit]</a>
+          <a href="/item_admin/{{collectionId}}/{{item.productId}}" style="padding-right:2rem;">[Edit]</a>
         {{/unless}}
       </div>
       <p>{{ item.description }}</p>
@@ -63,7 +63,7 @@
 
       <hr class="text-light">
       {{# unless inCart }}
-        <a class="btn btn-light" href="/addCart?productId={{item.productId}}&collectionId={{collectionId}}">Add to cart</a>
+        <a class="btn btn-light" href="/addCart/{{collectionId}}/{{item.productId}}">Add to cart</a>
       {{/unless}}
       {{# if inCart }}
         <h4 class="text-light"><span class="">{{ item.productName }} is in your cart.</span></h4>

@@ -3,14 +3,14 @@
     "$oid": "60de563056ba9ce1253bf9c4"
   },
   "collectionId": 1,
+  "sortOrder": 1,
   "collectionName": "Intimates",
   "image": "intimates.png",
   "description": "description....",
-  "active": false,
+  "active": true,
   "products": [
     {
       "productThumbs": [
-        "intimates/IMG_1553.PNG",
         "intimates/IMG_1569.PNG",
         "intimates/IMG_1554.PNG",
         "intimates/IMG_1556.PNG",
@@ -22,8 +22,8 @@
       "description": "description from postman 20 sep, revision 10.3",
       "price": 55,
       "size": 2,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -38,8 +38,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -47,16 +47,15 @@
         "intimates/IMG_1441.PNG",
         "intimates/IMG_1431.PNG",
         "intimates/IMG_1436.PNG",
-        "intimates/IMG_1437.PNG",
-        "intimates/IMG_1429.PNG"
+        "intimates/IMG_1437.PNG"
       ],
       "productId": 25130,
       "productName": "Intimates #3",
       "description": "Description",
       "price": 111,
       "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -64,16 +63,15 @@
         "intimates/IMG_1502.PNG",
         "intimates/IMG_1503.PNG",
         "intimates/IMG_1495.PNG",
-        "intimates/IMG_1499.PNG",
-        "intimates/IMG_1496.PNG"
+        "intimates/IMG_1499.PNG"
       ],
       "productId": 34906,
       "productName": "Intimates #4",
       "description": "Description",
       "price": 111,
       "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -89,8 +87,8 @@
       "description": "Description",
       "price": 111,
       "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -105,8 +103,8 @@
       "description": "tudors99",
       "price": 111,
       "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -122,8 +120,8 @@
       "description": "descr.",
       "price": 111,
       "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     }
   ],
@@ -133,6 +131,7 @@
     "$oid": "60de563056ba9ce1253bf9c5"
   },
   "collectionId": 5,
+  "sortOrder": 6,
   "collectionName": "She's got Knits",
   "image": "shes_got_knits.png",
   "description": "collection description",
@@ -140,24 +139,69 @@
   "products": [
     {
       "productThumbs": [
-        "shes_got_knits/IMG_4563.PNG",
-        "shes_got_knits/IMG_4562.PNG",
-        "shes_got_knits/IMG_4561.PNG",
-        "shes_got_knits/IMG_4559.PNG",
-        "shes_got_knits/IMG_4565.PNG",
-        "shes_got_knits/IMG_4564.PNG",
-        "shes_got_knits/IMG_4558.PNG",
-        "shes_got_knits/IMG_4566.PNG",
-        "shes_got_knits/IMG_4567.PNG",
-        "shes_got_knits/IMG_4568.PNG"
+        "shes_got_knits/IMG_3284.png",
+        "shes_got_knits/IMG_3285.png",
+        "shes_got_knits/IMG_3278.png",
+        "shes_got_knits/IMG_3279.png",
+        "shes_got_knits/IMG_3286.png",
+        "shes_got_knits/IMG_3296.png",
+        "shes_got_knits/IMG_3282.png",
+        "shes_got_knits/IMG_3283.png",
+        "shes_got_knits/IMG_3297.png",
+        "shes_got_knits/IMG_3281.png",
+        "shes_got_knits/IMG_3295.png",
+        "shes_got_knits/IMG_3294.png",
+        "shes_got_knits/IMG_3280.png",
+        "shes_got_knits/IMG_3299.png",
+        "shes_got_knits/IMG_3298.png"
       ],
-      "productId": 21534,
-      "productName": "She's got knits #1",
-      "description": "tudors99",
-      "price": 45,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productId": 3972,
+      "productName": " ’La Donna’  ",
+      "description": "- Stunning ivory, short sleeve, 80s mesh knit with drawstring waistband and three buttons at the back.\r\nAcrylic. \r\nMade in Hong Kong \r\n",
+      "price": 65,
+      "size": "Sz S-M ",
+      "measurements": "S 46 B 48 W 38 ",
+      "ausPostParcel": "S",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "shes_got_knits/IMG_4655.PNG",
+        "shes_got_knits/IMG_4653.PNG",
+        "shes_got_knits/IMG_4652.PNG",
+        "shes_got_knits/IMG_4650.PNG"
+      ],
+      "productId": 3981,
+      "productName": "‘Eve Jaqueline’",
+      "description": "- Gorgeous ivory knit cardi, featuring red and black love heart flowers, ribbed cuffs and waistband with double buttons. \r\nPolyester/Cotton. \r\nMade in Australia ",
+      "price": 65,
+      "size": "M",
+      "measurements": "S 50 B 60 W 34 (stretch) ",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "shes_got_knits/IMG_3409.png",
+        "shes_got_knits/IMG_3408.png",
+        "shes_got_knits/IMG_3416.png",
+        "shes_got_knits/IMG_3414.png",
+        "shes_got_knits/IMG_3415.png",
+        "shes_got_knits/IMG_3405.png",
+        "shes_got_knits/IMG_3411.png",
+        "shes_got_knits/IMG_3404.png",
+        "shes_got_knits/IMG_3412.png",
+        "shes_got_knits/IMG_3406.png",
+        "shes_got_knits/IMG_3407.png",
+        "shes_got_knits/IMG_3413.png"
+      ],
+      "productId": 62166,
+      "productName": "She's got knits #3",
+      "description": "Description",
+      "price": 111,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -184,34 +228,166 @@
       "productId": 80537,
       "productName": "She's got knits #2",
       "description": "Description",
-      "price": 120,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "price": 80,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
       "productThumbs": [
-        "shes_got_knits/IMG_3409.png",
-        "shes_got_knits/IMG_3408.png",
-        "shes_got_knits/IMG_3416.png",
-        "shes_got_knits/IMG_3414.png",
-        "shes_got_knits/IMG_3415.png",
-        "shes_got_knits/IMG_3405.png",
-        "shes_got_knits/IMG_3411.png",
-        "shes_got_knits/IMG_3404.png",
-        "shes_got_knits/IMG_3412.png",
-        "shes_got_knits/IMG_3406.png",
-        "shes_got_knits/IMG_3407.png",
-        "shes_got_knits/IMG_3413.png"
+        "shes_got_knits/IMG_3318.png",
+        "shes_got_knits/IMG_3324.png",
+        "shes_got_knits/IMG_3321.png",
+        "shes_got_knits/IMG_3322.png",
+        "shes_got_knits/IMG_3323.png",
+        "shes_got_knits/IMG_3312.png",
+        "shes_got_knits/IMG_3313.png",
+        "shes_got_knits/IMG_3311.png",
+        "shes_got_knits/IMG_3310.png"
       ],
-      "productId": 62166,
-      "productName": "She's got knits #3",
+      "productId": 54770,
+      "productName": "She's got knits #9",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "shes_got_knits/IMG_8228.PNG",
+        "shes_got_knits/IMG_8224.PNG",
+        "shes_got_knits/IMG_8227.PNG",
+        "shes_got_knits/IMG_8233.PNG",
+        "shes_got_knits/IMG_8232.PNG",
+        "shes_got_knits/IMG_8235.PNG",
+        "shes_got_knits/IMG_8234.PNG"
+      ],
+      "productId": 51697,
+      "productName": "She's got knits #12",
+      "description": "Description",
+      "price": 111,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "shes_got_knits/IMG_4563.PNG",
+        "shes_got_knits/IMG_4562.PNG",
+        "shes_got_knits/IMG_4561.PNG",
+        "shes_got_knits/IMG_4559.PNG",
+        "shes_got_knits/IMG_4565.PNG",
+        "shes_got_knits/IMG_4564.PNG",
+        "shes_got_knits/IMG_4558.PNG",
+        "shes_got_knits/IMG_4566.PNG",
+        "shes_got_knits/IMG_4567.PNG",
+        "shes_got_knits/IMG_4568.PNG"
+      ],
+      "productId": 21534,
+      "productName": "’McGee’ ",
+      "description": "- vintage 3/4 sleeve tinsel cardi in rich marsala. Features adorable cherry red buttons.\r\nNylon on sparkle chenille. \r\nMade in Australia ",
+      "price": 45,
+      "size": "8",
+      "measurements": "To fit B 84 W 65 H 90 ",
+      "ausPostParcel": "S",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "shes_got_knits/IMG_3333.png",
+        "shes_got_knits/IMG_3327.png",
+        "shes_got_knits/IMG_3326.png",
+        "shes_got_knits/IMG_3330.png",
+        "shes_got_knits/IMG_3331.png",
+        "shes_got_knits/IMG_3325.png",
+        "shes_got_knits/IMG_3335.png",
+        "shes_got_knits/IMG_3334.png",
+        "shes_got_knits/IMG_3336.png",
+        "shes_got_knits/IMG_3337.png",
+        "shes_got_knits/IMG_3340.png",
+        "shes_got_knits/IMG_3329.png"
+      ],
+      "productId": 76783,
+      "productName": "She's got knits #8",
+      "description": "Description",
+      "price": 111,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "shes_got_knits/IMG_8212.PNG",
+        "shes_got_knits/IMG_8213.PNG",
+        "shes_got_knits/IMG_8207.PNG",
+        "shes_got_knits/IMG_8216.PNG",
+        "shes_got_knits/IMG_8214.PNG",
+        "shes_got_knits/IMG_8201.PNG",
+        "shes_got_knits/IMG_8221.PNG",
+        "shes_got_knits/IMG_8220.PNG"
+      ],
+      "productId": 56654,
+      "productName": "She's got knits #10",
+      "description": "Description",
+      "price": 111,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "shes_got_knits/IMG_8239.PNG",
+        "shes_got_knits/IMG_8238.PNG",
+        "shes_got_knits/IMG_8244.PNG",
+        "shes_got_knits/IMG_8245.PNG",
+        "shes_got_knits/IMG_8240.PNG",
+        "shes_got_knits/IMG_8242.PNG",
+        "shes_got_knits/IMG_8243.PNG"
+      ],
+      "productId": 95509,
+      "productName": "She's got knits #14",
+      "description": "Description",
+      "price": 111,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "shes_got_knits/IMG_3350.png",
+        "shes_got_knits/IMG_3345.png",
+        "shes_got_knits/IMG_3347.png",
+        "shes_got_knits/IMG_3352.png",
+        "shes_got_knits/IMG_3346.png",
+        "shes_got_knits/IMG_3356.png",
+        "shes_got_knits/IMG_3357.png",
+        "shes_got_knits/IMG_3343.png",
+        "shes_got_knits/IMG_3355.png",
+        "shes_got_knits/IMG_3354.png",
+        "shes_got_knits/IMG_3359.png",
+        "shes_got_knits/IMG_3364.png",
+        "shes_got_knits/IMG_3358.png",
+        "shes_got_knits/IMG_3363.png",
+        "shes_got_knits/IMG_3362.png",
+        "shes_got_knits/IMG_3360.png",
+        "shes_got_knits/IMG_3348.png",
+        "shes_got_knits/IMG_3349.png",
+        "shes_got_knits/IMG_3361.png"
+      ],
+      "productId": 9813,
+      "productName": "She's got knits #13",
+      "description": "Description",
+      "price": 110,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -245,291 +421,96 @@
       "productName": "She's got knits #4",
       "description": "Description",
       "price": 110,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "shes_got_knits/IMG_3284.png",
-        "shes_got_knits/IMG_3285.png",
-        "shes_got_knits/IMG_3278.png",
-        "shes_got_knits/IMG_3279.png",
-        "shes_got_knits/IMG_3286.png",
-        "shes_got_knits/IMG_3296.png",
-        "shes_got_knits/IMG_3282.png",
-        "shes_got_knits/IMG_3283.png",
-        "shes_got_knits/IMG_3297.png",
-        "shes_got_knits/IMG_3281.png",
-        "shes_got_knits/IMG_3295.png",
-        "shes_got_knits/IMG_3294.png",
-        "shes_got_knits/IMG_3280.png",
-        "shes_got_knits/IMG_3299.png",
-        "shes_got_knits/IMG_3298.png"
-      ],
-      "productId": 3972,
-      "productName": "She's got knits #5",
-      "description": "Description",
-      "price": 111,
-      "size": 3,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "shes_got_knits/IMG_4655.PNG",
-        "shes_got_knits/IMG_4653.PNG",
-        "shes_got_knits/IMG_4652.PNG",
-        "shes_got_knits/IMG_4650.PNG"
-      ],
-      "productId": 3981,
-      "productName": "She's got knits #6",
-      "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "shes_got_knits/IMG_3418.png",
-        "shes_got_knits/IMG_3419.png",
-        "shes_got_knits/IMG_3417.png"
-      ],
-      "productId": 32117,
-      "productName": "She's got knits #7",
-      "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "shes_got_knits/IMG_3333.png",
-        "shes_got_knits/IMG_3327.png",
-        "shes_got_knits/IMG_3326.png",
-        "shes_got_knits/IMG_3330.png",
-        "shes_got_knits/IMG_3331.png",
-        "shes_got_knits/IMG_3325.png",
-        "shes_got_knits/IMG_3335.png",
-        "shes_got_knits/IMG_3334.png",
-        "shes_got_knits/IMG_3336.png",
-        "shes_got_knits/IMG_3337.png",
-        "shes_got_knits/IMG_3340.png",
-        "shes_got_knits/IMG_3329.png"
-      ],
-      "productId": 76783,
-      "productName": "She's got knits #8",
-      "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "shes_got_knits/IMG_3318.png",
-        "shes_got_knits/IMG_3324.png",
-        "shes_got_knits/IMG_3321.png",
-        "shes_got_knits/IMG_3322.png",
-        "shes_got_knits/IMG_3323.png",
-        "shes_got_knits/IMG_3312.png",
-        "shes_got_knits/IMG_3313.png",
-        "shes_got_knits/IMG_3311.png",
-        "shes_got_knits/IMG_3310.png"
-      ],
-      "productId": 54770,
-      "productName": "She's got knits #9",
-      "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "shes_got_knits/IMG_8212.PNG",
-        "shes_got_knits/IMG_8213.PNG",
-        "shes_got_knits/IMG_8207.PNG",
-        "shes_got_knits/IMG_8216.PNG",
-        "shes_got_knits/IMG_8214.PNG",
-        "shes_got_knits/IMG_8201.PNG",
-        "shes_got_knits/IMG_8221.PNG",
-        "shes_got_knits/IMG_8220.PNG"
-      ],
-      "productId": 56654,
-      "productName": "She's got knits #10",
-      "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "shes_got_knits/IMG_3308.png",
-        "shes_got_knits/IMG_3306.png",
-        "shes_got_knits/IMG_3307.png",
-        "shes_got_knits/IMG_3305.png",
-        "shes_got_knits/IMG_3304.png",
-        "shes_got_knits/IMG_3300.png",
-        "shes_got_knits/IMG_3301.png",
-        "shes_got_knits/IMG_3303.png",
-        "shes_got_knits/IMG_3302.png"
-      ],
-      "productId": 3958,
-      "productName": "She's got knits #11",
-      "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "shes_got_knits/IMG_8228.PNG",
-        "shes_got_knits/IMG_8224.PNG",
-        "shes_got_knits/IMG_8227.PNG",
-        "shes_got_knits/IMG_8233.PNG",
-        "shes_got_knits/IMG_8232.PNG",
-        "shes_got_knits/IMG_8235.PNG",
-        "shes_got_knits/IMG_8234.PNG"
-      ],
-      "productId": 51697,
-      "productName": "She's got knits #12",
-      "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "shes_got_knits/IMG_3350.png",
-        "shes_got_knits/IMG_3345.png",
-        "shes_got_knits/IMG_3347.png",
-        "shes_got_knits/IMG_3352.png",
-        "shes_got_knits/IMG_3346.png",
-        "shes_got_knits/IMG_3356.png",
-        "shes_got_knits/IMG_3357.png",
-        "shes_got_knits/IMG_3343.png",
-        "shes_got_knits/IMG_3355.png",
-        "shes_got_knits/IMG_3354.png",
-        "shes_got_knits/IMG_3359.png",
-        "shes_got_knits/IMG_3364.png",
-        "shes_got_knits/IMG_3358.png",
-        "shes_got_knits/IMG_3363.png",
-        "shes_got_knits/IMG_3362.png",
-        "shes_got_knits/IMG_3360.png",
-        "shes_got_knits/IMG_3348.png",
-        "shes_got_knits/IMG_3349.png",
-        "shes_got_knits/IMG_3361.png"
-      ],
-      "productId": 9813,
-      "productName": "She's got knits #13",
-      "description": "Description",
-      "price": 110,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "shes_got_knits/IMG_8239.PNG",
-        "shes_got_knits/IMG_8238.PNG",
-        "shes_got_knits/IMG_8244.PNG",
-        "shes_got_knits/IMG_8245.PNG",
-        "shes_got_knits/IMG_8240.PNG",
-        "shes_got_knits/IMG_8242.PNG",
-        "shes_got_knits/IMG_8243.PNG"
-      ],
-      "productId": 95509,
-      "productName": "She's got knits #14",
-      "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     }
   ],
-  "__v": 10
+  "__v": 17
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9c6"
   },
   "collectionId": 3,
+  "sortOrder": 2,
   "collectionName": "Slip it Slow",
   "image": "slip_it_slow.png",
   "description": "collection description",
-  "active": false,
+  "active": true,
   "products": [
     {
-      "productId": 24394,
-      "productName": "Gown 1",
-      "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        "slip_it_slow/IMG_0176.PNG",
-        "slip_it_slow/IMG_0174.PNG",
-        "slip_it_slow/IMG_0175.PNG",
-        "slip_it_slow/IMG_0178.PNG",
-        "slip_it_slow/IMG_0179.PNG",
-        "slip_it_slow/IMG_0182.PNG"
+        "slip_it_slow/IMG_4765.PNG",
+        "slip_it_slow/IMG_4768.PNG",
+        "slip_it_slow/IMG_4762.PNG",
+        "slip_it_slow/IMG_4761.PNG",
+        "slip_it_slow/IMG_4763.PNG"
       ],
-      "price": 21,
-      "size": 6,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productId": 35840,
+      "productName": "Gown 11",
+      "description": "Product description will go here, please add a brief description",
+      "price": 102,
+      "size": "9",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 84855,
-      "productName": "Gown 2",
-      "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        "slip_it_slow/IMG_1209.PNG",
-        "slip_it_slow/IMG_1206.PNG",
-        "slip_it_slow/IMG_1210.PNG",
-        "slip_it_slow/IMG_1212.PNG",
-        "slip_it_slow/IMG_1214.PNG"
+        "slip_it_slow/IMG_4927.PNG",
+        "slip_it_slow/IMG_4925.PNG",
+        "slip_it_slow/IMG_4932.PNG",
+        "slip_it_slow/IMG_4933.PNG",
+        "slip_it_slow/IMG_4936.PNG",
+        "slip_it_slow/IMG_4937.PNG"
       ],
-      "price": 500,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productId": 36402,
+      "productName": "Gown 13",
+      "description": "Product description will go here, please add a brief description",
+      "price": 50,
+      "size": "6",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 26240,
-      "productName": "Gown 3",
-      "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        "slip_it_slow/IMG_1225.PNG",
-        "slip_it_slow/IMG_1224.PNG",
-        "slip_it_slow/IMG_1228.PNG",
-        "slip_it_slow/IMG_1232.PNG"
+        "slip_it_slow/IMG_4770.PNG",
+        "slip_it_slow/IMG_4775.PNG",
+        "slip_it_slow/IMG_4777.PNG",
+        "slip_it_slow/IMG_4733.PNG",
+        "slip_it_slow/IMG_4778.PNG"
       ],
-      "price": 26,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productId": 45537,
+      "productName": "Gown 12",
+      "description": "Product description will go here, please add a brief description",
+      "price": 100,
+      "size": "5",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 96927,
-      "productName": "Gown 4",
+      "productThumbs": [
+        "slip_it_slow/IMG_1306.PNG",
+        "slip_it_slow/IMG_1302.PNG",
+        "slip_it_slow/IMG_1305.PNG",
+        "slip_it_slow/IMG_1308.PNG",
+        "slip_it_slow/IMG_1313.PNG",
+        "slip_it_slow/IMG_1315.PNG",
+        "slip_it_slow/IMG_1317.PNG"
+      ],
+      "productId": 99669,
+      "productName": "Gown 7",
       "description": "Product description will go here, please add a brief description",
+      "price": 45,
+      "size": "7",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
       "productThumbs": [
         "slip_it_slow/IMG_1239.PNG",
         "slip_it_slow/IMG_1238.PNG",
@@ -542,16 +523,33 @@
         "slip_it_slow/IMG_1246.PNG",
         "slip_it_slow/IMG_1249.PNG"
       ],
+      "productId": 96927,
+      "productName": "Gown 4",
+      "description": "Product description will go here, please add a brief description",
       "price": 122,
-      "size": 10,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "10",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 72701,
-      "productName": "Gown 5",
+      "productThumbs": [
+        "slip_it_slow/IMG_1322.PNG",
+        "slip_it_slow/IMG_1323.PNG",
+        "slip_it_slow/IMG_1325.PNG",
+        "slip_it_slow/IMG_1332.PNG",
+        "slip_it_slow/IMG_1336.PNG"
+      ],
+      "productId": 99645,
+      "productName": "Gown 8",
       "description": "Product description will go here, please add a brief description",
+      "price": 97,
+      "size": "5",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
       "productThumbs": [
         "slip_it_slow/IMG_1264.PNG",
         "slip_it_slow/IMG_1252.PNG",
@@ -563,157 +561,99 @@
         "slip_it_slow/IMG_1284.PNG",
         "slip_it_slow/IMG_1266.PNG"
       ],
+      "productId": 72701,
+      "productName": "'LUCAS Vanity Fair' ",
+      "description": "- incredible 50s Hollywood sleep in deep cobalt blue. Featuring delicate crochet trimming. The adjustable straps fade out to aubergine. \r\nNylon.",
       "price": 120,
-      "size": 6,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "10 ",
+      "measurements": "L 90 W 36 H 42 ",
+      "ausPostParcel": "XS",
       "active": true
     },
     {
-      "productId": 84290,
-      "productName": "Gown 6",
-      "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        "slip_it_slow/IMG_1297.PNG",
-        "slip_it_slow/IMG_1286.PNG",
+        "slip_it_slow/IMG_1225.PNG",
+        "slip_it_slow/IMG_1224.PNG",
+        "slip_it_slow/IMG_1228.PNG",
+        "slip_it_slow/IMG_1232.PNG"
+      ],
+      "productId": 26240,
+      "productName": "'Lady Lyn' ",
+      "description": "- stunning white slip featuring scalloped edges and hand embroidered floral detailing. Adjustable spaghetti straps. \r\nPolyester/Viscose. ",
+      "price": 120,
+      "size": "34",
+      "measurements": "L 106 B 42 W 36 H 42 ",
+      "ausPostParcel": "S",
+      "active": true
+    },
+    {
+      "productThumbs": [
         "slip_it_slow/IMG_1296.PNG",
         "slip_it_slow/IMG_1298.PNG",
         "slip_it_slow/IMG_1300.PNG",
         "slip_it_slow/IMG_1301.PNG"
       ],
+      "productId": 84290,
+      "productName": "'LUCAS' ",
+      "description": "- romantique white cotton slip, featuring fine lace accents at neckline and hem. The Empire waist adds to the femininity of this timeless piece.\r\nCotton.\r\nMade in Australia ",
       "price": 160,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "14 ",
+      "measurements": "L 104 B 90 W 84 H 95",
+      "ausPostParcel": "XS",
       "active": true
     },
     {
-      "productId": 99669,
-      "productName": "Gown 7",
-      "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        "slip_it_slow/IMG_1306.PNG",
-        "slip_it_slow/IMG_1302.PNG",
-        "slip_it_slow/IMG_1305.PNG",
-        "slip_it_slow/IMG_1308.PNG",
-        "slip_it_slow/IMG_1313.PNG",
-        "slip_it_slow/IMG_1315.PNG",
-        "slip_it_slow/IMG_1317.PNG"
+        "slip_it_slow/IMG_1209.PNG",
+        "slip_it_slow/IMG_1206.PNG",
+        "slip_it_slow/IMG_1210.PNG",
+        "slip_it_slow/IMG_1212.PNG",
+        "slip_it_slow/IMG_1214.PNG"
       ],
-      "price": 45,
-      "size": 7,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productId": 84855,
+      "productName": "'OSTI by Berlei' ",
+      "description": "- Hollywood glamour slip in pale and dusty peach. Featuring soft stretch lace upper and elegant lace trim. ",
+      "price": 140,
+      "size": "16 (Sml)",
+      "measurements": "B 95 W 75 H 100",
+      "ausPostParcel": "S",
       "active": true
     },
     {
-      "productId": 99645,
-      "productName": "Gown 8",
-      "description": "Product description will go here, please add a brief description",
       "productThumbs": [
-        "slip_it_slow/IMG_1322.PNG",
-        "slip_it_slow/IMG_1323.PNG",
-        "slip_it_slow/IMG_1325.PNG",
-        "slip_it_slow/IMG_1332.PNG",
-        "slip_it_slow/IMG_1336.PNG"
+        "slip_it_slow/IMG_0176.PNG",
+        "slip_it_slow/IMG_0174.PNG",
+        "slip_it_slow/IMG_0175.PNG",
+        "slip_it_slow/IMG_0178.PNG",
+        "slip_it_slow/IMG_0179.PNG",
+        "slip_it_slow/IMG_0182.PNG"
       ],
-      "price": 97,
-      "size": 5,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productId": 24394,
+      "productName": "Gown 1",
+      "description": "Product description will go here, please add a brief description",
+      "price": 21,
+      "size": "6",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 41665,
-      "productName": "Gown 9",
-      "description": "Product description will go here, please add a brief description",
       "productThumbs": [
         "slip_it_slow/IMG_1581.PNG",
         "slip_it_slow/IMG_1592.PNG",
         "slip_it_slow/IMG_1593.PNG",
         "slip_it_slow/IMG_1594.PNG"
       ],
+      "productId": 41665,
+      "productName": "Gown 9",
+      "description": "Product description will go here, please add a brief description",
       "price": 200,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 79445,
-      "productName": "Gown 10",
-      "description": "Product description will go here, please add a brief description",
-      "productThumbs": [
-        "slip_it_slow/IMG_2853.png",
-        "slip_it_slow/IMG_2851.png",
-        "slip_it_slow/IMG_2852.png",
-        "slip_it_slow/IMG_2855.png",
-        "slip_it_slow/IMG_2857.png",
-        "slip_it_slow/IMG_2852.png",
-        "slip_it_slow/IMG_2859.png"
-      ],
-      "price": 52,
-      "size": 3,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productId": 35840,
-      "productName": "Gown 11",
-      "description": "Product description will go here, please add a brief description",
-      "productThumbs": [
-        "slip_it_slow/IMG_4765.PNG",
-        "slip_it_slow/IMG_4768.PNG",
-        "slip_it_slow/IMG_4762.PNG",
-        "slip_it_slow/IMG_4761.PNG",
-        "slip_it_slow/IMG_4763.PNG"
-      ],
-      "price": 102,
-      "size": 9,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productId": 45537,
-      "productName": "Gown 12",
-      "description": "Product description will go here, please add a brief description",
-      "productThumbs": [
-        "slip_it_slow/IMG_4770.PNG",
-        "slip_it_slow/IMG_4775.PNG",
-        "slip_it_slow/IMG_4777.PNG",
-        "slip_it_slow/IMG_4733.PNG",
-        "slip_it_slow/IMG_4778.PNG"
-      ],
-      "price": 100,
-      "size": 5,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productId": 36402,
-      "productName": "Gown 13",
-      "description": "Product description will go here, please add a brief description",
-      "productThumbs": [
-        "slip_it_slow/IMG_4927.PNG",
-        "slip_it_slow/IMG_4925.PNG",
-        "slip_it_slow/IMG_4932.PNG",
-        "slip_it_slow/IMG_4933.PNG",
-        "slip_it_slow/IMG_4936.PNG",
-        "slip_it_slow/IMG_4937.PNG"
-      ],
-      "price": 50,
-      "size": 6,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productId": 64179,
-      "productName": "Gown 14",
-      "description": "Product description will go here, please add a brief description",
       "productThumbs": [
         "slip_it_slow/IMG_9164.PNG",
         "slip_it_slow/IMG_9162.PNG",
@@ -726,18 +666,23 @@
         "slip_it_slow/IMG_9189.PNG",
         "slip_it_slow/IMG_9193.PNG"
       ],
+      "productId": 64179,
+      "productName": "Gown 14",
+      "description": "Product description will go here, please add a brief description",
       "price": 290,
-      "size": 3,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "3",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     }
-  ]
+  ],
+  "__v": 6
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9c7"
   },
   "collectionId": 6,
+  "sortOrder": 9,
   "collectionName": "Winter Warmers",
   "image": "winter_warmers.png",
   "description": "collection description",
@@ -745,61 +690,24 @@
   "products": [
     {
       "productThumbs": [
-        "winter_warmers/IMG_1693.PNG",
-        "winter_warmers/IMG_1695.PNG",
-        "winter_warmers/IMG_1698.PNG",
-        "winter_warmers/IMG_1699.PNG",
-        "winter_warmers/IMG_1700.PNG",
-        "winter_warmers/IMG_1704.PNG",
-        "winter_warmers/IMG_1707.PNG"
+        "winter_warmers/IMG_8974.PNG",
+        "winter_warmers/IMG_8971.PNG",
+        "winter_warmers/IMG_8976.PNG",
+        "winter_warmers/IMG_8980.PNG",
+        "winter_warmers/IMG_8984.PNG",
+        "winter_warmers/IMG_8988.PNG",
+        "winter_warmers/IMG_8993.PNG",
+        "winter_warmers/IMG_8994.PNG",
+        "winter_warmers/IMG_8996.PNG",
+        "winter_warmers/IMG_8998.PNG"
       ],
-      "productId": 89587,
-      "productName": "Warmer 1",
-      "description": "product description",
-      "price": 220,
-      "size": 10,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "winter_warmers/IMG_3429.png",
-        "winter_warmers/IMG_3427.png",
-        "winter_warmers/IMG_3428.png",
-        "winter_warmers/IMG_3430.png",
-        "winter_warmers/IMG_3434.png",
-        "winter_warmers/IMG_3435.png",
-        "winter_warmers/IMG_3436.png",
-        "winter_warmers/IMG_3437.png"
-      ],
-      "productId": 74288,
-      "productName": "Warmer 2",
-      "description": "product description 2",
+      "productId": 82004,
+      "productName": "Winter Warmer 11",
+      "description": "product description 11",
       "price": 80,
-      "size": 6,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "winter_warmers/IMG_3445.png",
-        "winter_warmers/IMG_3438.png",
-        "winter_warmers/IMG_3439.png",
-        "winter_warmers/IMG_3440.png",
-        "winter_warmers/IMG_3442.png",
-        "winter_warmers/IMG_3443.png",
-        "winter_warmers/IMG_3444.png",
-        "winter_warmers/IMG_3446.png"
-      ],
-      "productId": 32771,
-      "productName": "Warmer 3",
-      "description": "product description 3",
-      "price": 140,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "8",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -821,9 +729,146 @@
       "productName": "Winter Warmer 4",
       "description": "product description 4",
       "price": 260,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "8",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "winter_warmers/IMG_8556.PNG",
+        "winter_warmers/IMG_8559.PNG",
+        "winter_warmers/IMG_8565.PNG",
+        "winter_warmers/IMG_8566.PNG",
+        "winter_warmers/IMG_8570.PNG",
+        "winter_warmers/IMG_8574.PNG",
+        "winter_warmers/IMG_8575.PNG"
+      ],
+      "productId": 23606,
+      "productName": "Winter Warmer 10",
+      "description": "product description 10",
+      "price": 150,
+      "size": "8",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "winter_warmers/IMG_1693.PNG",
+        "winter_warmers/IMG_1695.PNG",
+        "winter_warmers/IMG_1698.PNG",
+        "winter_warmers/IMG_1699.PNG",
+        "winter_warmers/IMG_1700.PNG",
+        "winter_warmers/IMG_1704.PNG",
+        "winter_warmers/IMG_1707.PNG"
+      ],
+      "productId": 89587,
+      "productName": "Warmer 1",
+      "description": "product description",
+      "price": 220,
+      "size": "10",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },  
+    {
+      "productThumbs": [
+        "winter_warmers/IMG_3429.png",
+        "winter_warmers/IMG_3427.png",
+        "winter_warmers/IMG_3428.png",
+        "winter_warmers/IMG_3430.png",
+        "winter_warmers/IMG_3434.png",
+        "winter_warmers/IMG_3435.png",
+        "winter_warmers/IMG_3436.png",
+        "winter_warmers/IMG_3437.png"
+      ],
+      "productId": 74288,
+      "productName": "‘Desert Road’ ",
+      "description": "- Vintage ribbed charcoal tube miniskirt with elastic waist. Wool like hairy fabric.\r\nMade in Australia ",
+      "price": 60,
+      "size": "S(Lge) ",
+      "measurements": "L 72 W 42 H 46 ",
+      "ausPostParcel": "S",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "winter_warmers/IMG_3445.png",
+        "winter_warmers/IMG_3438.png",
+        "winter_warmers/IMG_3439.png",
+        "winter_warmers/IMG_3440.png",
+        "winter_warmers/IMG_3442.png",
+        "winter_warmers/IMG_3443.png",
+        "winter_warmers/IMG_3444.png",
+        "winter_warmers/IMG_3446.png"
+      ],
+      "productId": 32771,
+      "productName": "Warmer 3",
+      "description": "product description 3",
+      "price": 140,
+      "size": "m",
+      "measurements": "",
+      "ausPostParcel": "XS",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "winter_warmers/IMG_7892.PNG",
+        "winter_warmers/IMG_7886.PNG",
+        "winter_warmers/IMG_7888.PNG",
+        "winter_warmers/IMG_7890.PNG",
+        "winter_warmers/IMG_7891.PNG",
+        "winter_warmers/IMG_7894.PNG",
+        "winter_warmers/IMG_7895.PNG",
+        "winter_warmers/IMG_7896.PNG",
+        "winter_warmers/IMG_7898.PNG"
+      ],
+      "productId": 91810,
+      "productName": "Winter Warmer 8",
+      "description": "product description 8",
+      "price": 120,
+      "size": "8",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "winter_warmers/IMG_8158.PNG",
+        "winter_warmers/IMG_8148.PNG",
+        "winter_warmers/IMG_8149.PNG",
+        "winter_warmers/IMG_8150.PNG",
+        "winter_warmers/IMG_8153.PNG",
+        "winter_warmers/IMG_8157.PNG",
+        "winter_warmers/IMG_8159.PNG"
+      ],
+      "productId": 63660,
+      "productName": "Winter Warmer 9",
+      "description": "product description 9",
+      "price": 26,
+      "size": "8",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "winter_warmers/IMG_7900.PNG",
+        "winter_warmers/IMG_7901.PNG",
+        "winter_warmers/IMG_7902.PNG",
+        "winter_warmers/IMG_7905.PNG",
+        "winter_warmers/IMG_7906.PNG",
+        "winter_warmers/IMG_7909.PNG",
+        "winter_warmers/IMG_7910.PNG"
+      ],
+      "productId": 47715,
+      "productName": "‘RM Williams’",
+      "description": "- heavyweight, A-line dark navy country button down maxi skirt. Features belt loops, front pockets and nine horn buttons. Super soft brushed cotton. Spare button. Panelled.\r\n100%  Cotton \r\nMade in Australia ",
+      "price": 120,
+      "size": "12",
+      "measurements": "L 90 W 37 H 46 ",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -850,11 +895,11 @@
       "productName": "Winter Warmer 5",
       "description": "product description 5",
       "price": 65,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "8",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
-    },
+    },    
     {
       "productThumbs": [
         "winter_warmers/IMG_3488.png",
@@ -865,121 +910,22 @@
         "winter_warmers/IMG_3494.png"
       ],
       "productId": 92049,
-      "productName": "Winter Warmer 6",
-      "description": "product description 6",
-      "price": 260,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "winter_warmers/IMG_7892.PNG",
-        "winter_warmers/IMG_7886.PNG",
-        "winter_warmers/IMG_7888.PNG",
-        "winter_warmers/IMG_7890.PNG",
-        "winter_warmers/IMG_7891.PNG",
-        "winter_warmers/IMG_7894.PNG",
-        "winter_warmers/IMG_7895.PNG",
-        "winter_warmers/IMG_7896.PNG",
-        "winter_warmers/IMG_7898.PNG"
-      ],
-      "productId": 91810,
-      "productName": "Winter Warmer 8",
-      "description": "product description 8",
-      "price": 120,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "winter_warmers/IMG_7900.PNG",
-        "winter_warmers/IMG_7901.PNG",
-        "winter_warmers/IMG_7902.PNG",
-        "winter_warmers/IMG_7905.PNG",
-        "winter_warmers/IMG_7906.PNG",
-        "winter_warmers/IMG_7909.PNG",
-        "winter_warmers/IMG_7910.PNG"
-      ],
-      "productId": 47715,
-      "productName": "Winter Warmer 8",
-      "description": "product description 8",
-      "price": 120,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "winter_warmers/IMG_8158.PNG",
-        "winter_warmers/IMG_8148.PNG",
-        "winter_warmers/IMG_8149.PNG",
-        "winter_warmers/IMG_8150.PNG",
-        "winter_warmers/IMG_8153.PNG",
-        "winter_warmers/IMG_8157.PNG",
-        "winter_warmers/IMG_8159.PNG"
-      ],
-      "productId": 63660,
-      "productName": "Winter Warmer 9",
-      "description": "product description 9",
-      "price": 26,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "winter_warmers/IMG_8556.PNG",
-        "winter_warmers/IMG_8559.PNG",
-        "winter_warmers/IMG_8565.PNG",
-        "winter_warmers/IMG_8566.PNG",
-        "winter_warmers/IMG_8570.PNG",
-        "winter_warmers/IMG_8574.PNG",
-        "winter_warmers/IMG_8575.PNG"
-      ],
-      "productId": 23606,
-      "productName": "Winter Warmer 10",
-      "description": "product description 10",
-      "price": 150,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "winter_warmers/IMG_8974.PNG",
-        "winter_warmers/IMG_8971.PNG",
-        "winter_warmers/IMG_8976.PNG",
-        "winter_warmers/IMG_8980.PNG",
-        "winter_warmers/IMG_8984.PNG",
-        "winter_warmers/IMG_8988.PNG",
-        "winter_warmers/IMG_8993.PNG",
-        "winter_warmers/IMG_8994.PNG",
-        "winter_warmers/IMG_8996.PNG",
-        "winter_warmers/IMG_8998.PNG"
-      ],
-      "productId": 82004,
-      "productName": "Winter Warmer 11",
-      "description": "product description 11",
-      "price": 80,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productName": "Tweed Threads ",
+      "description": "- Impeccable pastel flicked sea green, tweed maxi circle skirt. Fully lined with hook and eye closure above zip at the back.\r\nPolyester/wool. \r\nHandmade ",
+      "price": 220,
+      "size": "10",
+      "measurements": "L 98 W 37 ",
+      "ausPostParcel": "M",
       "active": true
     }
   ],
-  "__v": 15
+  "__v": 19
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9c8"
   },
   "collectionId": 8,
+  "sortOrder": 7,
   "collectionName": "Check, Please!",
   "image": "check_please.png",
   "description": "collection description",
@@ -987,38 +933,89 @@
   "products": [
     {
       "productThumbs": [
-        "check_please/IMG_8138.PNG",
-        "check_please/IMG_8146.PNG",
-        "check_please/IMG_8144.PNG",
-        "check_please/IMG_8143.PNG",
-        "check_please/IMG_8131.PNG",
-        "check_please/IMG_8136.PNG",
-        "check_please/IMG_8135.PNG"
+        "check_please/IMG_3762.png",
+        "check_please/IMG_3763.png",
+        "check_please/IMG_3764.png",
+        "check_please/IMG_3765.png"
       ],
-      "productId": 68682,
+      "productId": 75600,
       "productName": "Check Please! ",
       "description": "Description",
-      "price": 220,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "price": 65,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
       "productThumbs": [
-        "check_please/IMG_3775.png",
-        "check_please/IMG_3774.png",
-        "check_please/IMG_3776.png",
-        "check_please/IMG_3773.png",
-        "check_please/IMG_3772.png"
+        "check_please/IMG_5384.PNG",
+        "check_please/IMG_5395.PNG",
+        "check_please/IMG_5373.PNG",
+        "check_please/IMG_5398.PNG"
       ],
-      "productId": 47758,
+      "productId": 32102,
       "productName": "Check Please! ",
       "description": "Description",
       "price": 140,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "check_please/IMG_3806.png",
+        "check_please/IMG_3804.png",
+        "check_please/IMG_3801.png",
+        "check_please/IMG_3800.png",
+        "check_please/IMG_3808.png",
+        "check_please/IMG_3809.png"
+      ],
+      "productId": 51369,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 65,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "check_please/IMG_6764.PNG",
+        "check_please/IMG_6765.PNG",
+        "check_please/IMG_6773.PNG",
+        "check_please/IMG_6789.PNG",
+        "check_please/IMG_6788.PNG",
+        "check_please/IMG_6787.PNG",
+        "check_please/IMG_6780.PNG"
+      ],
+      "productId": 34475,
+      "productName": "‘Table Eight’",
+      "description": "- vintage red/white gingham mini skirt. Featuring ornate ‘pearl’ flower button. Fully lined. Cotton/Polyester lining. \r\nMade in Australia ",
+      "price": 80,
+      "size": "14 (Sml) ",
+      "measurements": "L 34 W 38 H 50 ",
+      "ausPostParcel": "S",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "check_please/IMG_2059.PNG",
+        "check_please/IMG_2052.PNG",
+        "check_please/IMG_2051.PNG",
+        "check_please/IMG_2055.PNG",
+        "check_please/IMG_2056.PNG",
+        "check_please/IMG_2057.PNG"
+      ],
+      "productId": 35512,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 65,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -1032,9 +1029,27 @@
       "productName": "Check Please! ",
       "description": "Description",
       "price": 65,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "check_please/IMG_4113.PNG",
+        "check_please/IMG_4129.PNG",
+        "check_please/IMG_4119.PNG",
+        "check_please/IMG_4123.PNG",
+        "check_please/IMG_4122.PNG",
+        "check_please/IMG_4120.PNG"
+      ],
+      "productId": 76028,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 110,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -1050,27 +1065,68 @@
       "productName": "Check Please! ",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
       "productThumbs": [
-        "check_please/IMG_5384.PNG",
-        "check_please/IMG_5395.PNG",
-        "check_please/IMG_5373.PNG",
-        "check_please/IMG_5398.PNG"
+        "check_please/IMG_3815.png",
+        "check_please/IMG_3814.png",
+        "check_please/IMG_3816.png",
+        "check_please/IMG_3817.png",
+        "check_please/IMG_3819.png",
+        "check_please/IMG_3818.png",
+        "check_please/IMG_3820.png",
+        "check_please/IMG_3821.png",
+        "check_please/IMG_3822.png"
       ],
-      "productId": 32102,
-      "productName": "Check Please! ",
-      "description": "Description",
+      "productId": 44574,
+      "productName": "’Alexon’",
+      "description": " - 80s double breasted houndstooth blazer. Features mother of pearl buttons and partial front pockets. \r\nPolyester/Rayon. \r\nMade in Great Britain",
       "price": 140,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "16",
+      "measurements": "L 56 S 44 B 46 W 48 H 50 ",
+      "ausPostParcel": "XS",
       "active": true
     },
+    {
+      "productThumbs": [
+        "check_please/IMG_2666.PNG",
+        "check_please/IMG_2659.PNG",
+        "check_please/IMG_2665.PNG",
+        "check_please/IMG_2654.PNG",
+        "check_please/IMG_2657.PNG",
+        "check_please/IMG_2652.PNG"
+      ],
+      "productId": 50984,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 35,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "check_please/IMG_9858.PNG",
+        "check_please/IMG_9860.PNG",
+        "check_please/IMG_9853.PNG",
+        "check_please/IMG_9852.PNG",
+        "check_please/IMG_9855.PNG",
+        "check_please/IMG_9857.PNG"
+      ],
+      "productId": 44464,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 85,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    }, 
     {
       "productThumbs": [
         "check_please/IMG_3754.png",
@@ -1084,30 +1140,11 @@
       ],
       "productId": 64307,
       "productName": "Check Please! ",
-      "description": "Description",
+      "description": "- 90s college plaid pencil midi skirt with press stud and zip. Fully lined. Electric cobalt blue/red/black/yellow.",
       "price": 160,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "check_please/IMG_6764.PNG",
-        "check_please/IMG_6765.PNG",
-        "check_please/IMG_6773.PNG",
-        "check_please/IMG_6789.PNG",
-        "check_please/IMG_6788.PNG",
-        "check_please/IMG_6787.PNG",
-        "check_please/IMG_6780.PNG"
-      ],
-      "productId": 34475,
-      "productName": "Check Please! ",
-      "description": "Description",
-      "price": 80,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "8-10",
+      "measurements": "L 62 W 32 H 40 ",
+      "ausPostParcel": "S",
       "active": true
     },
     {
@@ -1122,9 +1159,9 @@
       "productName": "Check Please! ",
       "description": "Description",
       "price": 340,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -1143,173 +1180,28 @@
       "productName": "Check Please! ",
       "description": "Description",
       "price": 180,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
-    },
+    },  
     {
       "productThumbs": [
-        "check_please/IMG_9858.PNG",
-        "check_please/IMG_9860.PNG",
-        "check_please/IMG_9853.PNG",
-        "check_please/IMG_9852.PNG",
-        "check_please/IMG_9855.PNG",
-        "check_please/IMG_9857.PNG"
+        "check_please/IMG_8138.PNG",
+        "check_please/IMG_8146.PNG",
+        "check_please/IMG_8144.PNG",
+        "check_please/IMG_8143.PNG",
+        "check_please/IMG_8131.PNG",
+        "check_please/IMG_8136.PNG",
+        "check_please/IMG_8135.PNG"
       ],
-      "productId": 44464,
-      "productName": "Check Please! ",
-      "description": "Description",
-      "price": 85,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "check_please/IMG_3762.png",
-        "check_please/IMG_3763.png",
-        "check_please/IMG_3764.png",
-        "check_please/IMG_3765.png"
-      ],
-      "productId": 75600,
-      "productName": "Check Please! ",
-      "description": "Description",
-      "price": 65,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "check_please/IMG_2628.PNG",
-        "check_please/IMG_2629.PNG",
-        "check_please/IMG_2622.PNG",
-        "check_please/IMG_2637.PNG",
-        "check_please/IMG_2634.PNG",
-        "check_please/IMG_2624.PNG",
-        "check_please/IMG_2625.PNG",
-        "check_please/IMG_2627.PNG",
-        "check_please/IMG_2632.PNG"
-      ],
-      "productId": 51350,
-      "productName": "Check Please! ",
-      "description": "Description",
-      "price": 140,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "check_please/IMG_4113.PNG",
-        "check_please/IMG_4129.PNG",
-        "check_please/IMG_4119.PNG",
-        "check_please/IMG_4123.PNG",
-        "check_please/IMG_4122.PNG",
-        "check_please/IMG_4120.PNG"
-      ],
-      "productId": 76028,
-      "productName": "Check Please! ",
-      "description": "Description",
-      "price": 110,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "check_please/IMG_2059.PNG",
-        "check_please/IMG_2052.PNG",
-        "check_please/IMG_2051.PNG",
-        "check_please/IMG_2055.PNG",
-        "check_please/IMG_2056.PNG",
-        "check_please/IMG_2057.PNG"
-      ],
-      "productId": 35512,
-      "productName": "Check Please! ",
-      "description": "Description",
-      "price": 65,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "check_please/IMG_3806.png",
-        "check_please/IMG_3804.png",
-        "check_please/IMG_3801.png",
-        "check_please/IMG_3800.png",
-        "check_please/IMG_3808.png",
-        "check_please/IMG_3809.png"
-      ],
-      "productId": 51369,
-      "productName": "Check Please! ",
-      "description": "Description",
-      "price": 65,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "check_please/IMG_1838.PNG",
-        "check_please/IMG_1839.PNG",
-        "check_please/IMG_1834.PNG",
-        "check_please/IMG_1833.PNG"
-      ],
-      "productId": 19860,
+      "productId": 68682,
       "productName": "Check Please! ",
       "description": "Description",
       "price": 220,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "check_please/IMG_3815.png",
-        "check_please/IMG_3814.png",
-        "check_please/IMG_3816.png",
-        "check_please/IMG_3817.png",
-        "check_please/IMG_3819.png",
-        "check_please/IMG_3818.png",
-        "check_please/IMG_3820.png",
-        "check_please/IMG_3821.png",
-        "check_please/IMG_3822.png"
-      ],
-      "productId": 44574,
-      "productName": "Check Please! ",
-      "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "check_please/IMG_2666.PNG",
-        "check_please/IMG_2659.PNG",
-        "check_please/IMG_2665.PNG",
-        "check_please/IMG_2654.PNG",
-        "check_please/IMG_2657.PNG",
-        "check_please/IMG_2652.PNG"
-      ],
-      "productId": 50984,
-      "productName": "Check Please! ",
-      "description": "Description",
-      "price": 35,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -1328,42 +1220,57 @@
       "productName": "Check Please! ",
       "description": "Description",
       "price": 140,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "check_please/IMG_3775.png",
+        "check_please/IMG_3774.png",
+        "check_please/IMG_3776.png",
+        "check_please/IMG_3773.png",
+        "check_please/IMG_3772.png"
+      ],
+      "productId": 47758,
+      "productName": "‘Rooney Clarke’ ",
+      "description": "- 80s/90s tartan boyfriend blazer in soft autumn hues. Features three pockets and 2 mother of pearl buttons. \r\nPure new wool. \r\nWoven in Scotland.\r\nMade in Australia",
+      "price": 220,
+      "size": "12",
+      "measurements": "L 82 S 46 B 54 W 50 ",
+      "ausPostParcel": "XS",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "check_please/IMG_1838.PNG",
+        "check_please/IMG_1839.PNG",
+        "check_please/IMG_1834.PNG",
+        "check_please/IMG_1833.PNG"
+      ],
+      "productId": 19860,
+      "productName": "Check Please! ",
+      "description": "Description",
+      "price": 220,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     }
   ],
-  "__v": 21
+  "__v": 26
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9c9"
   },
   "collectionId": 7,
+  "sortOrder": 8,
   "collectionName": "Trenched",
   "image": "trenched.png",
   "description": "collection description",
   "active": true,
   "products": [
-    {
-      "productThumbs": [
-        "trenched/IMG_3569.png",
-        "trenched/IMG_3568.png",
-        "trenched/IMG_3563.png",
-        "trenched/IMG_3562.png",
-        "trenched/IMG_3564.png",
-        "trenched/IMG_3570.png",
-        "trenched/IMG_3566.png"
-      ],
-      "productId": 84501,
-      "productName": "Trench Coat #1",
-      "description": "Description",
-      "price": 220,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
     {
       "productThumbs": [
         "trenched/IMG_2232.PNG",
@@ -1378,41 +1285,9 @@
       "productName": "Trench Coat #2",
       "description": "Description",
       "price": 160,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "trenched/IMG_3541.png",
-        "trenched/IMG_3540.png",
-        "trenched/IMG_3539.png",
-        "trenched/IMG_3538.png"
-      ],
-      "productId": 81226,
-      "productName": "Trench Coat #3",
-      "description": "Description",
-      "price": 120,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "trenched/IMG_3542.png",
-        "trenched/IMG_1779.PNG",
-        "trenched/IMG_3543.png",
-        "trenched/IMG_3544.png"
-      ],
-      "productId": 30209,
-      "productName": "Trench Coat #4",
-      "description": "Description",
-      "price": 240,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -1430,14 +1305,47 @@
         "trenched/IMG_3289.PNG"
       ],
       "productId": 63124,
-      "productName": "Trench Coat #5a",
-      "description": "Description",
-      "price": 80,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productName": "‘Fashion Fair’",
+      "description": "- 90s classic black reefer jacket. Featuring 3 buttons, faux pockets and a back slit that reaches the waistline. \r\nPolyester \r\nMade in Australia",
+      "price": 85,
+      "size": "10",
+      "measurements": "L 118 S 42 B 46 W 40 H 48 ",
+      "ausPostParcel": "XS",
       "active": true
     },
+    {
+      "productThumbs": [
+        "trenched/IMG_3542.png",
+        "trenched/IMG_1779.PNG",
+        "trenched/IMG_3543.png",
+        "trenched/IMG_3544.png"
+      ],
+      "productId": 30209,
+      "productName": "Trench Coat #4",
+      "description": "Description",
+      "price": 240,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "trenched/IMG_3541.png",
+        "trenched/IMG_3540.png",
+        "trenched/IMG_3539.png",
+        "trenched/IMG_3538.png"
+      ],
+      "productId": 81226,
+      "productName": "Trench Coat #3",
+      "description": "Description",
+      "price": 120,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    
     {
       "productThumbs": [
         "trenched/IMG_3550.png",
@@ -1453,18 +1361,38 @@
       "productName": "Trench Coat #6e",
       "description": "Description",
       "price": 240,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "trenched/IMG_3569.png",
+        "trenched/IMG_3568.png",
+        "trenched/IMG_3563.png",
+        "trenched/IMG_3562.png",
+        "trenched/IMG_3564.png",
+        "trenched/IMG_3570.png",
+        "trenched/IMG_3566.png"
+      ],
+      "productId": 84501,
+      "productName": "Trench Coat #1",
+      "description": "Description",
+      "price": 220,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     }
   ],
-  "__v": 9
+  "__v": 11
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9ca"
   },
   "collectionId": 9,
+  "sortOrder": 22,
   "collectionName": "Secret Secretary",
   "image": "collection13.png",
   "description": "collection description",
@@ -1475,6 +1403,7 @@
     "$oid": "60de563056ba9ce1253bf9cb"
   },
   "collectionId": 10,
+  "sortOrder": 36,
   "collectionName": "Some keep it Corporate",
   "image": "some_keep_it_corporate.png",
   "description": "collection description",
@@ -1485,6 +1414,7 @@
     "$oid": "60de563056ba9ce1253bf9cc"
   },
   "collectionId": 11,
+  "sortOrder": 30,
   "collectionName": "Formalities",
   "image": "collection1.png",
   "description": "collection description",
@@ -1495,10 +1425,11 @@
     "$oid": "60de563056ba9ce1253bf9cd"
   },
   "collectionId": 12,
+  "sortOrder": 27,
   "collectionName": "LBD",
   "image": "lbd.png",
   "description": "collection description",
-  "active": true,
+  "active": false,
   "products": [
     {
       "productThumbs": [
@@ -1515,9 +1446,9 @@
       "productName": "L.B.D  #1",
       "description": "Description",
       "price": 150,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -1541,9 +1472,9 @@
       "productName": "L.B.D  #2",
       "description": "Description",
       "price": 220,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -1574,9 +1505,9 @@
       "productName": "L.B.D  #3",
       "description": "Description",
       "price": 380,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -1593,12 +1524,12 @@
         "lbd/IMG_5089.png"
       ],
       "productId": 18231,
-      "productName": "L.B.D  #4",
-      "description": "Description",
+      "productName": "'Lola'",
+      "description": "- black padded strapless late 90s/early 00s mini cocktail dress. Speckled tinsel bubble meets sateen like upper sweetheart bodice. \r\nPolyester/Elastane \r\nMade in Australia ",
       "price": 120,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "S",
+      "measurements": "L 66 B 36 W 34 H 52 ",
+      "ausPostParcel": "S",
       "active": true
     },
     {
@@ -1619,9 +1550,9 @@
       "productName": "L.B.D  #5",
       "description": "Description",
       "price": 180,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -1640,30 +1571,28 @@
         "lbd/IMG_8624.PNG"
       ],
       "productId": 50261,
-      "productName": "L.B.D  #6",
-      "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productName": "‘Not For Boys’ ",
+      "description": "- stunning black 90s supermodel cocktail dress. Racey straps meet around a buttoned high neck, from the bust and the back. \r\n",
+      "price": 180,
+      "size": "14",
+      "measurements": "",
+      "ausPostParcel": "S",
       "active": true
     }
   ],
-  "__v": 5
+  "__v": 10
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9ce"
   },
   "collectionId": 13,
+  "sortOrder": 29,
   "collectionName": "Le Sport",
   "image": "le_sport.png",
   "description": "collection description",
   "active": true,
   "products": [
     {
-      "productId": 19678,
-      "productName": "Le Sport #1",
-      "description": "Description",
       "productThumbs": [
         "le_sport/IMG_3949.png",
         "le_sport/IMG_3948.png",
@@ -1674,16 +1603,16 @@
         "le_sport/IMG_3954.png",
         "le_sport/IMG_3955.png"
       ],
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productId": 19678,
+      "productName": "‘Sports Aspect’",
+      "description": "- vintage pleated tennis skirt in guava, with crackling/marble look throughout. Button back and zip. \r\nPolyester \r\nMade in Australia ",
+      "price": 75,
+      "size": "14 (Sml) ",
+      "measurements": "L 40 W 40 H 48 ",
+      "ausPostParcel": "XS",
       "active": true
     },
     {
-      "productId": 30261,
-      "productName": "Le Sport #2",
-      "description": "Description",
       "productThumbs": [
         "le_sport/IMG_3973.png",
         "le_sport/IMG_3972.png",
@@ -1695,16 +1624,16 @@
         "le_sport/IMG_3977.png",
         "le_sport/IMG_3978.png"
       ],
+      "productId": 30261,
+      "productName": "Le Sport #2",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 60734,
-      "productName": "Le Sport #3",
-      "description": "Description",
       "productThumbs": [
         "le_sport/IMG_3918.png",
         "le_sport/IMG_3924.png",
@@ -1712,16 +1641,16 @@
         "le_sport/IMG_3920.png",
         "le_sport/IMG_3921.png"
       ],
+      "productId": 60734,
+      "productName": "Le Sport #3",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 24755,
-      "productName": "Le Sport #4",
-      "description": "Description",
       "productThumbs": [
         "le_sport/IMG_3910.png",
         "le_sport/IMG_3911.png",
@@ -1731,16 +1660,16 @@
         "le_sport/IMG_3908.png",
         "le_sport/IMG_3909.png"
       ],
+      "productId": 24755,
+      "productName": "Le Sport #4",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 20845,
-      "productName": "Le Sport #5",
-      "description": "Description",
       "productThumbs": [
         "le_sport/IMG_3848.png",
         "le_sport/IMG_3845.png",
@@ -1751,16 +1680,16 @@
         "le_sport/IMG_3842.png",
         "le_sport/IMG_3841.png"
       ],
+      "productId": 20845,
+      "productName": "Le Sport #5",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 8094,
-      "productName": "Le Sport #6",
-      "description": "Description",
       "productThumbs": [
         "le_sport/IMG_3967.png",
         "le_sport/IMG_3964.png",
@@ -1772,16 +1701,16 @@
         "le_sport/IMG_3957.png",
         "le_sport/IMG_3956.png"
       ],
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productId": 8094,
+      "productName": "‘Mischief’",
+      "description": "- original black 80’s knife pleat, sports skirt.  Features three buttons on side. \r\nMade in Australia",
+      "price": 120,
+      "size": "10",
+      "measurements": "L 76  W 32 (60) H 54 (85)",
+      "ausPostParcel": "XS",
       "active": true
     },
     {
-      "productId": 81836,
-      "productName": "Le Sport #7",
-      "description": "Description",
       "productThumbs": [
         "le_sport/IMG_3938.png",
         "le_sport/IMG_3929.png",
@@ -1801,16 +1730,16 @@
         "le_sport/IMG_3936.png",
         "le_sport/IMG_3934.png"
       ],
+      "productId": 81836,
+      "productName": "Le Sport #7",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 29636,
-      "productName": "Le Sport #8",
-      "description": "Description",
       "productThumbs": [
         "le_sport/IMG_3889.png",
         "le_sport/IMG_3888.png",
@@ -1821,16 +1750,16 @@
         "le_sport/IMG_3891.png",
         "le_sport/IMG_3890.png"
       ],
+      "productId": 29636,
+      "productName": "Le Sport #8",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 48148,
-      "productName": "Le Sport #9",
-      "description": "Description",
       "productThumbs": [
         "le_sport/IMG_3879.png",
         "le_sport/IMG_3878.png",
@@ -1839,16 +1768,16 @@
         "le_sport/IMG_3883.png",
         "le_sport/IMG_3882.png"
       ],
+      "productId": 48148,
+      "productName": "Le Sport #9",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 97810,
-      "productName": "Le Sport #10",
-      "description": "Description",
       "productThumbs": [
         "le_sport/IMG_3988.png",
         "le_sport/IMG_3985.png",
@@ -1857,16 +1786,16 @@
         "le_sport/IMG_3982.png",
         "le_sport/IMG_3981.png"
       ],
+      "productId": 97810,
+      "productName": "Le Sport #10",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 63260,
-      "productName": "Le Sport #11",
-      "description": "Description",
       "productThumbs": [
         "le_sport/IMG_3864.png",
         "le_sport/IMG_3862.png",
@@ -1874,16 +1803,16 @@
         "le_sport/IMG_3861.png",
         "le_sport/IMG_3860.png"
       ],
+      "productId": 63260,
+      "productName": "Le Sport #11",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 11606,
-      "productName": "Le Sport #12",
-      "description": "Description",
       "productThumbs": [
         "le_sport/IMG_3898.png",
         "le_sport/IMG_3899.png",
@@ -1894,18 +1823,23 @@
         "le_sport/IMG_3895.png",
         "le_sport/IMG_3897.png"
       ],
+      "productId": 11606,
+      "productName": "Le Sport #12",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     }
-  ]
+  ],
+  "__v": 3
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9cf"
   },
   "collectionId": 4,
+  "sortOrder": 4,
   "collectionName": "Lace it Up",
   "image": "lace_it_up.png",
   "description": "collection description",
@@ -1913,24 +1847,18 @@
   "products": [
     {
       "productThumbs": [
-        "lace_it_up/IMG_4064.png",
-        "lace_it_up/IMG_4070.png",
-        "lace_it_up/IMG_4065.png",
-        "lace_it_up/IMG_4071.png",
-        "lace_it_up/IMG_4067.png",
-        "lace_it_up/IMG_4073.png",
-        "lace_it_up/IMG_4072.png",
-        "lace_it_up/IMG_4066.png",
-        "lace_it_up/IMG_4068.png",
-        "lace_it_up/IMG_4069.png"
+        "lace_it_up/IMG_5526.PNG",
+        "lace_it_up/IMG_5536.PNG",
+        "lace_it_up/IMG_5534.PNG",
+        "lace_it_up/IMG_5533.PNG"
       ],
-      "productId": 31929,
-      "productName": "Lace it up #1",
+      "productId": 10535,
+      "productName": "Lace it up #11",
       "description": "Description",
-      "price": 160,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "price": 45,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -1945,26 +1873,62 @@
       "productName": "Lace it up #2",
       "description": "Description rest",
       "price": 65,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
       "productThumbs": [
-        "lace_it_up/IMG_4029.png",
-        "lace_it_up/IMG_4028.png",
-        "lace_it_up/IMG_4027.png",
-        "lace_it_up/IMG_4031.png",
-        "lace_it_up/IMG_4034.png"
+        "lace_it_up/IMG_4014.png",
+        "lace_it_up/IMG_4013.png",
+        "lace_it_up/IMG_4012.png",
+        "lace_it_up/IMG_4011.png",
+        "lace_it_up/IMG_4015.png",
+        "lace_it_up/IMG_4016.png"
       ],
-      "productId": 86603,
-      "productName": "Lace it up #3",
+      "productId": 45899,
+      "productName": "Lace it up #16",
       "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "price": 80,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "lace_it_up/IMG_0523.PNG",
+        "lace_it_up/IMG_0518.PNG",
+        "lace_it_up/IMG_0520.PNG",
+        "lace_it_up/IMG_0522.PNG"
+      ],
+      "productId": 27520,
+      "productName": "Lace it up #7",
+      "description": "Description",
+      "price": 120,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "lace_it_up/IMG_4128.png",
+        "lace_it_up/IMG_4129.png",
+        "lace_it_up/IMG_4131.png",
+        "lace_it_up/IMG_4130.png",
+        "lace_it_up/IMG_4132.png",
+        "lace_it_up/IMG_4127.png",
+        "lace_it_up/IMG_4133.png"
+      ],
+      "productId": 37004,
+      "productName": "’DK’",
+      "description": "- delicate black tulle bolero with floral embroidery and netted trims. 3/4 sleeves. \r\nMade in Queensland, Australia",
+      "price": 80,
+      "size": "S-M",
+      "measurements": "S 36 B 43 ",
+      "ausPostParcel": "XS",
       "active": true
     },
     {
@@ -1983,29 +1947,27 @@
       "productName": "Lace it up #4",
       "description": "Description",
       "price": 140,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
       "productThumbs": [
-        "lace_it_up/IMG_4025.png",
-        "lace_it_up/IMG_4026.png",
-        "lace_it_up/IMG_4019.png",
-        "lace_it_up/IMG_4018.png",
-        "lace_it_up/IMG_4020.png",
-        "lace_it_up/IMG_4021.png",
-        "lace_it_up/IMG_4023.png",
-        "lace_it_up/IMG_4022.png"
+        "lace_it_up/IMG_4005.png",
+        "lace_it_up/IMG_4007.png",
+        "lace_it_up/IMG_4010.png",
+        "lace_it_up/IMG_4002.png",
+        "lace_it_up/IMG_4008.png",
+        "lace_it_up/IMG_4009.png"
       ],
-      "productId": 18076,
-      "productName": "Lace it up #5",
+      "productId": 12068,
+      "productName": "Lace it up #10",
       "description": "Description",
-      "price": 120,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "price": 220,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -2025,136 +1987,9 @@
       "productName": "Lace it up #6",
       "description": "Description",
       "price": 340,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "lace_it_up/IMG_0523.PNG",
-        "lace_it_up/IMG_0518.PNG",
-        "lace_it_up/IMG_0520.PNG",
-        "lace_it_up/IMG_0522.PNG"
-      ],
-      "productId": 27520,
-      "productName": "Lace it up #7",
-      "description": "Description",
-      "price": 120,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "lace_it_up/IMG_4077.png",
-        "lace_it_up/IMG_4076.png",
-        "lace_it_up/IMG_4075.png",
-        "lace_it_up/IMG_4074.png",
-        "lace_it_up/IMG_4079.png",
-        "lace_it_up/IMG_4078.png",
-        "lace_it_up/IMG_4080.png"
-      ],
-      "productId": 61261,
-      "productName": "Lace it up #8",
-      "description": "Description",
-      "price": 250,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "lace_it_up/IMG_4053.png",
-        "lace_it_up/IMG_4058.png",
-        "lace_it_up/IMG_4059.png",
-        "lace_it_up/IMG_4062.png",
-        "lace_it_up/IMG_4061.png",
-        "lace_it_up/IMG_4060.png",
-        "lace_it_up/IMG_4057.png",
-        "lace_it_up/IMG_4056.png",
-        "lace_it_up/IMG_4054.png",
-        "lace_it_up/IMG_4055.png"
-      ],
-      "productId": 91191,
-      "productName": "Lace it up #9",
-      "description": "Description",
-      "price": 240,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "lace_it_up/IMG_4005.png",
-        "lace_it_up/IMG_4007.png",
-        "lace_it_up/IMG_4010.png",
-        "lace_it_up/IMG_4002.png",
-        "lace_it_up/IMG_4008.png",
-        "lace_it_up/IMG_4009.png"
-      ],
-      "productId": 12068,
-      "productName": "Lace it up #10",
-      "description": "Description",
-      "price": 220,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "lace_it_up/IMG_5526.PNG",
-        "lace_it_up/IMG_5536.PNG",
-        "lace_it_up/IMG_5534.PNG",
-        "lace_it_up/IMG_5533.PNG"
-      ],
-      "productId": 10535,
-      "productName": "Lace it up #11",
-      "description": "Description",
-      "price": 45,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "lace_it_up/IMG_3991.png",
-        "lace_it_up/IMG_3998.png",
-        "lace_it_up/IMG_3997.png",
-        "lace_it_up/IMG_3996.png",
-        "lace_it_up/IMG_3994.png"
-      ],
-      "productId": 30029,
-      "productName": "Lace it up #12",
-      "description": "Description",
-      "price": 140,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "lace_it_up/IMG_4088.png",
-        "lace_it_up/IMG_4089.png",
-        "lace_it_up/IMG_4092.png",
-        "lace_it_up/IMG_4086.png",
-        "lace_it_up/IMG_4087.png",
-        "lace_it_up/IMG_4091.png",
-        "lace_it_up/IMG_4090.png"
-      ],
-      "productId": 9100,
-      "productName": "Lace it up #13",
-      "description": "Description",
-      "price": 80,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -2174,75 +2009,97 @@
       "productName": "Lace it up #14",
       "description": "Description",
       "price": 220,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
       "productThumbs": [
-        "lace_it_up/IMG_4126.png",
-        "lace_it_up/IMG_4117.png",
-        "lace_it_up/IMG_4119.png",
-        "lace_it_up/IMG_4118.png",
-        "lace_it_up/IMG_4123.png",
-        "lace_it_up/IMG_4122.png",
-        "lace_it_up/IMG_4120.png",
-        "lace_it_up/IMG_4121.png"
+        "lace_it_up/IMG_3991.png",
+        "lace_it_up/IMG_3998.png",
+        "lace_it_up/IMG_3997.png",
+        "lace_it_up/IMG_3996.png",
+        "lace_it_up/IMG_3994.png"
       ],
-      "productId": 74460,
-      "productName": "Lace it up #15",
-      "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productId": 30029,
+      "productName": "'UNDERCOVER WEAR' ",
+      "description": "- stunning 90s floral lace maxi slip. Features satin ribbon tie, two rose ribbons and scalloped trim. \r\nRayon/Nylon\r\nMade in Australia",
+      "price": 140,
+      "size": "10",
+      "measurements": "L 124 B 40 W 38 H 42",
+      "ausPostParcel": "XS",
       "active": true
     },
     {
       "productThumbs": [
-        "lace_it_up/IMG_4014.png",
-        "lace_it_up/IMG_4013.png",
-        "lace_it_up/IMG_4012.png",
-        "lace_it_up/IMG_4011.png",
-        "lace_it_up/IMG_4015.png",
-        "lace_it_up/IMG_4016.png"
+        "lace_it_up/IMG_4025.png",
+        "lace_it_up/IMG_4026.png",
+        "lace_it_up/IMG_4019.png",
+        "lace_it_up/IMG_4018.png",
+        "lace_it_up/IMG_4020.png",
+        "lace_it_up/IMG_4021.png",
+        "lace_it_up/IMG_4023.png",
+        "lace_it_up/IMG_4022.png"
       ],
-      "productId": 45899,
-      "productName": "Lace it up #16",
+      "productId": 18076,
+      "productName": "Lace it up #5",
       "description": "Description",
-      "price": 80,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "price": 120,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },    
+    {
+      "productThumbs": [
+        "lace_it_up/IMG_4053.png",
+        "lace_it_up/IMG_4058.png",
+        "lace_it_up/IMG_4059.png",
+        "lace_it_up/IMG_4062.png",
+        "lace_it_up/IMG_4061.png",
+        "lace_it_up/IMG_4060.png",
+        "lace_it_up/IMG_4057.png",
+        "lace_it_up/IMG_4056.png",
+        "lace_it_up/IMG_4054.png",
+        "lace_it_up/IMG_4055.png"
+      ],
+      "productId": 91191,
+      "productName": "Lace it up #9",
+      "description": "Description",
+      "price": 240,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
       "productThumbs": [
-        "lace_it_up/IMG_4128.png",
-        "lace_it_up/IMG_4129.png",
-        "lace_it_up/IMG_4131.png",
-        "lace_it_up/IMG_4130.png",
-        "lace_it_up/IMG_4132.png",
-        "lace_it_up/IMG_4127.png",
-        "lace_it_up/IMG_4133.png"
+        "lace_it_up/IMG_4077.png",
+        "lace_it_up/IMG_4076.png",
+        "lace_it_up/IMG_4075.png",
+        "lace_it_up/IMG_4074.png",
+        "lace_it_up/IMG_4079.png",
+        "lace_it_up/IMG_4078.png",
+        "lace_it_up/IMG_4080.png"
       ],
-      "productId": 37004,
-      "productName": "Lace it up #17",
+      "productId": 61261,
+      "productName": "Lace it up #8",
       "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "price": 250,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     }
   ],
-  "__v": 18
+  "__v": 20
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9d0"
   },
   "collectionId": 15,
+  "sortOrder": 31,
   "collectionName": "'BNWT'",
   "image": "collection13.png",
   "description": "collection description",
@@ -2253,6 +2110,7 @@
     "$oid": "60de563056ba9ce1253bf9d1"
   },
   "collectionId": 16,
+  "sortOrder": 32,
   "collectionName": "Day-core",
   "image": "day-core.png",
   "description": "collection description",
@@ -2263,6 +2121,7 @@
     "$oid": "60de563056ba9ce1253bf9d2"
   },
   "collectionId": 17,
+  "sortOrder": 15,
   "collectionName": "Look Good In Leather",
   "image": "collection13.png",
   "description": "collection description",
@@ -2273,6 +2132,7 @@
     "$oid": "60de563056ba9ce1253bf9d3"
   },
   "collectionId": 18,
+  "sortOrder": 16,
   "collectionName": "Are you fur real?",
   "image": "are_you_fur_real.png",
   "description": "collection description",
@@ -2283,6 +2143,7 @@
     "$oid": "60de563056ba9ce1253bf9d5"
   },
   "collectionId": 19,
+  "sortOrder": 17,
   "collectionName": "Club Conscious",
   "image": "club_conscious.png",
   "description": "collection description",
@@ -2293,6 +2154,7 @@
     "$oid": "60de563056ba9ce1253bf9d6"
   },
   "collectionId": 14,
+  "sortOrder": 18,
   "collectionName": "I'd Rather Yacht",
   "image": "collection13.png",
   "description": "collection description",
@@ -2303,6 +2165,7 @@
     "$oid": "60de563056ba9ce1253bf9d7"
   },
   "collectionId": 20,
+  "sortOrder": 19,
   "collectionName": "Wild Thing",
   "image": "wild_things.png",
   "description": "collection description",
@@ -2313,6 +2176,7 @@
     "$oid": "60de563056ba9ce1253bf9d8"
   },
   "collectionId": 23,
+  "sortOrder": 20,
   "collectionName": "Femme Fatal",
   "image": "collection13.png",
   "description": "collection description",
@@ -2323,6 +2187,7 @@
     "$oid": "60de563056ba9ce1253bf9da"
   },
   "collectionId": 22,
+  "sortOrder": 21,
   "collectionName": "Red Hot",
   "image": "red_hot.png",
   "description": "collection description",
@@ -2333,15 +2198,13 @@
     "$oid": "60de563056ba9ce1253bf9db"
   },
   "collectionId": 25,
+  "sortOrder": 5,
   "collectionName": "Roses",
   "image": "roses.png",
   "description": "collection description",
   "active": true,
   "products": [
     {
-      "productId": 66077,
-      "productName": "Roses #1",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4595.png",
         "roses/IMG_4594.png",
@@ -2350,16 +2213,16 @@
         "roses/IMG_4590.png",
         "roses/IMG_4591.png"
       ],
+      "productId": 66077,
+      "productName": "Roses #1",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": false
     },
     {
-      "productId": 41390,
-      "productName": "Roses #2",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4500.png",
         "roses/IMG_4499.png",
@@ -2371,16 +2234,16 @@
         "roses/IMG_4493.png",
         "roses/IMG_4492.png"
       ],
+      "productId": 41390,
+      "productName": "Roses #2",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 37686,
-      "productName": "Roses #3",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4514.png",
         "roses/IMG_4515.png",
@@ -2392,16 +2255,16 @@
         "roses/IMG_4518.png",
         "roses/IMG_4519.png"
       ],
+      "productId": 37686,
+      "productName": "Roses #3",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 39046,
-      "productName": "Roses #4",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4482.png",
         "roses/IMG_4483.png",
@@ -2411,16 +2274,16 @@
         "roses/IMG_4485.png",
         "roses/IMG_4479.png"
       ],
+      "productId": 39046,
+      "productName": "Roses #4",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 95960,
-      "productName": "Roses #5",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4548.png",
         "roses/IMG_4549.png",
@@ -2433,16 +2296,16 @@
         "roses/IMG_4553.png",
         "roses/IMG_4552.png"
       ],
+      "productId": 95960,
+      "productName": "Roses #5",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 51336,
-      "productName": "Roses #6",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4474.png",
         "roses/IMG_4475.png",
@@ -2452,16 +2315,16 @@
         "roses/IMG_4473.png",
         "roses/IMG_4478.png"
       ],
+      "productId": 51336,
+      "productName": "Roses #6",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 27357,
-      "productName": "Roses #7",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4563.png",
         "roses/IMG_4562.png",
@@ -2473,16 +2336,16 @@
         "roses/IMG_4558.png",
         "roses/IMG_4566.png"
       ],
+      "productId": 27357,
+      "productName": "Roses #7",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 36648,
-      "productName": "Roses #8",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_1554.PNG",
         "roses/IMG_1556.PNG",
@@ -2490,16 +2353,16 @@
         "roses/IMG_1561.PNG",
         "roses/IMG_1569.PNG"
       ],
+      "productId": 36648,
+      "productName": "Roses #8",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 1148,
-      "productName": "Roses #9",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4501.png",
         "roses/IMG_4503.png",
@@ -2512,16 +2375,16 @@
         "roses/IMG_4509.png",
         "roses/IMG_4508.png"
       ],
+      "productId": 1148,
+      "productName": "Roses #9",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 23978,
-      "productName": "Roses #10",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_8933.PNG",
         "roses/IMG_8936.PNG",
@@ -2534,16 +2397,16 @@
         "roses/IMG_8959.PNG",
         "roses/IMG_8939.PNG"
       ],
+      "productId": 23978,
+      "productName": "Roses #10",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 92892,
-      "productName": "Roses #11",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4488.png",
         "roses/IMG_4489.png",
@@ -2552,16 +2415,16 @@
         "roses/IMG_4487.png",
         "roses/IMG_4486.png"
       ],
+      "productId": 92892,
+      "productName": "Roses #11",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 26506,
-      "productName": "Roses #12",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4460.png",
         "roses/IMG_4461.png",
@@ -2573,31 +2436,31 @@
         "roses/IMG_4457.png",
         "roses/IMG_4453.png"
       ],
+      "productId": 26506,
+      "productName": "Roses #12",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 47257,
-      "productName": "Roses #13",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4545.png",
         "roses/IMG_4547.png",
         "roses/IMG_4546.png"
       ],
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productId": 47257,
+      "productName": "‘UndercoverWear’ ",
+      "description": "- 90s navy short sleeve slinky cardigan with fibre etched roses throughout. \r\nPolyester/spandex \r\nMade in Australia",
+      "price": 45,
+      "size": "10-12",
+      "measurements": "S 43 B 44 W 42 ",
+      "ausPostParcel": "XS",
       "active": true
     },
     {
-      "productId": 39774,
-      "productName": "Roses #14",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4448.png",
         "roses/IMG_4449.png",
@@ -2608,16 +2471,16 @@
         "roses/IMG_4451.png",
         "roses/IMG_4445.png"
       ],
+      "productId": 39774,
+      "productName": "Roses #14",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 92037,
-      "productName": "Roses #15",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4528.png",
         "roses/IMG_4529.png",
@@ -2630,16 +2493,16 @@
         "roses/IMG_4524.png",
         "roses/IMG_4525.png"
       ],
+      "productId": 92037,
+      "productName": "Roses #15",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 46865,
-      "productName": "Roses #16",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4428.png",
         "roses/IMG_4429.png",
@@ -2649,16 +2512,16 @@
         "roses/IMG_4432.png",
         "roses/IMG_4426.png"
       ],
+      "productId": 46865,
+      "productName": "Roses #16",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 71767,
-      "productName": "Roses #17",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4535.png",
         "roses/IMG_4534.png",
@@ -2668,16 +2531,16 @@
         "roses/IMG_4530.png",
         "roses/IMG_4531.png"
       ],
+      "productId": 71767,
+      "productName": "Roses #17",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 90639,
-      "productName": "Roses #18",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4463.png",
         "roses/IMG_4462.png",
@@ -2690,16 +2553,16 @@
         "roses/IMG_4469.png",
         "roses/IMG_4468.png"
       ],
+      "productId": 90639,
+      "productName": "Roses #18",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 73199,
-      "productName": "Roses #19",
-      "description": "Description",
       "productThumbs": [
         "roses/IMG_4539.png",
         "roses/IMG_4538.png",
@@ -2710,18 +2573,23 @@
         "roses/IMG_4544.png",
         "roses/IMG_4537.png"
       ],
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productId": 73199,
+      "productName": "’Miss Shop’",
+      "description": " - 90s sheer, sheen and straight maxi skirt in dark cocoa featuring soft water colour roses in dusty pink and blue. \r\nPolyester. \r\nMade in Australia \r\n",
+      "price": 120,
+      "size": "10/S ",
+      "measurements": " L 100 To fit  W 66 H 93 ",
+      "ausPostParcel": "XS",
       "active": true
     }
-  ]
+  ],
+  "__v": 5
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9dc"
   },
   "collectionId": 27,
+  "sortOrder": 23,
   "collectionName": "Baby Blues",
   "image": "baby_blues.png",
   "description": "collection description",
@@ -2732,6 +2600,7 @@
     "$oid": "60de563056ba9ce1253bf9dd"
   },
   "collectionId": 26,
+  "sortOrder": 24,
   "collectionName": "Pretty In Pink",
   "image": "pretty_in_pink.png",
   "description": "collection description",
@@ -2742,6 +2611,7 @@
     "$oid": "60de563056ba9ce1253bf9de"
   },
   "collectionId": 28,
+  "sortOrder": 25,
   "collectionName": "Miss Hawaiian Tropical",
   "image": "miss_hawaiian_tropical.png",
   "description": "collection description",
@@ -2752,6 +2622,7 @@
     "$oid": "60de563056ba9ce1253bf9df"
   },
   "collectionId": 29,
+  "sortOrder": 26,
   "collectionName": "Tribal Revival",
   "image": "collection13.png",
   "description": "collection description",
@@ -2762,6 +2633,7 @@
     "$oid": "60de563056ba9ce1253bf9e0"
   },
   "collectionId": 30,
+  "sortOrder": 10,
   "collectionName": "Seriously 60s",
   "image": "seriously_60s.png",
   "description": "collection description",
@@ -2779,8 +2651,8 @@
       "description": "Description",
       "price": 240,
       "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -2796,8 +2668,8 @@
       "description": "Description",
       "price": 140,
       "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -2812,8 +2684,8 @@
       "description": "Description",
       "price": 45,
       "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -2828,8 +2700,8 @@
       "description": "Description",
       "price": 110,
       "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -2844,8 +2716,8 @@
       "description": "Description",
       "price": 120,
       "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -2860,8 +2732,8 @@
       "description": "Description",
       "price": 110,
       "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     }
   ],
@@ -2871,6 +2743,7 @@
     "$oid": "60de563056ba9ce1253bf9e1"
   },
   "collectionId": 24,
+  "sortOrder": 28,
   "collectionName": "J'adore Cottage Core",
   "image": "collection13.png",
   "description": "collection description",
@@ -2881,6 +2754,7 @@
     "$oid": "60de563056ba9ce1253bf9e2"
   },
   "collectionId": 31,
+  "sortOrder": 11,
   "collectionName": "That 70s though",
   "image": "that_70s_though.png",
   "description": "collection description",
@@ -2897,9 +2771,9 @@
       "productName": "That 70s tho!#2",
       "description": "Description",
       "price": 85,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -2913,9 +2787,9 @@
       "productName": "That 70s tho!#3",
       "description": "Description",
       "price": 120,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -2932,9 +2806,9 @@
       "productName": "That 70s tho!#4",
       "description": "Description",
       "price": 220,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -2949,9 +2823,9 @@
       "productName": "That 70s tho!#5",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -2966,9 +2840,9 @@
       "productName": "That 70s tho!#6",
       "description": "Description",
       "price": 160,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -2983,9 +2857,9 @@
       "productName": "That 70s tho!#7",
       "description": "Description",
       "price": 120,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -2999,9 +2873,9 @@
       "productName": "That 70s tho!#8",
       "description": "Description",
       "price": 120,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3016,9 +2890,9 @@
       "productName": "That 70s tho!#9",
       "description": "Description",
       "price": 140,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3033,9 +2907,9 @@
       "productName": "That 70s tho!#10",
       "description": "Description",
       "price": 120,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3049,9 +2923,9 @@
       "productName": "That 70s tho!#11",
       "description": "Description",
       "price": 120,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3065,9 +2939,9 @@
       "productName": "That 70s tho!#12",
       "description": "Description",
       "price": 65,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3078,12 +2952,12 @@
         "that_70s_tho/IMG_4254.png"
       ],
       "productId": 74960,
-      "productName": "That 70s tho!#13",
-      "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productName": "‘Johnny Dexter’",
+      "description": "- 70s burgundy zig-zag knit tube skirt. Features looked fringe. Fully lined. Stretch fabric. \r\nNylon. Made in Australia  \r\n",
+      "price": 120,
+      "size": "8",
+      "measurements": "L 54 W 30 H 38-40",
+      "ausPostParcel": "S",
       "active": true
     },
     {
@@ -3098,18 +2972,19 @@
       "productName": "That 70s tho!#14",
       "description": "Description",
       "price": 80,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     }
   ],
-  "__v": 11
+  "__v": 12
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9e3"
   },
   "collectionId": 32,
+  "sortOrder": 12,
   "collectionName": "80s Dream Queen",
   "image": "80s_dream_queen.png",
   "description": "collection description",
@@ -3126,9 +3001,9 @@
       "productName": "80s Dream Queen#1",
       "description": "Description",
       "price": 240,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3141,11 +3016,11 @@
       ],
       "productId": 68348,
       "productName": "'Sophisticated-Eight'",
-      "description": " Late 80s/early 90s intrepid blazer. Whimsical stars, hearts and bows, sit understated in velvet - a subtle contrast to the bold black and gold buttons. Fully lined. Discreet structured shoulders. ",
+      "description": " Late 80s/early 90s intrepid blazer. Whimsical stars, hearts and bows, sit understated in velvet - a subtle contrast to the bold black and gold buttons. Fully lined. Discreet structured shoulders.\r\nPolyester/viscose. \r\nVelvet/cotton lined trim.  ",
       "price": 120,
-      "size": 12,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "12",
+      "measurements": "L 60 S 44 B 46 W 40 H 52 ",
+      "ausPostParcel": "XS",
       "active": true
     },
     {
@@ -3160,9 +3035,9 @@
       "productName": "80s Dream Queen#3",
       "description": "Description",
       "price": 240,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3176,9 +3051,9 @@
       "productName": "80s Dream Queen#4",
       "description": "Description",
       "price": 200,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3192,9 +3067,9 @@
       "productName": "80s Dream Queen#5",
       "description": "Description",
       "price": 140,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3209,18 +3084,19 @@
       "productName": "80s Dream Queen#6",
       "description": "Description",
       "price": 220,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     }
   ],
-  "__v": 7
+  "__v": 9
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9e4"
   },
   "collectionId": 33,
+  "sortOrder": 13,
   "collectionName": "90s like Nieve",
   "image": "90s_like_neve.png",
   "description": "collection description",
@@ -3237,9 +3113,9 @@
       "productName": "90s Like Nieve  #1",
       "description": "Description",
       "price": 45,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3251,12 +3127,12 @@
         "90s_like_nieve/IMG_4902.png"
       ],
       "productId": 18567,
-      "productName": "90s Like Nieve  #2",
-      "description": "Description",
-      "price": 160,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productName": "‘Miss Shop’ ",
+      "description": " - 90s straight maxi skirt with geometric Japanese flower print. Fully lined. Back zip and slit. \r\nMade in Australia ",
+      "price": 120,
+      "size": "8",
+      "measurements": "L 100 W 33 H 48 ",
+      "ausPostParcel": "S",
       "active": true
     },
     {
@@ -3270,9 +3146,9 @@
       "productName": "90s Like Nieve  #3",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3286,9 +3162,9 @@
       "productName": "90s Like Nieve  #4",
       "description": "ooooh nice feature ",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3302,9 +3178,9 @@
       "productName": "90s Like Nieve  #5",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3318,9 +3194,9 @@
       "productName": "90s Like Nieve  #6",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3334,9 +3210,9 @@
       "productName": "90s Like Nieve  #7",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3350,24 +3226,24 @@
       "productName": "90s Like Nieve  #8",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
       "productThumbs": [
         "90s_like_nieve/IMG_4602.PNG",
-        "90s_like_nieve/IMG_4604.PNG",
-        "90s_like_nieve/IMG_4598.PNG"
+        "90s_like_nieve/IMG_4598.PNG",
+        "90s_like_nieve/IMG_4604.PNG"
       ],
       "productId": 91209,
       "productName": "90s Like Nieve  #9",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": false
     },
     {
@@ -3381,9 +3257,9 @@
       "productName": "90s Like Nieve  #10",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3398,9 +3274,9 @@
       "productName": "90s Like Nieve  #11",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3411,12 +3287,12 @@
         "90s_like_nieve/IMG_4799.png"
       ],
       "productId": 33993,
-      "productName": "90s Like Nieve  #12",
-      "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productName": "’Sportsgirl’ ",
+      "description": "- 90s long sleeve top in rich sheer chocolate brown. Ribbed, slinky fabric with “burnout” flower motifs. Portrait neckline. \r\nPolyester/elastane. \r\nMade in Australia ",
+      "price": 45,
+      "size": "M",
+      "measurements": "L 52 S 40 B 42 W 36 ",
+      "ausPostParcel": "S",
       "active": true
     },
     {
@@ -3428,12 +3304,12 @@
         "90s_like_nieve/IMG_4935.PNG"
       ],
       "productId": 95402,
-      "productName": "90s Like Nieve  #13",
-      "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productName": "‘Body’",
+      "description": "- vintage corduroy jacket in rich merlot. Feature decorative buckled straps and press stud closure. \r\nCotton/Elastane \r\nMade in Australia",
+      "price": 45,
+      "size": "S",
+      "measurements": "S 52 B 50 W 41 ",
+      "ausPostParcel": "XS",
       "active": true
     },
     {
@@ -3444,12 +3320,12 @@
         "90s_like_nieve/IMG_7858.PNG"
       ],
       "productId": 75741,
-      "productName": "90s Like Nieve  #14",
-      "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productName": "‘Sochic’",
+      "description": "- 90s merlot velveteen top, featuring square neckline and ruched empire bust. \r\nPolyester/Nylon/Elastane.\r\nMade in Australia. ",
+      "price": 65,
+      "size": "10",
+      "measurements": "L 46 S 38 To fit  B 87 W 66  ",
+      "ausPostParcel": "XS",
       "active": true
     },
     {
@@ -3464,9 +3340,9 @@
       "productName": "90s Like Nieve  #15",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3484,9 +3360,9 @@
       "productName": "90s Like Nieve  #16",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3500,9 +3376,9 @@
       "productName": "90s Like Nieve  #17",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3516,9 +3392,9 @@
       "productName": "90s Like Nieve  #18",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3532,9 +3408,9 @@
       "productName": "90s Like Nieve  #19",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3549,9 +3425,9 @@
       "productName": "90s Like Nieve  #20",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3562,12 +3438,12 @@
         "90s_like_nieve/IMG_4853.png"
       ],
       "productId": 11410,
-      "productName": "90s Like Nieve  #21",
-      "description": "Description",
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productName": "‘Jersey Girl’",
+      "description": "- 90s sheer black and white cardi, featuring stark tree silhouettes and lettuce hem.\r\nPolyester \r\nMade in Australia ",
+      "price": 65,
+      "size": "12",
+      "measurements": "S 42 W 36 ",
+      "ausPostParcel": "XS",
       "active": true
     },
     {
@@ -3587,9 +3463,9 @@
       "productName": "90s Like Nieve  #22",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3604,9 +3480,9 @@
       "productName": "90s Like Nieve  #23",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3620,9 +3496,9 @@
       "productName": "90s Like Nieve  #24",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -3636,59 +3512,57 @@
       "productName": "90s Like Nieve  #25",
       "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     }
   ],
-  "__v": 3
+  "__v": 9
 },{
   "_id": {
     "$oid": "60de563056ba9ce1253bf9e5"
   },
   "collectionId": 34,
+  "sortOrder": 14,
   "collectionName": "Are you Y2Kray?",
   "image": "y2kray.png",
   "description": "collection description",
   "active": true,
   "products": [
     {
-      "productId": 66904,
-      "productName": "R U Y2Kray #1",
-      "description": "Description",
       "productThumbs": [
         "RUY2Kray/IMG_4669.png",
         "RUY2Kray/IMG_4666.png",
         "RUY2Kray/IMG_4668.png",
         "RUY2Kray/IMG_4667.png"
       ],
+      "productId": 66904,
+      "productName": "R U Y2Kray #1",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 91842,
-      "productName": "R U Y2Kray #2",
-      "description": "Description",
       "productThumbs": [
         "RUY2Kray/IMG_4683.png",
         "RUY2Kray/IMG_4684.png",
         "RUY2Kray/IMG_4680.png",
         "RUY2Kray/IMG_4682.png"
       ],
+      "productId": 91842,
+      "productName": "R U Y2Kray #2",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 42022,
-      "productName": "R U Y2Kray #3",
-      "description": "Description",
       "productThumbs": [
         "RUY2Kray/IMG_4649.png",
         "RUY2Kray/IMG_4648.png",
@@ -3701,16 +3575,16 @@
         "RUY2Kray/IMG_4653.png",
         "RUY2Kray/IMG_4647.png"
       ],
+      "productId": 42022,
+      "productName": "R U Y2Kray #3",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 89361,
-      "productName": "R U Y2Kray #4",
-      "description": "Description",
       "productThumbs": [
         "RUY2Kray/IMG_7999.PNG",
         "RUY2Kray/IMG_7998.PNG",
@@ -3720,48 +3594,48 @@
         "RUY2Kray/IMG_7991.PNG",
         "RUY2Kray/IMG_7993.PNG"
       ],
+      "productId": 89361,
+      "productName": "R U Y2Kray #4",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 46434,
-      "productName": "R U Y2Kray #5",
-      "description": "Description",
       "productThumbs": [
         "RUY2Kray/IMG_4641.png",
         "RUY2Kray/IMG_4642.png",
         "RUY2Kray/IMG_4643.png",
         "RUY2Kray/IMG_4646.png"
       ],
+      "productId": 46434,
+      "productName": "R U Y2Kray #5",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 9863,
-      "productName": "R U Y2Kray #6",
-      "description": "Description",
       "productThumbs": [
         "RUY2Kray/IMG_4604.png",
         "RUY2Kray/IMG_4606.png",
         "RUY2Kray/IMG_4609.png",
         "RUY2Kray/IMG_4608.png"
       ],
+      "productId": 9863,
+      "productName": "R U Y2Kray #6",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 74435,
-      "productName": "R U Y2Kray #7",
-      "description": "Description",
       "productThumbs": [
         "RUY2Kray/IMG_4676.png",
         "RUY2Kray/IMG_4677.png",
@@ -3772,157 +3646,161 @@
         "RUY2Kray/IMG_4672.png",
         "RUY2Kray/IMG_4678.png"
       ],
+      "productId": 74435,
+      "productName": "R U Y2Kray #7",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 31744,
-      "productName": "R U Y2Kray #8",
-      "description": "Description",
       "productThumbs": [
         "RUY2Kray/IMG_4658.png",
         "RUY2Kray/IMG_4661.png",
         "RUY2Kray/IMG_4663.png",
         "RUY2Kray/IMG_4660.png"
       ],
+      "productId": 31744,
+      "productName": "R U Y2Kray #8",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 43705,
-      "productName": "R U Y2Kray #9",
-      "description": "Description",
       "productThumbs": [
         "RUY2Kray/IMG_4628.png",
         "RUY2Kray/IMG_4626.png",
         "RUY2Kray/IMG_4625.png",
         "RUY2Kray/IMG_4631.png"
       ],
+      "productId": 43705,
+      "productName": "R U Y2Kray #9",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 27979,
-      "productName": "R U Y2Kray #10",
-      "description": "Description",
       "productThumbs": [
         "RUY2Kray/IMG_5070.PNG",
         "RUY2Kray/IMG_5065.PNG",
         "RUY2Kray/IMG_5067.PNG",
         "RUY2Kray/IMG_5056.PNG"
       ],
+      "productId": 27979,
+      "productName": "R U Y2Kray #10",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 91214,
-      "productName": "R U Y2Kray #11",
-      "description": "Description",
       "productThumbs": [
         "RUY2Kray/IMG_4622.png",
         "RUY2Kray/IMG_4617.png",
         "RUY2Kray/IMG_4619.png",
         "RUY2Kray/IMG_4620.png"
       ],
-      "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productId": 91214,
+      "productName": "’Scandals’",
+      "description": "- 90s rich chocolate ruched and draped V-neck with delicate copper sparkle throughout. Stretch fabric.\r\nPolyester/Spandex \r\nMade in Australia ",
+      "price": 45,
+      "size": "10",
+      "measurements": "L 58 S 44 B 46 w 40 L 58 S 44 B 46 W 40 ",
+      "ausPostParcel": "XS",
       "active": true
     },
     {
-      "productId": 3191,
-      "productName": "R U Y2Kray #12",
-      "description": "Description",
       "productThumbs": [
         "RUY2Kray/IMG_4688.png",
         "RUY2Kray/IMG_4690.png",
         "RUY2Kray/IMG_4687.png",
         "RUY2Kray/IMG_4686.png"
       ],
+      "productId": 3191,
+      "productName": "R U Y2Kray #12",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 24250,
-      "productName": "R U Y2Kray #13",
-      "description": "Description",
       "productThumbs": [
         "RUY2Kray/IMG_4610.png",
         "RUY2Kray/IMG_4615.png",
         "RUY2Kray/IMG_4614.png",
         "RUY2Kray/IMG_4612.png"
       ],
+      "productId": 24250,
+      "productName": "R U Y2Kray #13",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 3940,
-      "productName": "R U Y2Kray #14",
-      "description": "Description",
       "productThumbs": [
         "RUY2Kray/IMG_4691.png",
         "RUY2Kray/IMG_4692.png",
         "RUY2Kray/IMG_4695.png",
         "RUY2Kray/IMG_4696.png"
       ],
+      "productId": 3940,
+      "productName": "R U Y2Kray #14",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 89799,
-      "productName": "R U Y2Kray #15",
-      "description": "Description",
       "productThumbs": [
         "RUY2Kray/IMG_4636.png",
         "RUY2Kray/IMG_4632.png",
         "RUY2Kray/IMG_4640.png",
         "RUY2Kray/IMG_4639.png"
       ],
+      "productId": 89799,
+      "productName": "R U Y2Kray #15",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
-      "productId": 3085,
-      "productName": "R U Y2Kray #16",
-      "description": "Description",
       "productThumbs": [
         "RUY2Kray/IMG_4698.png",
         "RUY2Kray/IMG_4702.png",
         "RUY2Kray/IMG_4701.png",
         "RUY2Kray/IMG_4700.png"
       ],
+      "productId": 3085,
+      "productName": "R U Y2Kray #16",
+      "description": "Description",
       "price": 111,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     }
-  ]
+  ],
+  "__v": 1
 },{
   "_id": {
     "$oid": "60df3434837938542f6ca10b"
@@ -3938,6 +3816,7 @@
     "$oid": "60e2314cfcc625e31c39e89d"
   },
   "collectionId": 2,
+  "sortOrder": 3,
   "collectionName": "Beauty Sleeping",
   "image": "beauty_sleeping.png",
   "description": "collection description",
@@ -3945,118 +3824,35 @@
   "products": [
     {
       "productThumbs": [
-        "beauty_sleeping/IMG_2745.png",
-        "beauty_sleeping/IMG_2734.png",
-        "beauty_sleeping/IMG_2728.png",
-        "beauty_sleeping/IMG_2730.png",
-        "beauty_sleeping/IMG_2726.png"
+        "beauty_sleeping/IMG_3133.png",
+        "beauty_sleeping/IMG_3134.png",
+        "beauty_sleeping/IMG_3138.png",
+        "beauty_sleeping/IMG_3140.png",
+        "beauty_sleeping/IMG_3130.png"
       ],
-      "productId": 21491,
-      "productName": "‘Miss Gloria’",
-      "description": "- sheer, candy pink seersucker babydoll nightgown. Featuring crimped opaque horizontal stripes, ruffled peasant hem, lace bib trimming and two small sateen floral bows. Two matching pink \r\npearlescent bubble buttons. \r\n\r\nMATERIAL - BRï NYLON\r\n\r\nL 94cm B 90cm W 70cm H 95cm",
-      "price": 45,
-      "size": 14,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productId": 68593,
+      "productName": "'Berlei' ",
+      "description": "- vintage pearl white 1940s/50s night camise with delicate floral lace tulle. Adjustable shoestring straps. \r\nMade in Australia ",
+      "price": 65,
+      "size": "10",
+      "measurements": "L 44  To fit B 80 w 60 H 85",
+      "ausPostParcel": "XS",
       "active": true
     },
     {
       "productThumbs": [
-        "beauty_sleeping/IMG_2757.png",
-        "beauty_sleeping/IMG_2765.png",
-        "beauty_sleeping/IMG_2758.png",
-        "beauty_sleeping/IMG_2755.png"
+        "beauty_sleeping/IMG_3152.png",
+        "beauty_sleeping/IMG_3156.png",
+        "beauty_sleeping/IMG_3154.png",
+        "beauty_sleeping/IMG_3159.png"
       ],
-      "productId": 37770,
-      "productName": "Nightie 3",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 60,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "beauty_sleeping/IMG_2867.png",
-        "beauty_sleeping/IMG_2871.png",
-        "beauty_sleeping/IMG_2872.png",
-        "beauty_sleeping/IMG_2877.png",
-        "beauty_sleeping/IMG_2878.png",
-        "beauty_sleeping/IMG_2885.png"
-      ],
-      "productId": 61761,
-      "productName": "Nightie 4",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 45,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "beauty_sleeping/IMG_2768.png",
-        "beauty_sleeping/IMG_2774.png",
-        "beauty_sleeping/IMG_2775.png",
-        "beauty_sleeping/IMG_2679.png"
-      ],
-      "productId": 31030,
-      "productName": "Nightie 5",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 75,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "beauty_sleeping/IMG_2792.png",
-        "beauty_sleeping/IMG_2793.png",
-        "beauty_sleeping/IMG_2800.png",
-        "beauty_sleeping/IMG_2789.png"
-      ],
-      "productId": 77600,
-      "productName": "Nightie 6",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 50,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "beauty_sleeping/IMG_2810.png",
-        "beauty_sleeping/IMG_2808.png",
-        "beauty_sleeping/IMG_2803.png",
-        "beauty_sleeping/IMG_2804.png",
-        "beauty_sleeping/IMG_2801.png"
-      ],
-      "productId": 68274,
-      "productName": "Nightie 7",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 35,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "beauty_sleeping/IMG_2823.png",
-        "beauty_sleeping/IMG_2830.png",
-        "beauty_sleeping/IMG_2829.png",
-        "beauty_sleeping/IMG_2832.png"
-      ],
-      "productId": 97433,
-      "productName": "Nightie 8",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 45,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productId": 41408,
+      "productName": "‘Another Glance’",
+      "description": " - 50s peacock blue camisole featuring delicate lace trim, shoestring straps and decorative tie. Elastic back.\r\nNylon. \r\nMade in Australia ",
+      "price": 65,
+      "size": "12",
+      "measurements": "To fit B 85 W 85 H 90 ",
+      "ausPostParcel": "XS",
       "active": true
     },
     {
@@ -4070,9 +3866,9 @@
       "productName": "Nightie 9",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "price": 65,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "8",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -4086,9 +3882,25 @@
       "productName": "Nightie 11",
       "description": "product description 10",
       "price": 50,
-      "size": 8,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "8",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "beauty_sleeping/IMG_2757.png",
+        "beauty_sleeping/IMG_2765.png",
+        "beauty_sleeping/IMG_2758.png",
+        "beauty_sleeping/IMG_2755.png"
+      ],
+      "productId": 37770,
+      "productName": "Nightie 3",
+      "description": "Product description will go here - a brief two sentence description about the product...",
+      "price": 60,
+      "size": "8",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -4102,25 +3914,26 @@
       "productName": "Nightie 12",
       "description": "Product description will go here - a brief two sentence description about the product...",
       "price": 65,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
       "productThumbs": [
-        "beauty_sleeping/IMG_2903.png",
-        "beauty_sleeping/IMG_2898.png",
-        "beauty_sleeping/IMG_2902.png",
-        "beauty_sleeping/IMG_2896.png"
+        "beauty_sleeping/IMG_2950.png",
+        "beauty_sleeping/IMG_2947.png",
+        "beauty_sleeping/IMG_2946.png",
+        "beauty_sleeping/IMG_2942.png",
+        "beauty_sleeping/IMG_2940.png"
       ],
-      "productId": 63063,
-      "productName": "Nightie 13",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 35,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productId": 68874,
+      "productName": "'Elanor Lucas' ",
+      "description": "- wide strapped 90s nightie in bottle green sateen. Features 'fleur-de-lis' inspired floral motif in warm honey hues. ",
+      "price": 65,
+      "size": "12",
+      "measurements": "L 80 To fit B 85 W 65 H 90",
+      "ausPostParcel": "XS",
       "active": true
     },
     {
@@ -4136,49 +3949,95 @@
         "beauty_sleeping/IMG_2931.png"
       ],
       "productId": 58009,
-      "productName": "Nightie 14",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 65,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productName": "‘Bedroom Secrets’",
+      "description": "- Late 80s/early 90s blueberry nightie featuring delicate floral damask fabric and wide straps. \r\nPolyester. \r\nMade in Australia",
+      "price": 55,
+      "size": "14",
+      "measurements": "L 90 To fit B 90 W 75 H 100 ",
+      "ausPostParcel": "XS",
       "active": true
     },
     {
       "productThumbs": [
-        "beauty_sleeping/IMG_2950.png",
-        "beauty_sleeping/IMG_2947.png",
-        "beauty_sleeping/IMG_2946.png",
-        "beauty_sleeping/IMG_2942.png",
-        "beauty_sleeping/IMG_2940.png"
+        "beauty_sleeping/IMG_2867.png",
+        "beauty_sleeping/IMG_2871.png",
+        "beauty_sleeping/IMG_2872.png",
+        "beauty_sleeping/IMG_2877.png",
+        "beauty_sleeping/IMG_2878.png",
+        "beauty_sleeping/IMG_2885.png"
       ],
-      "productId": 68874,
-      "productName": "Nightie 15",
+      "productId": 61761,
+      "productName": "Nightie 4",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 65,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "price": 45,
+      "size": "8",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
       "productThumbs": [
-        "beauty_sleeping/IMG_3056.png",
-        "beauty_sleeping/IMG_3049.png",
-        "beauty_sleeping/IMG_3050.png",
-        "beauty_sleeping/IMG_3051.png",
-        "beauty_sleeping/IMG_3054.png",
-        "beauty_sleeping/IMG_3055.png",
-        "beauty_sleeping/IMG_3056.png",
-        "beauty_sleeping/IMG_3058.png"
+        "beauty_sleeping/IMG_3106.png",
+        "beauty_sleeping/IMG_3107.png",
+        "beauty_sleeping/IMG_3105.png",
+        "beauty_sleeping/IMG_3104.png"
       ],
-      "productId": 45346,
-      "productName": "Nightie 16",
+      "productId": 86014,
+      "productName": "‘Night Splash'",
+      "description": "- original pale sky blue babydoll featuring lace décolletage and hem. Microdot stitch cotton. \r\nMade in Australia",
+      "price": 45,
+      "size": "12",
+      "measurements": "L 88 B 85 W 85 H 90 ",
+      "ausPostParcel": "XS",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "beauty_sleeping/IMG_2745.png",
+        "beauty_sleeping/IMG_2734.png",
+        "beauty_sleeping/IMG_2728.png",
+        "beauty_sleeping/IMG_2730.png",
+        "beauty_sleeping/IMG_2726.png"
+      ],
+      "productId": 21491,
+      "productName": "‘Miss Gloria’",
+      "description": "- sheer, candy pink seersucker babydoll nightgown. Featuring crimped opaque horizontal stripes, ruffled peasant hem, lace bib trimming and two small sateen floral bows. Two matching pink \r\npearlescent bubble buttons. <br>\r\n\r\n\r\nMATERIAL - BRï NYLON\r\n\r\n",
+      "price": 45,
+      "size": "14",
+      "measurements": "L 94 B 90 W 70 H 95",
+      "ausPostParcel": "XS",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "beauty_sleeping/IMG_2903.png",
+        "beauty_sleeping/IMG_2898.png",
+        "beauty_sleeping/IMG_2902.png",
+        "beauty_sleeping/IMG_2896.png"
+      ],
+      "productId": 63063,
+      "productName": "Nightie 13",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 31,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "price": 35,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "M",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "beauty_sleeping/IMG_2823.png",
+        "beauty_sleeping/IMG_2830.png",
+        "beauty_sleeping/IMG_2829.png",
+        "beauty_sleeping/IMG_2832.png"
+      ],
+      "productId": 97433,
+      "productName": "Nightie 8",
+      "description": "Product description will go here - a brief two sentence description about the product...",
+      "price": 45,
+      "size": "8",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -4189,12 +4048,29 @@
         "beauty_sleeping/IMG_3061.png"
       ],
       "productId": 49106,
-      "productName": "Nightie 17",
+      "productName": "Babydoll",
+      "description": "- Super cute, fire truck red, polka dot vintage babydoll. Features crochet circle detailing around neck, tie ribbon, single button and scalloped edges. White/blue/green dots.\r\n",
+      "price": 55,
+      "size": "M",
+      "measurements": "L 104 B 56 W 60 H 62",
+      "ausPostParcel": "XS",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "beauty_sleeping/IMG_2810.png",
+        "beauty_sleeping/IMG_2808.png",
+        "beauty_sleeping/IMG_2803.png",
+        "beauty_sleeping/IMG_2804.png",
+        "beauty_sleeping/IMG_2801.png"
+      ],
+      "productId": 68274,
+      "productName": "Nightie 7",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 45,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "price": 35,
+      "size": "8",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
@@ -4206,44 +4082,12 @@
         "beauty_sleeping/IMG_3072.png"
       ],
       "productId": 70970,
-      "productName": "Nightie 18",
-      "description": "Product description will go here - a brief two sentence description about the product...",
+      "productName": "'Sussan'",
+      "description": "- Lightweight floral white damask dressing gown/robe with embroidered tulle detailing and lace trimming. \r\nPolyester. \r\nMade in Australia",
       "price": 85,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "beauty_sleeping/IMG_3097.png",
-        "beauty_sleeping/IMG_3096.png",
-        "beauty_sleeping/IMG_3100.png",
-        "beauty_sleeping/IMG_3101.png"
-      ],
-      "productId": 23911,
-      "productName": "Nightie 19",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 65,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "beauty_sleeping/IMG_3106.png",
-        "beauty_sleeping/IMG_3107.png",
-        "beauty_sleeping/IMG_3105.png",
-        "beauty_sleeping/IMG_3104.png"
-      ],
-      "productId": 86014,
-      "productName": "Nightie 20",
-      "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 45,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "S",
       "active": true
     },
     {
@@ -4255,47 +4099,62 @@
         "beauty_sleeping/IMG_3128.png"
       ],
       "productId": 49008,
-      "productName": "Nightie 21",
+      "productName": "'Sussan'",
+      "description": " - Like new, vintage summer weight dressing gown in white floral rose damask fabric. 100% Polyester. \r\nMade in Australia ",
+      "price": 65,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "S",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "beauty_sleeping/IMG_3097.png",
+        "beauty_sleeping/IMG_3096.png",
+        "beauty_sleeping/IMG_3100.png",
+        "beauty_sleeping/IMG_3101.png"
+      ],
+      "productId": 23911,
+      "productName": "'Sussan' ",
+      "description": "- Like new, vintage summer weight dressing gown in powder pink floral rose damask fabric.\r\nPolyester. \r\nMade in Australia",
+      "price": 65,
+      "size": "4",
+      "measurements": "",
+      "ausPostParcel": "XS",
+      "active": true
+    },
+    {
+      "productThumbs": [
+        "beauty_sleeping/IMG_2768.png",
+        "beauty_sleeping/IMG_2774.png",
+        "beauty_sleeping/IMG_2775.png",
+        "beauty_sleeping/IMG_2679.png"
+      ],
+      "productId": 31030,
+      "productName": "Nightie 5",
       "description": "Product description will go here - a brief two sentence description about the product...",
-      "price": 65,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "price": 75,
+      "size": "8",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     },
     {
       "productThumbs": [
-        "beauty_sleeping/IMG_3133.png",
-        "beauty_sleeping/IMG_3134.png",
-        "beauty_sleeping/IMG_3138.png",
-        "beauty_sleeping/IMG_3140.png",
-        "beauty_sleeping/IMG_3130.png"
+        "beauty_sleeping/IMG_2792.png",
+        "beauty_sleeping/IMG_2793.png",
+        "beauty_sleeping/IMG_2800.png",
+        "beauty_sleeping/IMG_2789.png"
       ],
-      "productId": 68593,
-      "productName": "Nightie 22",
-      "description": "Product Description to go here..",
-      "price": 45,
-      "size": 3,
-      "measurements" : "",
-      "ausPostParcel": "",
-      "active": true
-    },
-    {
-      "productThumbs": [
-        "beauty_sleeping/IMG_3152.png",
-        "beauty_sleeping/IMG_3156.png",
-        "beauty_sleeping/IMG_3154.png",
-        "beauty_sleeping/IMG_3159.png"
-      ],
-      "productId": 41408,
-      "productName": "Nightie 23",
-      "description": "Product Description goes here",
-      "price": 65,
-      "size": 4,
-      "measurements" : "",
-      "ausPostParcel": "",
+      "productId": 77600,
+      "productName": "Nightie 6",
+      "description": "Product description will go here - a brief two sentence description about the product...",
+      "price": 50,
+      "size": "8",
+      "measurements": "",
+      "ausPostParcel": "M",
       "active": true
     }
   ],
-  "__v": 34
+  "__v": 66
 }]

@@ -16,6 +16,7 @@ var productSchema = new Schema({
 
 var collectionSchema = new Schema({
     collectionId: { type:Number, required:true },
+    sortOrder: { type:Number, required:true },
     collectionName: { type:String, required:true },
     image: { type:String, required:true },
     description: { type:String, required:true },
