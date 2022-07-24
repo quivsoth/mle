@@ -1,8 +1,7 @@
 node_modules
+.git
+.env
 public/.DS_Store
 public/images/.DS_Store
 public/images/products/.DS_Store
 public/images/products/.DS_Store
-.git
-.env
-.env
