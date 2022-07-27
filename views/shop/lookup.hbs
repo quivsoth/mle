@@ -1,0 +1,75 @@
+<script>
+    var Collections = Object.create(null);
+    const imagePath = "/images/products/";
+
+    renderSelect = (data) => { 
+        console.log(data);
+        data.map(function(e) {
+            $("#collectionsSel").append(
+                '<option value="' + e.collectionId + '">' + e.collectionName + "</option>"
+            );    
+        });
+    }
+    fetchCollections = async() => {
+        fetch('/lookup/collections', {
+            method: 'GET', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    Collections = data;
+                    renderSelect(data);
+            })
+            .catch((error) => {
+                console.error('ERROR:', error);
+        });
+    },
+
+    $(document).ready(async function () {
+        
+        await fetchCollections();
+        $('select').on('change', function() {
+            //alert( this.value );
+            console.log("value: " + this.value);
+            var collectionId = parseInt(this.value);
+            var productLine = Collections.filter(function (item) {
+                return item.collectionId === collectionId;
+            }).pop();
+
+             $('#productLines').empty();
+            $('#productLines').append('<p class="mt-5 mb-2">Select an item..</h3><hr>');
+            productLine.products.forEach( (item) => {
+                console.log(item);
+                $('#productLines').append(`
+                <div class="row">
+                    <div class="col-2 pe-3"><img src="${imagePath + item.productThumbs[0]}" style="max-height:100px;"  /></div>
+                    <div class="col-8"><a href="/itemEdit/${collectionId}/${item.productId}" class="link-warning baja-font-135">${item.productName}</a><br><p>${item.description}</p></div>
+                </div>
+                <hr>
+                `);  
+            });
+
+        });
+    });
+</script>
+
+<div class="container fullBox">
+    <div class="row">
+        <h2>Edit a collection</h2>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <span>Choose a selection</span>
+            <select id="collectionsSel" name="collectionsSel" class="form-select form-select-lg">
+                <option>Select a Collection..</option>
+            </select>
+        </div>
+    </div>
+    <div class="row" id="productLines">
+        
+
+
+    </div>
+</div>

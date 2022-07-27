@@ -78,6 +78,15 @@ router.get('/item/:collection/:item', function (req, res, next) {
     })();
 });
 
+/* Item/Product Detail View. JSON Object        */
+router.post('/item/:collection/:item', async function (req, res, next) {
+    let collectionId = req.params.collection;
+    let itemId = req.params.item;
+    const item = await db.getItem(itemId, collectionId);
+    res.json(item);
+});
+
+
 /* Update item in collection                            */
 router.put('/updateProduct/:collection/:item', function (req, res) {
     (async function () {

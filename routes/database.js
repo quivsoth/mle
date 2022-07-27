@@ -20,7 +20,6 @@ module.exports = {
             await client.close();
         }
     },
-
     getProducts : async(collectionId) => {
         const client = new MongoClient(uri, {useUnifiedTopology: true});
         try {
@@ -63,6 +62,36 @@ module.exports = {
             p.measurements = measurements;
             p.ausPostParcel = ausPostParcel;
             p.active = isActive;
+            result.save();
+        });
+    },
+    updateProduct : async(product, collectionId) => {
+        var query = { collectionId: collectionId };
+        Collection.findOne(query, function (err, result) {
+            if (err) { console.log(err); }
+            var p = result.products.filter(function (item) {
+                return item.productId === parseInt(product.item.productId);
+            }).pop();
+         
+            p.productName = product.item.productName;
+            p.description = product.item.description;
+            p.price = product.item.price;
+            p.size = product.item.size;
+            p.measurements = product.item.measurements;
+            p.ausPostParcel = product.item.ausPostParcel;
+            p.active = product.item.active === "on" ? true : false;
+            result.save();
+        });
+    },
+    updateThumbs : async(productId, collectionId, thumbs) => {
+        var query = { collectionId: collectionId };
+        Collection.findOne(query, function (err, result) {
+
+            if (err) { console.log(err); }
+            var p = result.products.filter(function (item) {
+                return item.productId === parseInt(productId);
+            }).pop();
+            p.productThumbs = thumbs;
             result.save();
         });
     },

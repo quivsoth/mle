@@ -4,6 +4,41 @@ var SibApiV3Sdk = require("sib-api-v3-sdk");
 
 const db = require("./database");
 
+/* Item/Product Detail View.                        */
+router.put('/updateProduct/:collectionId/:itemId', function (req, res, next) {
+    (async function () {
+        try {
+            let collectionId = req.params.collectionId;
+            let itemId = req.params.itemId;
+            let data = req.body;
+            await db.updateProduct(data, collectionId);
+            res.json("SUCCESS");
+            //await db.updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size, req.body.measurements, req.body.parcel, req.body.isActive);    
+        } catch (error) {
+            console.log(error);
+            res.json("ERROR");
+        }
+    })();
+});
+
+/* Item/Product Detail View. JSON Object        */
+router.put('/updateThumbs/:collection/:item', async function (req, res, next) {
+    try {
+        let collectionId = req.params.collection;
+        let itemId = req.params.item;
+        let data = req.body;
+
+        //await updateProduct(req.body);
+
+        //await db.updateThumbs(itemId, collectionId, thumbs);
+        res.json("SUCCESS");
+        //await db.updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size, req.body.measurements, req.body.parcel, req.body.isActive);    
+    } catch (error) {
+        console.log(error);
+        res.json("ERROR");
+    }
+});
+
 /* Get a Product Item                               */
 router.get('/getItem', function (req, res, next) {
     (async function () {
@@ -13,6 +48,44 @@ router.get('/getItem', function (req, res, next) {
         res.json(item);
     })();
 });
+
+/* get collections (all)                            */
+router.get('/lookup/collections', async function (req, res, next) {
+    const collections = await db.getCollections();    
+    //res.json(collectionNames.map(({collectionName})=> collectionName));
+    res.json(collections);
+});
+
+
+
+/* Item/Product Detail View.                        */
+router.get('/lookup/', function (req, res, next) {
+    (async function () {
+        var messages = req.flash('info');
+        res.render('shop/lookup', {
+            title: 'Baja La Bruja - Admin Page',
+            messages: messages,
+            hasMessages: messages.length > 0
+        });
+    })();
+});
+
+
+
+/* View for Item Edit page                        */
+router.get('/itemEdit/:collection/:item', function (req, res, next) {
+    var messages = req.flash('info');
+    let collectionId = req.params.collection;
+    let itemId = req.params.item;
+    res.render('shop/itemEdit', {
+        title: 'Baja La Bruja - Item Editor Page',
+        messages: messages,
+        hasMessages: messages.length > 0,
+        collectionId: collectionId,
+        itemId: itemId
+    });
+});
+
 
 /* Sends an Email to the customer and billing       */
 router.get('/sendEmail', function (req, res, next) {
@@ -58,6 +131,8 @@ router.get('/sendEmail', function (req, res, next) {
         });
     })();
 });
+
+
 
 /* Item/Product Detail View.                        */
 router.get('/item_admin/:collection/:item', function (req, res, next) {

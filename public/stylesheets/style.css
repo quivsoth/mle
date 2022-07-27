@@ -113,6 +113,10 @@ body {
   color: #414141;
 }
 
+.fullBox {
+  height:100vh;
+}
+
 .full-width {
   width:100%;
 }
