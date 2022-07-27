@@ -52,7 +52,7 @@
       <div>
         <h1>{{ item.productName }}</h1>
         {{# unless login }}
-          <a href="/item_admin/{{collectionId}}/{{item.productId}}" style="padding-right:2rem;">[Edit]</a>
+          <a href="/itemEdit/{{collectionId}}/{{item.productId}}" style="padding-right:2rem;">[Edit]</a>
         {{/unless}}
       </div>
       <p>{{ item.description }}</p>

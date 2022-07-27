@@ -41,7 +41,6 @@
              $('#productLines').empty();
             $('#productLines').append('<p class="mt-5 mb-2">Select an item..</h3><hr>');
             productLine.products.forEach( (item) => {
-                console.log(item);
                 $('#productLines').append(`
                 <div class="row">
                     <div class="col-2 pe-3"><img src="${imagePath + item.productThumbs[0]}" style="max-height:100px;"  /></div>

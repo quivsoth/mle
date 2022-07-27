@@ -80,6 +80,7 @@ module.exports = {
             p.measurements = product.item.measurements;
             p.ausPostParcel = product.item.ausPostParcel;
             p.active = product.item.active === "on" ? true : false;
+            p.productThumbs = product.item.productThumbs;
             result.save();
         });
     },
