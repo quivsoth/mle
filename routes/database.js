@@ -79,7 +79,7 @@ module.exports = {
             p.size = product.item.size;
             p.measurements = product.item.measurements;
             p.ausPostParcel = product.item.ausPostParcel;
-            p.active = product.item.active === "on" ? true : false;
+            p.active = product.item.active;
             p.productThumbs = product.item.productThumbs;
             result.save();
         });

@@ -100,8 +100,9 @@
 
     $( document ).ready(async function(){ 
         await fetchItem(); 
+
         $( "#saveItem").click(async function() {
-            Product.item.active = $("[name='active']").val();;
+            Product.item.active = $("[name='active']")[0].checked;
             Product.item.productName = $("[name='productName']").val();
             Product.item.size = $("[name='size']").val();
             Product.item.price = $("[name='price']").val();
@@ -109,7 +110,7 @@
             Product.item.measurements = $("[name='measurements']").val();
             Product.item.ausPostParcel = $("[name='parcel']").val();
             Product.item.productThumbs = buildImageArray('#imageContainer');
-            await updateItem();            
+            await updateItem();
         });
     });
 </script>
