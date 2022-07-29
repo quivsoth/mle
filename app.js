@@ -15,6 +15,7 @@ var MongoStore = require('connect-mongo');
 const bodyParser = require('body-parser');
 
 var adminRouter = require('./routes/admin');
+var cartRouter = require('./routes/cart');
 var indexRouter = require('./routes/index');
 var orderRouter = require('./routes/order');
 var paymentRouter = require('./routes/payment');
@@ -58,6 +59,7 @@ app.use(function(req,res,next){
 });
 
 app.use('/', adminRouter);
+app.use('/', cartRouter);
 app.use('/', indexRouter);
 app.use('/order', orderRouter);
 app.use('/', paymentRouter);

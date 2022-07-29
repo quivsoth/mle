@@ -1,7 +1,5 @@
 var express = require("express");
 var router = express.Router();
-var Cart = require('../models/cart');
-
 const db = require("./database");
 
 /* Collections Page.                                    */
@@ -27,9 +25,8 @@ router.get('/collections', function (req, res, next) {
 router.get('/collections/:collectionId', function (req, res, next) {
     (async function () {
         var messages = req.flash('info');
-        //let collectionId = req.query.collectionId;
-        let collectionId = req.params.collectionId;
-        const collection = await db.getCollection(collectionId);
+        let collectionId = parseInt(req.params.collectionId);
+        const collection = await db.getCollections(collectionId);
 
         var activeProducts = [];
         for (let i = 0; i < collection.products.length; i++) {
@@ -54,21 +51,27 @@ router.get('/collections/:collectionId', function (req, res, next) {
 });
 
 /* Item/Product Detail View.                            */
-router.get('/item/:collection/:item', function (req, res, next) {
+router.get('/item/:collection/:itemId', function (req, res, next) {
     (async function () {
         var messages = req.flash('info');
-        let collectionId = req.params.collection;
-        let itemId = req.params.item;
+        let collectionId = parseInt(req.params.collection);
+        let itemId = parseInt(req.params.itemId);
  
         let inCart = false;
         if (req.session.hasOwnProperty('cart') && req.session.cart.items[itemId]) {
             inCart = true;
         }
         // if(req.session.cart.items[itemId]) inCart = true;
-        const item = await db.getItem(itemId, collectionId);
+        
+        const collection = await db.getCollections(collectionId);
+
+        var item = collection.products.filter(function (item) {
+            return item.productId === itemId;
+        }).pop();
+        
         res.render('shop/item', {
             title: 'Baja La Bruja - Items',
-            item: item.item,
+            item: item,
             collectionId: collectionId,
             collectionName: item.collectioName,
             inCart: inCart,
@@ -80,75 +83,14 @@ router.get('/item/:collection/:item', function (req, res, next) {
 
 /* Item/Product Detail View. JSON Object        */
 router.post('/item/:collection/:item', async function (req, res, next) {
-    let collectionId = req.params.collection;
-    let itemId = req.params.item;
-    const item = await db.getItem(itemId, collectionId);
+    let collectionId = parseInt(req.params.collection);
+    let itemId = parseInt(req.params.item);
+    // const item = await db.getItem(itemId, collectionId);
+    const collection = await db.getCollections(collectionId);
+    var item = collection.products.filter(function (item) {
+        return item.productId === itemId;
+    }).pop();
     res.json(item);
-});
-
-/* Add item to Shopping Cart.                           */ 
-router.get('/addCart/:collection/:item', function (req, res, next) {
-    (async function () {
-        let productId = parseInt(req.params.item);
-        let collectionId = parseInt(req.params.collection);
-        var cart = new Cart(req.session.cart ? req.session.cart : {});
-        const item = await db.getItem(productId, collectionId);
-        cart.add(item.item, item.item.productId);
-        req.session.cart = cart;
-        res.redirect('/item/' + collectionId + '/' + productId);
-    })();
-});
-
-/* Delete item in Shopping Cart                         */
-router.get('/deleteCart/:item', function (req, res, next) {
-    (async function () {
-        let productId = req.params.item;
-        var cart = new Cart(req.session.cart);
-        cart.delete(productId);
-        req.session.cart = cart;
-        res.redirect('/shopping-cart',);
-    })();
-});
-
-/* View Shopping Cart                                   */
-router.get('/shopping-cart', function (req, res, next) {
-    (async function () {
-        var messages = req.flash('info');
-        if (! req.session.cart) {
-            return res.render('shop/shopping-cart', {products: null});
-        }
-        var cart = new Cart(req.session.cart);
-        console.log(req.session.cart);
-        res.render('shop/shopping-cart', {
-            products: cart.generateArray(),
-            totalPrice: cart.totalPrice,
-            messages: messages,
-            hasMessages: messages.length > 0
-        });
-    })();
-});
-
-/* Checkout of Shopping Cart                             */
-router.get('/checkout', function (req, res, next) {
-    (async function () {
-        if (! req.session.cart) {
-            return res.render('shop/checkout', {products: null});
-        }
-        var cart = new Cart(req.session.cart);
-        var messages = req.flash('info');
-        res.render('shop/checkout', {
-            products: cart.generateArray(),
-            totalPrice: cart.totalPrice,
-            messages: messages,
-            hasMessages: messages.length > 0
-        });
-    })();
-});
-
-/* View for Video page                                   */
-router.get('/video', function (req, res, next) {
-    var messages = req.flash('info');
-    res.render('site/video', {title: 'Baja La Bruja - Fighting Fast Fashion'});
 });
 
 module.exports = router;

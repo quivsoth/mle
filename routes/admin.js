@@ -10,8 +10,8 @@ const db = require("./database");
 router.put('/updateProduct/:collectionId/:itemId', function (req, res, next) {
     (async function () {
         try {
-            let collectionId = req.params.collectionId;
-            let itemId = req.params.itemId;
+            let collectionId = parseInt(req.params.collectionId);
+            let itemId = parseInt(req.params.itemId);
             let data = req.body;
             await db.updateProduct(data, collectionId);
             req.flash('info', 'Item # ' + itemId + 'has been updated');
@@ -37,15 +37,14 @@ router.get('/lookup/', function (req, res, next) {
 /* get collections (all)    JSON RESULT             */
 router.get('/lookup/collections', async function (req, res, next) {
     const collections = await db.getCollections();    
-    //res.json(collectionNames.map(({collectionName})=> collectionName));
     res.json(collections);
 });
 
 /* View for Item Edit page                        */
 router.get('/itemEdit/:collection/:item', function (req, res, next) {
     var messages = req.flash('info');
-    let collectionId = req.params.collection;
-    let itemId = req.params.item;
+    let collectionId = parseInt(req.params.collection);
+    let itemId = parseInt(req.params.item);
     res.render('shop/itemEdit', {
         title: 'Baja La Bruja - Item Editor Page',
         messages: messages,
@@ -53,15 +52,6 @@ router.get('/itemEdit/:collection/:item', function (req, res, next) {
         collectionId: collectionId,
         itemId: itemId
     });
-});
-/* Get a Product Item   JSON RESULT                 */
-router.get('/getItem', function (req, res, next) {
-    (async function () {
-        let itemId = req.query.itemId;
-        let collectionId = req.query.collectionId;
-        const item = await db.getItem(itemId, collectionId);
-        res.json(item);
-    })();
 });
 
 /* Sends an Email to the customer and billing       */
@@ -109,7 +99,6 @@ router.get('/sendEmail', function (req, res, next) {
     })();
 });
 
-
 router.post('/profile', upload.single('avatar'), function (req, res, next) {
     console.log("heres");
     console.log(req);
@@ -129,7 +118,7 @@ router.get('/uploader', function (req, res, next) {
 
 module.exports = router;
 
-// -*-*-*-*-*-*-*-*-*-*-*-*-* DB FUNCTIONS -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
+// -*-*-*-*-*-*-*-*-*-*-*-*-* UTIL FUNCTIONS -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
 
 // this is a bit lazy - just querying the session variables, would be better to pass this to a full template.
 function EmailBody(order) {
@@ -151,7 +140,7 @@ function EmailBody(order) {
             <table style="width:100%;margin:10px" cellspacing="1">
                 <tr>
                     <td>
-                        <a><img src="https://baja.a2hosted.com/images/baja_logo.png" style="max-height: 7rem;" alt="Baja la Bruja Logo"/></a>
+                        <a><img src="https://baja.a2hosted.com/images/baja_logo_inverted.png" style="max-height: 7rem;" alt="Baja la Bruja Logo"/></a>
                     </td>
                 </tr>
                 <tr>

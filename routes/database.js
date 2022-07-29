@@ -1,106 +1,32 @@
-// const mongoose = require('mongoose');
-const {MongoClient} = require('mongodb');
-const uri = process.env.MONGO_DB;
 var Collection = require("../models/collection");
 
 module.exports = {
-    getCollections: async() => {
-        const client = new MongoClient(uri, {useUnifiedTopology: true});
-        try {
-            await client.connect();
-            const cursor = client.db("shop").collection("bruja").find({active: true}).sort({collectionId: 1});
-            const results = await cursor.toArray();
-
-            results.sort((a, b) => parseFloat(a.sortOrder) - parseFloat(b.sortOrder));
-
-            return results;
-        } catch (e) {
-            console.error(e);
-        } finally {
-            await client.close();
-        }
-    },
-    getCollection : async(collectionId) => {
-        const client = new MongoClient(uri, {useUnifiedTopology: true});
-        try {
-            await client.connect();
-            const cursor = await client.db("shop").collection("bruja").findOne({collectionId: Number(collectionId), active: true});
-            return cursor;
-        } catch (e) {
-            console.error(e);
-        } finally {
-            await client.close();
-        }
-    },
-    getItem : async(productId, collectionId) => {
-        const client = new MongoClient(uri, {useUnifiedTopology: true});
-        try {
-            await client.connect();
-            var result = {};
-            const cursor = await client.db("shop").collection("bruja").findOne({"collectionId": parseInt(collectionId)});
-            result.collectioName = cursor.collectionName;
-            let item = cursor.products.find(product => product.productId == productId);
-            result.item = item;
-            return result;
-        } catch (e) {
-            console.error(e);
-        } finally {
-            await client.close();
-        }
-    },
-    updateItem : async(productId, collectionId, productName, description, price, size, measurements, ausPostParcel, isActive) => {
-        var query = { collectionId: collectionId };
-        Collection.findOne(query, function (err, result) {
-            if (err) { console.log(err); }
-            var p = result.products.filter(function (item) {
-                return item.productId === productId;
-            }).pop();
-            p.productName = productName;
-            p.description = description;
-            p.price = price;
-            p.size = size;
-            p.measurements = measurements;
-            p.ausPostParcel = ausPostParcel;
-            p.isSold = product.item.isSold;
-            p.active = isActive;
-            result.save();
-        });
+    getCollections: async(collectionId) => {
+        try { 
+            if(collectionId === undefined) { return await Collection.find().lean(); } 
+            else {
+                var query = { collectionId: collectionId };
+                return await Collection.findOne(query).lean();
+            }
+        } catch (e) { console.error(e); }
     },
     updateProduct : async(product, collectionId) => {
         var query = { collectionId: collectionId };
         Collection.findOne(query, function (err, result) {
             if (err) { console.log(err); }
             var p = result.products.filter(function (item) {
-                return item.productId === parseInt(product.item.productId);
+                return item.productId === parseInt(product.productId);
             }).pop();
-         
-            p.productName = product.item.productName;
-            p.description = product.item.description;
-            p.price = product.item.price;
-            p.size = product.item.size;
-            p.measurements = product.item.measurements;
-            p.ausPostParcel = product.item.ausPostParcel;
-            p.isSold = product.item.isSold;
-            p.active = product.item.active;
-            p.productThumbs = product.item.productThumbs;
+            p.productName = product.productName;
+            p.description = product.description;
+            p.price = product.price;
+            p.size = product.size;
+            p.measurements = product.measurements;
+            p.ausPostParcel = product.ausPostParcel;
+            p.isSold = product.isSold;
+            p.active = product.active;
+            p.productThumbs = product.productThumbs;
             result.save();
         });
     }
 };
-
-
-
-
-
-// NOT WORKING _ NEED TO FIX _ TEMP FUNCTION THIS IS USING MONGOOSE _ THIS WILL REPLACE IT ALL
-async function getItem2(productId, collectionId) {
-    var query = { collectionId: collectionId };
-    var p;
-    Collection.findOne(query, function (err, result) {
-        if (err) { console.log(err); }
-        p = result.products.filter(function (item) {
-            return item.productId === productId;
-        }).pop();
-    });
-    return p;
-}
