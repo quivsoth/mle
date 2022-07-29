@@ -24,17 +24,17 @@ router.get('/collections', function (req, res, next) {
 });
 
 /* Products in Collection page.                         */        
-router.get('/products/:collection', function (req, res, next) {
+router.get('/collections/:collectionId', function (req, res, next) {
     (async function () {
         var messages = req.flash('info');
         //let collectionId = req.query.collectionId;
-        let collectionId = req.params.collection;
-        const products = await db.getProducts(collectionId);
+        let collectionId = req.params.collectionId;
+        const collection = await db.getCollection(collectionId);
 
         var activeProducts = [];
-        for (let i = 0; i < products.products.length; i++) {
-            if (products.products[i].active === true) 
-                activeProducts.push(products.products[i]);
+        for (let i = 0; i < collection.products.length; i++) {
+            if (collection.products[i].active === true) 
+                activeProducts.push(collection.products[i]);
         }
 
         var productChunks = [];
@@ -45,7 +45,7 @@ router.get('/products/:collection', function (req, res, next) {
         res.render('shop/products', {
             title: 'Baja La Bruja - Products',
             products: productChunks,
-            breadCrumb: products.collectionName,
+            breadCrumb: collection.collectionName,
             collectionId: collectionId,
             messages: messages,
             hasMessages: messages.length > 0
@@ -84,19 +84,6 @@ router.post('/item/:collection/:item', async function (req, res, next) {
     let itemId = req.params.item;
     const item = await db.getItem(itemId, collectionId);
     res.json(item);
-});
-
-
-/* Update item in collection                            */
-router.put('/updateProduct/:collection/:item', function (req, res) {
-    (async function () {
-        console.log("Update Product");
-        let itemId = parseInt(req.params.item);
-        let collectionId = parseInt(req.params.collection);
-        await db.updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size, req.body.measurements, req.body.parcel, req.body.isActive);
-        req.flash('info', 'Item # ' + itemId + 'has been updated');
-        res.redirect('/item_admin/' + collectionId + '/' + itemId);
-    })();
 });
 
 /* Add item to Shopping Cart.                           */ 

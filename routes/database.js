@@ -20,7 +20,7 @@ module.exports = {
             await client.close();
         }
     },
-    getProducts : async(collectionId) => {
+    getCollection : async(collectionId) => {
         const client = new MongoClient(uri, {useUnifiedTopology: true});
         try {
             await client.connect();
@@ -61,6 +61,7 @@ module.exports = {
             p.size = size;
             p.measurements = measurements;
             p.ausPostParcel = ausPostParcel;
+            p.isSold = product.item.isSold;
             p.active = isActive;
             result.save();
         });
@@ -79,23 +80,12 @@ module.exports = {
             p.size = product.item.size;
             p.measurements = product.item.measurements;
             p.ausPostParcel = product.item.ausPostParcel;
+            p.isSold = product.item.isSold;
             p.active = product.item.active;
             p.productThumbs = product.item.productThumbs;
             result.save();
         });
-    },
-    updateThumbs : async(productId, collectionId, thumbs) => {
-        var query = { collectionId: collectionId };
-        Collection.findOne(query, function (err, result) {
-
-            if (err) { console.log(err); }
-            var p = result.products.filter(function (item) {
-                return item.productId === parseInt(productId);
-            }).pop();
-            p.productThumbs = thumbs;
-            result.save();
-        });
-    },
+    }
 };
 
 
@@ -113,39 +103,4 @@ async function getItem2(productId, collectionId) {
         }).pop();
     });
     return p;
-}
-
-
-
-async function deleteThumb(productId, collectionId, thumb) {
-    var query = { collectionId: collectionId, "products.productId": productId };
-
-    console.log("collectionId : " + collectionId);
-    console.log("productId : " + productId);
-    console.log("thumb : " + thumb);
-
-    Collection.findOne(query, function (err, result) {
-        if (err) { console.log(err); }
-        console.log(result);
-    });
-
-    /*
-    Clothing.findOne(query, (err, result) => {
-        if (err) { console.log(err); }
-        // console.log(result);
-        
-    //    const items = category.products; //the array of items
-    // console.log(items); //gives an array back
-        const item = _.find(result, { productId: productId });
-        console.log(item); //gives the value of 'undefined' for whatever reason
-
-    //     var g;
-    //     console.log(category);
-    //    var p = category.products.filter(function (item) {
-    //         return item.productId === productId;
-    //     }).pop();
-
-    //     console.log(p);
-    });
-    */
 }

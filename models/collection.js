@@ -10,6 +10,7 @@ var productSchema = new Schema({
     size: { type:String, required:true },
     measurements: { type:String, required:false },
     ausPostParcel: { type:String, required:false },
+    isSold: { type:Boolean, required:true },
     active: { type:Boolean, required:true }
 },
 { collection : 'bruja' });

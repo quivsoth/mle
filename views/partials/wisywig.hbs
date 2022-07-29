@@ -1,0 +1,74 @@
+<!-- Include Quill stylesheet -->
+<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+ 
+<!-- Create the toolbar container -->
+<div id="toolbar">
+ 
+    <select class="ql-size">
+      <option value="small"></option>
+      <!-- Note a missing, thus falsy value, is used to reset to default -->
+      <option selected></option>
+      <option value="large"></option>
+      <option value="huge"></option>
+    </select>
+
+    <span class="ql-formats">
+      <button class="ql-bold"></button>
+      <button class="ql-italic"></button>
+      <button class="ql-underline"></button>
+      <button class="ql-strike"></button>
+    </span>
+    
+    <span class="ql-formats">
+      <select class="ql-color"></select>
+      <select class="ql-background"></select>
+    </span>
+    
+    <span class="ql-formats">
+      <button class="ql-script" value="sub"></button>
+      <button class="ql-script" value="super"></button>
+    </span>
+    
+
+    
+    <span class="ql-formats">
+      <button class="ql-list" value="ordered"></button>
+      <button class="ql-list" value="bullet"></button>
+      <button class="ql-indent" value="-1"></button>
+      <button class="ql-indent" value="+1"></button>
+    </span>
+    
+    <span class="ql-formats">
+      <button class="ql-direction" value="rtl"></button>
+      <select class="ql-align"></select>
+    </span>
+
+    <span class="ql-formats">
+      <button class="ql-link"></button>
+      <button class="ql-image"></button>
+      <button class="ql-video"></button>
+      <button class="ql-formula"></button>
+    </span>
+
+    <span class="ql-formats">
+      <button class="ql-clean"></button>
+    </span>
+
+
+</div>
+ 
+<!-- Create the editor container -->
+<div id="editor">
+  <p>Hello World!</p>
+</div>
+ 
+<!-- Include the Quill library -->
+<script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+ 
+<!-- Initialize Quill editor -->
+<script>
+  var editor = new Quill('#editor', {
+    modules: { toolbar: '#toolbar' },
+    theme: 'snow'
+  });
+</script> 

@@ -13,7 +13,7 @@
     "description": "description from postman 20 sep, revision 10.3,",
     "price": 55,
     "size": 2,
-    "active": true
+    "active": true,
 },
 {
     "productThumbs": [
@@ -27,7 +27,7 @@
     "description": "Description",
     "price": 111,
     "size": 4,
-    "active": true
+    "active": true,
 },
 {
     "productThumbs": [
@@ -42,7 +42,7 @@
     "description": "Description",
     "price": 111,
     "size": 4,
-    "active": true
+    "active": true,
 },
 {
     "productThumbs": [
@@ -57,7 +57,7 @@
     "description": "Description",
     "price": 111,
     "size": 4,
-    "active": true
+    "active": true,
 },
 {
     "productThumbs": [
@@ -72,7 +72,7 @@
     "description": "Description",
     "price": 111,
     "size": 4,
-    "active": true
+    "active": true,
 },
 {
     "productThumbs": [
@@ -87,7 +87,7 @@
     "description": "tudors99",
     "price": 111,
     "size": 4,
-    "active": true
+    "active": true,
 },
 {
     "productThumbs": [
@@ -102,6 +102,6 @@
     "description": "descr.",
     "price": 111,
     "size": 4,
-    "active": true
+    "active": true,
 }
 ]

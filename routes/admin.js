@@ -1,6 +1,8 @@
 var express = require("express");
 var router = express.Router();
 var SibApiV3Sdk = require("sib-api-v3-sdk");
+const multer  = require('multer');
+const upload = multer({ dest: 'uploads/' });
 
 const db = require("./database");
 
@@ -12,51 +14,14 @@ router.put('/updateProduct/:collectionId/:itemId', function (req, res, next) {
             let itemId = req.params.itemId;
             let data = req.body;
             await db.updateProduct(data, collectionId);
+            req.flash('info', 'Item # ' + itemId + 'has been updated');
             res.json("SUCCESS");
-            //await db.updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size, req.body.measurements, req.body.parcel, req.body.isActive);    
         } catch (error) {
             console.log(error);
             res.json("ERROR");
         }
     })();
 });
-
-/* Item/Product Detail View. JSON Object        */
-router.put('/updateThumbs/:collection/:item', async function (req, res, next) {
-    try {
-        let collectionId = req.params.collection;
-        let itemId = req.params.item;
-        let data = req.body;
-
-        //await updateProduct(req.body);
-
-        //await db.updateThumbs(itemId, collectionId, thumbs);
-        res.json("SUCCESS");
-        //await db.updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size, req.body.measurements, req.body.parcel, req.body.isActive);    
-    } catch (error) {
-        console.log(error);
-        res.json("ERROR");
-    }
-});
-
-/* Get a Product Item                               */
-router.get('/getItem', function (req, res, next) {
-    (async function () {
-        let itemId = req.query.itemId;
-        let collectionId = req.query.collectionId;
-        const item = await db.getItem(itemId, collectionId);
-        res.json(item);
-    })();
-});
-
-/* get collections (all)                            */
-router.get('/lookup/collections', async function (req, res, next) {
-    const collections = await db.getCollections();    
-    //res.json(collectionNames.map(({collectionName})=> collectionName));
-    res.json(collections);
-});
-
-
 
 /* Item/Product Detail View.                        */
 router.get('/lookup/', function (req, res, next) {
@@ -69,8 +34,12 @@ router.get('/lookup/', function (req, res, next) {
         });
     })();
 });
-
-
+/* get collections (all)    JSON RESULT             */
+router.get('/lookup/collections', async function (req, res, next) {
+    const collections = await db.getCollections();    
+    //res.json(collectionNames.map(({collectionName})=> collectionName));
+    res.json(collections);
+});
 
 /* View for Item Edit page                        */
 router.get('/itemEdit/:collection/:item', function (req, res, next) {
@@ -85,7 +54,15 @@ router.get('/itemEdit/:collection/:item', function (req, res, next) {
         itemId: itemId
     });
 });
-
+/* Get a Product Item   JSON RESULT                 */
+router.get('/getItem', function (req, res, next) {
+    (async function () {
+        let itemId = req.query.itemId;
+        let collectionId = req.query.collectionId;
+        const item = await db.getItem(itemId, collectionId);
+        res.json(item);
+    })();
+});
 
 /* Sends an Email to the customer and billing       */
 router.get('/sendEmail', function (req, res, next) {
@@ -133,42 +110,22 @@ router.get('/sendEmail', function (req, res, next) {
 });
 
 
+router.post('/profile', upload.single('avatar'), function (req, res, next) {
+    console.log("heres");
+    console.log(req);
+    // req.file is the `avatar` file
+    // req.body will hold the text fields, if there were any
+  })
 
-/* Item/Product Detail View.                        */
-router.get('/item_admin/:collection/:item', function (req, res, next) {
+  /* Item/Product Detail View.                        */
+router.get('/uploader', function (req, res, next) {
     (async function () {
-        var messages = req.flash('info');
-        let itemId = parseInt(req.params.item);
-        let collectionId = parseInt(req.params.collection);
-        let inCart = false;
-        if (req.session.hasOwnProperty('cart') && req.session.cart.items[itemId]) {
-            inCart = true;
-        }
-        const item = await db.getItem(itemId, collectionId);
-        var messages = req.flash('info');
-        res.render('shop/item_admin', {
-            title: 'Baja La Bruja - Items',
-            item: item.item,
-            collectionId: collectionId,
-            collectionName: item.collectioName,
-            inCart: inCart,
-            messages: messages,
-            hasMessages: messages.length > 0
+        res.render('site/upload', {
+            title: 'Baja La Bruja - Upload File',
         });
     })();
 });
 
-/* Update item in collection                    */
-router.put('/updateProduct/:collection/:id', function (req, res) {
-    (async function () {
-        console.log("Update Product");
-        let itemId = parseInt(req.params.id);
-        let collectionId = parseInt(req.params.collection);
-        await db.updateItem(itemId, collectionId, req.body.productName, req.body.description, req.body.price, req.body.size, req.body.measurements, req.body.parcel, req.body.isActive);
-        req.flash('info', 'Item # ' + itemId + 'has been updated');
-        res.redirect('/item_admin/'+collectionId+'/'+itemId);
-    })();
-});
 
 module.exports = router;
 
