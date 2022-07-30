@@ -4,7 +4,7 @@ var collectionId = document.getElementById("collectionId").value;
 var itemId = document.getElementById("itemId").value;
 
 fetchItem = async() => {
-    fetch('/item/' + collectionId + '/' + itemId, {
+    fetch('/api/item/' + collectionId + '/' + itemId, {
         method: 'POST', // or 'PUT'
         headers: {
             'Content-Type': 'application/json',
@@ -78,7 +78,6 @@ $( document ).ready(async function(){
     await fetchItem(); 
 
     $( "#saveItem").click(async function() {
-
         Product.active = $("[name='active']")[0].checked;
         Product.isSold = $("[name='isSold']")[0].checked;
         Product.productName = $("[name='productName']").val();

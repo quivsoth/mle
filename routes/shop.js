@@ -6,7 +6,13 @@ const db = require("./database");
 router.get('/collections', function (req, res, next) {
     (async function () {
         var messages = req.flash('info');
-        const collections = await db.getCollections();
+        const collectionsAll = await db.getCollections();
+
+        //filter active collections only
+        var collections = collectionsAll.filter((function (item) {
+            return item.active === true;
+        }));
+
         var productChunks = [];
         var chunkSize = 5;
         for (let i = 0; i < collections.length; i += chunkSize) {
@@ -79,18 +85,6 @@ router.get('/item/:collection/:itemId', function (req, res, next) {
             hasMessages: messages.length > 0
         });
     })();
-});
-
-/* Item/Product Detail View. JSON Object        */
-router.post('/item/:collection/:item', async function (req, res, next) {
-    let collectionId = parseInt(req.params.collection);
-    let itemId = parseInt(req.params.item);
-    // const item = await db.getItem(itemId, collectionId);
-    const collection = await db.getCollections(collectionId);
-    var item = collection.products.filter(function (item) {
-        return item.productId === itemId;
-    }).pop();
-    res.json(item);
 });
 
 module.exports = router;

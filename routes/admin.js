@@ -34,11 +34,6 @@ router.get('/lookup/', function (req, res, next) {
         });
     })();
 });
-/* get collections (all)    JSON RESULT             */
-router.get('/lookup/collections', async function (req, res, next) {
-    const collections = await db.getCollections();    
-    res.json(collections);
-});
 
 /* View for Item Edit page                        */
 router.get('/itemEdit/:collection/:item', function (req, res, next) {

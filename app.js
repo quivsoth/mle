@@ -15,6 +15,7 @@ var MongoStore = require('connect-mongo');
 const bodyParser = require('body-parser');
 
 var adminRouter = require('./routes/admin');
+var apiRouter = require('./routes/api');
 var cartRouter = require('./routes/cart');
 var indexRouter = require('./routes/index');
 var orderRouter = require('./routes/order');
@@ -59,6 +60,7 @@ app.use(function(req,res,next){
 });
 
 app.use('/', adminRouter);
+app.use('/api', apiRouter);
 app.use('/', cartRouter);
 app.use('/', indexRouter);
 app.use('/order', orderRouter);
@@ -70,7 +72,8 @@ app.use('/user', userRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+  // next(createError(404));
+  next();
 });
 
 // error handler
@@ -84,9 +87,13 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.use(function(req, res) {
+  res.status(404).end('error');
+});
+
+
 // Handlebars custom handlers
 var hbs = expressHbs.create({});
-
 // register new function
 hbs.handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
   return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
