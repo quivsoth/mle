@@ -15,16 +15,6 @@ var productSchema = new Schema({
     sortIndex: { type:Number, required: false},
     productThumbs: { type:[String], required: true} 
 },
-{ collection : 'bruja' });
-
-var collectionSchema = new Schema({
-    collectionId: { type:Number, required:true },
-    collectionName: { type:String, required:true },
-    image: { type:String, required:true },
-    description: { type:String, required:true },
-    active: { type:Boolean, required:true },
-},
-{ collection : 'bruja' });
+{ collection : 'products' });
 
 module.exports = mongoose.model('Product', productSchema);
-module.exports = mongoose.model('Collection', collectionSchema);

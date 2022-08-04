@@ -4,17 +4,15 @@ var collectionId = document.getElementById("collectionId").value;
 var itemId = document.getElementById("itemId").value;
 
 fetchItem = async() => {
-    fetch('/api/item/' + collectionId + '/' + itemId, {
-        method: 'POST', // or 'PUT'
-        headers: {
+    fetch('/api/product/' + itemId, {
+        method: 'GET', // or 'PUT'
+        headers: { 
             'Content-Type': 'application/json',
-        },
-            body: JSON.stringify({}),
-        })
+        }})
             .then((response) => response.json())
             .then((data) => {
-                Product = data;
                 console.log(data);
+                Product = data;
                 renderImageArray(data);
                 renderProperties(data);
         })
@@ -24,14 +22,14 @@ fetchItem = async() => {
 },
 updateItem = async() => {
     $.ajax({
-        url: '/updateProduct/' + collectionId + '/' + itemId,
+        url: '/updateProduct',
         headers: {"Content-Type": "application/json"},
         type: 'PUT',
         dataType: 'json',
         data: JSON.stringify(Product),
         success: function (data, textStatus, xhr) {
             //console.log(collection.products[0].productThumbs);
-            location.href = "/item/" + collectionId + "/" + itemId;
+            location.href = "/product/" + itemId;
         },
         error: function (xhr, textStatus, errorThrown) {
             console.log('Error in Operation');
@@ -75,7 +73,7 @@ removeImage = (element) => {
 },
 
 $( document ).ready(async function(){ 
-    await fetchItem(); 
+    await fetchItem();
 
     $( "#saveItem").click(async function() {
         Product.active = $("[name='active']")[0].checked;

@@ -2,17 +2,17 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
     <li class="breadcrumb-item"><a href="/collections">Collections</a></li>
-    <li class="breadcrumb-item active" aria-current="page">{{ this.breadCrumb }}</li>
+    <li class="breadcrumb-item active" aria-current="page">{{ this.collectionName }}</li>
   </ol>
 </nav>
-{{!-- /items?itemId={{this.productId}} --}}
 
+{{!-- /items?itemId={{this.productId}} --}}
 <h4 class="sectionHeader text-center text-light" style="padding: 0  1rem 0;padding-bottom:1rem">{{ this.breadCrumb }}</h4>
 {{# each products }}
     <div class="row justify-content-md-center bg-image">
-        {{# each this}}
+        {{# each this }}
             <div class="col-xs-3 col-lg-2 blockSpace4">
-                <a href="/item/{{@root.collectionId}}/{{this.productId}}" style="text-decoration: none;">
+                <a href="/product/{{this.productId}}" style="text-decoration: none;">
                     <div class="card">
                         <img class="card-img-top" src="/images/products/{{ this.productThumbs.[0] }}" alt="{{ this.productName }}">
                         <div class="card-body">

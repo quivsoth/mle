@@ -7,18 +7,14 @@ const upload = multer({ dest: 'uploads/' });
 const db = require("./database");
 
 /* Item/Product Detail View.                        */
-router.put('/updateProduct/:collectionId/:itemId', function (req, res, next) {
+router.put('/updateProduct/', function (req, res, next) {
     (async function () {
         try {
-            let collectionId = parseInt(req.params.collectionId);
-            let itemId = parseInt(req.params.itemId);
-            let data = req.body;
-            await db.updateProduct(data, collectionId);
-            req.flash('info', 'Item # ' + itemId + 'has been updated');
+            await db.updateProduct(req.body);
+            req.flash('info', 'Item # ' + req.body.productId + 'has been updated');
             res.json("SUCCESS");
         } catch (error) {
-            console.log(error);
-            res.json("ERROR");
+            res.json("ERROR: " + error);
         }
     })();
 });
@@ -27,7 +23,7 @@ router.put('/updateProduct/:collectionId/:itemId', function (req, res, next) {
 router.get('/lookup/', function (req, res, next) {
     (async function () {
         var messages = req.flash('info');
-        res.render('shop/lookup', {
+        res.render('admin/lookup', {
             title: 'Baja La Bruja - Admin Page',
             messages: messages,
             hasMessages: messages.length > 0
@@ -36,16 +32,16 @@ router.get('/lookup/', function (req, res, next) {
 });
 
 /* View for Item Edit page                        */
-router.get('/itemEdit/:collection/:item', function (req, res, next) {
+router.get('/itemEdit/:productId', function (req, res, next) {
     var messages = req.flash('info');
     let collectionId = parseInt(req.params.collection);
-    let itemId = parseInt(req.params.item);
-    res.render('shop/itemEdit', {
+    let productId = parseInt(req.params.productId);
+    res.render('admin/itemEdit', {
         title: 'Baja La Bruja - Item Editor Page',
         messages: messages,
         hasMessages: messages.length > 0,
         collectionId: collectionId,
-        itemId: itemId
+        itemId: productId
     });
 });
 
@@ -108,6 +104,11 @@ router.get('/uploader', function (req, res, next) {
             title: 'Baja La Bruja - Upload File',
         });
     })();
+});
+
+  /* Error 404                                  */
+router.get('/error404', function (req, res, next) {
+    res.render('site/error404', { title: 'Baja La Bruja - 404 NOT FOUND',});
 });
 
 

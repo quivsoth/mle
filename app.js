@@ -87,9 +87,13 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.use(function(req, res) {
-  res.status(404).end('error');
+// Handle 404 - Keep this as a last route
+app.use(function(req, res, next) {
+  
+  res.status(404).redirect('/error404')
+  // res.render('/site/error404',{});
 });
+
 
 
 // Handlebars custom handlers

@@ -4,12 +4,13 @@
     <li class="breadcrumb-item active" aria-current="page">Collections</li>
   </ol>
 </nav>
+
 <h4 class="sectionHeader text-center text-light" style="padding: 0 0 1rem 0;">Collections</h4>
 {{# each collections }}
     <div class="row justify-content-md-center bg-image">
         {{# each this}}
             <div class="col-xs-3 col-lg-2 blockSpace4">
-                <a href="/collections/{{this.collectionId}}" style="text-decoration: none;">
+                <a href="/products/{{this.collectionId}}" style="text-decoration: none;">
                 <div class="card" style="text-decoration: none;">
                     <img class="card-img-top" src="images/collections/{{ this.image }}" alt="{{ this.collectionName }}">
                 </div>

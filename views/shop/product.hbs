@@ -22,21 +22,22 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
     <li class="breadcrumb-item"><a href="/collections">Collections</a></li>
-    <li class="breadcrumb-item"><a href="/products/{{collectionId}}">{{collectionName}}</a></li>
-    <li class="breadcrumb-item active" aria-current="page">{{ item.productName }}</li>
+    <li class="breadcrumb-item"><a href="/products/{{collection.collectionId}}">{{collection.collectionName}}</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ product.productName }}</li>
   </ol>
 </nav>
+
 <div class="container-fluid">
 <div class="row mb-3">
   <div class="row mb-3">
     {{!-- #Start Column 1 --}}
     
     <div class="col-lg-4 col-md-6 col-xxl-3" style="position: relative;display: inline;">
-      {{#if item.isSold }}<img src="/images/sold.png" style="z-index: 999;height: 200px; width:auto; position:absolute;display:inline;margin-top:90px" />{{/if}}
+      {{#if product.isSold }}<img src="/images/sold.png" style="z-index: 999;height: 200px; width:auto; position:absolute;display:inline;margin-top:90px" />{{/if}}
       <div id="image-slider" class="splide">
         <div class="splide__track">    
           <ul class="splide__list full-width">
-            {{#each item.productThumbs}}
+            {{#each product.productThumbs}}
               <li class="full-width splide__slide"><img class="img-responsive img-fluid" src="/images/products/{{this}}" style="z-index: 2"></li>
             {{/each}}
           </ul>
@@ -51,27 +52,27 @@
     {{!-- #Start Column 2 --}}
     <div class="col-lg-6 col-md-5 ms-3 mt-3 col-xxl-8">
       <div>
-        <h1>{{ item.productName }}</h1>
+        <h1>{{ product.productName }}</h1>
         {{# unless login }}
-          <a href="/itemEdit/{{collectionId}}/{{item.productId}}" style="padding-right:2rem;">[Edit]</a>
+          <a href="/itemEdit/{{collectionId}}/{{product.productId}}" style="padding-right:2rem;">[Edit]</a>
         {{/unless}}
       </div>
       <div id="editorContent">
-        {{{ item.description }}}
+        {{{ product.description }}}
       </div>
-      <p>Size: {{ item.size }}</p>
-      <p>${{ item.price }}</p>
-      <p>Measurements: {{ item.measurements }}</p>
-      <p>SKU #: {{ item.productId }}</p>
+      <p>Size: {{ product.size }}</p>
+      <p>${{ product.price }}</p>
+      <p>Measurements: {{ product.measurements }}</p>
+      <p>SKU #: {{ product.productId }}</p>
 
       <hr class="text-light">
       {{# unless inCart }}
-       {{#unless item.isSold }}
-        <a class="btn btn-light" href="/addCart/{{collectionId}}/{{item.productId}}">Add to cart</a>
+       {{#unless product.isSold }}
+        <a class="btn btn-light" href="/addCart/{{product.productId}}">Add to cart</a>
          {{/unless }}
       {{/unless}}
       {{# if inCart }}
-        <h4 class="text-light"><span class="">{{ item.productName }} is in your cart.</span></h4>
+        <h4 class="text-light"><span class="">{{ product.productName }} is in your cart.</span></h4>
         <a class="btn btn-light" href="/shopping-cart">View your cart</a>
       {{/if}}
     </div> {{!-- #End Column 2 --}}

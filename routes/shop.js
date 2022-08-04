@@ -6,7 +6,7 @@ const db = require("./database");
 router.get('/collections', function (req, res, next) {
     (async function () {
         var messages = req.flash('info');
-        const collectionsAll = await db.getCollections();
+        const collectionsAll = await db.getCollections(true);
 
         //filter active collections only
         var collections = collectionsAll.filter((function (item) {
@@ -18,6 +18,7 @@ router.get('/collections', function (req, res, next) {
         for (let i = 0; i < collections.length; i += chunkSize) {
             productChunks.push(collections.slice(i, i + chunkSize));
         }
+
         res.render('shop/collections', {
             title: 'Baja La Bruja - Collections',
             collections: productChunks,
@@ -28,28 +29,27 @@ router.get('/collections', function (req, res, next) {
 });
 
 /* Products in Collection page.                         */        
-router.get('/collections/:collectionId', function (req, res, next) {
+router.get('/products/:collectionId', function (req, res, next) {
     (async function () {
         var messages = req.flash('info');
         let collectionId = parseInt(req.params.collectionId);
-        const collection = await db.getCollections(collectionId);
-
-        var activeProducts = [];
-        for (let i = 0; i < collection.products.length; i++) {
-            if (collection.products[i].active === true) 
-                activeProducts.push(collection.products[i]);
+        let currentCollection = await db.getCollections(true);
+        let selectedCollection = currentCollection.filter((current) => {
+            return current.collectionId == collectionId;
+        });
+        const c = await db.getProductsByCollectionId(collectionId);
+        var collection = [];
+        c.forEach((item) => { collection.push(JSON.parse(JSON.stringify(item)))});
+        var productRows = [];
+        var productColumns = 5;
+        for (let i = 0; i < collection.length; i += productColumns) {
+            productRows.push(collection.slice(i, i + productColumns));
         }
 
-        var productChunks = [];
-        var chunkSize = 5;
-        for (let i = 0; i < activeProducts.length; i += chunkSize) {
-            productChunks.push(activeProducts.slice(i, i + chunkSize));
-        }
         res.render('shop/products', {
             title: 'Baja La Bruja - Products',
-            products: productChunks,
-            breadCrumb: collection.collectionName,
-            collectionId: collectionId,
+            products: productRows,
+            collectionName: selectedCollection[0].collectionName,
             messages: messages,
             hasMessages: messages.length > 0
         });
@@ -57,29 +57,30 @@ router.get('/collections/:collectionId', function (req, res, next) {
 });
 
 /* Item/Product Detail View.                            */
-router.get('/item/:collection/:itemId', function (req, res, next) {
+router.get('/product/:productId', function (req, res, next) {
     (async function () {
         var messages = req.flash('info');
-        let collectionId = parseInt(req.params.collection);
-        let itemId = parseInt(req.params.itemId);
- 
+        let productId = parseInt(req.params.productId);
+        const product = await db.getProductByProductId(productId);
+
+        let currentCollection = await db.getCollections(true);
+        let selectedCollection = currentCollection.filter((current) => {
+            return current.collectionId == product.collectionId;
+        });
+      
         let inCart = false;
-        if (req.session.hasOwnProperty('cart') && req.session.cart.items[itemId]) {
+        if (req.session.hasOwnProperty('cart') && req.session.cart.items[productId]) {
             inCart = true;
         }
-        // if(req.session.cart.items[itemId]) inCart = true;
-        
-        const collection = await db.getCollections(collectionId);
+        //if(req.session.cart.items[itemId]) inCart = true; 
+        //var collection = req.session.sessionData ? collection = req.session.sessionData : collection = await db.getCollections(collectionId);
 
-        var item = collection.products.filter(function (item) {
-            return item.productId === itemId;
-        }).pop();
-        
-        res.render('shop/item', {
+
+
+        res.render('shop/product', {
             title: 'Baja La Bruja - Items',
-            item: item,
-            collectionId: collectionId,
-            collectionName: item.collectioName,
+            product: JSON.parse(JSON.stringify(product)),
+            collection: selectedCollection[0],
             inCart: inCart,
             messages: messages,
             hasMessages: messages.length > 0

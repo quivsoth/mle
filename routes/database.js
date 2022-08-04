@@ -1,32 +1,37 @@
-var Collection = require("../models/collection");
+const Product = require("../models/product");
 
 module.exports = {
-    getCollections: async(collectionId) => {
-        try { 
-            if(collectionId === undefined) { return await Collection.find().lean(); } 
-            else {
-                var query = { collectionId: collectionId };
-                return await Collection.findOne(query).lean();
-            }
-        } catch (e) { console.error(e); }
+    getCollections: async(active) => {
+        let c = require('../data/collections.json');
+        if(!active) return c;
+        if(active) {
+            return c.filter(function(item) {
+                return item.active == true;
+              });
+        }
     },
-    updateProduct : async(product, collectionId) => {
+    updateProduct : async(product) => {
+        var query = { productId: product.productId };
+        await Product.findOneAndUpdate(query, product);
+    },
+    getProductsByCollectionId : async(collectionId)  => {
         var query = { collectionId: collectionId };
-        Collection.findOne(query, function (err, result) {
-            if (err) { console.log(err); }
-            var p = result.products.filter(function (item) {
-                return item.productId === parseInt(product.productId);
-            }).pop();
-            p.productName = product.productName;
-            p.description = product.description;
-            p.price = product.price;
-            p.size = product.size;
-            p.measurements = product.measurements;
-            p.ausPostParcel = product.ausPostParcel;
-            p.isSold = product.isSold;
-            p.active = product.active;
-            p.productThumbs = product.productThumbs;
-            result.save();
+        var product = await Product.find(query);
+        return product.filter(function(item) {
+            return item.active == true;
         });
+    },
+    getProducts : async(active) => {
+        if(!active) return await Product.find();
+        if(active) {
+            var products =  await Product.find()
+            return products.filter(function(item) {
+                return item.active == true;
+              });
+        }
+    },
+    getProductByProductId : async(productId) => {
+        var query = { productId: productId };
+        return await Product.findOne(query);
     }
 };

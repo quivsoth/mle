@@ -4,20 +4,16 @@ var Cart = require('../models/cart');
 const db = require("./database");
 
 /* Add item to Shopping Cart.                           */ 
-router.get('/addCart/:collection/:item', function (req, res, next) {
+router.get('/addCart/:item', function (req, res, next) {
     (async function () {
         let productId = parseInt(req.params.item);
-        let collectionId = parseInt(req.params.collection);
         var cart = new Cart(req.session.cart ? req.session.cart : {});
-        const collection = await db.getCollections(collectionId);
-        var item = collection.products.filter(function (item) {
-            return item.productId === productId;
-        }).pop();
 
-       //const item = await db.getItem(productId, collectionId);
-        cart.add(item, item.productId);
+        const product = await db.getProductByProductId(productId);
+        cart.add(product, product.productId);
         req.session.cart = cart;
-        res.redirect('/item/' + collectionId + '/' + productId);
+
+        res.redirect('/product/' + productId);
     })();
 });
 
@@ -28,7 +24,7 @@ router.get('/deleteCart/:item', function (req, res, next) {
         var cart = new Cart(req.session.cart);
         cart.delete(productId);
         req.session.cart = cart;
-        res.redirect('/shopping-cart',);
+        res.redirect('/shopping-cart');
     })();
 });
 
@@ -40,7 +36,6 @@ router.get('/shopping-cart', function (req, res, next) {
             return res.render('shop/shopping-cart', {products: null});
         }
         var cart = new Cart(req.session.cart);
-        console.log(req.session.cart);
         res.render('shop/shopping-cart', {
             products: cart.generateArray(),
             totalPrice: cart.totalPrice,
@@ -58,6 +53,7 @@ router.get('/checkout', function (req, res, next) {
         }
         var cart = new Cart(req.session.cart);
         var messages = req.flash('info');
+        
         res.render('shop/checkout', {
             products: cart.generateArray(),
             totalPrice: cart.totalPrice,
