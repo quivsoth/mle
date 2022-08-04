@@ -67,9 +67,10 @@
 
       <hr class="text-light">
       {{# unless inCart }}
-       {{#unless product.isSold }}
-        <a class="btn btn-light" href="/addCart/{{product.productId}}">Add to cart</a>
-         {{/unless }}
+          {{#unless product.isSold }}
+            {{!-- {{#> button link="/addCart/" & product.productId text="Add to cart"}}{{/button}} --}}
+            <a class="btn btn-light" href="/addCart/{{product.productId}}">Add to cart</a>
+          {{/unless }}
       {{/unless}}
       {{# if inCart }}
         <h4 class="text-light"><span class="">{{ product.productName }} is in your cart.</span></h4>
