@@ -71,20 +71,23 @@ removeImage = (element) => {
     Product.productThumbs = Product.productThumbs.filter(function(e) { return e !== String(Product.productThumbs.filter(name => name.includes(element.name))) })
     renderImageArray(Product); 
 },
+saveProduct = async() => {
+    Product.active = $("[name='active']")[0].checked;
+    Product.isSold = $("[name='isSold']")[0].checked;
+    Product.productName = $("[name='productName']").val();
+    Product.size = $("[name='size']").val();
+    Product.price = $("[name='price']").val();
+    Product.description =  $(".ql-editor")[0].innerHTML;
+    Product.measurements = $("[name='measurements']").val();
+    Product.ausPostParcel = $("[name='parcel']").val();
+    Product.productThumbs = buildImageArray('#imageContainer');
+    await updateItem();
+}
 
 $( document ).ready(async function(){ 
     await fetchItem();
 
     $( "#saveItem").click(async function() {
-        Product.active = $("[name='active']")[0].checked;
-        Product.isSold = $("[name='isSold']")[0].checked;
-        Product.productName = $("[name='productName']").val();
-        Product.size = $("[name='size']").val();
-        Product.price = $("[name='price']").val();
-        Product.description =  $(".ql-editor")[0].innerHTML;
-        Product.measurements = $("[name='measurements']").val();
-        Product.ausPostParcel = $("[name='parcel']").val();
-        Product.productThumbs = buildImageArray('#imageContainer');
-        await updateItem();
+       saveProduct();
     });
 });
