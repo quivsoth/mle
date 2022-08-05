@@ -6,12 +6,24 @@ const upload = multer({ dest: 'uploads/' });
 
 const db = require("./database");
 
-/* Item/Product Detail View.                        */
+/* Item/Product Detail Update.                        */
 router.put('/updateProduct/', function (req, res, next) {
     (async function () {
         try {
             await db.updateProduct(req.body);
             req.flash('info', 'Item # ' + req.body.productId + 'has been updated');
+            res.json("SUCCESS");
+        } catch (error) {
+            res.json("ERROR: " + error);
+        }
+    })();
+});
+
+/* Update Products.                        */
+router.put('/updateProducts', function (req, res, next) {
+    (async function () {
+        try {
+            await db.updateProducts(req.body);
             res.json("SUCCESS");
         } catch (error) {
             res.json("ERROR: " + error);

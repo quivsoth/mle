@@ -14,9 +14,15 @@ module.exports = {
         var query = { productId: product.productId };
         await Product.findOneAndUpdate(query, product);
     },
+    updateProducts : async(products) => {
+        for (let i = 0; i < products.length; i++){ 
+            var query = { productId: products[i].productId };
+            await Product.findOneAndUpdate(query, products[i]);
+        }
+    },
     getProductsByCollectionId : async(collectionId)  => {
         var query = { collectionId: collectionId };
-        var product = await Product.find(query);
+        var product = await Product.find(query).sort('sortIndex');
         return product.filter(function(item) {
             return item.active == true;
         });
@@ -24,7 +30,7 @@ module.exports = {
     getProducts : async(active) => {
         if(!active) return await Product.find();
         if(active) {
-            var products =  await Product.find()
+            var products =  await Product.find().sort('sortIndex','ascending');
             return products.filter(function(item) {
                 return item.active == true;
               });

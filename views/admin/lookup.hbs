@@ -1,28 +1,308 @@
 <script>
+    /**
+ * drag-shift
+ * http://github.com/vishalok12
+ * Copyright (c) 2014 Vishal Kumar
+ * Licensed under the MIT License.
+ */
+'use strict';
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['jquery'], factory);
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
+}(function ($) {
+  var IS_TOUCH_DEVICE = ('ontouchstart' in document.documentElement);
+  /**
+   * mouse move threshold (in px) until drag action starts
+   * @type {Number}
+   */
+  var DRAG_THRESHOLD = 5;
+  /**
+   * to generate event namespace
+   * @type {Number}
+   */
+  var counter = 0;
+
+  /**
+   * Javascript events for touch device/desktop
+   * @return {Object}
+   */
+  var dragEvents = (function () {
+    if (IS_TOUCH_DEVICE) {
+      return {
+        START: 'touchstart',
+        MOVE: 'touchmove',
+        END: 'touchend'
+      };
+    }
+    else {
+      return {
+        START: 'mousedown',
+        MOVE: 'mousemove',
+        END: 'mouseup'
+      };
+    }
+  }());
+
+  $.fn.arrangeable = function(options) {
+    var dragging = false;
+    var $clone;
+    var dragElement;
+    var originalClientX, originalClientY; // client(X|Y) position before drag starts
+    var $elements;                        // list of elements to shift between
+    var touchDown = false;
+    var leftOffset, topOffset;
+    var eventNamespace;
+
+    if (typeof options === "string") {
+      // check if want to destroy drag-arrange
+      if (options === 'destroy') {
+        if (this.eq(0).data('drag-arrange-destroy')) {
+          this.eq(0).data('drag-arrange-destroy')();
+        }
+
+        return this;
+      }
+    }
+
+    options = $.extend({
+      "dragEndEvent": "drag.end.arrangeable"
+    }, options);
+
+    var dragEndEvent = options["dragEndEvent"];
+
+    $elements = this;
+    eventNamespace = getEventNamespace();
+
+    this.each(function() {
+      // bindings to trigger drag on element
+      var dragSelector = options.dragSelector;
+      var self = this;
+      var $this = $(this);
+
+      if (dragSelector) {
+        $this.on(dragEvents.START + eventNamespace, dragSelector, dragStartHandler);
+      } else {
+        $this.on(dragEvents.START + eventNamespace, dragStartHandler);
+      }
+
+      function dragStartHandler(e) {
+        // a mouse down/touchstart event, but still drag doesn't start till threshold reaches
+        // stopPropagation is compulsory, otherwise touchmove fires only once (android < 4 issue)
+        e.stopPropagation();
+        touchDown = true;
+        originalClientX = e.clientX || e.originalEvent.touches[0].clientX;
+        originalClientY = e.clientY || e.originalEvent.touches[0].clientY;
+        dragElement = self;
+      }
+    });
+
+    // bind mouse-move/touchmove on document
+    // (as it is not compulsory that event will trigger on dragging element)
+    $(document).on(dragEvents.MOVE + eventNamespace, dragMoveHandler)
+      .on(dragEvents.END + eventNamespace, dragEndHandler);
+
+    function dragMoveHandler(e) {
+      if (!touchDown) { return; }
+
+      var $dragElement = $(dragElement);
+      var dragDistanceX = (e.clientX  || e.originalEvent.touches[0].clientX) - originalClientX;
+      var dragDistanceY = (e.clientY || e.originalEvent.touches[0].clientY) - originalClientY;
+
+      if (dragging) {
+        e.stopPropagation();
+
+        $clone.css({
+          left: leftOffset + dragDistanceX,
+          top: topOffset + dragDistanceY
+        });
+
+        shiftHoveredElement($clone, $dragElement, $elements);
+
+      // check for drag threshold (drag has not started yet)
+      } else if (Math.abs(dragDistanceX) > DRAG_THRESHOLD ||
+          Math.abs(dragDistanceY) > DRAG_THRESHOLD) {
+        $clone = clone($dragElement);
+
+        // initialize left offset and top offset
+        // will be used in successive calls of this function
+        leftOffset = dragElement.offsetLeft - parseInt($dragElement.css('margin-left')) - 
+          parseInt($dragElement.css('padding-left'));
+        topOffset = dragElement.offsetTop - parseInt($dragElement.css('margin-top')) - 
+          parseInt($dragElement.css('padding-top'));
+
+        // put cloned element just above the dragged element
+        // and move it instead of original element
+        $clone.css({
+          left: leftOffset,
+          top: topOffset
+        });
+        $dragElement.parent().append($clone);
+
+        // hide original dragged element
+        $dragElement.css('visibility', 'hidden');
+
+        dragging = true;
+      }
+    }
+
+    function dragEndHandler(e) {
+      if (dragging) {
+        // remove the cloned dragged element and
+        // show original element back
+        e.stopPropagation();
+        dragging = false;
+        $clone.remove();
+        dragElement.style.visibility = 'visible';
+
+        $(dragElement).parent().trigger(dragEndEvent, [$(dragElement)]);
+      }
+
+      touchDown = false;
+    }
+
+    function destroy() {
+      $elements.each(function() {
+        // bindings to trigger drag on element
+        var dragSelector = options.dragSelector;
+        var $this = $(this);
+
+        if (dragSelector) {
+          $this.off(dragEvents.START + eventNamespace, dragSelector);
+        } else {
+          $this.off(dragEvents.START + eventNamespace);
+        }
+      });
+
+      $(document).off(dragEvents.MOVE + eventNamespace)
+        .off(dragEvents.END + eventNamespace);
+
+      // remove data
+      $elements.eq(0).data('drag-arrange-destroy', null);
+
+      // clear variables
+      $elements = null;
+      dragMoveHandler = null;
+      dragEndHandler = null;
+    }
+
+    this.eq(0).data('drag-arrange-destroy', destroy);
+  };
+
+  function clone($element) {
+    var $clone = $element.clone();
+
+    $clone.css({
+      position: 'absolute',
+      width: $element.width(),
+      height: $element.height(),
+      'z-index': 100000 // very high value to prevent it to hide below other element(s)
+    });
+
+    return $clone;
+  }
+
+  /**
+   * find the element on which the dragged element is hovering
+   * @return {DOM Object} hovered element
+   */
+  function getHoveredElement($clone, $dragElement, $movableElements) {
+    var cloneOffset = $clone.offset();
+    var cloneWidth = $clone.width();
+    var cloneHeight = $clone.height();
+    var cloneLeftPosition = cloneOffset.left;
+    var cloneRightPosition = cloneOffset.left + cloneWidth;
+    var cloneTopPosition = cloneOffset.top;
+    var cloneBottomPosition = cloneOffset.top + cloneHeight;
+    var $currentElement;
+    var horizontalMidPosition, verticalMidPosition;
+    var offset, overlappingX, overlappingY, inRange;
+
+    for (var i = 0; i < $movableElements.length; i++) {
+      $currentElement = $movableElements.eq(i);
+
+      if ($currentElement[0] === $dragElement[0]) { continue; }
+
+      offset = $currentElement.offset();
+
+      // current element width and draggable element(clone) width or height can be different
+      horizontalMidPosition = offset.left + 0.5 * $currentElement.width();
+      verticalMidPosition = offset.top + 0.5 * $currentElement.height();
+
+      // check if this element position is overlapping with dragged element
+      overlappingX = (horizontalMidPosition < cloneRightPosition) &&
+        (horizontalMidPosition > cloneLeftPosition);
+
+      overlappingY = (verticalMidPosition < cloneBottomPosition) &&
+        (verticalMidPosition > cloneTopPosition);
+
+      inRange = overlappingX && overlappingY;
+
+      if (inRange) {
+        return $currentElement[0];
+      }
+    }
+  }
+
+  function shiftHoveredElement($clone, $dragElement, $movableElements) {
+    var hoveredElement = getHoveredElement($clone, $dragElement, $movableElements);
+
+    if (hoveredElement !== $dragElement[0]) {
+      // shift all other elements to make space for the dragged element
+      var hoveredElementIndex = $movableElements.index(hoveredElement);
+      var dragElementIndex = $movableElements.index($dragElement);
+      if (hoveredElementIndex < dragElementIndex) {
+        $(hoveredElement).before($dragElement);
+      } else {
+        $(hoveredElement).after($dragElement);
+      }
+
+      // since elements order have changed, need to change order in jQuery Object too
+      shiftElementPosition($movableElements, dragElementIndex, hoveredElementIndex);
+    }
+  }
+
+  function shiftElementPosition(arr, fromIndex, toIndex) {
+    var temp = arr.splice(fromIndex, 1)[0];
+    return arr.splice(toIndex, 0, temp);
+  }
+
+  function getEventNamespace() {
+    counter += 1;
+
+    return '.drag-arrange-' + counter;
+  }
+
+}));
+</script>
+<style>
+    #imageContainer {
+        text-align: center;
+    }
+    .draggable-element {
+        display: inline-block;
+        width: 120px;
+        height: 120px;
+        background-color:black;
+        border: 1px solid black;
+        line-height: 120px;
+        text-align: center;
+        margin: 10px;
+        color: rgb(51, 51, 51);
+        font-size: 30px;
+        cursor: move;
+    }
+</style>
+
+<script>
     var Collections = Object.create(null);
+    var Products = Object.create(null);
     const imagePath = "/images/products/";
 
-    renderSelect = (data) => { 
-        console.log(data);
-        data.map(function(e) {
-            $("#collectionsSel").append(
-                '<option value="' + e.collectionId + '">' + e.collectionName + "</option>"
-            );    
-        });
-    },
-    renderThumbs = (data) => {
-        $('#productLines').empty();
-        $('#productLines').append('<p class="mt-5 mb-2">Select an item..</h3><hr>');
-        data.forEach( (item) => {
-            $('#productLines').append(`
-            <div class="row">
-                <div class="col-2 pe-3"><img src="${imagePath + item.productThumbs[0]}" style="max-height:100px;"  /></div>
-                <div class="col-8"><a href="/productEditor/${item.productId}" class="link-warning baja-font-135">${item.productName}</a><br><p>${item.description}</p></div>
-            </div>
-            <hr>
-            `);  
-        });
-    },
     fetchCollections = async() => {
         fetch('/api/allCollections', {
             method: 'GET', // or 'PUT'
@@ -48,34 +328,119 @@
         })
             .then((response) => response.json())
             .then((data) => {
-                renderThumbs(data);
+                Products = data;
+                renderThumbs(Products);
         })
         .catch((error) => {
-            console.error('ERROR:', error);
+            console.error('Baja Error : ', error);
         });
     },
-
+    pageClear = () => {
+        $('#productLines').empty();  
+        $('#imageContainer').empty(); 
+    },
+    renderImageSort = (data) => {
+        pageClear();
+        data.forEach(o => {
+            $("#imageContainer").append(`<span class="draggable-element d-1" data-productId="${o.productId}" style="background-image: url('${imagePath + o.productThumbs[0]}');background-size:contain;background-repeat:no-repeat;background-position: center;"></span>`);
+        });
+        
+        // !!Enable the drag!!
+        $('.draggable-element').arrangeable();
+		$('#imageContainer').on("drag.end.arrangeable", function(item) { 
+            $.each(document.querySelectorAll('#imageContainer span'), function( index, value ){                
+                var productId = parseInt(value.getAttribute('data-productId'));
+                Products.find(item => item.productId === productId).sortIndex = index + 1;
+               
+            });
+            updateProducts();
+        });
+        
+    },
+    renderSelect = (data) => { 
+        data.map(function(e) {
+            $("#collectionsSel").append(
+                '<option value="' + e.collectionId + '">' + e.collectionName + "</option>"
+            );    
+        });
+    },
+    renderThumbs = (data) => {
+        pageClear();
+        $('#productLines').append('<p class="mt-5 mb-2">Select an item..</h3><hr>');
+        data.forEach( (item) => {
+            $('#productLines').append(`
+            <div class="row">
+                <div class="col-2 pe-3"><img src="${imagePath + item.productThumbs[0]}" style="max-height:100px;"  /></div>
+                <div class="col-8"><a href="/productEditor/${item.productId}" class="link-warning baja-font-135">${item.productName}</a><br><p>${item.description}</p></div>
+            </div>
+            <hr>
+            `);  
+        });
+        $("#viewThumbs").show();
+    },
+    updateProducts = async() => {
+        $.ajax({
+            url: '/updateProducts',
+            headers: {"Content-Type": "application/json"},
+            type: 'PUT',
+            dataType: 'json',
+            data: JSON.stringify(Products),
+            success: function (data, textStatus, xhr) {
+                console.log("SUCCESS : " + xhr);
+                //console.log(collection.products[0].productThumbs);
+                //location.href = "/product/" + itemId;
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                console.log('Error in Operation');
+                console.log('Error: ' + errorThrown);
+            }
+        });
+    },
     $(document).ready(async function () {
+        $("#viewThumbs").hide();
         await fetchCollections();
+
         $('select').on('change', function() {            
-            var collectionId = parseInt(this.value);
-            fetchProducts(collectionId);             
+            var collectionId = parseInt(this.value);            
+            fetchProducts(collectionId);
+        });
+
+        $( "#viewThumbs").click(async function() {        
+            if(Products.length > 0) { renderImageSort(Products); }
         });
     });
 </script>
-
+{{!-- <div class="d-flex p-2">I'm a flexbox container!</div> --}}
+<div class="container-fluid">
+    {{!-- <div class="row">
+        <div class="col">
+            <!-- Search form -->
+            <form class="form-inline d-flex justify-content-center md-form form-sm">
+                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </form>
+        </div>
+    </div> --}}
+</div>
 <div class="container">
     <div class="row">
-        <h2>Edit a collection</h2>
+        <h2>Baja La Bruja Site Administration</h2>
     </div>
     <div class="row">
-        <div class="col-8">
+        <div class="col-4">
             <span>Choose a selection</span>
             <select id="collectionsSel" name="collectionsSel" class="form-select form-select-lg">
-                <option disabled>Select a Collection..</option>
+                <option disabled selected>Select a Collection..</option>
             </select>
         </div>
     </div>
-    <div class="row" id="productLines">
+    <div class="row" id="menuOptions">
+        <div class="col-3">
+            <button id="viewThumbs" type="button" class="btn btn-outline-warning mt-3">Arrange Products</button>
+        </div>
     </div>
+    <div class="row" id="productLines"></div>
+    <section class="Image-Gallery">            
+            <div id="imageContainer"></div>    
+    </section>
 </div>
