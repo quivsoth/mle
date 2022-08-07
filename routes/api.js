@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const db = require("./database");
+const fs = require('fs');
 
 /* get Collections (active only)                                */
 router.get('/collections', async function (req, res, next) {
@@ -18,6 +19,21 @@ router.get('/products/:collectionId', async function (req, res, next) {
 router.get('/product/:productId', async function (req, res, next) {
     let productId = parseInt(req.params.productId);
     res.json(await db.getProductByProductId(productId));
+});
+
+router.put('/updateCollections', function (req, res, next) {
+    (async function () {
+
+        var d = new Date(); 
+        const dateStamp = d.getMonth() + "-" + d.getDate() + "-" + d.getFullYear() + "@" + d.getHours() + "." + d.getMinutes() + "." + d.getSeconds();
+        try {
+            fs.writeFile('data/backup/collections-' + dateStamp + '.json', JSON.stringify(req.body), function (err) {if (err) return console.log(err);});
+            fs.writeFile('data/collections.json', JSON.stringify(req.body), function (err) {if (err) return console.log(err);});
+            res.json("SUCCESS");
+        } catch (error) {
+            res.json("ERROR: " + error);
+        }
+    })();
 });
 
 //-- TEST FUNCTIONS

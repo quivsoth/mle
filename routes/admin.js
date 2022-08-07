@@ -118,6 +118,19 @@ router.get('/uploader', function (req, res, next) {
     })();
 });
 
+/* Item/Product Detail View.                        */
+router.get('/admin', function (req, res, next) {
+    (async function () {
+        var messages = req.flash('info');
+        res.render('admin/admin', {
+            title: 'Baja La Bruja - Admin Page',
+            messages: messages,
+            hasMessages: messages.length > 0
+        });
+    })();
+});
+
+
   /* Error 404                                  */
 router.get('/error404', function (req, res, next) {
     res.render('site/error404', { title: 'Baja La Bruja - 404 NOT FOUND',});

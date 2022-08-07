@@ -1,10 +1,5 @@
+<script type="text/javascript" src="/javascripts/api.js"></script>
 <script>
-    /**
- * drag-shift
- * http://github.com/vishalok12
- * Copyright (c) 2014 Vishal Kumar
- * Licensed under the MIT License.
- */
 'use strict';
 (function (factory) {
   if (typeof define === 'function' && define.amd) {
@@ -278,9 +273,77 @@
   }
 
 }));
+
+var Collections = Object.create(null);
+var SelectedCollection = Object.create(null);
+var Products = Object.create(null);
+var Product = Object.create(null);
+const imagePath = "/images/products/";
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+  fetch("/api/allCollections", (data) => { 
+    Collections = JSON.parse(data);
+    Collections.map(function(e) { $("#collectionsSel").append('<option value="' + e.collectionId + '">' + e.collectionName + "</option>")});
+    Collections.forEach(c => {$("#collectionContainer").append(`<span class="draggable-element d-1" data-collectionId="${c.collectionId}" style="position: relative;background-image: url(/images/collections/${c.image});background-size:contain;background-repeat:no-repeat;background-position: center;height:180px;"><button data-collectionId="${c.collectionId}" data-bs-toggle="offcanvas" data-bs-target="#offCanvas" type="button" class="btn btn-light" style="position:absolute;bottom:0;left:0" onclick="collectionEdit(this)">Edit</button></span>`)});
+
+    $('.draggable-element').arrangeable();
+    $('#collectionContainer').on("drag.end.arrangeable", function(item) { 
+        $.each(document.querySelectorAll('#collectionContainer span'), function( index, value ){                
+            var collectionId = parseInt(value.getAttribute('data-collectionId'));
+            Collections.find(item => item.collectionId === collectionId).sortIndex = index + 1;
+        });
+        put("/api/updateCollections", Collections, (result) => { console.log('updated') });
+    });
+  fetch("/api/allProducts", (data) => { Products = JSON.parse(data) });
+  });
+  document.getElementById("collectionsSel").addEventListener("change", colSelChanged);
+});
+
+function collectionEdit(e){
+  let colId = parseInt(e.getAttribute('data-collectionId'));
+  let sc = Collections.find(item => item.collectionId === colId);
+  document.getElementById('ocColId').value = colId;
+  document.getElementById('ocTopHeader').innerText = sc.collectionName;
+  document.getElementById('ocCollectionName').value = sc.collectionName;
+  document.getElementById('ocCollectionDesc').value = sc.description;
+  document.getElementById('ocSortOrder').innerText = sc.sortIndex;
+  document.getElementById("colHero").src = "/images/collections/" + sc.image;
+}
+
+function colSelChanged(e) {
+  $('#imageContainer').empty(); 
+  var colId = parseInt(this.value);
+  var products = Products.filter((item) => { return item.collectionId === colId }).sort(function(a, b){ return a.sortIndex - b.sortIndex; });
+   products.forEach(o => {
+      $("#imageContainer").append(`<span class="draggable-element d-1" data-productId="${o.productId}" style="background-image: url('${imagePath + o.productThumbs[0]}');background-size:contain;background-repeat:no-repeat;background-position: center;"></span>`);
+  });
+  $('.draggable-element').arrangeable();
+  $('#imageContainer').on("drag.end.arrangeable", function(item) { 
+    var updateProducts = [];
+    $.each(document.querySelectorAll('#imageContainer span'), function( index, value ){                
+        var productId = parseInt(value.getAttribute('data-productId'));
+        var filtered = Products.find(item => item.productId === productId);
+        filtered.sortIndex = index + 1;  
+        updateProducts.push(filtered);
+    });
+    put("/updateProducts", updateProducts, (result) => { if(result === "SUCCESS"){/*do stuff*/} });
+  });
+}
+
+function SaveCollection(e) {
+  var colId = parseInt(document.getElementById('ocColId').value);
+  let sc = Collections.find(item => item.collectionId === colId);
+  sc.collectionName = document.getElementById('ocCollectionName').value;
+  sc.description = document.getElementById('ocCollectionDesc').value;
+  put("/api/updateCollections", Collections, (result) => { 
+    bootstrap.Offcanvas.getInstance(document.getElementById("offCanvas")).hide();
+  });
+}
+
+
 </script>
 <style>
-    #imageContainer {
+    #collectionContainer {
         text-align: center;
     }
     .draggable-element {
@@ -296,177 +359,63 @@
         font-size: 30px;
         cursor: move;
     }
+
 </style>
 
-<script>
-    var Collections = Object.create(null);
-    var Products = Object.create(null);
-    const imagePath = "/images/products/";
-
-    fetchCollections = async() => {
-        fetch('/api/allCollections', {
-            method: 'GET', // or 'PUT'
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            })
-                .then((response) => response.json())
-                .then((data) => {
-                    Collections = data;
-                    renderSelect(data);
-            })
-            .catch((error) => {
-                console.error('ERROR:', error);
-        });
-    },
-    fetchProducts = async(collectionId) => {
-        fetch('/api/products/' + collectionId, {
-            method: 'GET', // or 'PUT'
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                Products = data;
-                renderThumbs(Products);
-        })
-        .catch((error) => {
-            console.error('Baja Error : ', error);
-        });
-    },
-    pageClear = () => {
-        $('#productLines').empty();  
-        $('#imageContainer').empty(); 
-    },
-    renderImageSort = (data) => {
-        pageClear();
-        data.forEach(o => {
-            $("#imageContainer").append(`<span class="draggable-element d-1" data-productId="${o.productId}" style="background-image: url('${imagePath + o.productThumbs[0]}');background-size:contain;background-repeat:no-repeat;background-position: center;"></span>`);
-        });
-        
-        // !!Enable the drag!!
-        $('.draggable-element').arrangeable();
-		$('#imageContainer').on("drag.end.arrangeable", function(item) { 
-            $.each(document.querySelectorAll('#imageContainer span'), function( index, value ){                
-                var productId = parseInt(value.getAttribute('data-productId'));
-                Products.find(item => item.productId === productId).sortIndex = index + 1;
-               
-            });
-            updateProducts();
-        });
-        
-    },
-    renderSelect = (data) => { 
-        data.map(function(e) {
-            $("#collectionsSel").append(
-                '<option value="' + e.collectionId + '">' + e.collectionName + "</option>"
-            );    
-        });
-    },
-    renderThumbs = (data) => {
-        pageClear();
-        $('#productLines').append('<p class="mt-5 mb-2">Select an item..</h3><hr>');
-        data.forEach( (item) => {
-            $('#productLines').append(`
-            <div class="row">
-                <div class="col-2 pe-3"><img src="${imagePath + item.productThumbs[0]}" style="max-height:100px;"  /></div>
-                <div class="col-8"><a href="/productEditor/${item.productId}" class="link-warning baja-font-135">${item.productName}</a><br><p>${item.description}</p></div>
-            </div>
-            <hr>
-            `);  
-        });
-        $("#viewThumbs").show();
-    },
-    updateProducts = async() => {
-        $.ajax({
-            url: '/updateProducts',
-            headers: {"Content-Type": "application/json"},
-            type: 'PUT',
-            dataType: 'json',
-            data: JSON.stringify(Products),
-            success: function (data, textStatus, xhr) {
-                console.log("SUCCESS : " + xhr);
-                //console.log(collection.products[0].productThumbs);
-                //location.href = "/product/" + itemId;
-            },
-            error: function (xhr, textStatus, errorThrown) {
-                console.log('Error in Operation');
-                console.log('Error: ' + errorThrown);
-            }
-        });
-    },
-    
-    $(document).ready(async function () {
-        $("#viewThumbs").hide();
-        await fetchCollections();
-
-        $('select').on('change', function() {            
-            var collectionId = parseInt(this.value);            
-            fetchProducts(collectionId);
-        });
-
-        $( "#viewThumbs").click(async function() {        
-            if(Products.length > 0) { renderImageSort(Products); }
-        });
-    });
-</script>
-
-<h2 class="m-3">Baja La Bruja Site Administration</h2>
-<nav>
-  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Collections</button>
-    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Products</button>
-    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Product Detail</button>
+<div class="offcanvas offcanvas-start text-dark" tabindex="-1" id="offCanvas" aria-labelledby="offCanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="ocTopHeader"></h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-</nav>
-<div class="tab-content" id="nav-tabContent">
-  {{!-- Collections --}}
-  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-    
-    <button type="button" class="btn btn-outline-light btn-rounded" data-mdb-ripple-color="dark"><i class="fa fa-plus" aria-hidden="true"></i> New Collection</button>
-  </div>
-
-  {{!-- Products --}}
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <span>Choose a selection</span>
-                <select id="collectionsSel" name="collectionsSel" class="form-select form-select-lg">
-                    <option disabled selected>Select a Collection..</option>
-                </select>
-            </div>
-        </div>
-        <section class="Image-Gallery">            
-            <div id="imageContainer"></div>    
-        </section>
-
-    
-    <div class="row" id="menuOptions">
-        <div class="col-3">
-            <button id="viewThumbs" type="button" class="btn btn-outline-warning mt-3">Arrange Products</button>
-        </div>
+  <div class="offcanvas-body">
+    <div class="mb-3">
+      <span>Sort Order: <span id="ocSortOrder"></span></span>
     </div>
-    <div class="row" id="productLines"></div>
-    
+    <div class="mb-3">
+      <label for="ocCollectionName" class="form-label">Name</label>
+      <input type="text" class="form-control form-control-lg" id="ocCollectionName" placeholder="Collection Name">
+      <input type="hidden" id="ocColId" />
     </div>
-  </div>
-  
-  {{!-- Product Details --}}
-  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-    <div class="row">
-        <div class="col">
-            <!-- Search form -->
-            <form class="form-inline d-flex justify-content-center md-form form-sm">
-                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
-                <i class="fas fa-search" aria-hidden="true"></i>
-            </form>
-        </div>
+    <div class="mb-3">
+      <label for="ocCollectionDesc" class="form-label">Description</label>
+      <textarea class="form-control form-control-lg" id="ocCollectionDesc" rows="3"></textarea>
+    </div>
+    <div class="mb-5">
+      <img id="colHero" class="rounded mx-auto d-block" style="max-height:400px"  />
+    </div>
+    <div class="mb-3">
+      <input class="form-control form-control-lg" id="formFileLg" type="file">
+    </div>
+    <div class="mb-3">
+      <button type="submit" class="btn btn-primary btn-lg" onclick="SaveCollection(this)">Save</button>
     </div>
   </div>
 </div>
 
+<h2 style="margin-top:150px" class="mb-4 ms-2">Baja La Admin</h2>
+<nav>
+  <div class="nav nav-tabs m-1" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-collections-tab" data-bs-toggle="tab" data-bs-target="#nav-collections" type="button" role="tab" aria-controls="nav-collections" aria-selected="true">Collections</button>
+    <button class="nav-link" id="nav-products-tab" data-bs-toggle="tab" data-bs-target="#nav-products" type="button" role="tab" aria-controls="nav-products" aria-selected="false">Products</button>
+    <button class="nav-link" id="nav-product-tab" data-bs-toggle="tab" data-bs-target="#nav-product" type="button" role="tab" aria-controls="nav-product" aria-selected="false">Product Detail</button>
+  </div>
+</nav>
 
+<div class="tab-content" id="nav-tabContent">
 
+  <div class="tab-pane fade show active" id="nav-collections" role="tabpanel" aria-labelledby="nav-collections-tab">
+    <h4 class="m-3">Drag the collection to the order you would like them to be displayed..</p>
+    <div id="collectionContainer"></div> 
+  </div>
+
+  <div class="tab-pane fade show active" id="nav-products" role="tabpanel" aria-labelledby="nav-products-tab">
+    <span>Choose a collection..</span>
+    <select id="collectionsSel" name="collectionsSel" class="form-select form-select-lg">
+      <option disabled selected>Select a Collection..</option>
+    </select>
+    <div id="imageContainer"></div>
+  </div>
+
+  <div class="tab-pane fade show active" id="nav-product" role="tabpanel" aria-labelledby="nav-product-tab">
+  </div>
 </div>
