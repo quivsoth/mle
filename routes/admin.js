@@ -3,37 +3,7 @@ var router = express.Router();
 var SibApiV3Sdk = require("sib-api-v3-sdk");
 const multer  = require('multer');
 const upload = multer({ dest: 'uploads/' });
-
 const db = require("./database");
-
-router.get('/tester/', async function (req, res, next) {
-
-   
-    var g = db.search().then((value) => {
-        console.log(value); // Success!
-    });
-     
-    // Product.find({
-    //     $text: {
-    //         $search: query
-    //     }
-    // }, function(err, result) {
-    //     if (err) throw err;
-    //     if (result) {
-    //         res.json(result)
-    //     } else {
-    //         res.send(JSON.stringify({
-    //             error : 'Error'
-    //         }))
-    //     }
-    // })
-        
-
-    res.render('admin/tester', {
-        title: 'Baja La Bruja - test Page'
-    });
-});
-
 
 /* Item/Product Detail Update.                        */
 router.put('/updateProduct/', function (req, res, next) {
@@ -158,7 +128,6 @@ router.get('/admin', function (req, res, next) {
         });
     })();
 });
-
 
   /* Error 404                                  */
 router.get('/error404', function (req, res, next) {

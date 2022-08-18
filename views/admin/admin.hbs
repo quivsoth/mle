@@ -285,7 +285,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $('#nav-collections-tab').on('click', function (e) { displayFirstTab() });
     $('#nav-products-tab').on('click', function (e) { displaySecondTab() });
     $('#nav-product-tab').on('click', function (e) { displayThirdTab() });
-    $('#btnSearch').on('click', function (e) { SearchItem($('#frmSearch').val()) });
+    document.getElementById("btnSearch").addEventListener("click", function(event) {
+      SearchItem($('#search-input').val());
+    });
+    document.getElementById("search-input").addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        SearchItem($('#search-input').val());
+    }
+});
 
     Collections = JSON.parse(data);
     Collections.map(function(e) { $("#collectionsSel").append('<option value="' + e.collectionId + '">' + e.collectionName + "</option>")});
@@ -359,10 +367,11 @@ function displayThirdTab() {
   for (var i = 0; i < thirdTabDescendents.length; i++) { thirdTabDescendents[i].style.visibility = 'visible';}
 }
 
-function collectionEdit(e){
+function collectionEdit(e) {
   let colId = parseInt(e.getAttribute('data-collectionId'));
   let sc = Collections.find(item => item.collectionId === colId);
-  document.getElementById('ocColId').value = colId;
+  document.getElementById('ocColId').value = colId;  
+  document.getElementById('ocActive').checked = sc.active;  
   document.getElementById('ocTopHeader').innerText = sc.collectionName;
   document.getElementById('ocCollectionName').value = sc.collectionName;
   document.getElementById('ocCollectionDesc').value = sc.description;
@@ -393,6 +402,7 @@ function colSelChanged(e) {
 function SaveCollection(e) {
   var colId = parseInt(document.getElementById('ocColId').value);
   let sc = Collections.find(item => item.collectionId === colId);
+  sc.active = document.getElementById('ocActive').checked;
   sc.collectionName = document.getElementById('ocCollectionName').value;
   sc.description = document.getElementById('ocCollectionDesc').value;
   put("/api/updateCollections", Collections, (result) => { 
@@ -401,8 +411,11 @@ function SaveCollection(e) {
 }
 
 function SearchItem(text) {
-fetch("/api/search/" + text, (data) => { 
-    console.log(data);
+  $('#searchResults').empty(); 
+  fetch("/api/search/" + text, (data) => { 
+    JSON.parse(data).forEach(o => {
+      $("#searchResults").append(`<span class="draggable-element d-1" data-productId="${o.productId}" style="background-image: url('${imagePath + o.productThumbs[0]}');background-size:contain;background-repeat:no-repeat;background-position: center;"></span>`);
+    });
   }); 
 }
 </script>
@@ -439,6 +452,10 @@ fetch("/api/search/" + text, (data) => {
   <div class="offcanvas-body">
     <div class="mb-3">
       <span>Sort Order: <span id="ocSortOrder"></span></span>
+    </div>
+    <div class="mb-3">
+      <label for="ocActive" class="form-label">Active   </label>
+      <input class="form-check-input" type="checkbox" name="ocActive" id="ocActive">
     </div>
     <div class="mb-3">
       <label for="ocCollectionName" class="form-label">Name</label>
@@ -488,12 +505,12 @@ fetch("/api/search/" + text, (data) => {
   <div class="tab-pane fade show active" id="nav-product" role="tabpanel" aria-labelledby="nav-product-tab">
     <div class="input-group">
       <div class="form-outline">
-        <input type="search" id="frmSearch" class="form-control" />
-        <label class="form-label" for="frmSearch">Search</label>
+        <input id="search-input" type="search" id="form1" class="form-control form-control-lg" placeholder="Find Stock" />
       </div>
       <button type="button" class="btn btn-primary" id="btnSearch">
         <i class="fas fa-search"></i>
       </button>
     </div>
+    <div id="searchResults"></div>
   </div>
 </div>
