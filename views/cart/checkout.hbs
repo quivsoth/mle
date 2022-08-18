@@ -1,123 +1,136 @@
 <style>
-    .box{
+    .box {
         display: none;
         margin-top: 1.5rem;
     }
-    
-
-.timeline {
-	width:800px;
-	height: 20px;
-	list-style: none;
-	text-align: justify;
-	margin: 80px auto;
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(45%, rgba(255,255,255,0)), color-stop(51%, rgba(191,128,11,1)), color-stop(57%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,0)));
-	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 45%, rgba(191,128,11,1) 51%, rgba(255,255,255,0) 57%, rgba(255,255,255,0) 100%);
-}
-
-.timeline:after {display: inline-block; content: ""; width: 100%;}
-
-.timeline li {
-	display: inline-block;
-	width: 18px;
-	height: 18px;
-	background: #F2BB13;
-	text-align: center;
-	line-height: 1.2;
-	position: relative;
-	border-radius: 80%;
-}
-
-.timeline li:before {
-	display: inline-block;
-	content: attr(data-point);
-	font-size: 1.2rem;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-.timeline li:nth-child(odd):before {
-	bottom: -40px;
-}
-.timeline li:nth-child(even):before {
-	bottom: -40px;
-}
-
-.timeline li:after {
-	display: inline-block;
-	content: attr(data-text);
-	font-size: 16px;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-}
 
 
+    .timeline {
+        width: 800px;
+        height: 20px;
+        list-style: none;
+        text-align: justify;
+        margin: 80px auto;
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(45%, rgba(255,255,255,0)), color-stop(51%, rgba(191,128,11,1)), color-stop(57%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,0)));
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 45%, rgba(191,128,11,1) 51%, rgba(255,255,255,0) 57%, rgba(255,255,255,0) 100%);
+    }
+
+    .timeline:after {
+        display: inline-block;
+        content: "";
+        width: 100%;
+    }
+
+    .timeline li {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: #F2BB13;
+        text-align: center;
+        line-height: 1.2;
+        position: relative;
+        border-radius: 80%;
+    }
+
+    .timeline li:before {
+        display: inline-block;
+        content: attr(data-point);
+        font-size: 1.2rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline li:nth-child(odd):before {
+        bottom: -40px;
+    }
+    .timeline li:nth-child(even):before {
+        bottom: -40px;
+    }
+
+    .timeline li:after {
+        display: inline-block;
+        content: attr(data-text);
+        font-size: 16px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 </style>
 
 <script>
-$(document).ready(function(){
-    $('input[type="radio"]').click(function(){
-        var inputValue = $(this).attr("value");
-        var targetBox = $("." + inputValue);
-        $(".box").not(targetBox).hide();
-        $(targetBox).show();
+    $(document).ready(function () {
+        $('input[type="radio"]').click(function () {
+            var inputValue = $(this).attr("value");
+            var targetBox = $("." + inputValue);
+            $(".box").not(targetBox).hide();
+            $(targetBox).show();
+        });
     });
-});
 </script>
 
-<div class="container nopadding">
+<div class="container-fluid nopadding full-width me-5">
+    <div class="row ms-2 mt-1 justify-content-md-center ">
+        <div class="col-12 full-width" style="font-size:1.4rem">
+            <h1 class="sectionHeader text-left text-light ps-2" style="font-size:3rem;">Checkout</h1>
+        </div>
+    </div>
+
     <div class="row full-width">
         <ul class="timeline">
-        <li data-point="Cart"></li>
-        <li data-point="Shipping"></li>
-        <li data-point="Review"></li>
-        <li data-point="Pay"></li>
-        <li data-point="Complete"></li>
-    </ul>
-            
-
+            <li data-point="Cart"></li>
+            <li data-point="Shipping"></li>
+            <li data-point="Review"></li>
+            <li data-point="Pay"></li>
+            <li data-point="Complete"></li>
+        </ul>
     </div>
 
-    <section clas="col-lg-8 col-md-10 ">
-        <h1 class="display-4 ps-2 text-center" style="line-height: 1">
-            Check-out 
-        </h1>
-    </section>
-    <div class="row ps-4 col-md-6">
-        <form method="POST" action="/order/checkout-options?_method=POST" id="cart1" enctype="application/x-www-form-urlencoded">
-            <h2 class="mb-4 mt-3 border-bottom">Your Details</h2>
-            <div class="mb-4">
-                <label class="form-label" for="inputEmail">Email</label>
-                <input type="email" class="form-control" name="inputEmail" placeholder="Email Address" required>
-            </div>
-            <div class="mb-4">
-                <label class="form-label" for="inputFirstName">First Name</label>
-                <input type="text" class="form-control" name="inputFirstName" placeholder="First Name" required>
-            </div>
-            <div class="mb-4">
-                <label class="form-label" for="inputLastName">Last Name</label>
-                <input type="text" class="form-control" name="inputLastName" placeholder="Last Name" required>
-            </div>
-            <div class="mb-4">
-                <label class="form-label" for="inputMobilePhone">Mobile Phone</label>
-                <input type="text" class="form-control" name="inputMobilePhone" placeholder="Mobile Phone">
-            </div>
-
-            <h2 class="mb-4 mt-5 border-bottom">Shipping Address</h2>            
-            {{> address addressType="shipping"}}
-
-            <h2 class="mb-4 mt-5 border-bottom">Billing Address</h2>
-            <div id="billing">
-                <div>
-                    <label><input type="radio" name="isBilling" value="isBillingYes" checked="checked"> Default (Same as Shipping Address)</label><br>
-                    <label><input type="radio" name="isBilling" value="isBillingNo"> Add Billing Address</label>
+    <form method="POST" action="/order/checkout-options?_method=POST" id="cart1" enctype="application/x-www-form-urlencoded">
+        <div class="row ps-4">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <h2 class="mb-4 border-bottom">Your Details</h2>
+                <div class="mb-4">
+                    <label class="form-label" for="inputEmail">Email</label>
+                    <input type="email" class="form-control" name="inputEmail" placeholder="Email Address" required>
                 </div>
-                <div class="isBillingYes box"><i class="fas fa-check-square"></i>Use Shipping Address</div>
-                <div class="isBillingNo box">{{> address addressType="billing"}}</div>
+                <div class="mb-4">
+                    <label class="form-label" for="inputFirstName">First Name</label>
+                    <input type="text" class="form-control" name="inputFirstName" placeholder="First Name" required>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label" for="inputLastName">Last Name</label>
+                    <input type="text" class="form-control" name="inputLastName" placeholder="Last Name" required>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label" for="inputMobilePhone">Mobile Phone</label>
+                    <input type="text" class="form-control" name="inputMobilePhone" placeholder="Mobile Phone">
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary mt-5 mb-5">Proceed To Options</button>
-        </form>
-    </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <h2 class="mb-4 border-bottom">Shipping Address</h2>
+                {{> address addressType="shipping"}}
+
+                <h2 class="mb-4 mt-5 border-bottom">Billing Address</h2>
+                <div id="billing">
+                    <div>
+                        <label><input type="radio" name="isBilling" value="isBillingYes" checked="checked">
+                            Default (Same as Shipping Address)</label><br>
+                        <label><input type="radio" name="isBilling" value="isBillingNo">
+                            Add Billing Address</label>
+                    </div>
+                    <div class="isBillingYes box">
+                        <i class="fas fa-check-square"></i>Use Shipping Address</div>
+                    <div class="isBillingNo box">{{> address addressType="billing"}}</div>
+                </div>                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-outline-light btn-lg mt-5 mb-5">Continue To Options</button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>

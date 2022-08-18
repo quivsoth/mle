@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const db = require("./database");
+var Cart = require('../models/cart');
 
 /* Collections Page.                                    */
 router.get('/collections', function (req, res, next) {
@@ -86,6 +87,12 @@ router.get('/product/:productId', function (req, res, next) {
             hasMessages: messages.length > 0
         });
     })();
+});
+
+router.get('/bag', function(req, res, next) {
+    //if (! req.session.cart) { return res.render('shop/shopping-cart', {products: null}); }
+    var cart = new Cart(req.session.cart);
+    res.json(cart.generateArray());
 });
 
 module.exports = router;

@@ -1,7 +1,15 @@
 module.exports = function Cart(currentCart) {
-    this.items = currentCart.items || {};
-    this.totalPrice = currentCart.totalPrice || 0;
-    this.qty = currentCart.qty || 0;
+    
+    if(currentCart === undefined) {
+        this.items = {};
+        this.totalPrice = 0;
+        this.qty = 0;
+    } else {
+        this.items = currentCart.items;
+        this.totalPrice = 0;
+        this.qty = currentCart.qty;
+    }
+    
 
     this.add = function(item, id) {
         console.log("Item SKU:\t" +  id);

@@ -16,5 +16,6 @@ var productSchema = new Schema({
     productThumbs: { type:[String], required: true} 
 },
 { collection : 'products' });
+productSchema.index({description: 'text', productName: 'text', productId: 'text'});
 
 module.exports = mongoose.model('Product', productSchema);

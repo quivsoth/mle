@@ -6,6 +6,35 @@ const upload = multer({ dest: 'uploads/' });
 
 const db = require("./database");
 
+router.get('/tester/', async function (req, res, next) {
+
+   
+    var g = db.search().then((value) => {
+        console.log(value); // Success!
+    });
+     
+    // Product.find({
+    //     $text: {
+    //         $search: query
+    //     }
+    // }, function(err, result) {
+    //     if (err) throw err;
+    //     if (result) {
+    //         res.json(result)
+    //     } else {
+    //         res.send(JSON.stringify({
+    //             error : 'Error'
+    //         }))
+    //     }
+    // })
+        
+
+    res.render('admin/tester', {
+        title: 'Baja La Bruja - test Page'
+    });
+});
+
+
 /* Item/Product Detail Update.                        */
 router.put('/updateProduct/', function (req, res, next) {
     (async function () {
@@ -134,6 +163,15 @@ router.get('/admin', function (req, res, next) {
   /* Error 404                                  */
 router.get('/error404', function (req, res, next) {
     res.render('site/error404', { title: 'Baja La Bruja - 404 NOT FOUND',});
+});
+
+/* Message                                        */
+router.post('/message', function (req, res, next) {
+    var s = req.flash('message', 'Success!!');
+    res.status(200).send( { 
+        messages: s,  hasMessages: true 
+    });
+    
 });
 
 

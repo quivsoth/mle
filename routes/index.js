@@ -17,8 +17,10 @@ router.get('/tt', function (req, res, next) {
 
 /* View for HOME page.                           */
 router.get('/', function (req, res, next) {
+    
     (async function () {
         var messages = req.flash('info');
+        messages = req.flash('message', 'Success!!');
         res.render('site/index', {
             title: 'Baja La Bruja - Fighting Fast Fashion',
             messages: messages,

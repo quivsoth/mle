@@ -4,27 +4,31 @@ var Cart = require('../models/cart');
 const db = require("./database");
 
 /* Add item to Shopping Cart.                           */ 
-router.get('/addCart/:item', function (req, res, next) {
+router.put('/addCart/:product', function (req, res, next) {
     (async function () {
-        let productId = parseInt(req.params.item);
+        let productId = parseInt(req.params.product);
         var cart = new Cart(req.session.cart ? req.session.cart : {});
-
         const product = await db.getProductByProductId(productId);
         cart.add(product, product.productId);
         req.session.cart = cart;
-
-        res.redirect('/product/' + productId);
+        res.json(cart.generateArray());
     })();
 });
 
 /* Delete item in Shopping Cart                         */
-router.get('/deleteCart/:item', function (req, res, next) {
+router.delete('/deleteCart', function (req, res, next) {
     (async function () {
-        let productId = req.params.item;
-        var cart = new Cart(req.session.cart);
-        cart.delete(productId);
-        req.session.cart = cart;
-        res.redirect('/shopping-cart');
+        try {
+            let productId = req.body.productId;
+            var cart = new Cart(req.session.cart);
+            cart.delete(productId);
+            req.session.cart = cart;
+            res.json(cart.generateArray());
+        }
+        catch(error) {
+            console.log(error);
+            res.json("ERROR: " + error);
+        }
     })();
 });
 
@@ -54,7 +58,7 @@ router.get('/checkout', function (req, res, next) {
         var cart = new Cart(req.session.cart);
         var messages = req.flash('info');
         
-        res.render('shop/checkout', {
+        res.render('cart/checkout', {
             products: cart.generateArray(),
             totalPrice: cart.totalPrice,
             messages: messages,

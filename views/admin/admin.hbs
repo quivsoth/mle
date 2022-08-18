@@ -1,4 +1,3 @@
-<script type="text/javascript" src="/javascripts/api.js"></script>
 <script>
 'use strict';
 (function (factory) {
@@ -278,10 +277,16 @@ var Collections = Object.create(null);
 var SelectedCollection = Object.create(null);
 var Products = Object.create(null);
 var Product = Object.create(null);
-const imagePath = "/images/products/";
 
+//Start Here
 document.addEventListener("DOMContentLoaded", function(event) { 
   fetch("/api/allCollections", (data) => { 
+    displayFirstTab();
+    $('#nav-collections-tab').on('click', function (e) { displayFirstTab() });
+    $('#nav-products-tab').on('click', function (e) { displaySecondTab() });
+    $('#nav-product-tab').on('click', function (e) { displayThirdTab() });
+    $('#btnSearch').on('click', function (e) { SearchItem($('#frmSearch').val()) });
+
     Collections = JSON.parse(data);
     Collections.map(function(e) { $("#collectionsSel").append('<option value="' + e.collectionId + '">' + e.collectionName + "</option>")});
     Collections.forEach(c => {$("#collectionContainer").append(`<span class="draggable-element d-1" data-collectionId="${c.collectionId}" style="position: relative;background-image: url(/images/collections/${c.image});background-size:contain;background-repeat:no-repeat;background-position: center;height:180px;"><button data-collectionId="${c.collectionId}" data-bs-toggle="offcanvas" data-bs-target="#offCanvas" type="button" class="btn btn-light" style="position:absolute;bottom:0;left:0" onclick="collectionEdit(this)">Edit</button></span>`)});
@@ -294,10 +299,65 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
         put("/api/updateCollections", Collections, (result) => { console.log('updated') });
     });
+
   fetch("/api/allProducts", (data) => { Products = JSON.parse(data) });
   });
   document.getElementById("collectionsSel").addEventListener("change", colSelChanged);
+  /*$.ajax({
+      method:'POST',
+      ulr: '/message',
+      data: {},
+      success: function(msg) {
+          console.log('Success!!1111');
+          //console.log(msg);  // loginMessage from your code
+      },
+      error: function(){
+          console.log('Error!!');
+      }
+  })*/
 });
+
+function displayFirstTab() {
+  var firstTab = document.getElementById("nav-collections");
+  var firstTabDescendents = firstTab.getElementsByTagName('*');
+  for (var i = 0; i < firstTabDescendents.length; i++) { firstTabDescendents[i].style.visibility = 'visible';}
+  
+  var secondTab = document.getElementById("nav-products");
+  var secondTabDescendents = secondTab.getElementsByTagName('*');
+  for (var i = 0; i < secondTabDescendents.length; i++) { secondTabDescendents[i].style.visibility = 'hidden';}
+    
+  var thirdTab = document.getElementById("nav-product");
+  var thirdTabDescendents = thirdTab.getElementsByTagName('*');
+  for (var i = 0; i < thirdTabDescendents.length; i++) { thirdTabDescendents[i].style.visibility = 'hidden';}
+}
+
+function displaySecondTab() {
+  var firstTab = document.getElementById("nav-collections");
+  var firstTabDescendents = firstTab.getElementsByTagName('*');
+  for (var i = 0; i < firstTabDescendents.length; i++) { firstTabDescendents[i].style.visibility = 'hidden';}
+  
+  var secondTab = document.getElementById("nav-products");
+  var secondTabDescendents = secondTab.getElementsByTagName('*');
+  for (var i = 0; i < secondTabDescendents.length; i++) { secondTabDescendents[i].style.visibility = 'visible';}
+    
+  var thirdTab = document.getElementById("nav-product");
+  var thirdTabDescendents = thirdTab.getElementsByTagName('*');
+  for (var i = 0; i < thirdTabDescendents.length; i++) { thirdTabDescendents[i].style.visibility = 'hidden';}
+}
+
+function displayThirdTab() {
+  var firstTab = document.getElementById("nav-collections");
+  var firstTabDescendents = firstTab.getElementsByTagName('*');
+  for (var i = 0; i < firstTabDescendents.length; i++) { firstTabDescendents[i].style.visibility = 'hidden';}
+  
+  var secondTab = document.getElementById("nav-products");
+  var secondTabDescendents = secondTab.getElementsByTagName('*');
+  for (var i = 0; i < secondTabDescendents.length; i++) { secondTabDescendents[i].style.visibility = 'hidden';}
+    
+  var thirdTab = document.getElementById("nav-product");
+  var thirdTabDescendents = thirdTab.getElementsByTagName('*');
+  for (var i = 0; i < thirdTabDescendents.length; i++) { thirdTabDescendents[i].style.visibility = 'visible';}
+}
 
 function collectionEdit(e){
   let colId = parseInt(e.getAttribute('data-collectionId'));
@@ -340,7 +400,11 @@ function SaveCollection(e) {
   });
 }
 
-
+function SearchItem(text) {
+fetch("/api/search/" + text, (data) => { 
+    console.log(data);
+  }); 
+}
 </script>
 <style>
     #collectionContainer {
@@ -359,7 +423,12 @@ function SaveCollection(e) {
         font-size: 30px;
         cursor: move;
     }
-
+    #nav-tab button {
+      color: white;
+    }
+     #nav-tab button.active {
+      color: black;
+    }
 </style>
 
 <div class="offcanvas offcanvas-start text-dark" tabindex="-1" id="offCanvas" aria-labelledby="offCanvasLabel">
@@ -393,6 +462,7 @@ function SaveCollection(e) {
 </div>
 
 <h2 style="margin-top:150px" class="mb-4 ms-2">Baja La Admin</h2>
+
 <nav>
   <div class="nav nav-tabs m-1" id="nav-tab" role="tablist">
     <button class="nav-link active" id="nav-collections-tab" data-bs-toggle="tab" data-bs-target="#nav-collections" type="button" role="tab" aria-controls="nav-collections" aria-selected="true">Collections</button>
@@ -402,7 +472,6 @@ function SaveCollection(e) {
 </nav>
 
 <div class="tab-content" id="nav-tabContent">
-
   <div class="tab-pane fade show active" id="nav-collections" role="tabpanel" aria-labelledby="nav-collections-tab">
     <h4 class="m-3">Drag the collection to the order you would like them to be displayed..</p>
     <div id="collectionContainer"></div> 
@@ -417,5 +486,14 @@ function SaveCollection(e) {
   </div>
 
   <div class="tab-pane fade show active" id="nav-product" role="tabpanel" aria-labelledby="nav-product-tab">
+    <div class="input-group">
+      <div class="form-outline">
+        <input type="search" id="frmSearch" class="form-control" />
+        <label class="form-label" for="frmSearch">Search</label>
+      </div>
+      <button type="button" class="btn btn-primary" id="btnSearch">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
   </div>
 </div>

@@ -1,14 +1,14 @@
 /* ---------------- HTML ---------------- */
 
-
 body {
   font-family: 'splendid_66regular';
   background-color: black;
   color: #FFF;
   margin: 0;
   padding: 0;
-  margin-top: 125px;  /* This is needed for a fixed header, remove if not using fixed header */
+  margin-top: 160px;  /* This is needed for a fixed header, remove if not using fixed header */
 }
+
 
 /* ---------------- IDs ---------------- */
 
@@ -29,7 +29,6 @@ body {
 
 
 /* ---------------- Classes ---------------- */
-
 
 .baja-font-135 {
   font-size:1.5rem;
@@ -64,6 +63,11 @@ body {
   padding-bottom: 4rem;
 }
 
+.breadcrumb {
+  margin-top: 0.8rem;
+  margin-left: 0.5rem;
+}
+
 .breadcrumb-item,
 .breadcrumb-item li,
 .breadcrumb-item a {
@@ -87,7 +91,6 @@ body {
 
 .card:hover {
   text-decoration: none;
-
   animation: onHoverAnimation 0.5s ease-in both;
 }
 
@@ -136,33 +139,27 @@ img.rounded-corners {
   border-radius: 1.5rem;
 }
 
-
 .nav-link {
   font-size:larger;
   margin-right: 3rem;
 }
 
 .navbar {
-  background-color: #070707;
-  margin: 0;
-  padding: 0;
+  background-color: #131212;
+border-bottom:slategrey;
+  padding: 1rem;
   /* background-color: yellow; */
   /* border-bottom: 1px solid  #252525; */
 
 }
 
 .navbar-brand img {
-  height: 7rem;
-  
+  height: 7rem;  
 }
 
 .navbar-nav {
   padding-left: 2rem;
   font-size: large;
-}
-
-.nav-item {
-  
 }
 
 .nopadding {
@@ -196,8 +193,6 @@ img.rounded-corners {
 .videoControl {
   width: 100%;
 }
-
-
 
 /* ---------------- Keyframess ---------------- */
 

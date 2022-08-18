@@ -28,6 +28,13 @@ module.exports = {
         var query = { productId: productId };
         return await Product.findOne(query);
     },
+    getProductByProductId : async(productId) => {
+        var query = { productId: productId };
+        return await Product.findOne(query);
+    },
+    search : async(searchText) => {
+        return await Product.find({ $text: { $search: searchText } });
+    },
     updateProduct : async(product) => {
         var query = { productId: product.productId };
         await Product.findOneAndUpdate(query, product);

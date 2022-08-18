@@ -21,9 +21,14 @@ router.get('/product/:productId', async function (req, res, next) {
     res.json(await db.getProductByProductId(productId));
 });
 
+/* Search                                           */
+router.get('/search/:searchText', async function (req, res, next) {
+    let searchText = req.params.searchText;
+    db.search(searchText).then((value) => { res.json(value) }); 
+});
+
 router.put('/updateCollections', function (req, res, next) {
     (async function () {
-
         var d = new Date(); 
         const dateStamp = d.getMonth() + "-" + d.getDate() + "-" + d.getFullYear() + "@" + d.getHours() + "." + d.getMinutes() + "." + d.getSeconds();
         try {

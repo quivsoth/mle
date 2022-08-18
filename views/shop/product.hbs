@@ -1,103 +1,129 @@
 <script src="/javascripts/splide.min.js"></script>
 <link rel="stylesheet" href="/stylesheets/splide.min.css">
 <style>
-  .splide__slide img {
-    height: auto;
-    border-radius: 5px;
+    .splide__slide img {
+        height: auto;
+        border-radius: 5px;
+    }
+    .carousel-progress {
+        background: #ccc;
+    }
 
-  }
-  .carousel-progress {
-    background: #ccc;
-  }
-
-  .progress-bar {
-    background: white;
-    height: 2px;
-    transition: width 400ms ease;
-    width: 0;
-  }
-</style> 
+    .progress-bar {
+        background: white;
+        height: 2px;
+        transition: width 400ms ease;
+        width: 0;
+    }
+</style>
 
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item"><a href="/collections">Collections</a></li>
-    <li class="breadcrumb-item"><a href="/products/{{collection.collectionId}}">{{collection.collectionName}}</a></li>
-    <li class="breadcrumb-item active" aria-current="page">{{ product.productName }}</li>
-  </ol>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="/">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="/collections">Collections</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="/products/{{collection.collectionId}}">{{collection.collectionName}}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">{{ product.productName }}</li>
+    </ol>
 </nav>
 
 <div class="container-fluid">
-<div class="row mb-3">
-  <div class="row mb-3">
-    {{!-- #Start Column 1 --}}
-    
-    <div class="col-lg-4 col-md-6 col-xxl-3" style="position: relative;display: inline;">
-      {{#if product.isSold }}<img src="/images/sold.png" style="z-index: 999;height: 200px; width:auto; position:absolute;display:inline;margin-top:90px" />{{/if}}
-      <div id="image-slider" class="splide">
-        <div class="splide__track">    
-          <ul class="splide__list full-width">
-            {{#each product.productThumbs}}
-              <li class="full-width splide__slide"><img class="img-responsive img-fluid" src="/images/products/{{this}}" style="z-index: 2"></li>
-            {{/each}}
-          </ul>
-        </div>
-        <div class="carousel-progress">
-          <div class="progress-bar"></div>
-        </div>
-      </div>
-    </div>  {{!-- #End Column 1 --}}
-    
-    
-    {{!-- #Start Column 2 --}}
-    <div class="col-lg-6 col-md-5 ms-3 mt-3 col-xxl-8">
-      <div>
-        <h1>{{ product.productName }}</h1>
-        {{# unless login }}
-          <a href="/productEditor/{{product.productId}}" style="padding-right:2rem;">[Edit]</a>
-        {{/unless}}
-      </div>
-      <div id="editorContent">
-        {{{ product.description }}}
-      </div>
-      <p>Size: {{ product.size }}</p>
-      <p>${{ product.price }}</p>
-      <p>Measurements: {{ product.measurements }}</p>
-      <p>SKU #: {{ product.productId }}</p>
+    <div class="row mb-3">
+        <div class="row mb-3">
+            {{!-- #Start Column 1 --}}
+            <div class="col-lg-4 col-md-6 col-xxl-3" style="position: relative;display: inline;">
+                {{#if product.isSold }}<img src="/images/sold.png" style="z-index: 999;height: 200px; width:auto; position:absolute;display:inline;margin-top:90px"/>
+                {{/if}}
+                <div id="image-slider" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list full-width">
+                            {{#each product.productThumbs}}
+                                <li class="full-width splide__slide"><img class="img-responsive img-fluid" src="/images/products/{{this}}" style="z-index: 2"></li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    <div class="carousel-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+            {{!-- #End Column 1 --}}
 
-      <hr class="text-light">
-      {{# unless inCart }}
-          {{#unless product.isSold }}
-            {{!-- {{#> button link="/addCart/" & product.productId text="Add to cart"}}{{/button}} --}}
-            <a class="btn btn-light" href="/addCart/{{product.productId}}">Add to cart</a>
-          {{/unless }}
-      {{/unless}}
-      {{# if inCart }}
-        <h4 class="text-light"><span class="">{{ product.productName }} is in your cart.</span></h4>
-        <a class="btn btn-light" href="/shopping-cart">View your cart</a>
-      {{/if}}
-    </div> {{!-- #End Column 2 --}}
-  </div>
+            {{!-- #Start Column 2 --}}
+            <div class="col-lg-6 col-md-5 ms-3 mt-3 col-xxl-8">
+                <div>
+                    <h1>{{ product.productName }}</h1>
+                    {{# unless login }}
+                        <a href="/productEditor/{{product.productId}}" style="padding-right:2rem;">[Edit]</a>
+                    {{/unless}}
+                </div>
+                <div id="editorContent"> {{{ product.description }}} </div>
+                <p>Size: {{ product.size }}</p>
+                <p>Price: ${{ product.price }}</p>
+                <p>Measurements: {{ product.measurements }}</p>
+                <p>SKU #: {{ product.productId }}</p>
+                <hr class="text-light">
+
+                {{# unless inCart }}
+                    {{#unless product.isSold }}
+                        {{!-- {{#> button link="/addCart/" & product.productId text="Add to cart"}}
+                        {{/button}}
+                        --}}
+                        <a id="addCart" class="btn btn-outline-light btn-large btn-block" data-productid={{product.productId}}>Add to cart</a>
+                    {{/unless }}
+                {{/unless}}
+
+                {{# if inCart }}
+                    <div id="inCart">
+                    <h4 class="text-light">
+                        <span id="spnPreview" class="">{{ product.productName }}
+                            is in your cart!</span>
+                    </h4>
+                    <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="btn btn-outline-light btn-large btn-block" href="#">View your cart</a>
+                {{/if}}
+            </div>
+        {{!-- #End Column 2 --}}
+        </div>
+    </div>
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var splide = new Splide('#image-slider', {
-        classes: {
-            arrows: 'splide__arrows arrows',
-            arrow: 'splide__arrow arrow',
-            prev: 'splide__arrow--prev arrow_prev',
-            next: 'splide__arrow--next arrow_next'
-        },
-        type   : 'loop'
-    });
-    var bar = splide.root.querySelector('.progress-bar');
+    document.addEventListener('DOMContentLoaded', function () {
+        var splide = new Splide('#image-slider', {
+            classes: {
+                arrows: 'splide__arrows arrows',
+                arrow: 'splide__arrow arrow',
+                prev: 'splide__arrow--prev arrow_prev',
+                next: 'splide__arrow--next arrow_next'
+            },
+            type: 'loop'
+        });
+        var bar = splide.root.querySelector('.progress-bar');
 
-    // Update the bar width:
-    splide.on('mounted move', function () {
-        var end = splide.Components.Controller.getEnd() + 1;
-        bar.style.width = String(100 * (splide.index + 1) / end) + '%';
+        // Update the bar width:
+        splide.on('mounted move', function () {
+            var end = splide.Components.Controller.getEnd() + 1;
+            bar.style.width = String(100 * (splide.index + 1) / end) + '%';
+        });
+        splide.mount();
+
+        document.getElementById("addCart").addEventListener("click", AddCart);
     });
-    splide.mount();
-  });
+
+    function AddCart(e) {        
+        var productId = parseInt(e.target.getAttribute('data-productId'));
+        var url = "/addCart/" + productId;
+        
+        put(url, {}, (result) => {
+            e.target.style.visibility = 'hidden';
+            //var t = document.getElementById("spnPreview");
+            //console.log(t);
+            BuildCart(JSON.parse(result));
+        });
+    }
 </script>
