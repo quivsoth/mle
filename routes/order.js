@@ -17,18 +17,14 @@ var csrfProtection = csrf();
 
 /* Checkout (Cart Review) - Step 1.                 */                   
 router.get('/checkout', function (req, res, next) {
-    var messages = req.flash('info');
     res.render('cart/checkout', {
-        title: 'Baja La Bruja - Checkout Step 1',
-        messages: messages,
-        hasMessages: messages.length > 0
+        title: 'Baja La Bruja - Checkout Step 1'
     });
 });
 
 /* Options Checkout - Step 2.                        */                    
 router.post('/checkout-options', function (req, res, next) {
     (async function () {
-        var messages = req.flash('info');
         var ObjectID = mongo.ObjectId;
         var cart = new Cart(req.session.cart);
         var shippingAddress = {
@@ -103,8 +99,6 @@ router.post('/checkout-options', function (req, res, next) {
 
             res.render('cart/checkout-options', {
                 title: 'Baja La Bruja - Checkout Step 2',
-                messages: messages,
-                hasMessages: messages.length > 0,
                 order: order,
                 subtotal: order.subtotal,
                 shippingPrice: order.shippingCost.toFixed(2),
@@ -120,7 +114,6 @@ router.post('/checkout-options', function (req, res, next) {
 /* Called when payment is successful - Step 3         */   
 router.get("/success/:orderNumber", function (req, res, next) {
     // (async function () {
-        var messages = req.flash('info');
         var cart = new Cart(req.session.cart);
 
         var successOrder = new Order({
@@ -147,8 +140,6 @@ router.get("/success/:orderNumber", function (req, res, next) {
 
         res.render('cart/success', {
             title: 'Baja La Bruja - Order Successful',
-            messages: messages,
-            hasMessages: messages.length > 0,
             orderNumber: req.params.orderNumber,
             viewable: true
         });

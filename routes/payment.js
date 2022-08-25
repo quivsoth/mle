@@ -32,7 +32,6 @@ var csrfProtection = csrf();
 
 /*    Description: Route for successful card pay     */
 router.post('/pay', async (req, res, next) => {
-  var messages = req.flash('info');
   var order = req.session.order;
   if(order == undefined) { throw new Error("Order is Missing"); }
 
@@ -40,8 +39,6 @@ router.post('/pay', async (req, res, next) => {
   
   res.render('cart/pay', {
       title: 'Baja La Bruja - Pay for Items and Checkout',
-      messages: messages,
-      hasMessages: messages.length > 0,
       viewable: (order != undefined)
   });
 });
@@ -93,7 +90,6 @@ router.post('/payment', async(req, res) => {
 
 /*    Description: Route for successful card pay     */
 router.get('/success', async (req, res, next) => {
-  var messages = req.flash('info');
   var order = req.session.order;
     if(order == undefined) { throw new Error("Order is Missing"); }
 
@@ -119,8 +115,6 @@ router.get('/success', async (req, res, next) => {
 
   res.render('cart/success', {
       title: 'Baja La Bruja - Pay for Items and Checkout',
-      messages: messages,
-      hasMessages: messages.length > 0,
       orderNumber: order.orderNumber,
       viewable: (order != undefined),
   });

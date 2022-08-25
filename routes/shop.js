@@ -6,7 +6,6 @@ var Cart = require('../models/cart');
 /* Collections Page.                                    */
 router.get('/collections', function (req, res, next) {
     (async function () {
-        var messages = req.flash('info');
         const collectionsAll = await db.getCollections(true);
 
         //filter active collections only
@@ -22,9 +21,7 @@ router.get('/collections', function (req, res, next) {
 
         res.render('shop/collections', {
             title: 'Baja La Bruja - Collections',
-            collections: productChunks,
-            messages: messages,
-            hasMessages: messages.length > 0
+            collections: productChunks
         });
     })();
 });
@@ -32,7 +29,6 @@ router.get('/collections', function (req, res, next) {
 /* Products in Collection page.                         */        
 router.get('/products/:collectionId', function (req, res, next) {
     (async function () {
-        var messages = req.flash('info');
         let collectionId = parseInt(req.params.collectionId);
         let currentCollection = await db.getCollections(true);
         let selectedCollection = currentCollection.filter((current) => {
@@ -51,8 +47,6 @@ router.get('/products/:collectionId', function (req, res, next) {
             title: 'Baja La Bruja - Products',
             products: productRows,
             collectionName: selectedCollection[0].collectionName,
-            messages: messages,
-            hasMessages: messages.length > 0
         });
     })();
 });
@@ -60,7 +54,6 @@ router.get('/products/:collectionId', function (req, res, next) {
 /* Item/Product Detail View.                            */
 router.get('/product/:productId', function (req, res, next) {
     (async function () {
-        var messages = req.flash('info');
         let productId = parseInt(req.params.productId);
         const product = await db.getProductByProductId(productId);
 
@@ -82,9 +75,7 @@ router.get('/product/:productId', function (req, res, next) {
             title: 'Baja La Bruja - Items',
             product: JSON.parse(JSON.stringify(product)),
             collection: selectedCollection[0],
-            inCart: inCart,
-            messages: messages,
-            hasMessages: messages.length > 0
+            inCart: inCart
         });
     })();
 });

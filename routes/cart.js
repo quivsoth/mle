@@ -35,7 +35,7 @@ router.delete('/deleteCart', function (req, res, next) {
 /* View Shopping Cart                                   */
 router.get('/shopping-cart', function (req, res, next) {
     (async function () {
-        var messages = req.flash('info');
+
         if (! req.session.cart) {
             return res.render('shop/shopping-cart', {products: null});
         }
@@ -43,8 +43,6 @@ router.get('/shopping-cart', function (req, res, next) {
         res.render('shop/shopping-cart', {
             products: cart.generateArray(),
             totalPrice: cart.totalPrice,
-            messages: messages,
-            hasMessages: messages.length > 0
         });
     })();
 });
@@ -56,13 +54,9 @@ router.get('/checkout', function (req, res, next) {
             return res.render('shop/checkout', {products: null});
         }
         var cart = new Cart(req.session.cart);
-        var messages = req.flash('info');
-        
         res.render('cart/checkout', {
             products: cart.generateArray(),
             totalPrice: cart.totalPrice,
-            messages: messages,
-            hasMessages: messages.length > 0
         });
     })();
 });

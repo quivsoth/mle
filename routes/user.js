@@ -22,12 +22,8 @@ router.use("/", notLoggedIn, function (req, res, next) {
 });
 
 router.get("/signup", function (req, res, next) {
-    let messages = req.flash("error");
     // res.render('user/signup', {csrfToken: req.csrfToken()});
-    res.render("user/signup", {
-        messages: messages,
-        hasErrors: messages.length > 0
-    });
+    res.render("user/signup", {title: 'Baja La Bruja Signup',});
 });
 
 router.post("/signup", passport.authenticate("local.signup", {
@@ -37,10 +33,7 @@ router.post("/signup", passport.authenticate("local.signup", {
 }));
 
 router.get("/signin", function (req, res, next) {
-    let messages = req.flash("error");
-    res.render("user/signin", {
-        messages: messages,
-        hasErrors: messages.length > 0
+    res.render("user/signin", {title: 'Baja La Bruja - Fighting Fast Fashion',
     });
 });
 
@@ -68,11 +61,8 @@ var Subscriber = require("../models/subscriber");
 /*    Description: View for HOME page.
       Method: GET                     */
 router.get('/', function (req, res, next) {
-    var messages = req.flash('info');
     res.render('site/index', {
         title: 'Baja La Bruja - Fighting Fast Fashion',
-        messages: messages,
-        hasMessages: messages.length > 0
     });
 });
 
