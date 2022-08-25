@@ -3,11 +3,8 @@ var router = express.Router();
 
 /* Shipping Home Page                           */
 router.get('/shipping', function (req, res, next) {
-    var messages = req.flash('info');
     res.render('site/shipping', {
         title: 'Baja La Bruja - Shipping',
-        messages: messages,
-        hasMessages: messages.length > 0
     });
 });
 

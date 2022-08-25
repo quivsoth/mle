@@ -10,7 +10,7 @@ router.put('/updateProduct/', function (req, res, next) {
     (async function () {
         try {
             await db.updateProduct(req.body);
-            req.flash('info', 'Item # ' + req.body.productId + 'has been updated');
+            req.flash('info', 'Item # ' + req.body.productId + ' has been updated');
             res.json("SUCCESS");
         } catch (error) {
             res.json("ERROR: " + error);
@@ -33,23 +33,17 @@ router.put('/updateProducts', function (req, res, next) {
 /* Item/Product Detail View.                        */
 router.get('/lookup/', function (req, res, next) {
     (async function () {
-        var messages = req.flash('info');
         res.render('admin/lookup', {
-            title: 'Baja La Bruja - Admin Page',
-            messages: messages,
-            hasMessages: messages.length > 0
+            title: 'Baja La Bruja - Admin Page'
         });
     })();
 });
 
 /* View for Item Edit page                        */
 router.get('/productEditor/:productId', function (req, res, next) {
-    var messages = req.flash('info');
     let productId = parseInt(req.params.productId);
     res.render('admin/productEditor', {
         title: 'Baja La Bruja - Item Editor Page',
-        messages: messages,
-        hasMessages: messages.length > 0,
         itemId: productId
     });
 });
@@ -118,11 +112,8 @@ router.get('/uploader', function (req, res, next) {
 /* Item/Product Detail View.                        */
 router.get('/admin', function (req, res, next) {
     (async function () {
-        var messages = req.flash('info');
         res.render('admin/admin', {
-            title: 'Baja La Bruja - Admin Page',
-            messages: messages,
-            hasMessages: messages.length > 0
+            title: 'Baja La Bruja - Admin Page'
         });
     })();
 });
@@ -132,14 +123,6 @@ router.get('/error404', function (req, res, next) {
     res.render('site/error404', { title: 'Baja La Bruja - 404 NOT FOUND',});
 });
 
-/* Message                                        */
-router.post('/message', function (req, res, next) {
-    var s = req.flash('message', 'Success!!');
-    res.status(200).send( { 
-        messages: s,  hasMessages: true 
-    });
-    
-});
 
 
 module.exports = router;

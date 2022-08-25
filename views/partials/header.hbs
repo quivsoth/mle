@@ -1,13 +1,15 @@
-{{#if hasMessages}}
-  <div class="alert alert-success" style="z-index:1000">
-    {{# each messages}}
-      <p>{{this}}</p>
-    {{/each}}
-  </div>
-{{/if}}
-
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top " aria-label="Baja La Bruja Navigation Bar">
+  {{#if hasMessages}}
+    <div class="alert alert-success full-width" style="z-index:1000;position:absolute">
+      {{# each messages}}
+        <p>{{this}}</p>
+      {{/each}}
+    </div>
+  {{/if}}
+
   <div class="container-fluid full-width nopadding" >
+
+
     {{!-- LOGO --}}
     <a class="navbar-brand ms-3 mb-1" href="/"> <img src="/images/baja_logo.png" style="max-height: 7rem;" alt="Baja la Bruja Logo" /> </a>
     
