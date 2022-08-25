@@ -1,24 +1,29 @@
-const imagePath = "/images/products/";
 var Product = Object.create(null);
-var collectionId = document.getElementById("collectionId").value;
-var itemId = document.getElementById("itemId").value;
+
+
+fetch("/api/allProducts", (data) => { 
+    Products = JSON.parse(data) 
+});
+
+
 
 fetchItem = async() => {
-    fetch('/api/product/' + itemId, {
-        method: 'GET', // or 'PUT'
-        headers: { 
-            'Content-Type': 'application/json',
-        }})
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                Product = data;
-                renderImageArray(data);
-                renderProperties(data);
-        })
-        .catch((error) => {
-            console.error('ERROR:', error);
+    var url = '/api/product/' + document.getElementById("itemId").value;
+    fetch(url, (response) => { 
+        Product = JSON.parse(response);
+        renderImageArray();
+        renderProperties();
     });
+            //.then((response) => {response.json())
+            //.then((data) => {
+            //    console.log(data);
+            //    Product = data;
+                //renderImageArray(data);
+                //renderProperties(data);
+        //})
+    //     .catch((error) => {
+    //         console.error('ERROR:', error);
+    // });
 },
 updateItem = async() => {
     $.ajax({
@@ -47,7 +52,7 @@ buildImageArray = (element) => {
     });
     return productStringArray;
 },
-renderImageArray = (product) => {
+renderImageArray = () => {
     $("#imageContainer").empty();
     Product.productThumbs.forEach(o => {
         const imageName = o.split("/");
@@ -57,15 +62,15 @@ renderImageArray = (product) => {
     //Enable the drag
     $('.draggable-element').arrangeable();   
 },
-renderProperties = (product) => {
-    $("[name='active']").prop("checked", product.active );
-    $("[name='isSold']").prop("checked", product.isSold );          
-    $("[name='productName']").val(product.productName);
-    $(".ql-editor")[0].innerHTML = product.description;
-    $("[name='size']").val(product.size);
-    $("[name='price']").val(product.price);
-    $("[name='measurements']").val(product.measurements);
-    $("[name='parcel']").val(product.ausPostParcel);
+renderProperties = () => {
+    $("[name='active']").prop("checked", Product.active );
+    $("[name='isSold']").prop("checked", Product.isSold );          
+    $("[name='productName']").val(Product.productName);
+    $(".ql-editor")[0].innerHTML = Product.description;
+    $("[name='size']").val(Product.size);
+    $("[name='price']").val(Product.price);
+    $("[name='measurements']").val(Product.measurements);
+    $("[name='parcel']").val(Product.ausPostParcel);
 },
 removeImage = (element) => {
     Product.productThumbs = Product.productThumbs.filter(function(e) { return e !== String(Product.productThumbs.filter(name => name.includes(element.name))) })

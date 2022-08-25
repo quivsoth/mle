@@ -45,13 +45,11 @@ router.get('/lookup/', function (req, res, next) {
 /* View for Item Edit page                        */
 router.get('/productEditor/:productId', function (req, res, next) {
     var messages = req.flash('info');
-    let collectionId = parseInt(req.params.collection);
     let productId = parseInt(req.params.productId);
     res.render('admin/productEditor', {
         title: 'Baja La Bruja - Item Editor Page',
         messages: messages,
         hasMessages: messages.length > 0,
-        collectionId: collectionId,
         itemId: productId
     });
 });

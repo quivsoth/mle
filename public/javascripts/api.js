@@ -1,5 +1,5 @@
 fetch = async(url, callback) => {
-    // console.log("URL : " + url);
+    //console.log("URL : " + url);
     //console.log("callback : " + callback);
 
     var xhr = new XMLHttpRequest();

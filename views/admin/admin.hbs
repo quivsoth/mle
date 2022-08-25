@@ -276,7 +276,7 @@
 var Collections = Object.create(null);
 var SelectedCollection = Object.create(null);
 var Products = Object.create(null);
-var Product = Object.create(null);
+//var Product = Object.create(null);
 
 //Start Here
 document.addEventListener("DOMContentLoaded", function(event) { 
@@ -285,19 +285,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $('#nav-collections-tab').on('click', function (e) { displayFirstTab() });
     $('#nav-products-tab').on('click', function (e) { displaySecondTab() });
     $('#nav-product-tab').on('click', function (e) { displayThirdTab() });
-    document.getElementById("btnSearch").addEventListener("click", function(event) {
-      SearchItem($('#search-input').val());
-    });
+    document.getElementById("btnSearch").addEventListener("click", function(event) { SearchItem($('#search-input').val()) });
     document.getElementById("search-input").addEventListener("keypress", function(event) {
       if (event.key === "Enter") {
         event.preventDefault();
         SearchItem($('#search-input').val());
-    }
-});
+      }
+    });
 
     Collections = JSON.parse(data);
     Collections.map(function(e) { $("#collectionsSel").append('<option value="' + e.collectionId + '">' + e.collectionName + "</option>")});
-    Collections.forEach(c => {$("#collectionContainer").append(`<span class="draggable-element d-1" data-collectionId="${c.collectionId}" style="position: relative;background-image: url(/images/collections/${c.image});background-size:contain;background-repeat:no-repeat;background-position: center;height:180px;"><button data-collectionId="${c.collectionId}" data-bs-toggle="offcanvas" data-bs-target="#offCanvas" type="button" class="btn btn-light" style="position:absolute;bottom:0;left:0" onclick="collectionEdit(this)">Edit</button></span>`)});
+    Collections.forEach(c => {$("#collectionContainer").append(`<span class="draggable-element d-1" data-collectionId="${c.collectionId}" style="position:relative;background-image: url(/images/collections/${c.image});background-size:contain;background-repeat:no-repeat;background-position: center;height:180px;"><button data-collectionId="${c.collectionId}" data-bs-toggle="offcanvas" data-bs-target="#offCanvas" type="button" class="btn btn-light" style="position:absolute;bottom:0;left:0" onclick="collectionEdit(this)">Edit</button></span>`)});
 
     $('.draggable-element').arrangeable();
     $('#collectionContainer').on("drag.end.arrangeable", function(item) { 
@@ -383,8 +381,8 @@ function colSelChanged(e) {
   $('#imageContainer').empty(); 
   var colId = parseInt(this.value);
   var products = Products.filter((item) => { return item.collectionId === colId }).sort(function(a, b){ return a.sortIndex - b.sortIndex; });
-   products.forEach(o => {
-      $("#imageContainer").append(`<span class="draggable-element d-1" data-productId="${o.productId}" style="background-image: url('${imagePath + o.productThumbs[0]}');background-size:contain;background-repeat:no-repeat;background-position: center;"></span>`);
+   products.forEach(p => {
+      $("#imageContainer").append(renderProductItemPreview(p));
   });
   $('.draggable-element').arrangeable();
   $('#imageContainer').on("drag.end.arrangeable", function(item) { 
@@ -399,6 +397,31 @@ function colSelChanged(e) {
   });
 }
 
+function productEdit(e) {
+  let productId = parseInt(e.getAttribute('data-productId'));
+  let sp = Products.find(item => item.productId === productId);
+  //document.getElementById('offcanvasRightHeader').innerHTML = sp.productName;
+  document.getElementById('ocrSku').value = sp.productId;
+  document.getElementById('ocrActive').checked = sp.active;
+  document.getElementById('ocrIsSold').checked = sp.isSold;
+  document.getElementById('ocrSortOrder').innerText = sp.sortIndex;
+  document.getElementById('ocrProductName').value = sp.productName;
+  document.getElementById('ocrSize').value = sp.size;
+  document.getElementById('ocrPrice').value = sp.price;
+  document.getElementById('ocrMeasurements').value = sp.measurements;
+  document.getElementById('ocrPostal').value = sp.ausPostParcel;
+  //document.getElementById('productHero')?? = sp.productThumbs[0];
+}
+
+function Redirect() {
+  var productId = document.getElementById('ocrSku').value;
+  location.href='/productEditor/' + productId;
+}
+
+function renderProductItemPreview(p) {
+  return `<span class="draggable-element d-1" data-productId="${p.productId}" style="position:relative;background-image:url('${imagePath + p.productThumbs[0]}');background-size:contain;background-repeat:no-repeat;background-position:center;height:180px;"><button data-productId="${p.productId}" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPEditor" type="button" class="btn btn-light" style="position:absolute;bottom:0;left:0" onclick="productEdit(this)">Edit</button></span>`;
+}
+
 function SaveCollection(e) {
   var colId = parseInt(document.getElementById('ocColId').value);
   let sc = Collections.find(item => item.collectionId === colId);
@@ -410,13 +433,30 @@ function SaveCollection(e) {
   });
 }
 
+function SaveProduct() {
+  let productId = parseInt(document.getElementById("ocrSku").value);  
+  let p = Products.find(item => item.productId === productId);
+  p.productName = document.getElementById("ocrProductName").value;;
+  p.productId = productId;
+  p.active = document.getElementById("ocrActive").checked;
+  p.isSold = document.getElementById("ocrIsSold").checked;
+  p.size = document.getElementById("ocrSize").value;;
+  p.price = document.getElementById("ocrPrice").value;;
+  p.measurements = document.getElementById("ocrMeasurements").value;;
+  p.ausPostParcel = document.getElementById("ocrPostal").value;;
+
+  put("/updateProduct/", p, (result) => { 
+    bootstrap.Offcanvas.getInstance(document.getElementById("offcanvasPEditor")).hide();
+  });
+}
+
 function SearchItem(text) {
-  $('#searchResults').empty(); 
-  fetch("/api/search/" + text, (data) => { 
-    JSON.parse(data).forEach(o => {
-      $("#searchResults").append(`<span class="draggable-element d-1" data-productId="${o.productId}" style="background-image: url('${imagePath + o.productThumbs[0]}');background-size:contain;background-repeat:no-repeat;background-position: center;"></span>`);
+  $('#searchResults').empty();
+  fetch("/api/search/" + text, (data) => {
+    JSON.parse(data).forEach(p => {
+      $("#searchResults").append(renderProductItemPreview(p));
     });
-  }); 
+  });
 }
 </script>
 <style>
@@ -444,6 +484,7 @@ function SearchItem(text) {
     }
 </style>
 
+{{!-- Collections Offcanvas View --}}
 <div class="offcanvas offcanvas-start text-dark" tabindex="-1" id="offCanvas" aria-labelledby="offCanvasLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="ocTopHeader"></h5>
@@ -478,36 +519,103 @@ function SearchItem(text) {
   </div>
 </div>
 
-<h2 style="margin-top:150px" class="mb-4 ms-2">Baja La Admin</h2>
+{{!-- Products Offcanvas View --}}
+<div class="offcanvas offcanvas-end text-dark" tabindex="-1" id="offcanvasPEditor" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <div class="mb-3">
+      <h5>Quick Edit</h5>
+    </div>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+     <div class="mb-3">
+      <label for="ocrProductName" class="form-label">Name</label>
+      <input type="text" class="form-control form-control-lg" id="ocrProductName" placeholder="Product Name">
+    </div>
+    <div class="mb-3">
+      <span>Sort Order: <span id="ocrSortOrder"></span></span>
+    </div>
+    
+    <div class="mb-3">
+      <label for="ocrActive" class="form-label">Active</label>
+      <input class="form-check-input" type="checkbox" name="ocrActive" id="ocrActive">
+   
+      <label for="ocrIsSold" class="form-label ms-5">Is Sold</label>
+      <input class="form-check-input" type="checkbox" name="ocrIsSold" id="ocrIsSold">
+    </div>
 
+    <div class="row">
+      <div class="col-5">
+        <div class="mb-3">
+          <label for="ocrSku" class="form-label">SKU</label>
+          <input type="text" class="form-control form-control-lg" id="ocrSku" placeholder="SKU Number">
+        </div>
+        <div class="mb-3">
+          <label for="ocrPrice" class="form-label">Price</label>
+          <input type="text" class="form-control form-control-lg" id="ocrPrice" placeholder="Price">
+        </div>
+        <div class="mb-3">
+          <label for="ocrSize" class="form-label">Size</label>
+          <input type="text" class="form-control form-control-lg" id="ocrSize" placeholder="Size">
+        </div>
+      </div>
+      <div class="col-7">
+        <div class="mb-5">
+          <img id="productHero" class="rounded mx-auto d-block" style="max-height:400px"  />
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="ocrMeasurements" class="form-label">Measurements</label>
+      <input type="text" class="form-control form-control-lg" id="ocrMeasurements" placeholder="Measurements">
+    </div>
+    <div class="mb-3">
+      <label for="ocrPostal" class="form-label">Parcel Size</label>
+      <select id="ocrPostal" name="parcel" class="form-select form-select-lg" >
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-dark btn-lg" onclick="Redirect()">Full Edit</button>
+    <button type="submit" class="btn btn-dark btn-lg" onclick="SaveProduct()">Save</button>
+
+  </div>
+</div>
+
+
+{{!-- CONTENT PANE --}}
+<h2 style="margin-top:150px" class="mb-4 ms-2">Baja La Admin</h2>
 <nav>
   <div class="nav nav-tabs m-1" id="nav-tab" role="tablist">
     <button class="nav-link active" id="nav-collections-tab" data-bs-toggle="tab" data-bs-target="#nav-collections" type="button" role="tab" aria-controls="nav-collections" aria-selected="true">Collections</button>
     <button class="nav-link" id="nav-products-tab" data-bs-toggle="tab" data-bs-target="#nav-products" type="button" role="tab" aria-controls="nav-products" aria-selected="false">Products</button>
-    <button class="nav-link" id="nav-product-tab" data-bs-toggle="tab" data-bs-target="#nav-product" type="button" role="tab" aria-controls="nav-product" aria-selected="false">Product Detail</button>
+    <button class="nav-link" id="nav-product-tab" data-bs-toggle="tab" data-bs-target="#nav-product" type="button" role="tab" aria-controls="nav-product" aria-selected="false">Search</button>
   </div>
 </nav>
-
 <div class="tab-content" id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-collections" role="tabpanel" aria-labelledby="nav-collections-tab">
     <h4 class="m-3">Drag the collection to the order you would like them to be displayed..</p>
     <div id="collectionContainer"></div> 
   </div>
 
-  <div class="tab-pane fade show active" id="nav-products" role="tabpanel" aria-labelledby="nav-products-tab">
+  <div class="m-4 tab-pane fade show active" id="nav-products" role="tabpanel" aria-labelledby="nav-products-tab">
     <span>Choose a collection..</span>
-    <select id="collectionsSel" name="collectionsSel" class="form-select form-select-lg">
+    <select id="collectionsSel" name="collectionsSel" class="form-select form-select-lg w-auto">
       <option disabled selected>Select a Collection..</option>
     </select>
     <div id="imageContainer"></div>
   </div>
 
-  <div class="tab-pane fade show active" id="nav-product" role="tabpanel" aria-labelledby="nav-product-tab">
+  <div class="m-4 tab-pane fade show active" id="nav-product" role="tabpanel" aria-labelledby="nav-product-tab">
+    <span>Search for an item (Name, Description or SKU)</span>
     <div class="input-group">
       <div class="form-outline">
         <input id="search-input" type="search" id="form1" class="form-control form-control-lg" placeholder="Find Stock" />
       </div>
-      <button type="button" class="btn btn-primary" id="btnSearch">
+      <button type="button" class="btn btn-light ps-1" id="btnSearch">
         <i class="fas fa-search"></i>
       </button>
     </div>

@@ -9,13 +9,6 @@ var csrfProtection = csrf();
 // router.use(csrfProtection);
 
 /* View for HOME page.                           */
-router.get('/tt', function (req, res, next) {
-    res.render('site/tt', {
-        title: 'Baja La Bruja - Fighting Fast Fashion',
-    });
-});
-
-/* View for HOME page.                           */
 router.get('/', function (req, res, next) {
     
     (async function () {

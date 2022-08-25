@@ -58,9 +58,9 @@
             <div class="col-lg-6 col-md-5 ms-3 mt-3 col-xxl-8">
                 <div>
                     <h1>{{ product.productName }}</h1>
-                    {{# unless login }}
+                    {{!-- {{# unless login }}
                         <a href="/productEditor/{{product.productId}}" style="padding-right:2rem;">[Edit]</a>
-                    {{/unless}}
+                    {{/unless}} --}}
                 </div>
                 <div id="editorContent"> {{{ product.description }}} </div>
                 <p>Size: {{ product.size }}</p>

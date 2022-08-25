@@ -18,6 +18,7 @@ router.get('/products/:collectionId', async function (req, res, next) {
 /* get Products (by Product ID)                                            */
 router.get('/product/:productId', async function (req, res, next) {
     let productId = parseInt(req.params.productId);
+    console.log("productId : " + productId);
     res.json(await db.getProductByProductId(productId));
 });
 
