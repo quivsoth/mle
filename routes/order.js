@@ -79,14 +79,14 @@ router.post('/checkout-options', function (req, res, next) {
         australiaPostAPI.searchParams.append("to_postcode", shippingAddress.shippingZipcode);
         australiaPostAPI.searchParams.append("service_code", process.env.AP_SERVICE_CODE);
         var options = {
-            'method': 'POST',
+            'method': 'GET',
             'url': australiaPostAPI.href,
             'headers': { 'AUTH-KEY': process.env.AP_AUTHKEY },
             followAllRedirects: true
         };
         request(options, function (error, response) {
             if (error) { throw new Error(error); }
-            
+            console.log(response);
             var result = JSON.parse(response.body);
             order.shippingCost = parseFloat(result.postage_result.total_cost);
             //TODO GST
