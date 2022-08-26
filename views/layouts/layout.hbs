@@ -5,32 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Baja La Bruja is an online shop for revitalized vitage and curated fashion!">
 
-    {{!-- Font awesome --}}
+    {{!-- font awesome --}}
     <link rel='stylesheet' href='/stylesheets/fontawesome/all.min.css' />
     <link rel='stylesheet' href='/fonts/stylesheet.css' />
     
-    {{!-- Bootstrap --}}
+    {{!-- bootstrap --}}
+    <script src="/javascripts/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <link href="/stylesheets/bootstrap@5.0.2.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="/javascripts/bootstrap@5.0.2.min.js"  crossorigin="anonymous"></script>
     
     <script type="text/javascript" src="/javascripts/api.js"></script>
     
-    {{!-- JQUERY --}}
+    {{!-- jquery --}}
     <script src="/javascripts/jquery-3.6.0.min.js"></script>
     
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' media='screen and (max-width: 576px)' href='/stylesheets/smallscreen.css' />
   </head>
   <body>
-    
     {{> header}}
     <div class="nopadding bg-image">
       <!-- Content here -->
       {{{body}}}
       {{> footer}}
     </div> 
-
-  
   </body>
     {{!-- Image Wordplay --}}
     <script src="/javascripts/imagesloaded.pkgd.min.js"></script>

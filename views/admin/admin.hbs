@@ -427,6 +427,12 @@ function SaveCollection(e) {
   sc.collectionName = document.getElementById('ocCollectionName').value;
   sc.description = document.getElementById('ocCollectionDesc').value;
   put("/api/updateCollections", Collections, (result) => { 
+    if (result == "\"SUCCESS\"") { 
+      document.getElementById("toastMessage").innerText = "Collection updated successfully.";
+       $(".toast").toast('show');
+    } else {
+      console.error(result);
+    }
     bootstrap.Offcanvas.getInstance(document.getElementById("offCanvas")).hide();
   });
 }
@@ -443,7 +449,13 @@ function SaveProduct() {
   p.measurements = document.getElementById("ocrMeasurements").value;;
   p.ausPostParcel = document.getElementById("ocrPostal").value;;
 
-  put("/updateProduct/", p, (result) => { 
+  put("/updateProduct/", p, (result) => {        
+    if (result == "\"SUCCESS\"") { 
+      document.getElementById("toastMessage").innerText = "Product updated successfully.";
+       $(".toast").toast('show');
+    } else {
+      console.error(result);
+    }
     bootstrap.Offcanvas.getInstance(document.getElementById("offcanvasPEditor")).hide();
   });
 }
@@ -533,15 +545,12 @@ function SearchItem(text) {
     <div class="mb-3">
       <span>Sort Order: <span id="ocrSortOrder"></span></span>
     </div>
-    
     <div class="mb-3">
       <label for="ocrActive" class="form-label">Active</label>
       <input class="form-check-input" type="checkbox" name="ocrActive" id="ocrActive">
-   
       <label for="ocrIsSold" class="form-label ms-5">Is Sold</label>
       <input class="form-check-input" type="checkbox" name="ocrIsSold" id="ocrIsSold">
     </div>
-
     <div class="row">
       <div class="col-5">
         <div class="mb-3">
@@ -579,7 +588,6 @@ function SearchItem(text) {
     </div>
     <button type="submit" class="btn btn-dark btn-lg" onclick="Redirect()">Full Edit</button>
     <button type="submit" class="btn btn-dark btn-lg" onclick="SaveProduct()">Save</button>
-
   </div>
 </div>
 
