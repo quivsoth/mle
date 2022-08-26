@@ -90,9 +90,6 @@
     const imagePath = "/images/products/";
     //var template = Handlebars.compile(source);
     document.addEventListener("DOMContentLoaded", function (event) {
-        
-        //$(".toast").toast('show');
-
         fetch("/bag", (data) => {
           BuildCart(JSON.parse(data));
         });
