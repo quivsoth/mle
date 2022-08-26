@@ -307,18 +307,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   fetch("/api/allProducts", (data) => { Products = JSON.parse(data) });
   });
   document.getElementById("collectionsSel").addEventListener("change", colSelChanged);
-  /*$.ajax({
-      method:'POST',
-      ulr: '/message',
-      data: {},
-      success: function(msg) {
-          console.log('Success!!1111');
-          //console.log(msg);  // loginMessage from your code
-      },
-      error: function(){
-          console.log('Error!!');
-      }
-  })*/
 });
 
 function displayFirstTab() {
@@ -428,8 +416,7 @@ function SaveCollection(e) {
   sc.description = document.getElementById('ocCollectionDesc').value;
   put("/api/updateCollections", Collections, (result) => { 
     if (result == "\"SUCCESS\"") { 
-      document.getElementById("toastMessage").innerText = "Collection updated successfully.";
-       $(".toast").toast('show');
+      sendToastMessage("Collection updated successfully.");
     } else {
       console.error(result);
     }
@@ -451,8 +438,7 @@ function SaveProduct() {
 
   put("/updateProduct/", p, (result) => {        
     if (result == "\"SUCCESS\"") { 
-      document.getElementById("toastMessage").innerText = "Product updated successfully.";
-       $(".toast").toast('show');
+      sendToastMessage("Product updated successfully.");
     } else {
       console.error(result);
     }

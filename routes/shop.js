@@ -84,17 +84,7 @@ router.get('/product/:productId', function (req, res, next) {
 });
 
 router.get('/bag', function(req, res, next) {
-    //if (! req.session.cart) { return res.render('shop/shopping-cart', {products: null}); }
-    var cart;
-    if (req.session.cart === undefined) {
-        req.session.cart = {};
-        req.session.cart.items = [];
-        req.session.cart.price = 0;
-        req.session.cart.qty = 0;
-    } else {
-        cart = new Cart(req.session.cart);
-    }
-
+    var cart = new Cart(req.session.cart ? req.session.cart : {});
     res.json(cart.generateArray());
 });
 

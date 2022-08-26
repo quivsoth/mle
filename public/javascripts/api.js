@@ -39,4 +39,8 @@ cartDelete = (url, data, callback) => {
     };
     xhr.setRequestHeader('Content-type', 'application/json');
     xhr.send(JSON.stringify(data));
+},
+sendToastMessage = (message) => {
+    document.getElementById("toastMessage").innerText = message;
+    $(".toast").toast('show');
 }

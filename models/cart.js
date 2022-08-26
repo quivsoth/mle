@@ -1,7 +1,8 @@
 module.exports = function Cart(currentCart) {
-    this.items = currentCart.items;
-    this.totalPrice = 0;
-    this.qty = currentCart.qty;
+        
+    this.items = currentCart.items || {};
+    this.totalPrice = currentCart.totalPrice || 0;
+    this.qty = currentCart.qty || 0;
 
     this.add = function(item, id) {
         var storedItem = this.items[id];

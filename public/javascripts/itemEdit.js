@@ -26,6 +26,7 @@ fetchItem = async() => {
     // });
 },
 updateItem = async() => {
+    console.log(updateItem);
     $.ajax({
         url: '/updateProduct',
         headers: {"Content-Type": "application/json"},
@@ -34,7 +35,8 @@ updateItem = async() => {
         data: JSON.stringify(Product),
         success: function (data, textStatus, xhr) {
             //console.log(collection.products[0].productThumbs);
-            location.href = "/product/" + itemId;
+            //location.href = "/product/" + itemId;
+            sendToastMessage("Changes saved successfully.");
         },
         error: function (xhr, textStatus, errorThrown) {
             console.log('Error in Operation');
