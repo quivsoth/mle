@@ -26,27 +26,29 @@ fetchItem = async() => {
     // });
 },
 updateItem = async() => {
-    console.log(updateItem);
-    $.ajax({
-        url: '/updateProduct',
-        headers: {"Content-Type": "application/json"},
-        type: 'PUT',
-        dataType: 'json',
-        data: JSON.stringify(Product),
-        success: function (data, textStatus, xhr) {
-            //console.log(collection.products[0].productThumbs);
-            //location.href = "/product/" + itemId;
-            sendToastMessage("Changes saved successfully.");
-        },
-        error: function (xhr, textStatus, errorThrown) {
-            console.log('Error in Operation');
-            console.log('Error: ' + errorThrown);
-        }
-    });
+    console.log(Product);
+    // $.ajax({
+    //     url: '/updateProduct',
+    //     headers: {"Content-Type": "application/json"},
+    //     type: 'PUT',
+    //     dataType: 'json',
+    //     data: JSON.stringify(Product),
+    //     success: function (data, textStatus, xhr) {
+    //         //console.log(collection.products[0].productThumbs);
+    //         //location.href = "/product/" + itemId;
+    //         sendToastMessage("Changes saved successfully.");
+    //     },
+    //     error: function (xhr, textStatus, errorThrown) {
+    //         console.log('Error in Operation');
+    //         console.log('Error: ' + errorThrown);
+    //     }
+    // });
 },
 buildImageArray = (element) => {
     var productStringArray = [];
     $(element).children().each(function () {
+
+        console.log(element);
         const reg = /(?:\(['"]?)(.*?)(?:['"]?\))/;
         const name = reg.exec(this.style.backgroundImage);
         const formattedValue = String(name[1].split(imagePath)).replaceAll(',', '');
