@@ -65,7 +65,7 @@
                 <p>Size: {{ product.size }}</p>
                 <p>Price: ${{ product.price }}</p>
                 <p>Measurements: {{ product.measurements }}</p>
-                <p>SKU #: {{ product.productId }}</p>
+                <p>SKU #: <span id="productId">{{product.productId}}</span></p>
                 <hr class="text-light">
                 <div id="cartView">
                     {{# unless inCart }}
@@ -89,6 +89,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
+        let cartView = document.getElementById("cartView");
         var splide = new Splide('#image-slider', {
             classes: {
                 arrows: 'splide__arrows arrows',
@@ -107,8 +108,10 @@
         });
         splide.mount();
         document.getElementById("addCart").addEventListener("click", AddCart);
+
     });
 
+    
     function AddCart(e) {        
         var productId = parseInt(e.target.getAttribute('data-productId'));
         var url = "/addCart/" + productId;
@@ -117,15 +120,37 @@
             e.target.remove();
             BuildCart(JSON.parse(result));
 
-            let cartView = document.getElementById("cartView");
             var img = new Image();
             img.src = '/images/animated.gif';
             img.style.height = '50px';
-            img.style.align = 'left';
             cartView.appendChild(img);
 
             let addCartMessage = document.createTextNode("Added to cart!");
             cartView.appendChild(addCartMessage);
         });
     }
+    
+    function CreateAddCartButton(pid) {
+        const btn = document.createElement("a");
+        btn.innerHTML = "Add to cart";
+        btn.classList.add("btn");
+        btn.classList.add("btn-outline-light");
+        btn.classList.add("btn-large");
+        btn.classList.add("btn-block");
+        btn.setAttribute('data-productid', pid);
+        btn.addEventListener("click", AddCart);
+        cartView.appendChild(btn);
+    }
+
+    function RevertCart(pid) {   
+        var productId = parseInt(document.getElementById("productId").innerText);
+        if(pid === productId){
+            let cartView = document.getElementById("cartView");
+            cartView.innerHTML = '';
+            CreateAddCartButton(productId);
+        }        
+    }   
+    
+    
+
 </script>
