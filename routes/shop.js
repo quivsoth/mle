@@ -65,9 +65,9 @@ router.get('/product/:productId', function (req, res, next) {
         let inCart = false;
         
         //console.log("CART items : " + req.session.cart.items);
-        //if (req.session.hasOwnProperty('cart') && req.session.cart.items[productId]) {
-        //    inCart = true;
-        //}
+        if (req.session.hasOwnProperty('cart') && req.session.cart.items[productId]) {
+            inCart = true;
+        }
 
         //if(req.session.cart.items[itemId]) inCart = true; 
         //var collection = req.session.sessionData ? collection = req.session.sessionData : collection = await db.getCollections(collectionId);
