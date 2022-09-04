@@ -14,6 +14,7 @@ fetch = async(url, callback) => {
     xhr.send();
 },
 put = (url, data, callback) => {
+    console.log(data);
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState == XMLHttpRequest.DONE) { // XMLHttpRequest.DONE == 4

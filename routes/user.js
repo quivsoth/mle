@@ -4,6 +4,8 @@ const uri = process.env.MONGO_DB;
 var csrf = require("csurf");
 var passport = require("passport");
 var User = require("../models/user");
+var Subscriber = require("../models/subscriber");
+
 
 // var csrfProtection = csrf();
 // router.use(csrfProtection);
@@ -50,24 +52,6 @@ router.get("/logout", function (req, res, next) {
 
 /*      Description: Checkout of Shopping Cart.
         Method: GET                           */
-router.get('/checkout1', function (req, res, next) {
-    (async function () {
-        res.render('cart/checkout', {});
-    })();
-});
-
-
-var Subscriber = require("../models/subscriber");
-/*    Description: View for HOME page.
-      Method: GET                     */
-router.get('/', function (req, res, next) {
-    res.render('site/index', {
-        title: 'Baja La Bruja - Fighting Fast Fashion',
-    });
-});
-
-/*      Description: Checkout of Shopping Cart.
-        Method: GET                           */
 router.get('/subscribers', function (req, res, next) {
     (async function () {
         const all = await Subscriber.find();
@@ -82,15 +66,15 @@ router.get('/subscribers', function (req, res, next) {
 /*      Description: Add email to subscription list
         Method: PUT                           */
 router.put('/emailSubscribe', function (req, res) {
-    (async function () {
-        var emailAddress = req.body.email;
-        const doc = new Subscriber({email: emailAddress});
-
-        await doc.save();
-
-        req.flash('info', 'Thank you for subscribing!');
-        var referrer = req.headers['referer'];
-        res.redirect(referrer);
+    (async function () {      
+        try {
+            var emailAddress = req.body.email;
+            const doc = new Subscriber({email: emailAddress});
+            await doc.save();
+            res.json("SUCCESS");
+        } catch (error) {
+            res.json("ERROR: " + error);
+        }  
     })();
 });
 
