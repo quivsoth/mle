@@ -38,6 +38,8 @@ passport.use('local.signup', new LocalStrategy({
         var newUser = new User();
         newUser.email = email;
         newUser.password = newUser.encryptPassword(password);
+        newUser.firstName = req.body.firstName;
+        newUser.lastName = req.body.lastName;
         newUser.save(function(err, result) {
             if(err) {
                 return done(err);
@@ -53,6 +55,8 @@ passport.use('local.signin', new LocalStrategy({
     passwordField: 'password',
     passReqToCallback: true
 }, function (req, email, password, done) {
+    console.log("local.sign-in");
+
     req.checkBody('email', 'Invalid email').notEmpty().isEmail();
     req.checkBody('password', 'Invalid password').notEmpty();
     var errors = req.validationErrors();
@@ -62,7 +66,9 @@ passport.use('local.signin', new LocalStrategy({
             messages.push(error.msg);
         });
         return done (null, false, req.flash('error', messages))
-    }
+    }; 
+    console.log("local.sign-in2");
+
     User.findOne({'email': email}, function (err, user) {
         if (err) {
             return done(err);
@@ -73,21 +79,9 @@ passport.use('local.signin', new LocalStrategy({
         if(!user.validPassword(password)){
             return done(null, false, {message: 'This password is incorrect.'});
         }
+        console.log(err);
+        console.log(user);
+        
         return done(null, user);
     });
 }));
-
-
-
-// // const {MongoClient} = require('mongodb');
-// var bcrypt = require('bcrypt-nodejs');
-// const uri = `mongodb://192.168.1.3:27017`;
-// async function getUser(emailAddress){
-//     const client = new MongoClient(uri, { useUnifiedTopology: true });
-//     try {
-//         await client.connect();
-//         const person = await client.db("shop").collection("user").findOne({email: emailAddress});
-//         return person;
-//     } catch (e) { console.error(e); }
-//     finally { await client.close(); }
-// }

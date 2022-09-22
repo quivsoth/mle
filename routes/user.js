@@ -45,6 +45,18 @@ router.post("/signin", passport.authenticate("local.signin", {
     failureFlash: true
 }));
 
+router.post("/login", function(req, res, next) {
+    passport.authenticate("local.signin", function(err, user, info) {
+        if (err) { return next(err);} 
+        if (user === false) {
+            res.status = 401;
+            res.send(info.message);
+        } else {
+             res.json({success:"OK"});
+        }
+     })(req, res, next);
+});
+
 router.get("/logout", function (req, res, next) {
     req.logout();
     res.redirect("/");

@@ -1,10 +1,11 @@
+<input type="hidden" value="{{messages}}">
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top " aria-label="Baja La Bruja Navigation Bar">
   {{#if hasMessages}}
-    <div class="alert alert-success full-width" style="z-index:1000;position:absolute">
-      {{# each messages}}
-        <p>{{this}}</p>
-      {{/each}}
-    </div>
+  <div class="alert alert-success full-width" style="z-index:1000;position:absolute">
+    {{# each messages}}
+      <p>{{this}}</p>
+    {{/each}}
+  </div>
   {{/if}}
   <div class="toast align-items-center full-width" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="d-flex text-light">
@@ -15,13 +16,10 @@
     </div>
   </div>
   
-
   <div class="container-fluid full-width nopadding" >
-
-
     {{!-- LOGO --}}
     <a class="navbar-brand ms-3 mb-1" href="/"> <img src="/images/baja_logo.png" style="max-height: 7rem;" alt="Baja la Bruja Logo" /> </a>
-    
+  
     {{!-- TOGGLE BUTTON --}}
     <button style="margin-top: 4rem" class="navbar-toggler position-absolute top-0 end-0 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#blj-nav"
       aria-controls="blj-nav" aria-expanded="true" aria-label="Toggle Baja Navigation">
@@ -48,9 +46,11 @@
         </li> --}}
       </ul>
     </div> {{!-- collapse navbar --}}
+    
     <div class="position-absolute top-0 end-0 p-3">
+
       {{# unless login }}
-        <a href="/user/signin"></a><img class="baja-icon pe-2" src="/images/login-key.png" alt="Baja la Bruja Login Image" /></a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><img class="baja-icon pe-2" src="/images/login-key.png" alt="Baja la Bruja Login Image" /></a>
       {{/unless}}
 
       {{# if login }}
@@ -71,8 +71,7 @@
   </div>
 </nav>
 
-<input type="hidden" value="{{messages}}">
-
+{{!-- SHOPPING CART --}}
 <div class="offcanvas offcanvas-end text-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasRightLabel">Shopping Bag</h5>
@@ -86,6 +85,37 @@
     </div>
 </div>
 
+{{!-- LOGIN MODAL --}}
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">Baja La Bruja Login</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="formLogin">
+        <div class="modal-body form-group" style="padding-top:0px; margin-top:0px">  
+          <h2 id="result"></h2>
+          <div class="mb-3 mt-4">
+              <label for="login" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="login" aria-describedby="login" required>
+          </div>
+          <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password">
+          </div>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="btnLogin">Login</button>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <p class="pb-2 pe-2">Not a member? <a href="#" class="text-white">SIGNUP NOW</a></p>
+      </div>
+    </div>
+  
+  </div>
+</div>
+
 <script>
     const imagePath = "/images/products/";
     //var template = Handlebars.compile(source);
@@ -93,7 +123,28 @@
         fetch("/bag", (data) => {
           BuildCart(JSON.parse(data));
         });
+        $('#btnLogin').on('click', validateLogin);
     });
+
+    const validateEmail = (email) => {
+      return email.match(
+        /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+    }; 
+    const validateLogin = () => {
+      const $result = $('#result');
+      const email = $('#login').val();
+      $result.text('');
+
+      if (validateEmail(email)) {
+        $result.text(email + ' is valid :)');
+        $result.css('color', 'green');
+      } else {
+        $result.text(email + ' is not valid :(');
+        $result.css('color', 'red');
+      }
+      return false;
+    }
     function BuildCart(result) {
         $("#cartList").empty();
         if (result.length > 0) {

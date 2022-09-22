@@ -133,11 +133,24 @@ body {
   background-size: 22rem;
 }
 
-
-
 img.rounded-corners {
   border-radius: 1.5rem;
 }
+
+.modal-content {
+  background-image: url("/images/fullmoon.png");
+  background-position: 90% 50%;
+  background-size: 90% 90%;
+  background-repeat: no-repeat;
+}
+
+
+.modal-header, .modal-footer {
+  border: none;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
 
 .nav-link {
   font-size:larger;
