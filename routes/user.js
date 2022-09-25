@@ -1,11 +1,11 @@
 var express = require("express");
 var router = express.Router();
 const uri = process.env.MONGO_DB;
+
 var csrf = require("csurf");
 var passport = require("passport");
 var User = require("../models/user");
 var Subscriber = require("../models/subscriber");
-
 
 // var csrfProtection = csrf();
 // router.use(csrfProtection);
@@ -15,8 +15,6 @@ router.get("/profile", isLoggedIn, function (req, res, next) {
         res.render("user/profile");
      else 
         res.render("user/signin");
-    
-
 });
 
 router.use("/", notLoggedIn, function (req, res, next) {
@@ -45,14 +43,14 @@ router.post("/signin", passport.authenticate("local.signin", {
     failureFlash: true
 }));
 
-router.post("/login", function(req, res, next) {
+router.post("/a", function(req, res, next) {    
     passport.authenticate("local.signin", function(err, user, info) {
         if (err) { return next(err);} 
         if (user === false) {
             res.status = 401;
             res.send(info.message);
         } else {
-             res.json({success:"OK"});
+            res.json("OK");
         }
      })(req, res, next);
 });

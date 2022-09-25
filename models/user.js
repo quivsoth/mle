@@ -14,12 +14,16 @@ var addressSchema = new Schema({
 
 var userSchema = new Schema({
     firstName: {type:String, required:true },
-    lastName: {type:String, required:true },
-    phoneNumber: {type:Number, required:false },
+    lastName: {type:String, required:true },    
     email: {type:String, required:true },
     password: {type:String, required:true},
-    billingAddress: { type:addressSchema, required:false },
-    shippingAddress: { type:addressSchema, required:false },
+    billingAddress: { type:Object, required:false },
+    shippingAddress: { type:Object, required:false },
+    phoneNumber: {type:Number, required:false },
+    failedAttempts: {type:Number, required:false },
+    verified: {type:Boolean, required:true},
+    active: {type:Boolean, required:true},
+    authToken: {type:String, required:true}
 },
 { collection : 'users' });
 

@@ -118,7 +118,7 @@
         put(url, {}, (result) => {
             //e.target.style.visibility = 'hidden';
             e.target.remove();
-            BuildCart(JSON.parse(result));
+            buildCart(JSON.parse(result));
 
             var img = new Image();
             img.src = '/images/animated.gif';
