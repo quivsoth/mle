@@ -163,8 +163,24 @@ router.post('/emailTest', function (req, res) {
     });
 });
 
-router.get("/resetPassword", function (req, res, next) {
-    res.render("user/resetPassword", {title: 'Baja La Bruja - Password Reset',});
+router.get("/resetPassword/:authToken", function (req, res, next) {
+    let authToken = req.params.authToken;
+    console.log(authToken);
+    User.findOne({'authToken': authToken}, function (err, user) {
+        if(err) {
+            console.log(err);
+        }
+        if (!user) {
+            res.json('Unable to find user.')
+            console.log('Unable to find user.');
+            // TODO: redirect to an error page
+            //res.render("user/resetPassword", {title: 'Baja La Bruja - Password Reset',});
+        }
+        if (user) {
+            console.log(user);
+            res.render("user/resetPassword", {title: 'Baja La Bruja - Password Reset', firstName: user.firstName, authToken: user.authToken});
+        }
+    });
 });
 
 
@@ -200,7 +216,7 @@ function EmailForgotPassword(user) {
             <h1> <img src="https://baja.a2hosted.com/images/baja_logo.png" style="max-height: 7rem;" alt="Baja la Bruja Logo"/> </h1>            
             <h3>Forgot your password?</h3>
             <p>Hi ${user.firstName},</p>
-            <p>Please use the following link to reset your password: <a style='color:white; font-size:larger' href="http://www.bajalabruja.org/user/passwordReset?refId=${user.authToken}">RESET MY PASSWORD</a></p>
+            <p>Please use the following link to reset your password: <a style='color:white; font-size:larger' href="http://www.bajalabruja.org/user/passwordReset/${user.authToken}">RESET MY PASSWORD</a></p>
             <p>Thank you, <br> Baja La Bruja Team</p>
         </body>
     </html>    
