@@ -144,12 +144,10 @@ router.post('/emailTest', function (req, res) {
                     email: "donotreply@bajalabruja.org",
                     name: "bajalabruja.org"
                 },
-            to: [
-                {
+            to: [{
                     email: user.email,
                     name: user.firstName + " " + user.lastName
-                },
-            ],
+                },],
             subject: "Password Reset",
             htmlContent: EmailForgotPassword(user)
             };
@@ -164,6 +162,11 @@ router.post('/emailTest', function (req, res) {
         }
     });
 });
+
+router.get("/resetPassword", function (req, res, next) {
+    res.render("user/resetPassword", {title: 'Baja La Bruja - Password Reset',});
+});
+
 
 
 module.exports = router;
