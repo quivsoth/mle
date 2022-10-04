@@ -36,9 +36,7 @@ module.exports = {
     resetPassword : async(authToken, password, cb) => {
         User.findOne({'authToken': authToken}, function (err, user) {
             if (err) { return cb(err) }
-            if (!user) {
-                return cb('Invalid Authentication Token');
-            } 
+            if (!user) { return cb('Invalid Authentication Token') } 
             else {
                 // validate the password and return appropriately
                 if(password == "") return cb("Cannot use a blank password.");
@@ -46,7 +44,8 @@ module.exports = {
                 if(password.length > 15) return cb("Password length must not exceed 15 characters");
                 
                 // change the password using passport.js?????
-
+                user.password = user.encryptPassword(password);
+                user.save();
                 return cb("OK");
             }
         });
