@@ -34,7 +34,7 @@ router.put("/resetPassword/:authToken", async function (req, res, next) {
     let authToken = req.params.authToken;
     let password = req.body.a;
     let validate = (message) => { res.json(message) }
-    const resetPassword =  await db.resetPassword(authToken, password, validate);
+    await db.resetPassword(authToken, password, validate);
 });
 
 router.put('/updateCollections', function (req, res, next) {
