@@ -88,35 +88,6 @@ router.put('/emailSubscribe', function (req, res) {
     })();
 });
 
-/*      Description: Add email to subscription list
-        Method: PUT                           */
-router.put('/newUser', function (req, res) {
-    (async function () {
-        console.log("New User Functionality");
-
-        var address = {
-            streetName: "21 Highview Grove", 
-            city: "Burwood East",
-            state:  "VIC",
-            postcode: "3151",
-            specialNotes: "deliver at garage",
-            active: true
-        };
-
-        var person = new User({
-            firstName: "First",
-            lastName: "Person",
-            phoneNumber: "98036705",
-            email: "james.jogn@gmail.com",
-            password: "$r3#b4t434!!@",
-            billingAddress: address,
-            shippingAddress: address
-        });
-        await person.save();
-        res.send(person);
-
-    })();
-});
 
 router.post('/emailTest', function (req, res) {
     console.log('email test');
@@ -200,8 +171,6 @@ function notLoggedIn(req, res, next) {
     }
     res.redirect("/");
 }
-
-
 
 function EmailForgotPassword(user) {
     var body = `

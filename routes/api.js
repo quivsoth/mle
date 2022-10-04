@@ -28,6 +28,15 @@ router.get('/search/:searchText', async function (req, res, next) {
     db.search(searchText).then((value) => { res.json(value) }); 
 });
 
+
+/* Reset Password                                                       */
+router.put("/resetPassword/:authToken", async function (req, res, next) {
+    let authToken = req.params.authToken;
+    let password = req.body.a;
+    let validate = (message) => { res.json(message) }
+    const resetPassword =  await db.resetPassword(authToken, password, validate);
+});
+
 router.put('/updateCollections', function (req, res, next) {
     (async function () {
         var d = new Date(); 

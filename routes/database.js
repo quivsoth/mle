@@ -1,4 +1,5 @@
 const Product = require("../models/product");
+const User = require("../models/user");
 const fs = require('fs');
 
 module.exports = {
@@ -31,6 +32,24 @@ module.exports = {
     getProductByProductId : async(productId) => {
         var query = { productId: productId };
         return await Product.findOne(query);
+    },
+    resetPassword : async(authToken, password, cb) => {
+        User.findOne({'authToken': authToken}, function (err, user) {
+            if (err) { return cb(err) }
+            if (!user) {
+                return cb('Invalid Authentication Token');
+            } 
+            else {
+                // validate the password and return appropriately
+                if(password == "") return cb("Cannot use a blank password.");
+                if(password.length < 6) return cb("Password length must be atleast 6 characters");
+                if(password.length > 15) return cb("Password length must not exceed 15 characters");
+                
+                // change the password using passport.js?????
+
+                return cb("OK");
+            }
+        });
     },
     search : async(searchText) => {
         return await Product.find({ $text: { $search: searchText } });
