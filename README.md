@@ -10,6 +10,12 @@ Installation
 * Run npm start
 
 
+Install Container
+* Terminal into the /container directory and run: "docker build -t mle-website ."
+
+
+
+
 Import MongoData and set up DB/Collection by running the script from the root folder
 mongoimport --db shop --collection bruja --drop --file ./collections.json --jsonArray
 
