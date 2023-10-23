@@ -5,7 +5,6 @@ const fs = require('fs');
 module.exports = {
     getCollections: async(active) => {
         let c = require('../data/collections.json');
-
         if(!active) return c;
         if(active) {
             return c.filter(function(item) { return item.active == true }).sort(function(a, b){ return a.sortIndex - b.sortIndex; });
@@ -19,8 +18,8 @@ module.exports = {
         }
     },
     getProductsByCollectionId : async(collectionId)  => {
-        var query = { collectionId: collectionId };
-        var product = await Product.find(query).sort('sortIndex');
+        var query = { collectionId: collectionId }; 
+        var product = await Product.find(query).sort('sortIndex');        
         return product.filter(function(item) {
             return item.active == true;
         });

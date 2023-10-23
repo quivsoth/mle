@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config(); 
 var mongoose = require('mongoose');
 var createError = require('http-errors');
 var express = require('express');
@@ -25,8 +25,10 @@ var shopRouter = require('./routes/shop');
 var userRouter = require('./routes/user');
 
 var app = express();
-const uri = process.env.MONGO_DB;
+const uri = process.env.MONGO_DB; 
+mongoose.set('strictQuery', false);
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
 
 require('./config/passport');
 
