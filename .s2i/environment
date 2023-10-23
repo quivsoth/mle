@@ -1,2 +1,2 @@
-MONGO_DB=mongodb://0.0.0.0:27017
+MONGO_DB=mongodb://doom:27017/shop
 PORT=8080
