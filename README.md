@@ -7,6 +7,12 @@ Installation
 
 
 CONTAINER ONLY
+NOTE: you must have podman and podman-compose installed. 
+    - Instructions for podman available here: https://podman.io/docs/installation    
+    - Instructions for podman-compose available here: https://access.redhat.com/discussions/6979552
+
+
+
 Inside the /container directory run
 sh ./first-time-load.sh
 
