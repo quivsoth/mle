@@ -1,0 +1,26 @@
+version: "3.9"
+name: baja-docker
+services:
+
+  website:
+    container_name: mle
+    image: quay.io/pknezevich/mle
+    ports:
+      - 7485:7485
+    environment:
+      PORT: 7485
+      MONGO_DB: mongodb://pkmongo:27017/shop
+    networks:
+      - blb-network
+
+  database:
+    container_name: pkmongo
+    image: quay.io/pknezevich/mongo
+    ports:
+      - 27017:27017
+    networks:
+      - blb-network
+
+networks:
+  blb-network:
+    driver: bridge
