@@ -27,3 +27,16 @@ fi
 #docker exec -it pkmongo mongoimport --db shop --collection products --type json --file products.json --jsonArray
 
 echo "Build Complete."
+
+
+
+
+
+
+#podman generate systemd --restart-policy=always -t 1 pkmongo > /etc/systemd/system/pkmongo.service
+#podman generate systemd --restart-policy=always -t 1 mle > /etc/systemd/system/mle.service
+# sc start mle
+# sc enable mle
+# sc start pkmongo
+# sc enable pkmongo
+
